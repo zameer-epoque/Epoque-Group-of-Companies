@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function Hero(): JSX.Element {
+export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center px-6 pt-28 bg-black overflow-hidden"
@@ -12,7 +12,6 @@ export default function Hero(): JSX.Element {
       </div>
 
       <div className="max-w-5xl text-center">
-
         {/* LOGO */}
         <div className="flex justify-center mb-10">
           <Image

@@ -8,9 +8,10 @@ import {
 export default function WhyChooseEpoque() {
     return (
         <section
-            className="relative py-6 px-6 bg-black"
+            className="relative py-6 px-6 bg-[black]"
             aria-label="Why Choose Époque Group"
         >
+
             <div className="max-w-7xl mx-auto">
 
                 {/* HEADER */}
