@@ -10,7 +10,6 @@ export default function WhoWeAre() {
             </div>
 
             <div className="relative max-w-7xl mx-auto">
-
                 {/* SECTION HEADING */}
                 <div className="max-w-5xl mx-auto text-center mb-28 group">
                     <h2 className="relative inline-block font-heading text-5xl sm:text-6xl md:text-7xl font-semibold text-white leading-tight tracking-tight">
@@ -20,23 +19,7 @@ export default function WhoWeAre() {
                         </span>
 
                         {/* HOVER UNDERLINE */}
-                        <span
-                            className="
-                  absolute
-                  left-1/2
-                  -bottom-4
-                  h-[3px]
-                  w-0
-                  -translate-x-1/2
-                  bg-gradient-to-r
-                  from-[#C79A3B]
-                  via-[#D45B5B]
-                  to-[#7A2E63]
-                  transition-all
-                  duration-500
-                  group-hover:w-full
-                "
-                        />
+                        <span className="absolute left-1/2 -bottom-4 h-[3px] w-0 -translate-x-1/2 bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-500 group-hover:w-full" />
                     </h2>
 
                     <p className="mt-10 text-xl md:text-2xl text-gray-400 leading-relaxed font-body">
@@ -52,15 +35,16 @@ export default function WhoWeAre() {
 
                 {/* VALUES GRID */}
                 <div className="grid gap-14 md:grid-cols-2 lg:grid-cols-4">
-
                     {/* ITEM 1 */}
                     <div className="group relative border border-white/10 rounded-2xl p-9 transition-all duration-300 hover:border-[#C79A3B] hover:-translate-y-3 hover:shadow-[0_0_40px_rgba(199,154,59,0.18)]">
                         <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110">
                             ✨
                         </div>
+
                         <h3 className="font-heading text-2xl font-semibold text-white mb-4">
                             Innovation First
                         </h3>
+
                         <p className="text-gray-400 leading-relaxed text-sm">
                             We push boundaries with forward-thinking solutions that redefine
                             industries and create lasting global impact.
@@ -72,9 +56,11 @@ export default function WhoWeAre() {
                         <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110">
                             🎨
                         </div>
+
                         <h3 className="font-heading text-2xl font-semibold text-white mb-4">
                             Creative Excellence
                         </h3>
+
                         <p className="text-gray-400 leading-relaxed text-sm">
                             Every project is crafted where artistry meets strategy, delivering
                             experiences that captivate, inspire, and endure.
@@ -86,9 +72,11 @@ export default function WhoWeAre() {
                         <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110">
                             🎯
                         </div>
+
                         <h3 className="font-heading text-2xl font-semibold text-white mb-4">
                             Strategic Vision
                         </h3>
+
                         <p className="text-gray-400 leading-relaxed text-sm">
                             We see beyond the present, shaping intelligent strategies that help
                             businesses grow, scale, and thrive.
@@ -100,15 +88,16 @@ export default function WhoWeAre() {
                         <div className="text-4xl mb-6 transition-transform duration-300 group-hover:scale-110">
                             🌍
                         </div>
+
                         <h3 className="font-heading text-2xl font-semibold text-white mb-4">
                             Global Impact
                         </h3>
+
                         <p className="text-gray-400 leading-relaxed text-sm">
                             From local communities to international markets, we bridge culture,
                             commerce, and creativity with precision.
                         </p>
                     </div>
-
                 </div>
             </div>
         </section>

@@ -5,7 +5,6 @@ export default function OurDivisionsHeader() {
             aria-label="Our Divisions - Époque Group"
         >
             <div className="max-w-6xl mx-auto text-center">
-
                 {/* TITLE */}
                 <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 leading-tight">
                     Our{" "}

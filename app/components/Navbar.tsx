@@ -6,7 +6,7 @@ import Image from "next/image"
 
 const navItems = ["Home", "Digital", "Realty", "Interiors", "Revenue", "Contact"]
 
-export default function Navbar(): JSX.Element {
+export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
@@ -37,42 +37,12 @@ export default function Navbar(): JSX.Element {
             <li key={item} className="relative group">
               <Link
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="
-                  text-[15px]
-                  font-semibold
-                  uppercase
-                  tracking-wider
-                  text-gray-300
-                  transition-all
-                  duration-300
-                  group-hover:bg-gradient-to-r
-                  group-hover:from-[#C79A3B]
-                  group-hover:via-[#D45B5B]
-                  group-hover:to-[#7A2E63]
-                  group-hover:bg-clip-text
-                  group-hover:text-transparent
-                "
+                className="text-[15px] font-semibold uppercase tracking-wider text-gray-300 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#C79A3B] group-hover:via-[#D45B5B] group-hover:to-[#7A2E63] group-hover:bg-clip-text group-hover:text-transparent"
               >
                 {item}
               </Link>
 
-              {/* DESKTOP GRADIENT UNDERLINE */}
-              <span
-                className="
-                  absolute
-                  left-0
-                  -bottom-2
-                  h-[2px]
-                  w-0
-                  bg-gradient-to-r
-                  from-[#C79A3B]
-                  via-[#D45B5B]
-                  to-[#7A2E63]
-                  transition-all
-                  duration-300
-                  group-hover:w-full
-                "
-              />
+              <span className="absolute left-0 -bottom-2 h-[2px] w-0 bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-300 group-hover:w-full" />
             </li>
           ))}
         </ul>
@@ -102,42 +72,12 @@ export default function Navbar(): JSX.Element {
               <Link
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 onClick={() => setOpen(false)}
-                className="
-                  text-base
-                  font-semibold
-                  uppercase
-                  tracking-wider
-                  text-gray-300
-                  transition-all
-                  duration-300
-                  group-hover:bg-gradient-to-r
-                  group-hover:from-[#C79A3B]
-                  group-hover:via-[#D45B5B]
-                  group-hover:to-[#7A2E63]
-                  group-hover:bg-clip-text
-                  group-hover:text-transparent
-                "
+                className="text-base font-semibold uppercase tracking-wider text-gray-300 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#C79A3B] group-hover:via-[#D45B5B] group-hover:to-[#7A2E63] group-hover:bg-clip-text group-hover:text-transparent"
               >
                 {item}
               </Link>
 
-              {/* MOBILE GRADIENT UNDERLINE */}
-              <span
-                className="
-                  absolute
-                  left-0
-                  -bottom-1
-                  h-[2px]
-                  w-0
-                  bg-gradient-to-r
-                  from-[#C79A3B]
-                  via-[#D45B5B]
-                  to-[#7A2E63]
-                  transition-all
-                  duration-300
-                  group-hover:w-full
-                "
-              />
+              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-300 group-hover:w-full" />
             </li>
           ))}
         </ul>

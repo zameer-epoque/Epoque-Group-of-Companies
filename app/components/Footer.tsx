@@ -14,7 +14,6 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F0F0F] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-32 grid gap-20 md:grid-cols-4">
-
         {/* BRAND */}
         <div>
           <Image
@@ -40,6 +39,7 @@ export default function Footer() {
             >
               <Linkedin size={22} />
             </a>
+
             <a
               href="#"
               aria-label="Instagram"
@@ -90,14 +90,7 @@ export default function Footer() {
             ].map((item) => (
               <li
                 key={item}
-                className="
-                  flex items-center gap-3
-                  text-gray-400
-                  transition-all duration-300
-                  hover:text-[#C79A3B]
-                  hover:translate-x-2
-                  cursor-pointer
-                "
+                className="flex items-center gap-3 text-gray-400 transition-all duration-300 hover:text-[#C79A3B] hover:translate-x-2 cursor-pointer"
               >
                 <ArrowRight size={16} />
                 {item}
@@ -120,13 +113,7 @@ export default function Footer() {
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  className="
-                    flex items-center gap-3
-                    text-gray-400
-                    transition-all duration-300
-                    hover:text-[#C79A3B]
-                    hover:translate-x-2
-                  "
+                  className="flex items-center gap-3 text-gray-400 transition-all duration-300 hover:text-[#C79A3B] hover:translate-x-2"
                 >
                   <ArrowRight size={16} />
                   {item.label}

@@ -47,7 +47,6 @@ export default function OurDivisions() {
             aria-label="Our Divisions - Époque Group"
         >
             <div className="max-w-7xl mx-auto">
-
                 {/* SECTION HEADER */}
                 <div className="text-center mb-24">
                     <h2 className="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold text-white mb-6">
@@ -79,7 +78,6 @@ export default function OurDivisions() {
                                 alt={item.title}
                                 fill
                                 className="object-cover scale-110 transition-transform duration-700 group-hover:scale-100"
-                                priority={false}
                             />
 
                             {/* OVERLAY */}
@@ -121,7 +119,7 @@ export default function OurDivisions() {
 
                                 {/* CTA */}
                                 <div
-                                    className="mt-5 inline-flex items-center gap-2 text-sm font-medium opacity-0 translate-x-[-10px] transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0"
+                                    className="mt-5 inline-flex items-center gap-2 text-sm font-medium opacity-0 -translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0"
                                     style={{ color: item.accent }}
                                 >
                                     Explore More →
