@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation"
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Digital", href: "/digital" },
-  { label: "Realty", href: "/realty" },
+  { label: "Realty", href: "/Realty" },
   { label: "Interiors", href: "/interiors" },
   { label: "Revenue", href: "/revenue" },
   { label: "Contact", href: "/contact" },
@@ -18,7 +18,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
-  /* Lock body scroll when mobile menu is open */
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : ""
     return () => {
@@ -27,18 +26,25 @@ export default function Navbar() {
   }, [open])
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
-      <nav
-        className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between"
-        aria-label="Primary Navigation"
-      >
+    <header
+      className="
+        fixed top-0 w-full z-50
+        bg-black/95 text-white
+        backdrop-blur-xl
+        border-b border-white/10
+        transition-all duration-500 ease-in-out
+      "
+    >
+      <nav className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+
         {/* LOGO */}
         <Link
           href="/"
-          className="relative group hover:scale-105 transition-transform duration-300"
-          aria-label="Époque Group Home"
+          className="relative group hover:scale-105 transition-transform duration-500"
         >
-          <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-40" />
+          {/* Glow */}
+          <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] opacity-0 blur-xl transition-all duration-500 group-hover:opacity-40" />
+
           <Image
             src="/logo.png"
             alt="Époque Group logo"
@@ -50,7 +56,7 @@ export default function Navbar() {
         </Link>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex items-center gap-10">
+        <ul className="hidden md:flex items-center gap-12">
           {navItems.map((item) => {
             const active = pathname === item.href
 
@@ -58,23 +64,37 @@ export default function Navbar() {
               <li key={item.href} className="relative group">
                 <Link
                   href={item.href}
-                  className={`text-[15px] font-semibold uppercase tracking-wider transition-all duration-300
-                    ${active
-                      ? "bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent"
-                      : "text-gray-300 group-hover:bg-gradient-to-r group-hover:from-[#C79A3B] group-hover:via-[#D45B5B] group-hover:to-[#7A2E63] group-hover:bg-clip-text group-hover:text-transparent"
-                    }
+                  className={`
+                    relative text-[15px] font-semibold uppercase tracking-wider
+                    text-white
+                    transition-all duration-300 ease-in-out
                   `}
-                  aria-current={active ? "page" : undefined}
                 >
                   {item.label}
-                </Link>
 
-                {/* UNDERLINE */}
-                <span
-                  className={`absolute left-0 -bottom-2 h-[2px] bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-300
-                    ${active ? "w-full" : "w-0 group-hover:w-full"}
-                  `}
-                />
+                  {/* UNDERLINE */}
+                  <span
+                    className={`
+                      absolute left-0 -bottom-2 h-[2px] w-full
+                      bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                      transition-transform duration-500 ease-out
+                      ${active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}
+                      origin-left
+                    `}
+                  />
+
+                  {/* GLOW */}
+                  <span
+                    className={`
+                      absolute left-0 -bottom-2 h-[6px] w-full
+                      bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                      blur-md opacity-0
+                      transition-all duration-500
+                      ${active ? "opacity-60 scale-x-100" : "group-hover:opacity-40 group-hover:scale-x-100"}
+                      scale-x-0 origin-left
+                    `}
+                  />
+                </Link>
               </li>
             )
           })}
@@ -83,10 +103,7 @@ export default function Navbar() {
         {/* MOBILE BUTTON */}
         <button
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C79A3B]"
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
+          className="md:hidden focus:outline-none"
         >
           <div className="space-y-1">
             <span className="block h-[2px] w-6 bg-white" />
@@ -98,37 +115,31 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        id="mobile-menu"
-        className={`md:hidden overflow-hidden transition-all duration-500 ${open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
-          } bg-black border-t border-white/10`}
+        className={`
+          md:hidden overflow-hidden
+          transition-all duration-500 ease-in-out
+          ${open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}
+          bg-black
+          border-t border-white/10
+        `}
       >
         <ul className="flex flex-col px-8 py-10 gap-8">
-          {navItems.map((item) => {
-            const active = pathname === item.href
-
-            return (
-              <li key={item.href} className="relative group w-fit">
-                <Link
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`text-base font-semibold uppercase tracking-wider transition-all duration-300
-                    ${active
-                      ? "bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent"
-                      : "text-gray-300 group-hover:bg-gradient-to-r group-hover:from-[#C79A3B] group-hover:via-[#D45B5B] group-hover:to-[#7A2E63] group-hover:bg-clip-text group-hover:text-transparent"
-                    }
-                  `}
-                >
-                  {item.label}
-                </Link>
-
-                <span
-                  className={`absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-300
-                    ${active ? "w-full" : "w-0 group-hover:w-full"}
-                  `}
-                />
-              </li>
-            )
-          })}
+          {navItems.map((item) => (
+            <li key={item.href} className="group">
+              <Link
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="
+                  text-base font-semibold uppercase tracking-wider
+                  text-white
+                  transition-all duration-300
+                  group-hover:text-[#C79A3B]
+                "
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </header>

@@ -4,8 +4,6 @@ import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import "./globals.css"
 
-
-
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
@@ -37,15 +35,17 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${poppins.variable} ${playfair.variable} bg-[#1A1A1A] text-white antialiased`}
+        className={`
+          ${poppins.variable}
+          ${playfair.variable}
+          antialiased
+          bg-white
+          text-[#1A1A1A]
+          transition-colors duration-300
+        `}
       >
-        {/* GLOBAL NAVBAR */}
         <Navbar />
-
-        {/* PAGE CONTENT */}
-        <main>{children}</main>
-
-        {/* GLOBAL FOOTER */}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

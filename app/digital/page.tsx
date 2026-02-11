@@ -1,188 +1,182 @@
-import type { Metadata } from "next"
+"use client"
 
-export const metadata: Metadata = {
-    title: "Époque Digital | Digital Excellence & Performance Marketing",
-    description:
-        "Époque Digital designs high-performance digital ecosystems that drive qualified leads, measurable conversions, and scalable visibility. From funnel engineering to performance marketing.",
-    keywords: [
-        "Digital Marketing Agency",
-        "Performance Marketing",
-        "Lead Generation",
-        "Brand Strategy",
-        "Époque Digital",
-        "SEO & Funnels",
-    ],
+import Image from "next/image"
+import { motion } from "framer-motion"
+
+const fadeUp = {
+    hidden: { opacity: 0, y: 60 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+    },
 }
 
-export default function DigitalPage() {
+export default function DigitalClient() {
     return (
-        <main className="bg-[#0F0F0F] text-white overflow-hidden">
+        <main className="overflow-hidden bg-black text-white">
+
             {/* HERO SECTION */}
-            <section className="relative min-h-screen flex items-center justify-center px-6">
-                {/* Glow */}
+            <section className="relative flex items-center justify-center px-6 py-28 overflow-hidden">
+
+                {/* Background Glow */}
                 <div className="absolute inset-0 flex justify-center pointer-events-none">
                     <div className="w-[900px] h-[900px] bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/20 to-[#7A2E63]/20 blur-[200px]" />
                 </div>
 
-                <div className="relative max-w-5xl text-center animate-fade-in-up">
-                    <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-6">
-                        Digital Excellence
-                    </p>
+                <motion.div
+                    initial="hidden"
+                    animate="show"
+                    variants={fadeUp}
+                    className="relative max-w-5xl text-center"
+                >
+                    {/* LOGO */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6 }}
+                        className="flex justify-center mb-4"
+                    >
+
+                    </motion.div>
+
+                    {/* <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-4">
+                        Performance Marketing Agency
+                    </p> */}
 
                     <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold leading-tight">
                         Époque{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Digital
                         </span>
+
                     </h1>
+                    <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-4">
+                        Performance Marketing Agency
+                    </p>
 
-                    <p className="mt-8 text-xl md:text-2xl text-gray-300 leading-relaxed">
-                        Where <span className="text-white font-medium">Intelligence</span>{" "}
-                        meets{" "}
-                        <span className="bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] bg-clip-text text-transparent font-medium">
-                            Imagination
+                    <p className="mt-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
+                        Scalable Growth Through{" "}
+                        <span className="text-white font-medium">
+                            SEO, Paid Advertising & Funnel Engineering
                         </span>
-                        .
                     </p>
 
-                    <p className="mt-10 text-lg text-gray-400 max-w-3xl mx-auto">
-                        We design digital ecosystems that drive qualified leads, measurable
-                        conversions, and scalable visibility — turning clicks into
-                        conversations and conversations into conversions.
+                    <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto">
+                        We architect high-performance digital ecosystems that generate
+                        qualified leads, strengthen brand authority, and deliver measurable ROI
+                        for ambitious businesses across India.
                     </p>
-                </div>
-            </section>
-
-            {/* STRATEGY SECTION */}
-            <section className="py-2 px-6 bg-[#121212]">
-                <div className="max-w-6xl mx-auto grid gap-16 md:grid-cols-2 items-center">
-                    <div className="animate-fade-in-left">
-                        <h2 className="font-heading text-4xl md:text-5xl font-semibold mb-6">
-                            Strategy Beyond Marketing
-                        </h2>
-
-                        <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                            Our focus goes beyond campaigns and creatives. We architect
-                            intelligent digital strategies that make businesses
-                            future-proof.
-                        </p>
-
-                        <p className="text-gray-400 text-lg leading-relaxed">
-                            From lead augmentation and digital branding to creative campaigns
-                            and performance intelligence, every system we build is designed
-                            to scale with precision.
-                        </p>
-                    </div>
-
-                    <div className="relative animate-fade-in-right">
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#C79A3B]/30 via-[#D45B5B]/30 to-[#7A2E63]/30 blur-2xl" />
-                        <div className="relative rounded-3xl border border-white/10 p-10 backdrop-blur">
-                            <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">
-                                Our Philosophy
-                            </p>
-                            <p className="text-xl leading-relaxed">
-                                We don’t chase trends —{" "}
-                                <span className="text-white font-medium">we design them</span>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </motion.div>
             </section>
 
             {/* CORE SERVICES */}
-            <section className="py-32 px-6">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-24">
-                        <h2 className="font-heading text-4xl md:text-6xl font-semibold">
-                            Core{" "}
-                            <span className="bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] bg-clip-text text-transparent">
-                                Services
-                            </span>
+            <section className="py-4 px-6 bg-[#0E0E0E] relative overflow-hidden">
+
+                <div className="absolute inset-0 flex justify-center pointer-events-none">
+                    <div className="w-[700px] h-[700px] bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-[180px]" />
+                </div>
+
+                <div className="relative max-w-7xl mx-auto">
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        variants={fadeUp}
+                        className="text-center mb-10"
+                    >
+                        <h2 className="font-heading text-4xl md:text-6xl font-semibold relative inline-block">
+                            Our Core Services
+                            <span className="absolute left-0 -bottom-3 w-full h-[3px] bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]" />
                         </h2>
 
-                        <p className="mt-6 text-xl text-gray-400 max-w-3xl mx-auto">
-                            High-impact solutions engineered for growth, visibility, and
-                            conversion.
+                        <p className="mt-8 text-xl text-gray-400 max-w-3xl mx-auto">
+                            Conversion-focused digital frameworks built for sustainable,
+                            predictable growth.
                         </p>
-                    </div>
+                    </motion.div>
 
                     <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
                         {[
                             {
+                                icon: "🔍",
+                                title: "Search Engine Optimization",
+                                desc: "Technical SEO, keyword strategy, authority building, and structured content systems that dominate search rankings.",
+                            },
+                            {
+                                icon: "📈",
+                                title: "Performance Advertising",
+                                desc: "Meta Ads & Google Ads campaigns engineered for scalable lead acquisition and maximum profitability.",
+                            },
+                            {
+                                icon: "⚙️",
+                                title: "Funnel Engineering",
+                                desc: "High-converting landing pages and automation systems that transform traffic into qualified opportunities.",
+                            },
+                            {
                                 icon: "🎯",
-                                title: "Lead Augmentation & Funnel Engineering",
-                                desc: "Strategic funnel optimization engineered for maximum conversion.",
-                                color: "#C79A3B",
+                                title: "Brand Strategy & Positioning",
+                                desc: "Premium storytelling frameworks and creative direction that elevate authority and trust.",
                             },
-                            {
-                                icon: "📝",
-                                title: "Brand & Content Strategy",
-                                desc: "Compelling narratives that resonate deeply with your audience.",
-                                color: "#D45B5B",
-                            },
-                            {
-                                icon: "📊",
-                                title: "Performance Marketing",
-                                desc: "Data-driven campaigns delivering measurable ROI.",
-                                color: "#7A2E63",
-                            },
-                            {
-                                icon: "🎨",
-                                title: "Creative Direction & Social Media Science",
-                                desc: "Engaging content that builds community and drives action.",
-                                color: "#2E5A57",
-                            },
-                        ].map((item) => (
-                            <div
-                                key={item.title}
-                                className="group relative border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-3"
-                                style={{
-                                    boxShadow: `0 0 0 rgba(0,0,0,0)`,
-                                }}
+                        ].map((service, index) => (
+                            <motion.div
+                                key={service.title}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: index * 0.2 }}
+                                viewport={{ once: true }}
+                                className="group relative rounded-2xl border border-white/10 p-8 bg-white/5 hover:bg-white/10 transition-all duration-500 hover:-translate-y-4 overflow-hidden"
                             >
-                                <div
-                                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 rounded-2xl"
-                                    style={{
-                                        boxShadow: `0 0 40px ${item.color}33`,
-                                    }}
-                                />
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-2xl" />
+
                                 <div className="relative">
-                                    <div className="text-4xl mb-6">{item.icon}</div>
-                                    <h3 className="font-heading text-xl font-semibold mb-4">
-                                        {item.title}
+                                    <div className="text-4xl mb-6">{service.icon}</div>
+
+                                    <h3 className="font-heading text-xl font-semibold mb-4 group-hover:text-[#C79A3B] transition">
+                                        {service.title}
                                     </h3>
+
                                     <p className="text-gray-400 text-sm leading-relaxed">
-                                        {item.desc}
+                                        {service.desc}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
             {/* CTA */}
-            <section className="py-4 px-6 bg-[#121212] text-center">
-                <h2 className="font-heading text-4xl md:text-6xl font-semibold mb-8">
-                    Ready to Build a{" "}
-                    <span className="bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] bg-clip-text text-transparent">
-                        High-Performance
-                    </span>{" "}
-                    Digital Engine?
-                </h2>
+            <section className="py-32 px-6 text-center relative overflow-hidden">
 
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-                    Let’s transform your digital presence into a scalable system that
-                    drives growth, leads, and long-term impact.
-                </p>
-
-                <a
-                    href="/contact"
-                    className="inline-block px-12 py-4 rounded-full font-semibold text-black bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] hover:opacity-90 transition"
+                <motion.div
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    variants={fadeUp}
                 >
-                    Start a Conversation
-                </a>
+                    <h2 className="font-heading text-4xl md:text-6xl font-semibold mb-8">
+                        Ready to Build a{" "}
+                        <span className="bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] bg-clip-text text-transparent">
+                            High-Performance Digital Engine?
+                        </span>
+                    </h2>
+
+                    <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
+                        Let’s transform your marketing into a scalable, predictable revenue
+                        system powered by strategy and innovation.
+                    </p>
+
+                    <a
+                        href="/contact"
+                        className="inline-block px-14 py-5 rounded-full font-semibold text-black bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] hover:scale-105 transition duration-300 shadow-xl"
+                    >
+                        Start Your Growth Journey
+                    </a>
+                </motion.div>
             </section>
+
         </main>
     )
 }

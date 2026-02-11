@@ -17,7 +17,7 @@ export default function Home() {
       <WhoWeAre />
       <VisionMissionPromise />
       <OurDivisions />
-      <WhyChooseEpoque/>
+      <WhyChooseEpoque />
 
 
 
