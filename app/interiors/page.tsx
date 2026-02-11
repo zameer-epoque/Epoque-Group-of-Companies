@@ -1,24 +1,30 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Sparkles, Sofa, ScanLine, LayoutGrid } from "lucide-react"
 import Link from "next/link"
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 50 },
+const fadeUp: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
     show: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" }
+        transition: {
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1] as const
+        }
     }
 }
 
-export default function InteriorsPage(): JSX.Element {
+export default function InteriorsPage() {
     return (
         <section className="relative bg-black text-white overflow-hidden">
 
-            {/* Animated Background Glow */}
-            <div className="absolute inset-0">
+            {/* Background Glow */}
+            <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -top-32 -left-32 w-[600px] h-[600px] bg-gradient-to-br from-[#C79A3B]/20 to-[#7A2E63]/30 blur-[160px]" />
                 <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#D45B5B]/20 to-[#C79A3B]/20 blur-[160px]" />
             </div>
@@ -99,14 +105,12 @@ export default function InteriorsPage(): JSX.Element {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.15 }}
-                            className="
-                group relative p-8 rounded-2xl
-                bg-white/5 border border-white/10
-                hover:border-[#C79A3B]
-                hover:-translate-y-3
-                transition-all duration-300
-              "
+                            transition={{
+                                duration: 0.6,
+                                delay: index * 0.15,
+                                ease: [0.16, 1, 0.3, 1] as const
+                            }}
+                            className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#C79A3B] hover:-translate-y-3 transition-all duration-300"
                         >
                             <div className="text-[#C79A3B] mb-5">
                                 {item.icon}
@@ -125,7 +129,7 @@ export default function InteriorsPage(): JSX.Element {
                     ))}
                 </div>
 
-                {/* SEO CONTENT SECTION */}
+                {/* SEO SECTION */}
                 <div className="mt-32 text-center max-w-4xl mx-auto space-y-8">
 
                     <motion.h2
