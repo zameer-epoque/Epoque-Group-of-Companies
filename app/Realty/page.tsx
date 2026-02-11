@@ -1,14 +1,17 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Building2, Users, TrendingUp, BarChart3 } from "lucide-react"
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: "easeOut" }
+    transition: {
+      duration: 0.7,
+      ease: [0.16, 1, 0.3, 1]
+    }
   }
 }
 
@@ -16,14 +19,13 @@ export default function EpoqueRealtySection() {
   return (
     <section className="relative bg-black text-white overflow-hidden">
 
-      {/* Background Glow Accent */}
+      {/* Background Glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-r from-[#C9A24D]/15 via-[#D16C6C]/15 to-[#7A2E5D]/20 blur-[140px]" />
       </div>
 
       {/* HERO */}
       <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-16 text-center">
-
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -47,7 +49,6 @@ export default function EpoqueRealtySection() {
             pricing analytics, and high-performance sales enablement.
           </p>
         </motion.div>
-
       </div>
 
       {/* CORE GRID */}
@@ -81,7 +82,11 @@ export default function EpoqueRealtySection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.12 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.12,
+                ease: [0.16, 1, 0.3, 1]
+              }}
               className="
                 group relative p-6 rounded-xl
                 bg-white/5 border border-white/10
@@ -102,7 +107,6 @@ export default function EpoqueRealtySection() {
                 {item.desc}
               </p>
 
-              {/* Bottom Hover Accent */}
               <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C9A24D] to-[#D16C6C] group-hover:w-full transition-all duration-300" />
             </motion.div>
           ))}
@@ -114,7 +118,6 @@ export default function EpoqueRealtySection() {
       <div className="relative border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT TEXT */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -137,7 +140,6 @@ export default function EpoqueRealtySection() {
             </p>
           </motion.div>
 
-          {/* RIGHT STATS */}
           <motion.div
             initial="hidden"
             whileInView="show"
