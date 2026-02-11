@@ -1,19 +1,25 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Landmark, TrendingUp, Settings, Brain } from "lucide-react"
 import Link from "next/link"
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 40 },
+const fadeUp: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 40
+    },
     show: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" }
+        transition: {
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1] as const
+        }
     }
 }
 
-export default function RevenuePage(): JSX.Element {
+export default function RevenuePage() {
     return (
         <section className="relative bg-black text-white overflow-hidden">
 
@@ -24,7 +30,7 @@ export default function RevenuePage(): JSX.Element {
 
             <div className="relative max-w-7xl mx-auto px-6 py-28">
 
-                {/* HERO (Centered Like Interiors) */}
+                {/* HERO */}
                 <motion.div
                     initial="hidden"
                     animate="show"
@@ -99,7 +105,11 @@ export default function RevenuePage(): JSX.Element {
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.15 }}
+                            transition={{
+                                duration: 0.6,
+                                delay: index * 0.15,
+                                ease: [0.16, 1, 0.3, 1] as const
+                            }}
                             className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#C79A3B] hover:-translate-y-3 transition-all duration-300"
                         >
                             <div className="text-[#C79A3B] mb-5">
@@ -119,7 +129,7 @@ export default function RevenuePage(): JSX.Element {
                     ))}
                 </div>
 
-                {/* AUTHORITY SECTION (Like Interiors SEO Block) */}
+                {/* AUTHORITY SECTION */}
                 <div className="mt-32 text-center max-w-4xl mx-auto space-y-8">
 
                     <motion.h2
