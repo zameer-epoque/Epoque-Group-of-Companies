@@ -66,12 +66,7 @@ export default function InteriorsPage() {
                             Start Designing
                         </Link>
 
-                        <Link
-                            href="/projects"
-                            className="px-8 py-4 rounded-full border border-white/20 hover:border-[#C79A3B] hover:text-[#C79A3B] transition duration-300"
-                        >
-                            View Projects
-                        </Link>
+
                     </div>
                 </motion.div>
 
