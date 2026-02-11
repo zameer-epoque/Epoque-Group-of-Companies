@@ -1,14 +1,19 @@
 "use client"
 
-import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 
-const fadeUp = {
-    hidden: { opacity: 0, y: 60 },
+const fadeUp: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 60,
+    },
     show: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
+        transition: {
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1] as const,
+        },
     },
 }
 
@@ -19,7 +24,6 @@ export default function DigitalClient() {
             {/* HERO SECTION */}
             <section className="relative flex items-center justify-center px-6 py-28 overflow-hidden">
 
-                {/* Background Glow */}
                 <div className="absolute inset-0 flex justify-center pointer-events-none">
                     <div className="w-[900px] h-[900px] bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/20 to-[#7A2E63]/20 blur-[200px]" />
                 </div>
@@ -30,28 +34,14 @@ export default function DigitalClient() {
                     variants={fadeUp}
                     className="relative max-w-5xl text-center"
                 >
-                    {/* LOGO */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6 }}
-                        className="flex justify-center mb-4"
-                    >
-
-                    </motion.div>
-
-                    {/* <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-4">
-                        Performance Marketing Agency
-                    </p> */}
-
                     <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold leading-tight">
                         Époque{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Digital
                         </span>
-
                     </h1>
-                    <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mb-4">
+
+                    <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mt-4">
                         Performance Marketing Agency
                     </p>
 
@@ -124,8 +114,12 @@ export default function DigitalClient() {
                                 key={service.title}
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.2 }}
                                 viewport={{ once: true }}
+                                transition={{
+                                    duration: 0.6,
+                                    delay: index * 0.2,
+                                    ease: [0.16, 1, 0.3, 1] as const,
+                                }}
                                 className="group relative rounded-2xl border border-white/10 p-8 bg-white/5 hover:bg-white/10 transition-all duration-500 hover:-translate-y-4 overflow-hidden"
                             >
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-2xl" />
