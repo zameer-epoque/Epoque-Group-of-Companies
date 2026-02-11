@@ -12,12 +12,12 @@ const fadeUp = {
   }
 }
 
-export default function EpoqueRealtySection(): JSX.Element {
+export default function EpoqueRealtySection() {
   return (
     <section className="relative bg-black text-white overflow-hidden">
 
-      {/* Background Accent */}
-      <div className="absolute inset-0">
+      {/* Background Glow Accent */}
+      <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-r from-[#C9A24D]/15 via-[#D16C6C]/15 to-[#7A2E5D]/20 blur-[140px]" />
       </div>
 
@@ -43,7 +43,7 @@ export default function EpoqueRealtySection(): JSX.Element {
 
           <p className="mt-6 text-gray-300 max-w-2xl mx-auto leading-relaxed">
             A structured channel partner ecosystem empowering builders,
-            brokers, and investors with intelligence-driven distribution,
+            brokers, and investors through intelligence-driven distribution,
             pricing analytics, and high-performance sales enablement.
           </p>
         </motion.div>
@@ -68,12 +68,12 @@ export default function EpoqueRealtySection(): JSX.Element {
             {
               icon: <Building2 size={24} />,
               title: "Builder Representation",
-              desc: "Inventory positioning, pricing advisory, and market absorption strategies."
+              desc: "Inventory positioning, pricing advisory, and strategic market absorption models."
             },
             {
               icon: <BarChart3 size={24} />,
               title: "Market Intelligence",
-              desc: "Demand forecasting, pricing benchmarks, and analytics-backed insights."
+              desc: "Demand forecasting, pricing benchmarks, and analytics-backed investment insights."
             }
           ].map((item, index) => (
             <motion.div
@@ -81,7 +81,7 @@ export default function EpoqueRealtySection(): JSX.Element {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
+              transition={{ delay: index * 0.12 }}
               className="
                 group relative p-6 rounded-xl
                 bg-white/5 border border-white/10
@@ -102,7 +102,7 @@ export default function EpoqueRealtySection(): JSX.Element {
                 {item.desc}
               </p>
 
-              {/* Bottom Accent Line */}
+              {/* Bottom Hover Accent */}
               <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C9A24D] to-[#D16C6C] group-hover:w-full transition-all duration-300" />
             </motion.div>
           ))}
@@ -114,6 +114,7 @@ export default function EpoqueRealtySection(): JSX.Element {
       <div className="relative border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
 
+          {/* LEFT TEXT */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -125,18 +126,18 @@ export default function EpoqueRealtySection(): JSX.Element {
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-4">
-              We don’t operate as traditional brokers. We architect structured
-              distribution ecosystems that align channel partners, builders,
-              and market intelligence into one seamless growth model.
+              We move beyond traditional brokerage models. Our framework
+              aligns builders, channel partners, and analytics into a
+              single performance-driven ecosystem.
             </p>
 
             <p className="text-gray-500 leading-relaxed">
-              Our approach ensures faster absorption cycles, higher partner
-              confidence, and optimized pricing strategies.
+              This structured approach ensures faster project absorption,
+              optimized pricing strategy, and higher partner confidence.
             </p>
           </motion.div>
 
-          {/* STATS */}
+          {/* RIGHT STATS */}
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -154,7 +155,8 @@ export default function EpoqueRealtySection(): JSX.Element {
                 key={i}
                 className="
                   p-6 rounded-xl bg-white/5 border border-white/10
-                  hover:border-[#C9A24D] transition duration-300
+                  hover:border-[#C9A24D]
+                  transition duration-300
                 "
               >
                 <h3 className="text-2xl font-bold text-[#C9A24D]">
