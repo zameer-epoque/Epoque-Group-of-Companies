@@ -6,12 +6,20 @@ import Lottie from "lottie-react"
 import { useEffect, useState } from "react"
 
 export default function Hero() {
-  const [animationData, setAnimationData] = useState<any>(null)
+  const [animationData, setAnimationData] = useState<object | null>(null)
 
   useEffect(() => {
-    fetch("/lottie/mtmbackgroundeffect.json")
-      .then((res) => res.json())
-      .then((data) => setAnimationData(data))
+    const loadAnimation = async () => {
+      try {
+        const res = await fetch("/lottie/mtmbackgroundeffect.json")
+        const data = await res.json()
+        setAnimationData(data)
+      } catch (error) {
+        console.error("Lottie load error:", error)
+      }
+    }
+
+    loadAnimation()
   }, [])
 
   return (
@@ -21,25 +29,25 @@ export default function Hero() {
         px-6 pt-28 overflow-hidden
         bg-black text-white
       "
-      aria-label="Époque Group Hero Section"
+      aria-label="Hero Section"
     >
-      {/* LOTTIE BACKGROUND */}
+      {/* ✅ LOTTIE BACKGROUND FIXED */}
       {animationData && (
-        <div className="absolute inset-0 -z-20 opacity-25 pointer-events-none">
+        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
           <Lottie
             animationData={animationData}
             loop
             autoplay
-            style={{ width: "100%", height: "100%" }}
           />
         </div>
       )}
 
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 -z-10 bg-black/70" />
+      {/* ✅ Overlay FIXED */}
+      <div className="absolute inset-0 z-10 bg-black/60" />
 
-      <div className="max-w-5xl text-center">
-        {/* LOGO */}
+      {/* ✅ Content Layer */}
+      <div className="relative z-20 max-w-5xl text-center">
+
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -48,14 +56,13 @@ export default function Hero() {
         >
           <Image
             src="/logo.png"
-            alt="Époque Group of Companies logo"
+            alt="Company logo"
             width={220}
             height={220}
             priority
           />
         </motion.div>
 
-        {/* HEADING */}
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +75,6 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* TEXT */}
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +85,6 @@ export default function Hero() {
           and strategic excellence.
         </motion.p>
 
-        {/* BUTTONS */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,7 +103,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="/Realty"
+            href="/realty"
             className="
               px-10 py-4 rounded-full font-semibold
               border border-white/30
@@ -110,6 +115,7 @@ export default function Hero() {
             Explore Our Divisions
           </a>
         </motion.div>
+
       </div>
     </section>
   )

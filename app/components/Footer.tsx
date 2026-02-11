@@ -70,15 +70,15 @@ export default function Footer() {
           <div className="space-y-6 text-gray-400 text-sm">
             <p className="flex gap-3">
               <MapPin size={18} className="text-[#C79A3B]" />
-              Jubilee Hills, Hyderabad
+              902, Office No C3, Sattva Magnus Commercial Building, Shaikpet, Jubilee Hills, Hyderabad
             </p>
             <p className="flex gap-3">
               <Phone size={18} />
-              +91 90000 00000
+              +91 9133 633 327
             </p>
             <p className="flex gap-3">
               <Mail size={18} />
-              info@company.com
+              sales@epoquegroup.in
             </p>
           </div>
         </div>
@@ -122,15 +122,15 @@ export default function Footer() {
 
           <div className="flex justify-center flex-wrap gap-6">
 
-            <a href="#" className="p-4 rounded-full bg-[#0f172a] hover:bg-[#0A66C2] transition-all duration-500 hover:scale-110">
+            <a href="https://www.linkedin.com/company/epoquegroupofcompany" className="p-4 rounded-full bg-[#0f172a] hover:bg-[#0A66C2] transition-all duration-500 hover:scale-110">
               <Linkedin size={20} />
             </a>
 
-            <a href="#" className="p-4 rounded-full bg-[#0f172a] hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all duration-500 hover:scale-110">
+            <a href="https://www.instagram.com/epoque.digital/" className="p-4 rounded-full bg-[#0f172a] hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all duration-500 hover:scale-110">
               <Instagram size={20} />
             </a>
 
-            <a href="#" className="p-4 rounded-full bg-[#0f172a] hover:bg-[#1877F2] transition-all duration-500 hover:scale-110">
+            <a href="https://www.facebook.com/EpoqueGroupOfCompanies" className="p-4 rounded-full bg-[#0f172a] hover:bg-[#1877F2] transition-all duration-500 hover:scale-110">
               <Facebook size={20} />
             </a>
 
@@ -153,11 +153,11 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="relative border-t border-white/10 py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-          <span>© 2026 Company Name. All Rights Reserved.</span>
+          <span>© 2026 Epoque Group of Companies. All Rights Reserved.</span>
 
           <span className="flex items-center gap-2 tracking-wide">
             <FileText size={14} />
-            Designed for Strategic Excellence
+            Designed for Epoque Group of Companies
           </span>
         </div>
       </div>
