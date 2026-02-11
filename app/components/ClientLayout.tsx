@@ -30,8 +30,8 @@ function SplashScreen() {
                 <Image
                     src="/logo.png"
                     alt="Époque Group Logo"
-                    width={220}
-                    height={220}
+                    width={420}
+                    height={420}
                     priority
                     className="drop-shadow-2xl"
                 />
