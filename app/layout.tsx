@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Poppins, Playfair_Display } from "next/font/google"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
+import ClientLayout from "./components/ClientLayout"
 import "./globals.css"
 
 const poppins = Poppins({
@@ -44,9 +45,11 @@ export default function RootLayout({
           transition-colors duration-300
         `}
       >
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <ClientLayout>
+          <Navbar />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </ClientLayout>
       </body>
     </html>
   )
