@@ -1,17 +1,21 @@
 "use client"
 
-import type { Metadata } from "next"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import { Phone, Mail, MapPin } from "lucide-react"
 
-
-const fadeUp = {
-    hidden: { opacity: 0, y: 50 },
+const fadeUp: Variants = {
+    hidden: {
+        opacity: 0,
+        y: 50
+    },
     show: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
-    },
+        transition: {
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1] as const
+        }
+    }
 }
 
 export default function ContactPage() {
@@ -24,7 +28,7 @@ export default function ContactPage() {
 
             <div className="relative max-w-7xl mx-auto px-6 py-28">
 
-                {/* ================= HEADER ================= */}
+                {/* HEADER */}
                 <motion.div
                     initial="hidden"
                     animate="show"
@@ -45,7 +49,7 @@ export default function ContactPage() {
                     </p>
                 </motion.div>
 
-                {/* ================= GRID ================= */}
+                {/* GRID */}
                 <div className="grid lg:grid-cols-2 gap-20 items-start">
 
                     {/* LEFT SIDE */}
@@ -141,6 +145,7 @@ export default function ContactPage() {
                             >
                                 Send Message
                             </button>
+
                         </form>
                     </motion.div>
 
