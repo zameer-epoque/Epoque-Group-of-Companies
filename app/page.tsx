@@ -1,7 +1,7 @@
 
 import Hero from "./components/Hero";
 import OurDivisions from "./components/OurDivisions";
-import OurDivisionsHeader from "./components/OurDivisionsHeader";
+
 import VisionMissionPromise from "./components/VisionMissionPromise";
 import WhoWeAre from "./components/whoareyou";
 import WhyChooseEpoque from "./components/WhyChooseEpoque";
