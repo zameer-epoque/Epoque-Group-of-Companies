@@ -85,16 +85,16 @@ export default function ContactPage() {
                                         Get in Touch
                                     </h2>
 
-                                   
+                                    <div className="flex items-center gap-4 text-gray-400">
+                                        <Phone className="text-orange-400" size={22} />
+                                        <span>+91 9133 633 327</span>
+                                    </div>
 
                                     <div className="flex items-center gap-4 text-gray-400">
                                         <Mail className="text-orange-400" size={22} />
                                         <span>sales@epoquegroup.in</span>
                                     </div>
-                                     <div className="flex items-center gap-4 text-gray-400">
-                                        <Phone className="text-orange-400" size={22} />
-                                        <span>+91 9133 633 327</span>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,21 @@ export default function ContactPage() {
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent focus:outline-none focus:border-orange-400 focus:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition"
                                         />
                                     </div>
-
+ <div>
+                                        <label
+                                            htmlFor="phone"
+                                            className="block text-sm font-medium text-gray-400 mb-3"
+                                        >
+                                            Enter Your Phone Number
+                                        </label>
+                                        <input
+                                            id="phone"
+                                            name="phone"
+                                            type="tel"
+                                            placeholder="+91 XXXXX XXXXX"
+                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent focus:outline-none focus:border-orange-400 focus:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition"
+                                        />
+                                    </div>
                                     {/* Email */}
                                     <div>
                                         <label
@@ -159,21 +173,7 @@ export default function ContactPage() {
                                     </div>
 
                                     {/* Phone */}
-                                    <div>
-                                        <label
-                                            htmlFor="phone"
-                                            className="block text-sm font-medium text-gray-400 mb-3"
-                                        >
-                                            Enter Your Phone Number
-                                        </label>
-                                        <input
-                                            id="phone"
-                                            name="phone"
-                                            type="tel"
-                                            placeholder="+91 XXXXX XXXXX"
-                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent focus:outline-none focus:border-orange-400 focus:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition"
-                                        />
-                                    </div>
+                                   
 
                                     {/* Message */}
                                     <div>
