@@ -12,6 +12,7 @@ const divisions = [
             "Crafting digital experiences that captivate, convert, and inspire. From web platforms to immersive applications, we build the future of your online presence.",
         image: "/tech.jpg",
         href: "/digital",
+        cta: "Explore Digital Division",
     },
     {
         id: "02",
@@ -19,7 +20,8 @@ const divisions = [
         description:
             "Redefining real estate through innovation and insight. We connect vision with value, transforming properties into legacies.",
         image: "/reality.jpg",
-        href: "/Realty",
+        href: "/realty",
+        cta: "Explore Realty Services",
     },
     {
         id: "03",
@@ -28,6 +30,7 @@ const divisions = [
             "Where spaces become stories. Our designs blend aesthetics with functionality, creating environments that elevate life and work.",
         image: "/interior.jpg",
         href: "/interiors",
+        cta: "View Creative Portfolio",
     },
     {
         id: "04",
@@ -36,6 +39,7 @@ const divisions = [
             "Engineering growth through strategic frameworks. We design revenue models and operational systems that scale with precision and purpose.",
         image: "/architecture.jpg",
         href: "/revenue",
+        cta: "Discover Our Strategy",
     },
 ]
 
@@ -45,11 +49,10 @@ export default function OurDivisions() {
 
             {/* Background Glow */}
             <div className="absolute inset-0 flex justify-center pointer-events-none">
-                <div className="w-[1200px] h-[1200px] bg-blue-500/10 blur-[250px]" />
+                <div className="w-[1200px] h-[1200px] bg-yellow-500/10 blur-[250px]" />
             </div>
 
             <div className="relative max-w-7xl mx-auto">
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     {divisions.map((item, index) => (
@@ -62,9 +65,8 @@ export default function OurDivisions() {
                             className="group perspective"
                         >
 
-                            {/* GRADIENT BORDER WRAPPER */}
-                            <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500
- transition-all duration-500 group-hover:from-yellow-400 group-hover:via-blue-500 group-hover:to-purple-500">
+                            {/* Gradient Border */}
+                            <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 transition-all duration-500 group-hover:from-yellow-400 group-hover:via-yellow-500 group-hover:to-yellow-600">
 
                                 <Link
                                     href={item.href}
@@ -80,7 +82,7 @@ export default function OurDivisions() {
                                     />
 
                                     {/* Dark Overlay */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1120] via-[#0B1120]/80 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
                                     {/* Content */}
                                     <div className="absolute inset-0 p-8 flex flex-col justify-end">
@@ -92,7 +94,7 @@ export default function OurDivisions() {
                                             transition={{ delay: 0.2 }}
                                             className="inline-block mb-4 px-4 py-2 bg-white/10 backdrop-blur rounded-full"
                                         >
-                                            <span className="text-blue-400 text-sm font-semibold">
+                                            <span className="text-yellow-400 text-sm font-semibold">
                                                 {item.id}
                                             </span>
                                         </motion.div>
@@ -112,18 +114,32 @@ export default function OurDivisions() {
                                                     key={i}
                                                     className="h-1 flex-1 rounded-full bg-white/20 overflow-hidden"
                                                 >
-                                                    <div className="h-full bg-gradient-to-r from-blue-400 to-yellow-400 w-0 group-hover:w-full transition-all duration-700" />
+                                                    <div className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 w-0 group-hover:w-full transition-all duration-700" />
                                                 </div>
                                             ))}
                                         </div>
 
-                                        {/* Explore */}
-                                        <div className="mt-5 inline-flex items-center gap-2 text-blue-400 opacity-0 translate-x-[-10px] transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
-                                            <span className="text-sm font-medium">
-                                                Explore More
+                                        {/* SEO Optimized Luxury CTA */}
+                                        <div className="
+                                            mt-6 inline-flex items-center gap-3
+                                            px-5 py-2.5 rounded-full
+                                            bg-gradient-to-r from-yellow-400/20 to-yellow-600/20
+                                            border border-yellow-400/40
+                                            backdrop-blur-md
+                                            text-yellow-400
+                                            opacity-0 translate-x-[-10px]
+                                            transition-all duration-500
+                                            group-hover:opacity-100
+                                            group-hover:translate-x-0
+                                            hover:from-yellow-400/30 hover:to-yellow-600/30
+                                            hover:shadow-[0_0_25px_rgba(250,204,21,0.4)]
+                                        ">
+                                            <span className="text-sm font-semibold tracking-wide uppercase">
+                                                {item.cta}
                                             </span>
+
                                             <svg
-                                                className="w-4 h-4"
+                                                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"

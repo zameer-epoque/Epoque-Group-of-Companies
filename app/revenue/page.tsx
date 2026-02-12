@@ -5,10 +5,7 @@ import { Landmark, TrendingUp, Settings, Brain } from "lucide-react"
 import Link from "next/link"
 
 const fadeUp: Variants = {
-    hidden: {
-        opacity: 0,
-        y: 40
-    },
+    hidden: { opacity: 0, y: 40 },
     show: {
         opacity: 1,
         y: 0,
@@ -23,10 +20,10 @@ export default function RevenuePage() {
     return (
         <section className="relative bg-black text-white overflow-hidden">
 
-            {/* Background Effects */}
-            <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#C79A3B_1px,transparent_1px),linear-gradient(to_bottom,#C79A3B_1px,transparent_1px)] bg-[size:80px_80px]" />
-            <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-gradient-to-br from-[#C79A3B]/20 to-[#D45B5B]/20 blur-[150px]" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tr from-[#7A2E63]/20 to-[#C79A3B]/20 blur-[150px]" />
+            {/* Enhanced Background */}
+            <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,orange_1px,transparent_1px),linear-gradient(to_bottom,orange_1px,transparent_1px)] bg-[size:90px_90px]" />
+            <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-gradient-to-br from-orange-500/20 to-red-500/20 blur-[160px]" />
+            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gradient-to-tr from-yellow-500/20 to-orange-500/20 blur-[160px]" />
 
             <div className="relative max-w-7xl mx-auto px-6 py-28">
 
@@ -37,13 +34,13 @@ export default function RevenuePage() {
                     variants={fadeUp}
                     className="text-center max-w-4xl mx-auto"
                 >
-                    <span className="text-xs uppercase tracking-[0.4em] text-[#C79A3B]">
+                    <span className="text-xs uppercase tracking-[0.4em] text-orange-400">
                         Strategic Growth Division
                     </span>
 
                     <h1 className="font-heading text-5xl md:text-6xl font-semibold mt-6 leading-tight">
                         Revenue{" "}
-                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
                             Architects
                         </span>
                     </h1>
@@ -61,12 +58,10 @@ export default function RevenuePage() {
                     <div className="mt-10 flex justify-center gap-6 flex-wrap">
                         <Link
                             href="/contact"
-                            className="px-8 py-4 rounded-full bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] text-black font-semibold hover:scale-105 transition duration-300 shadow-xl"
+                            className="px-10 py-4 rounded-full font-semibold text-black bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 hover:scale-105 transition duration-300 shadow-xl"
                         >
                             Request Consultation
                         </Link>
-
-
                     </div>
                 </motion.div>
 
@@ -75,22 +70,22 @@ export default function RevenuePage() {
 
                     {[
                         {
-                            icon: <Landmark size={26} />,
+                            icon: <Landmark size={28} />,
                             title: "DPR & Government Consulting",
                             desc: "Feasibility analysis, compliance documentation, PPP frameworks, and institutional financial modeling."
                         },
                         {
-                            icon: <TrendingUp size={26} />,
+                            icon: <TrendingUp size={28} />,
                             title: "Profitability Engineering",
                             desc: "Revenue modeling, cost architecture, and scalable financial systems."
                         },
                         {
-                            icon: <Settings size={26} />,
+                            icon: <Settings size={28} />,
                             title: "Process Optimization",
                             desc: "Workflow redesign, KPI tracking, and operational efficiency frameworks."
                         },
                         {
-                            icon: <Brain size={26} />,
+                            icon: <Brain size={28} />,
                             title: "Leadership Development",
                             desc: "Executive alignment programs and structured decision-making systems."
                         }
@@ -105,21 +100,52 @@ export default function RevenuePage() {
                                 delay: index * 0.15,
                                 ease: [0.16, 1, 0.3, 1] as const
                             }}
-                            className="group relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#C79A3B] hover:-translate-y-3 transition-all duration-300"
+                            className="group relative h-full"
                         >
-                            <div className="text-[#C79A3B] mb-5">
-                                {item.icon}
+
+                            {/* Orange Gradient Border */}
+                            <div className="
+                                relative p-[1.5px] rounded-3xl
+                                bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500
+                                transition-all duration-500
+                                group-hover:shadow-[0_0_40px_rgba(249,115,22,0.6)]
+                                h-full
+                            ">
+
+                                {/* Card */}
+                                <div className="
+                                    relative h-full rounded-3xl p-8
+                                    bg-gradient-to-br from-[#121212] to-[#1c1c1c]
+                                    border border-orange-500/20
+                                    transition-all duration-500
+                                    group-hover:-translate-y-3
+                                    group-hover:scale-[1.03]
+                                ">
+
+                                    {/* Glow Overlay */}
+                                    <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-orange-500/15 to-transparent blur-2xl" />
+
+                                    <div className="relative z-10">
+
+                                        <div className="text-orange-400 mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                                            {item.icon}
+                                        </div>
+
+                                        <h3 className="text-lg font-semibold mb-3 group-hover:text-orange-400 transition">
+                                            {item.title}
+                                        </h3>
+
+                                        <div className="w-12 h-[2px] bg-gradient-to-r from-orange-400 to-yellow-500 mb-5 rounded-full group-hover:w-20 transition-all duration-500" />
+
+                                        <p className="text-sm text-gray-400 leading-relaxed">
+                                            {item.desc}
+                                        </p>
+
+                                    </div>
+
+                                </div>
                             </div>
 
-                            <h3 className="text-lg font-semibold mb-3 group-hover:text-[#C79A3B] transition">
-                                {item.title}
-                            </h3>
-
-                            <p className="text-sm text-gray-400 leading-relaxed">
-                                {item.desc}
-                            </p>
-
-                            <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] group-hover:w-full transition-all duration-300" />
                         </motion.div>
                     ))}
                 </div>
@@ -132,7 +158,7 @@ export default function RevenuePage() {
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="text-4xl font-semibold bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent"
+                        className="text-4xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent"
                     >
                         Strategic Consulting Across India
                     </motion.h2>
@@ -164,7 +190,7 @@ export default function RevenuePage() {
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="text-xl italic text-[#D45B5B]"
+                        className="text-xl italic text-orange-400"
                     >
                         We don’t build businesses — we architect structured growth.
                     </motion.p>

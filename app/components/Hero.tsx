@@ -25,8 +25,8 @@ export default function Hero() {
   return (
     <section
       className="
-        relative min-h-screen flex items-center justify-center
-        px-6 pt-28 overflow-hidden
+        relative  flex items-center justify-center
+        px-6 pt-24 overflow-hidden
         bg-black text-white
       "
       aria-label="Hero Section"
@@ -54,13 +54,13 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="flex justify-center mb-12"
         >
-          <Image
+          {/* <Image
             src="/logo.png"
             alt="Company logo"
             width={220}
             height={220}
             priority
-          />
+          /> */}
         </motion.div>
 
         <motion.h1

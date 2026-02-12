@@ -61,10 +61,11 @@ export default function DigitalClient() {
             </section>
 
             {/* CORE SERVICES */}
+            {/* CORE SERVICES */}
             <section className="py-4 px-6 bg-[#0E0E0E] relative overflow-hidden">
 
                 <div className="absolute inset-0 flex justify-center pointer-events-none">
-                    <div className="w-[700px] h-[700px] bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-[180px]" />
+                    <div className="w-[700px] h-[700px] bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-red-500/10 blur-[180px]" />
                 </div>
 
                 <div className="relative max-w-7xl mx-auto">
@@ -74,11 +75,11 @@ export default function DigitalClient() {
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="text-center mb-10"
+                        className="text-center mb-16"
                     >
                         <h2 className="font-heading text-4xl md:text-6xl font-semibold relative inline-block">
                             Our Core Services
-                            <span className="absolute left-0 -bottom-3 w-full h-[3px] bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]" />
+                            <span className="absolute left-0 -bottom-3 w-full h-[3px] bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500" />
                         </h2>
 
                         <p className="mt-8 text-xl text-gray-400 max-w-3xl mx-auto">
@@ -87,7 +88,7 @@ export default function DigitalClient() {
                         </p>
                     </motion.div>
 
-                    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 items-stretch">
                         {[
                             {
                                 icon: "🔍",
@@ -120,56 +121,67 @@ export default function DigitalClient() {
                                     delay: index * 0.2,
                                     ease: [0.16, 1, 0.3, 1] as const,
                                 }}
-                                className="group relative rounded-2xl border border-white/10 p-8 bg-white/5 hover:bg-white/10 transition-all duration-500 hover:-translate-y-4 overflow-hidden"
+                                className="group relative h-full"
                             >
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-2xl" />
 
-                                <div className="relative">
-                                    <div className="text-4xl mb-6">{service.icon}</div>
+                                {/* Premium Orange Gradient Border */}
+                                <div className="
+                    relative p-[1.5px] rounded-3xl
+                    bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500
+                    transition-all duration-500
+                    group-hover:shadow-[0_0_40px_rgba(249,115,22,0.6)]
+                    h-full
+                ">
 
-                                    <h3 className="font-heading text-xl font-semibold mb-4 group-hover:text-[#C79A3B] transition">
-                                        {service.title}
-                                    </h3>
+                                    {/* Card */}
+                                    <div className="
+                        relative flex flex-col h-full
+                        rounded-3xl p-8
+                        bg-gradient-to-br from-[#121212] to-[#1c1c1c]
+                        border border-orange-500/20
+                        backdrop-blur-xl
+                        transition-all duration-500
+                        group-hover:-translate-y-3
+                        group-hover:scale-[1.03]
+                    ">
 
-                                    <p className="text-gray-400 text-sm leading-relaxed">
-                                        {service.desc}
-                                    </p>
+                                        {/* Glow Overlay */}
+                                        <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-orange-500/10 to-transparent blur-2xl" />
+
+                                        <div className="relative z-10 flex flex-col h-full">
+
+                                            {/* Icon */}
+                                            <div className="text-5xl mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                                                {service.icon}
+                                            </div>
+
+                                            {/* Title */}
+                                            <h3 className="font-heading text-xl font-semibold mb-4 group-hover:text-orange-400 transition">
+                                                {service.title}
+                                            </h3>
+
+                                            {/* Divider */}
+                                            <div className="w-12 h-[2px] bg-gradient-to-r from-orange-400 to-yellow-500 mb-6 rounded-full group-hover:w-20 transition-all duration-500" />
+
+                                            {/* Description */}
+                                            <p className="text-gray-400 text-sm leading-relaxed mt-auto">
+                                                {service.desc}
+                                            </p>
+
+                                        </div>
+
+                                        {/* Shimmer Effect */}
+                                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none bg-gradient-to-r from-transparent via-white/10 to-transparent bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
+
+                                    </div>
                                 </div>
+
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-32 px-6 text-center relative overflow-hidden">
-
-                <motion.div
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true }}
-                    variants={fadeUp}
-                >
-                    <h2 className="font-heading text-4xl md:text-6xl font-semibold mb-8">
-                        Ready to Build a{" "}
-                        <span className="bg-gradient-to-r from-[#C79A3B] to-[#D45B5B] bg-clip-text text-transparent">
-                            High-Performance Digital Engine?
-                        </span>
-                    </h2>
-
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-                        Let’s transform your marketing into a scalable, predictable revenue
-                        system powered by strategy and innovation.
-                    </p>
-
-                    <a
-                        href="/contact"
-                        className="inline-block px-14 py-5 rounded-full font-semibold text-black bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] hover:scale-105 transition duration-300 shadow-xl"
-                    >
-                        Start Your Growth Journey
-                    </a>
-                </motion.div>
-            </section>
 
         </main>
     )
