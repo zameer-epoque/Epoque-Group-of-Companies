@@ -21,7 +21,7 @@ const divisions = [
             "Redefining real estate through innovation and insight. We connect vision with value, transforming properties into legacies.",
         image: "/reality.jpg",
         href: "/realty",
-        cta: "Explore Realty Services",
+        cta: "Get More Realty Services",
     },
     {
         id: "03",
@@ -120,20 +120,24 @@ export default function OurDivisions() {
                                         </div>
 
                                         {/* SEO Optimized Luxury CTA */}
-                                        <div className="
-                                            mt-6 inline-flex items-center gap-3
-                                            px-5 py-2.5 rounded-full
-                                            bg-gradient-to-r from-yellow-400/20 to-yellow-600/20
-                                            border border-yellow-400/40
-                                            backdrop-blur-md
-                                            text-yellow-400
-                                            opacity-0 translate-x-[-10px]
-                                            transition-all duration-500
-                                            group-hover:opacity-100
-                                            group-hover:translate-x-0
-                                            hover:from-yellow-400/30 hover:to-yellow-600/30
-                                            hover:shadow-[0_0_25px_rgba(250,204,21,0.4)]
-                                        ">
+                                        <div
+                                            className="
+    mt-6 inline-flex items-center gap-3
+    px-5 py-2.5 rounded-full
+    bg-gradient-to-r from-yellow-400/20 to-red-400/20
+    border border-red-400/40
+    backdrop-blur-md
+    text-red-400
+    opacity-0 translate-x-[-10px]
+    transition-all duration-500
+    group-hover:opacity-100
+    group-hover:translate-x-0
+    hover:from-yellow-400/40 hover:to-red-500/40
+    hover:shadow-[0_0_30px_rgba(255,0,0,0.5)]
+    hover:scale-105
+  "
+                                        >
+
                                             <span className="text-sm font-semibold tracking-wide uppercase">
                                                 {item.cta}
                                             </span>

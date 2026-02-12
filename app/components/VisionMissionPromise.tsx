@@ -33,7 +33,7 @@ export default function VisionMissionPromise() {
                         title: "Our Promise",
                         subtitle: "Your Success, Our Legacy",
                         desc: "Every partnership is a journey of transformation. We invest not just our expertise, but our passion—ensuring your vision becomes a reality that inspires and evolves with you.",
-                        color: "#ca8a04",
+                        color: "#eab308",
                     },
                 ].map((item, index) => (
                     <motion.div
