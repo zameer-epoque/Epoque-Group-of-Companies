@@ -85,14 +85,15 @@ export default function ContactPage() {
                                         Get in Touch
                                     </h2>
 
-                                    <div className="flex items-center gap-4 text-gray-400">
-                                        <Phone className="text-orange-400" size={22} />
-                                        <span>+91 9133 633 327</span>
-                                    </div>
+                                   
 
                                     <div className="flex items-center gap-4 text-gray-400">
                                         <Mail className="text-orange-400" size={22} />
                                         <span>sales@epoquegroup.in</span>
+                                    </div>
+                                     <div className="flex items-center gap-4 text-gray-400">
+                                        <Phone className="text-orange-400" size={22} />
+                                        <span>+91 9133 633 327</span>
                                     </div>
                                 </div>
                             </div>
