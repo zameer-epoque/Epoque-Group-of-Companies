@@ -34,7 +34,7 @@ export default function ContactPage() {
                 >
                     <h1 className="font-heading text-5xl md:text-6xl font-semibold leading-tight">
                         Contact{" "}
-                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Époque Group
                         </span>
                     </h1>

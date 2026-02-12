@@ -40,7 +40,7 @@ export default function RevenuePage() {
 
                     <h1 className="font-heading text-5xl md:text-6xl font-semibold mt-6 leading-tight">
                         Revenue{" "}
-                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Architects
                         </span>
                     </h1>

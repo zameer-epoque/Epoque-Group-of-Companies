@@ -38,7 +38,7 @@ export default function EpoqueRealtySection() {
 
           <h1 className="font-heading text-4xl md:text-5xl xl:text-6xl font-semibold mt-6 leading-tight">
             Époque{" "}
-            <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
               Realty
             </span>
           </h1>
