@@ -3,6 +3,7 @@
 import Hero from "./components/Hero";
 
 import OurDivisions from "./components/OurDivisions";
+import PremiumCTA from "./components/PremiumCTA";
 
 import VisionMissionPromise from "./components/VisionMissionPromise";
 import WhoWeAre from "./components/whoareyou";
@@ -20,7 +21,7 @@ export default function Home() {
       <VisionMissionPromise />
       <OurDivisions />
       <WhyChooseEpoque />
-
+<PremiumCTA/>
 
 
 

@@ -27,7 +27,7 @@ export default function Footer() {
       </div>
 
       {/* CTA Section */}
-      <div className="relative bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 py-14 md:py-20">
+      {/* <div className="relative bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 py-14 md:py-20">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <h2 className="text-xl md:text-3xl font-semibold text-black tracking-wide leading-snug">
             Looking for Villas, Plots, Digital Growth or Interior Design in Hyderabad?
@@ -40,7 +40,7 @@ export default function Footer() {
             Talk to Our Experts →
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Footer */}
       <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24 grid gap-12 md:gap-16 sm:grid-cols-2 md:grid-cols-4">

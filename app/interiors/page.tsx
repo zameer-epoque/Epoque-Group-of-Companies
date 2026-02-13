@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion"
 import { Sparkles, Sofa, ScanLine, LayoutGrid } from "lucide-react"
 import Link from "next/link"
+import PremiumCTA from "../components/PremiumCTA"
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 50 },
@@ -197,6 +198,7 @@ export default function InteriorsPage() {
                 </div>
 
             </div>
+            <PremiumCTA/>
         </section>
     )
 }

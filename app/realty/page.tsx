@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion"
 import { Building2, Users, TrendingUp, BarChart3 } from "lucide-react"
+import PremiumCTA from "../components/PremiumCTA"
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
@@ -204,7 +205,7 @@ export default function realty() {
                     “We don’t just sell property — we build long-term real estate value in Hyderabad.”
                 </p>
             </div>
-
+            <PremiumCTA/>
         </section>
     )
 }

@@ -60,11 +60,7 @@ export default function WhyChooseEpoque() {
                 >
                     <h2 className="relative inline-block font-heading text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tight">
                         Why{" "}
-                        <span className="bg-gradient-to-r 
-                             from-yellow-400 
-                             via-yellow-500 
-                             to-yellow-600 
-                             bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Choose Époque
                         </span>
 
