@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 const divisions = [
     {
@@ -44,8 +45,10 @@ const divisions = [
 ]
 
 export default function OurDivisions() {
+    const router = useRouter()
+
     return (
-        <section className="relative py-12 px-6 bg-black text-white overflow-hidden">
+        <section className="relative py-20 px-6 bg-black text-white overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute inset-0 flex justify-center pointer-events-none">
@@ -53,6 +56,28 @@ export default function OurDivisions() {
             </div>
 
             <div className="relative max-w-7xl mx-auto">
+
+                {/* SECTION TITLE */}
+                <div className="text-center mb-16">
+                    <h2 className="relative inline-block text-4xl md:text-5xl font-semibold tracking-wide">
+                        Our{" "}
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                            Divisions
+                        </span>
+
+                        <span
+                            className="
+                absolute left-0 -bottom-3 h-[3px] w-full
+                bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                bg-[length:200%_100%]
+                animate-gradientMove
+                rounded-full
+              "
+                        />
+                    </h2>
+                </div>
+
+                {/* GRID */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                     {divisions.map((item, index) => (
@@ -64,13 +89,11 @@ export default function OurDivisions() {
                             viewport={{ once: true }}
                             className="group perspective"
                         >
-
-                            {/* Gradient Border */}
                             <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 transition-all duration-500 group-hover:from-yellow-400 group-hover:via-yellow-500 group-hover:to-yellow-600">
 
                                 <Link
                                     href={item.href}
-                                    className="relative block h-[420px] sm:h-[480px] rounded-xl overflow-hidden bg-black transform-style-3d transition-all duration-700 hover:rotate-y-2 hover:-translate-y-2"
+                                    className="relative block h-[460px] sm:h-[500px] rounded-xl overflow-hidden bg-black transform-style-3d transition-all duration-700 hover:rotate-y-2 hover:-translate-y-2"
                                 >
 
                                     {/* Image */}
@@ -85,9 +108,9 @@ export default function OurDivisions() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
                                     {/* Content */}
-                                    <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                                    <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end">
 
-                                        {/* ID Badge */}
+                                        {/* ID */}
                                         <motion.div
                                             initial={{ opacity: 0, x: -20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
@@ -99,46 +122,50 @@ export default function OurDivisions() {
                                             </span>
                                         </motion.div>
 
-                                        <h3 className="text-3xl sm:text-4xl font-semibold mb-4">
+                                        {/* Title */}
+                                        <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
                                             {item.title}
                                         </h3>
 
-                                        <p className="text-gray-300 text-base sm:text-lg leading-relaxed overflow-hidden max-h-0 opacity-0 transition-all duration-500 group-hover:max-h-40 group-hover:opacity-100">
+                                        {/* Description */}
+                                        <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
                                             {item.description}
                                         </p>
 
                                         {/* Progress Bars */}
-                                        <div className="mt-6 flex gap-1">
+                                        <div className="mt-2 flex gap-1">
                                             {[...Array(5)].map((_, i) => (
                                                 <div
                                                     key={i}
                                                     className="h-1 flex-1 rounded-full bg-white/20 overflow-hidden"
                                                 >
-                                                    <div className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 w-0 group-hover:w-full transition-all duration-700" />
+                                                    <div className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 w-full transition-all duration-700" />
                                                 </div>
                                             ))}
                                         </div>
 
-                                        {/* SEO Optimized Luxury CTA */}
+                                        {/* CTA FIXED FOR MOBILE */}
                                         <div
+                                            onClick={(e) => {
+                                                e.preventDefault()
+                                                e.stopPropagation()
+                                                router.push(item.href)
+                                            }}
                                             className="
-    mt-6 inline-flex items-center gap-3
-    px-5 py-2.5 rounded-full
-    bg-gradient-to-r from-yellow-400/20 to-red-400/20
-    border border-red-400/40
-    backdrop-blur-md
-    text-red-400
-    opacity-0 translate-x-[-10px]
-    transition-all duration-500
-    group-hover:opacity-100
-    group-hover:translate-x-0
-    hover:from-yellow-400/40 hover:to-red-500/40
-    hover:shadow-[0_0_30px_rgba(255,0,0,0.5)]
-    hover:scale-105
-  "
+                        mt-6 inline-flex items-center gap-3
+                        px-5 py-2.5 rounded-full
+                        bg-gradient-to-r from-yellow-400/20 to-red-400/20
+                        border border-red-400/40
+                        backdrop-blur-md
+                        text-red-400
+                        hover:from-yellow-400/40 hover:to-red-500/40
+                        hover:shadow-[0_0_30px_rgba(255,0,0,0.5)]
+                        hover:scale-105
+                        transition-all duration-300
+                        cursor-pointer
+                      "
                                         >
-
-                                            <span className="text-sm font-semibold tracking-wide uppercase">
+                                            <span className="text-xs sm:text-sm font-semibold tracking-wide uppercase">
                                                 {item.cta}
                                             </span>
 
@@ -164,7 +191,6 @@ export default function OurDivisions() {
 
                                 </Link>
                             </div>
-
                         </motion.div>
                     ))}
 
