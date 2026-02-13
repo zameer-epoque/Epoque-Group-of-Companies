@@ -1,5 +1,4 @@
 
-import DivisionsSection from "./components/DivisionsSection";
 import Hero from "./components/Hero";
 import OurDivisions from "./components/OurDivisions";
 
