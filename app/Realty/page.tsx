@@ -15,7 +15,7 @@ const fadeUp: Variants = {
     }
 }
 
-export default function EpoqueRealtySection() {
+export default function realty() {
     return (
         <section
             className="relative bg-black text-white overflow-hidden"
