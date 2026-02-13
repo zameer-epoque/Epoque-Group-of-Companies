@@ -10,37 +10,41 @@ const divisions = [
         id: "01",
         title: "Époque Digital",
         description:
-            "Crafting digital experiences that captivate, convert, and inspire. From web platforms to immersive applications, we build the future of your online presence.",
+            "SEO-driven digital marketing, performance advertising, and web development solutions designed to scale brands and businesses in Hyderabad and beyond.",
         image: "/tech.jpg",
         href: "/digital",
-        cta: "Explore Digital Division",
+        cta: "Explore Digital Marketing Services",
+        alt: "Digital marketing and SEO services in Hyderabad",
     },
     {
         id: "02",
         title: "Époque Realty",
         description:
-            "Redefining real estate through innovation and insight. We connect vision with value, transforming properties into legacies.",
+            "Luxury villas, gated community plots, HMDA approved lands, and premium real estate opportunities across Hyderabad’s fastest growing investment corridors.",
         image: "/reality.jpg",
         href: "/realty",
-        cta: "Get More Realty Services",
+        cta: "Get More Villas & Plots",
+        alt: "Luxury villas and plots for sale in Hyderabad",
     },
     {
         id: "03",
         title: "Époque Interiors",
         description:
-            "Where spaces become stories. Our designs blend aesthetics with functionality, creating environments that elevate life and work.",
+            "Premium residential and commercial interior design solutions crafted to elevate lifestyle spaces and modern work environments.",
         image: "/interior.jpg",
         href: "/interiors",
-        cta: "View Creative Portfolio",
+        cta: "View Interior Projects",
+        alt: "Luxury interior design services in Hyderabad",
     },
     {
         id: "04",
         title: "Revenue Architects",
         description:
-            "Engineering growth through strategic frameworks. We design revenue models and operational systems that scale with precision and purpose.",
+            "Strategic revenue growth consulting, sales optimization frameworks, and business scaling systems built for sustainable enterprise expansion.",
         image: "/architecture.jpg",
         href: "/revenue",
-        cta: "Discover Our Strategy",
+        cta: "Discover Revenue Strategy",
+        alt: "Revenue growth consulting and business scaling solutions",
     },
 ]
 
@@ -48,7 +52,10 @@ export default function OurDivisions() {
     const router = useRouter()
 
     return (
-        <section className="relative py-20 px-6 bg-black text-white overflow-hidden">
+        <section
+            className="relative py-20 px-6 bg-black text-white overflow-hidden"
+            aria-label="Our Business Divisions - Real Estate, Digital Marketing, Interiors and Revenue Consulting in Hyderabad"
+        >
 
             {/* Background Glow */}
             <div className="absolute inset-0 flex justify-center pointer-events-none">
@@ -67,14 +74,21 @@ export default function OurDivisions() {
 
                         <span
                             className="
-                absolute left-0 -bottom-3 h-[3px] w-full
-                bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-                bg-[length:200%_100%]
-                animate-gradientMove
-                rounded-full
-              "
+                                absolute left-0 -bottom-3 h-[3px] w-full
+                                bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                                bg-[length:200%_100%]
+                                animate-gradientMove
+                                rounded-full
+                            "
                         />
                     </h2>
+
+                    {/* SEO Supporting Line */}
+                    <p className="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">
+                        From luxury villas and plots in Hyderabad to digital marketing,
+                        interior design execution, and revenue growth consulting —
+                        Époque Group delivers integrated business and property solutions.
+                    </p>
                 </div>
 
                 {/* GRID */}
@@ -99,18 +113,18 @@ export default function OurDivisions() {
                                     {/* Image */}
                                     <Image
                                         src={item.image}
-                                        alt={item.title}
+                                        alt={item.alt}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover scale-110 transition-transform duration-700 group-hover:scale-100"
                                     />
 
-                                    {/* Dark Overlay */}
+                                    {/* Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent" />
 
                                     {/* Content */}
                                     <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end">
 
-                                        {/* ID */}
                                         <motion.div
                                             initial={{ opacity: 0, x: -20 }}
                                             whileInView={{ opacity: 1, x: 0 }}
@@ -122,29 +136,15 @@ export default function OurDivisions() {
                                             </span>
                                         </motion.div>
 
-                                        {/* Title */}
                                         <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
                                             {item.title}
                                         </h3>
 
-                                        {/* Description */}
                                         <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
                                             {item.description}
                                         </p>
 
-                                        {/* Progress Bars */}
-                                        <div className="mt-2 flex gap-1">
-                                            {[...Array(5)].map((_, i) => (
-                                                <div
-                                                    key={i}
-                                                    className="h-1 flex-1 rounded-full bg-white/20 overflow-hidden"
-                                                >
-                                                    <div className="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 w-full transition-all duration-700" />
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        {/* CTA FIXED FOR MOBILE */}
+                                        {/* CTA */}
                                         <div
                                             onClick={(e) => {
                                                 e.preventDefault()
@@ -152,18 +152,18 @@ export default function OurDivisions() {
                                                 router.push(item.href)
                                             }}
                                             className="
-                        mt-6 inline-flex items-center gap-3
-                        px-5 py-2.5 rounded-full
-                        bg-gradient-to-r from-yellow-400/20 to-red-400/20
-                        border border-red-400/40
-                        backdrop-blur-md
-                        text-red-400
-                        hover:from-yellow-400/40 hover:to-red-500/40
-                        hover:shadow-[0_0_30px_rgba(255,0,0,0.5)]
-                        hover:scale-105
-                        transition-all duration-300
-                        cursor-pointer
-                      "
+                                                mt-6 inline-flex items-center gap-3
+                                                px-5 py-2.5 rounded-full
+                                                bg-gradient-to-r from-yellow-400/20 to-red-400/20
+                                                border border-red-400/40
+                                                backdrop-blur-md
+                                                text-red-400
+                                                hover:from-yellow-400/40 hover:to-red-500/40
+                                                hover:shadow-[0_0_30px_rgba(255,0,0,0.5)]
+                                                hover:scale-105
+                                                transition-all duration-300
+                                                cursor-pointer
+                                            "
                                         >
                                             <span className="text-xs sm:text-sm font-semibold tracking-wide uppercase">
                                                 {item.cta}
@@ -186,7 +186,6 @@ export default function OurDivisions() {
 
                                     </div>
 
-                                    {/* Shine Effect */}
                                     <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-transparent via-white/10 to-transparent bg-[length:200%_100%] animate-shimmer opacity-0 group-hover:opacity-100 transition duration-700" />
 
                                 </Link>

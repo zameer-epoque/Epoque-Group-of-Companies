@@ -6,7 +6,7 @@ export default function WhoWeAre() {
     return (
         <section
             className="relative py-14 px-6 overflow-hidden bg-black text-white"
-            aria-label="Who We Are - Époque Group"
+            aria-label="Who We Are - Époque Group Real Estate, Digital, Interiors and Revenue Experts in Hyderabad"
         >
 
             {/* Background Glow */}
@@ -38,12 +38,12 @@ export default function WhoWeAre() {
                             transition={{ duration: 0.9, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="
-        absolute left-1/2 -bottom-4 h-[3px] w-full
-        -translate-x-1/2
-        origin-center
-        rounded-full
-        bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-    "
+                                absolute left-1/2 -bottom-4 h-[3px] w-full
+                                -translate-x-1/2
+                                origin-center
+                                rounded-full
+                                bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                            "
                         />
 
                         {/* Soft Glow Line */}
@@ -53,28 +53,32 @@ export default function WhoWeAre() {
                             transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="
-        absolute left-1/2 -bottom-4 h-[8px] w-full
-        -translate-x-1/2
-        origin-center
-        rounded-full
-        bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-        blur-md opacity-40
-    "
+                                absolute left-1/2 -bottom-4 h-[8px] w-full
+                                -translate-x-1/2
+                                origin-center
+                                rounded-full
+                                bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                                blur-md opacity-40
+                            "
                         />
 
                     </h2>
 
-
+                    {/* SEO Optimized Description */}
                     <p className="mt-8 text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-400">
                         <span className="font-semibold text-white">
                             Époque Group
                         </span>{" "}
-                        is a collective of visionaries, creators, and strategists united by one
-                        mission — to transform ideas into{" "}
+                        is a multi-division enterprise delivering premium{" "}
+                        <span className="font-semibold text-white">
+                            real estate solutions in Hyderabad
+                        </span>, performance-driven digital marketing services,
+                        luxury interior design execution, and strategic revenue growth consulting.
+                        We unite creativity, commerce, and intelligence to transform villas,
+                        gated community developments, brands, and businesses into{" "}
                         <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent font-semibold">
-                            iconic realities
-                        </span>{" "}
-                        through innovation, design, and strategic excellence.
+                            scalable success stories
+                        </span>.
                     </p>
                 </motion.div>
 
@@ -83,27 +87,27 @@ export default function WhoWeAre() {
 
                     {[
                         {
-                            icon: "✨",
-                            title: "Innovation First",
-                            desc: "We push boundaries with forward-thinking solutions that redefine industries and create lasting global impact.",
+                            icon: "🏡",
+                            title: "Real Estate Excellence",
+                            desc: "Delivering premium villas, gated community plots, and investment-driven real estate opportunities across Hyderabad’s fastest growing corridors.",
                             color: "#facc15",
                         },
                         {
-                            icon: "🎨",
-                            title: "Creative Excellence",
-                            desc: "Every project is crafted where artistry meets strategy, delivering experiences that captivate and inspire.",
+                            icon: "💻",
+                            title: "Digital Marketing",
+                            desc: "Performance-driven SEO, paid advertising, and brand growth strategies engineered to scale modern businesses and digital-first enterprises.",
                             color: "#eab308",
                         },
                         {
-                            icon: "🎯",
-                            title: "Strategic Vision",
-                            desc: "We shape intelligent strategies that empower businesses to grow, scale, and lead markets confidently.",
+                            icon: "🎨",
+                            title: "Interior Design",
+                            desc: "Luxury residential and commercial interior solutions crafted to elevate lifestyle, workspace functionality, and design identity.",
                             color: "#ca8a04",
                         },
                         {
-                            icon: "🌍",
-                            title: "Global Impact",
-                            desc: "We bridge culture, commerce, and creativity to create measurable global influence.",
+                            icon: "📈",
+                            title: "Revenue Growth",
+                            desc: "Strategic revenue consulting frameworks designed to optimize sales systems, scale operations, and accelerate sustainable business growth.",
                             color: "#a16207",
                         },
                     ].map((item, index) => (

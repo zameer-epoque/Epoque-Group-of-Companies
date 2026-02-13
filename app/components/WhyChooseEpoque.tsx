@@ -12,37 +12,40 @@ const items = [
     {
         icon: Palette,
         title: "Design-Led Thinking",
-        desc: "Every solution begins with design intelligence—where aesthetics, functionality, and human experience align to create timeless outcomes.",
+        desc: "From luxury villas and gated community developments to digital platforms and interior spaces, every solution begins with design intelligence—where aesthetics, functionality, and human experience align to create lasting value.",
     },
     {
         icon: Target,
         title: "Strategic Expertise",
-        desc: "We combine market insight, data-driven strategy, and creative foresight to architect solutions that accelerate growth and long-term success.",
+        desc: "We combine real estate market insight, SEO-driven digital marketing strategy, and revenue optimization frameworks to accelerate business growth across Hyderabad and emerging markets.",
     },
     {
         icon: Layers,
         title: "End-to-End Solutions",
-        desc: "From ideation to execution, we manage every layer of the process—ensuring clarity, quality, and cohesion across all touchpoints.",
+        desc: "From villas and plots in Hyderabad to performance marketing campaigns and interior execution, we manage every layer of development with clarity, precision, and measurable outcomes.",
     },
     {
         icon: Handshake,
         title: "Trusted Partnerships",
-        desc: "We believe true success is built through long-term partnerships—working as collaborators invested in your vision, growth, and legacy.",
+        desc: "We build long-term partnerships with property investors, business leaders, and growing brands—delivering transparent real estate solutions and scalable growth systems.",
     },
 ]
 
 export default function WhyChooseEpoque() {
     return (
-        <section className="relative py-24 px-6 bg-[#0E0E0E] text-white overflow-hidden">
+        <section
+            className="relative py-24 px-6 bg-[#0E0E0E] text-white overflow-hidden"
+            aria-label="Why Choose Époque - Real Estate, Digital Marketing, Interior Design and Revenue Consulting Experts in Hyderabad"
+        >
 
             {/* Ambient Background Glow */}
             <div className="absolute inset-0 flex justify-center pointer-events-none">
                 <div className="w-[1100px] h-[1100px] 
-                        bg-gradient-to-r 
-                        from-yellow-400/10 
-                        via-yellow-500/10 
-                        to-yellow-600/10 
-                        blur-[220px]" />
+                    bg-gradient-to-r 
+                    from-yellow-400/10 
+                    via-yellow-500/10 
+                    to-yellow-600/10 
+                    blur-[220px]" />
             </div>
 
             <div className="relative max-w-7xl mx-auto">
@@ -71,18 +74,19 @@ export default function WhyChooseEpoque() {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true }}
                             className="absolute left-1/2 -bottom-6 h-[3px] w-full 
-                         -translate-x-1/2 
-                         bg-gradient-to-r 
-                         from-yellow-400 
-                         via-yellow-500 
-                         to-yellow-600 
-                         rounded-full origin-center"
+                                -translate-x-1/2 
+                                bg-gradient-to-r 
+                                from-yellow-400 
+                                via-yellow-500 
+                                to-yellow-600 
+                                rounded-full origin-center"
                         />
                     </h2>
 
                     <p className="mt-10 text-xl md:text-2xl text-gray-400 leading-relaxed">
-                        Where strategic insight, creative excellence, and executional
-                        precision come together to deliver enduring value.
+                        A multidisciplinary platform delivering luxury real estate,
+                        performance-driven digital marketing, premium interior design,
+                        and strategic revenue growth solutions across Hyderabad.
                     </p>
                 </motion.div>
 
@@ -102,63 +106,44 @@ export default function WhyChooseEpoque() {
                             >
 
                                 {/* OUTER GRADIENT BORDER */}
-                                <div className="
-                  relative p-[1.5px] rounded-3xl h-full
-                  bg-gradient-to-br 
-                  from-yellow-400 
-                  via-yellow-500 
-                  to-yellow-600
-                  transition-all duration-500
-
-                  shadow-lg shadow-yellow-500/10
-                  group-hover:shadow-[0_0_45px_rgba(250,204,21,0.6)]
-                ">
+                                <div className="relative p-[1.5px] rounded-3xl h-full
+                                    bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600
+                                    transition-all duration-500
+                                    shadow-lg shadow-yellow-500/10
+                                    group-hover:shadow-[0_0_45px_rgba(250,204,21,0.6)]">
 
                                     {/* INNER CARD */}
-                                    <div className="
-                    relative flex flex-col h-full
-                    rounded-3xl p-8 sm:p-10
-                    bg-gradient-to-br from-[#141414] to-[#1c1c1c]
-                    border border-yellow-500/20
-                    backdrop-blur-xl
-                    transition-all duration-500
+                                    <div className="relative flex flex-col h-full
+                                        rounded-3xl p-8 sm:p-10
+                                        bg-gradient-to-br from-[#141414] to-[#1c1c1c]
+                                        border border-yellow-500/20
+                                        backdrop-blur-xl
+                                        transition-all duration-500
+                                        group-hover:-translate-y-3
+                                        group-hover:border-yellow-400/60">
 
-                    group-hover:-translate-y-3
-                    group-hover:border-yellow-400/60
-                  ">
+                                        {/* Glow */}
+                                        <div className="absolute inset-0 rounded-3xl
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-700 blur-3xl
+                                            bg-yellow-400/30" />
 
-                                        {/* Glow Spread Layer */}
-                                        <div className="
-                      absolute inset-0 rounded-3xl
-                      opacity-0 group-hover:opacity-100
-                      transition duration-700 blur-3xl
-                      bg-yellow-400/30
-                    " />
-
-                                        {/* CONTENT */}
                                         <div className="relative z-10">
 
                                             {/* ICON */}
-                                            <div className="
-  mb-6 
-  flex justify-center
-">
-                                                <div className="
-    flex items-center justify-center
-    w-16 h-16
-    rounded-full
-    bg-yellow-400/10
-    border border-yellow-400/30
-    text-yellow-400
-    transition-all duration-500
-    group-hover:scale-125
-    group-hover:bg-yellow-400/20
-    group-hover:shadow-[0_0_25px_rgba(250,204,21,0.5)]
-  ">
+                                            <div className="mb-6 flex justify-center">
+                                                <div className="flex items-center justify-center
+                                                    w-16 h-16 rounded-full
+                                                    bg-yellow-400/10
+                                                    border border-yellow-400/30
+                                                    text-yellow-400
+                                                    transition-all duration-500
+                                                    group-hover:scale-125
+                                                    group-hover:bg-yellow-400/20
+                                                    group-hover:shadow-[0_0_25px_rgba(250,204,21,0.5)]">
                                                     <Icon size={36} />
                                                 </div>
                                             </div>
-
 
                                             <h3 className="font-heading text-[36px] font-semibold mb-4 tracking-wide text-white flex justify-center">
                                                 {item.title}

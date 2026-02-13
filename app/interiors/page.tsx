@@ -18,9 +18,12 @@ const fadeUp: Variants = {
 
 export default function InteriorsPage() {
     return (
-        <section className="relative bg-black text-white overflow-hidden">
+        <section
+            className="relative bg-black text-white overflow-hidden"
+            aria-label="Luxury Interior Designers in Hyderabad - Home and Villa Interior Design"
+        >
 
-            {/* Enhanced Background Glow */}
+            {/* Background Glow */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -top-40 -left-40 w-[700px] h-[700px] bg-gradient-to-br from-orange-500/25 to-red-500/25 blur-[180px]" />
                 <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-tr from-yellow-500/20 to-orange-500/20 blur-[180px]" />
@@ -36,23 +39,26 @@ export default function InteriorsPage() {
                     className="text-center max-w-4xl mx-auto"
                 >
                     <span className="text-xs uppercase tracking-[0.4em] text-orange-400">
-                        Luxury Interior Innovation
+                        Luxury Interior Designers in Hyderabad
                     </span>
 
                     <h1 className="font-heading text-5xl md:text-6xl font-semibold mt-6 leading-tight">
-                        Époque{" "}
+                        Premium Home & Villa{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                            Interiors
+                            Interior Design
                         </span>
                     </h1>
 
                     <p className="mt-6 text-xl text-gray-300">
-                        Design It Yourself — Curate • Create • Customize
+                        Modular Kitchens • Custom Furniture • Office Interiors
                     </p>
 
-                    <p className="mt-6 text-gray-400 leading-relaxed max-w-2xl mx-auto">
-                        A next-generation interior design ecosystem blending digital visualization,
-                        modular engineering, and personalized material intelligence.
+                    <p className="mt-6 text-gray-400 leading-relaxed max-w-3xl mx-auto">
+                        Époque Interiors is a luxury interior design company in Hyderabad
+                        specializing in villa interiors, apartment interiors, modular kitchen design,
+                        custom furniture solutions, and office space optimization.
+                        We blend aesthetics, functionality, and intelligent planning
+                        to create timeless living and working environments.
                     </p>
 
                     <div className="mt-10 flex justify-center gap-6 flex-wrap">
@@ -60,7 +66,7 @@ export default function InteriorsPage() {
                             href="/contact"
                             className="px-10 py-4 rounded-full font-semibold text-black bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 hover:scale-105 transition duration-300 shadow-xl"
                         >
-                            Start Designing
+                            Book Interior Consultation
                         </Link>
                     </div>
                 </motion.div>
@@ -71,23 +77,23 @@ export default function InteriorsPage() {
                     {[
                         {
                             icon: <Sparkles size={28} />,
-                            title: "DIY Design Frameworks",
-                            desc: "Interactive tools empowering clients to co-create layouts, themes, and curated aesthetics."
+                            title: "Home & Villa Interiors",
+                            desc: "Luxury interior design for villas, gated community homes, and premium apartments across Hyderabad."
                         },
                         {
                             icon: <ScanLine size={28} />,
-                            title: "AR/VR Visualization",
-                            desc: "Immersive previews enabling accurate spatial decisions before execution begins."
+                            title: "3D & AR Visualization",
+                            desc: "Advanced 3D interior visualization and walkthroughs to preview your design before execution."
                         },
                         {
                             icon: <Sofa size={28} />,
-                            title: "Modular & Custom Furniture",
-                            desc: "Precision-crafted furniture systems balancing elegance and functionality."
+                            title: "Modular Kitchen & Furniture",
+                            desc: "Custom modular kitchens, wardrobes, and bespoke furniture crafted for elegance and durability."
                         },
                         {
                             icon: <LayoutGrid size={28} />,
-                            title: "Ergonomic Space Optimization",
-                            desc: "Scientific workflow mapping and spatial intelligence for modern lifestyles."
+                            title: "Office & Commercial Design",
+                            desc: "Modern office interior design focused on productivity, branding, and ergonomic excellence."
                         }
                     ].map((item, index) => (
                         <motion.div
@@ -103,26 +109,19 @@ export default function InteriorsPage() {
                             className="group relative h-full"
                         >
 
-                            {/* Orange Gradient Border */}
-                            <div className="
-                                relative p-[1.5px] rounded-3xl
+                            <div className="relative p-[1.5px] rounded-3xl
                                 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500
                                 transition-all duration-500
                                 group-hover:shadow-[0_0_40px_rgba(249,115,22,0.6)]
-                                h-full
-                            ">
+                                h-full">
 
-                                {/* Card */}
-                                <div className="
-                                    relative h-full rounded-3xl p-8
+                                <div className="relative h-full rounded-3xl p-8
                                     bg-gradient-to-br from-[#121212] to-[#1c1c1c]
                                     border border-orange-500/20
                                     transition-all duration-500
                                     group-hover:-translate-y-3
-                                    group-hover:scale-[1.03]
-                                ">
+                                    group-hover:scale-[1.03]">
 
-                                    {/* Glow Overlay */}
                                     <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-orange-500/15 to-transparent blur-2xl" />
 
                                     <div className="relative z-10">
@@ -142,7 +141,6 @@ export default function InteriorsPage() {
                                         </p>
 
                                     </div>
-
                                 </div>
                             </div>
 
@@ -150,7 +148,7 @@ export default function InteriorsPage() {
                     ))}
                 </div>
 
-                {/* SEO SECTION */}
+                {/* SEO CONTENT BLOCK */}
                 <div className="mt-32 text-center max-w-4xl mx-auto space-y-8">
 
                     <motion.h2
@@ -160,7 +158,7 @@ export default function InteriorsPage() {
                         variants={fadeUp}
                         className="text-4xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent"
                     >
-                        Redefining Luxury Interior Design in India
+                        Best Interior Designers in Hyderabad for Luxury Living
                     </motion.h2>
 
                     <motion.p
@@ -170,8 +168,9 @@ export default function InteriorsPage() {
                         variants={fadeUp}
                         className="text-gray-400 leading-relaxed"
                     >
-                        Modern interior design is no longer passive — it is collaborative,
-                        data-driven, and deeply personal.
+                        Whether you are designing a new villa, renovating an apartment,
+                        or building a premium office, our interior design solutions
+                        combine creativity with technical precision.
                     </motion.p>
 
                     <motion.p
@@ -181,9 +180,9 @@ export default function InteriorsPage() {
                         variants={fadeUp}
                         className="text-gray-500 leading-relaxed"
                     >
-                        Époque Interiors integrates digital visualization, material
-                        intelligence, and ergonomic science to craft environments
-                        that inspire productivity, elegance, and identity.
+                        We specialize in modular kitchen design, custom wardrobes,
+                        living room interiors, false ceiling design, lighting layouts,
+                        and complete turnkey interior execution across Hyderabad.
                     </motion.p>
 
                     <motion.p
@@ -193,7 +192,7 @@ export default function InteriorsPage() {
                         variants={fadeUp}
                         className="text-gray-400 leading-relaxed italic"
                     >
-                        Don’t just live in a space — design it your way.
+                        Transform your house into a personalized masterpiece with Époque Interiors.
                     </motion.p>
                 </div>
 

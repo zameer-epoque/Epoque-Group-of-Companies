@@ -17,9 +17,12 @@ const fadeUp: Variants = {
 
 export default function ContactPage() {
     return (
-        <section className="relative bg-black text-white overflow-hidden">
+        <section
+            className="relative bg-black text-white overflow-hidden"
+            aria-label="Contact Époque Group - Real Estate, Interiors and Business Consulting in Hyderabad"
+        >
 
-            {/* Enhanced Background Glow */}
+            {/* Background Glow */}
             <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-orange-500/25 to-red-500/25 blur-[180px] rounded-full"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-yellow-500/20 to-orange-500/20 blur-[180px] rounded-full"></div>
 
@@ -40,9 +43,9 @@ export default function ContactPage() {
                     </h1>
 
                     <p className="mt-6 text-lg text-gray-400 leading-relaxed">
-                        Let’s collaborate on transformative real estate, luxury interiors,
-                        and strategic growth consulting. Our team is ready to assist your
-                        next ambitious project.
+                        Get in touch with our Hyderabad team for luxury real estate,
+                        villa and plot advisory, premium interior design services,
+                        or strategic business consulting solutions.
                     </p>
                 </motion.div>
 
@@ -58,26 +61,26 @@ export default function ContactPage() {
                         className="space-y-12"
                     >
 
-                        {/* ADDRESS CARD */}
+                        {/* ADDRESS */}
                         <div className="group relative h-full">
                             <div className="relative p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(249,115,22,0.6)]">
                                 <div className="p-10 rounded-3xl bg-gradient-to-br from-[#121212] to-[#1c1c1c] border border-orange-500/20 transition-all duration-500 group-hover:-translate-y-2">
                                     <h2 className="text-2xl font-semibold mb-8 text-orange-400">
-                                        Office Address
+                                        Office Address – Hyderabad
                                     </h2>
 
                                     <div className="flex items-start gap-4 text-gray-400">
                                         <MapPin className="text-orange-400 mt-1" size={22} />
                                         <p>
                                             902, Office No C3, Sattva Magnus Commercial Building,
-                                            Shaikpet, Jubilee Hills, Hyderabad, India
+                                            Shaikpet, Jubilee Hills, Hyderabad, Telangana, India
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* CONTACT INFO CARD */}
+                        {/* CONTACT INFO */}
                         <div className="group relative h-full">
                             <div className="relative p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 transition-all duration-500 group-hover:shadow-[0_0_35px_rgba(249,115,22,0.6)]">
                                 <div className="p-10 rounded-3xl bg-gradient-to-br from-[#121212] to-[#1c1c1c] border border-orange-500/20 transition-all duration-500 group-hover:-translate-y-2 space-y-6">
@@ -94,20 +97,19 @@ export default function ContactPage() {
                                         <Mail className="text-orange-400" size={22} />
                                         <span>sales@epoquegroup.in</span>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
 
                         <p className="text-gray-500 leading-relaxed">
-                            Serving clients across India from our Hyderabad headquarters,
-                            Époque Group delivers structured real estate advisory,
-                            architectural interiors, DPR preparation, and enterprise-level
-                            consulting solutions with strategic excellence.
+                            Époque Group operates from Jubilee Hills, Hyderabad,
+                            delivering luxury villas and plots advisory, interior
+                            design execution, DPR consulting, and enterprise growth
+                            systems across India.
                         </p>
                     </motion.div>
 
-                    {/* RIGHT SIDE – FORM */}
+                    {/* FORM */}
                     <motion.div
                         initial="hidden"
                         whileInView="show"
@@ -124,28 +126,22 @@ export default function ContactPage() {
 
                                 <form className="space-y-8">
 
-                                    {/* Name */}
                                     <div>
-                                        <label
-                                            htmlFor="name"
-                                            className="block text-sm font-medium text-gray-400 mb-3"
-                                        >
-                                            Enter Your Name
+                                        <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-3">
+                                            Your Name
                                         </label>
                                         <input
                                             id="name"
                                             name="name"
                                             type="text"
-                                            placeholder="Your Name"
+                                            placeholder="Enter your full name"
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent focus:outline-none focus:border-orange-400 focus:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition"
                                         />
                                     </div>
- <div>
-                                        <label
-                                            htmlFor="phone"
-                                            className="block text-sm font-medium text-gray-400 mb-3"
-                                        >
-                                            Enter Your Phone Number
+
+                                    <div>
+                                        <label htmlFor="phone" className="block text-sm font-medium text-gray-400 mb-3">
+                                            Phone Number
                                         </label>
                                         <input
                                             id="phone"
@@ -155,13 +151,10 @@ export default function ContactPage() {
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent focus:outline-none focus:border-orange-400 focus:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition"
                                         />
                                     </div>
-                                    {/* Email */}
+
                                     <div>
-                                        <label
-                                            htmlFor="email"
-                                            className="block text-sm font-medium text-gray-400 mb-3"
-                                        >
-                                            Enter Your Email Address
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-3">
+                                            Email Address
                                         </label>
                                         <input
                                             id="email"
@@ -172,32 +165,24 @@ export default function ContactPage() {
                                         />
                                     </div>
 
-                                    {/* Phone */}
-                                   
-
-                                    {/* Message */}
                                     <div>
-                                        <label
-                                            htmlFor="message"
-                                            className="block text-sm font-medium text-gray-400 mb-3"
-                                        >
-                                            Tell Us About Your Project
+                                        <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-3">
+                                            Project Details
                                         </label>
                                         <textarea
                                             id="message"
                                             name="message"
                                             rows={5}
-                                            placeholder="Describe your real estate, interior, or consulting requirement..."
+                                            placeholder="Tell us about your real estate, interior design, or consulting requirement..."
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent focus:outline-none focus:border-orange-400 focus:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition resize-none"
                                         />
                                     </div>
 
-                                    {/* Submit */}
                                     <button
                                         type="submit"
                                         className="w-full py-4 rounded-full font-semibold text-black bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 hover:scale-105 transition duration-300 shadow-xl"
                                     >
-                                        Send Message
+                                        Submit Inquiry
                                     </button>
 
                                 </form>
