@@ -158,10 +158,10 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="relative border-t border-white/10 py-6">
-        <div className="max-w-7xl mx-auto px-6 text-center text-xs md:text-sm text-gray-500">
-          © 2026 Epoque Group of Companies | Real Estate, Interiors & Digital Marketing in Hyderabad
-        </div>
-      </div>
+  <div className="max-w-7xl mx-auto px-6 text-center text-xs md:text-sm text-gray-400">
+    © 2026 Epoque Group of Companies | Real Estate, Interiors & Digital Marketing in Hyderabad
+  </div>
+</div>
 
     </footer>
   )
