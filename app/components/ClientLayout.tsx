@@ -50,7 +50,7 @@ export default function ClientLayout({
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false)
-        }, 2200)
+        }, 1200)
 
         return () => clearTimeout(timer)
     }, [])
