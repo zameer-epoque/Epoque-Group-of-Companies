@@ -157,8 +157,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative border-t border-white/10 py-6">
-  <div className="max-w-7xl mx-auto px-6 text-center text-xs md:text-sm text-gray-400">
+<div className="relative border-t border-white/10 py-6">
+  <div className="max-w-7xl mx-auto px-6 text-center text-xs md:text-sm text-white/80">
     © 2026 Epoque Group of Companies | Real Estate, Interiors & Digital Marketing in Hyderabad
   </div>
 </div>
