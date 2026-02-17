@@ -170,7 +170,7 @@ export default function DigitalClient() {
                     </div>
                 </div>
             </section>
-            <PremiumCTA/>
+            <PremiumCTA />
         </main>
     )
 }

@@ -514,7 +514,8 @@ export default function ContactPage() {
                                             name="fullName"
                                             type="text"
                                             required
-                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent"
+                                            placeholder="Enter your full name"
+                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
@@ -526,7 +527,8 @@ export default function ContactPage() {
                                             name="phone"
                                             type="tel"
                                             required
-                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent"
+                                            placeholder="Enter your phone number"
+                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
@@ -538,7 +540,8 @@ export default function ContactPage() {
                                             name="email"
                                             type="email"
                                             required
-                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent"
+                                            placeholder="Enter your email address"
+                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
@@ -549,7 +552,7 @@ export default function ContactPage() {
                                         <select
                                             name="service"
                                             required
-                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-black text-white"
+                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-black text-white focus:outline-none focus:border-orange-400 transition"
                                         >
                                             <option value="">Select a Service</option>
                                             <option value="Real Estate">Real Estate – Villas & Plots</option>
@@ -567,7 +570,8 @@ export default function ContactPage() {
                                             name="message"
                                             rows={5}
                                             required
-                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent resize-none"
+                                            placeholder="Tell us about your project requirements..."
+                                            className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent resize-none placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
@@ -580,6 +584,7 @@ export default function ContactPage() {
                                     </button>
 
                                 </form>
+
 
                             </div>
                         </div>
