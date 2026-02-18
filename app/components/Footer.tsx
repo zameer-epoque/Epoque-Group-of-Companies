@@ -123,16 +123,15 @@ export default function Footer() {
               <Youtube size={18} />
             </a>
 
-            {/* WhatsApp */}
             <a
-              href="https://wa.me/919133633327"
+              href="https://wa.me/919133633327?text=Hello%20%C3%89poque%20Group,%20I%20am%20interested%20in%20your%20services.%20Please%20share%20more%20details."
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"
               className="w-10 h-10 flex items-center justify-center rounded-full 
-    bg-white/10 hover:bg-green-600 active:bg-green-600
-    hover:scale-110 active:scale-95
-    transition-all duration-300"
+  bg-white/10 hover:bg-green-600 active:bg-green-600
+  hover:scale-110 active:scale-95
+  transition-all duration-300"
             >
               <FaWhatsapp size={18} />
             </a>
