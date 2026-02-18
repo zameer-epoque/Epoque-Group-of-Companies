@@ -106,21 +106,12 @@ export default function ContactPage() {
                                                 href="https://maps.app.goo.gl/ZJbPj6fDZFsumDEj6"
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="
-      block w-full
-      text-gray-400
-      cursor-pointer
-      transition-colors duration-300
-      hover:text-white
-      active:text-white
-      focus:text-white
-    "
+                                                className="block w-full text-gray-400 hover:text-white transition-colors duration-300"
                                             >
                                                 902, Office No C3, Sattva Magnus Commercial Building,
                                                 Shaikpet, Jubilee Hills, Hyderabad, Telangana, India, 500008
                                             </a>
                                         </p>
-
                                     </div>
 
                                     <div className="mt-8 rounded-2xl overflow-hidden border border-orange-500/20">
@@ -151,7 +142,7 @@ export default function ContactPage() {
 
                                     <a
                                         href="tel:+919133633327"
-                                        className="flex items-center gap-4 text-gray-400 hover:text-white active:text-white transition-colors duration-300"
+                                        className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors duration-300"
                                     >
                                         <Phone className="text-orange-400" size={22} />
                                         +91 9133 633 327
@@ -159,7 +150,7 @@ export default function ContactPage() {
 
                                     <a
                                         href="mailto:sales@epoquegroup.in"
-                                        className="flex items-center gap-4 text-gray-400 hover:text-white active:text-white transition-colors duration-300"
+                                        className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors duration-300"
                                     >
                                         <Mail className="text-orange-400" size={22} />
                                         sales@epoquegroup.in
@@ -186,55 +177,72 @@ export default function ContactPage() {
                                     Send Us a Message
                                 </h2>
 
-                                <form ref={formRef} onSubmit={sendEmail} className="space-y-8">
+                                <form
+                                    ref={formRef}
+                                    onSubmit={sendEmail}
+                                    autoComplete="on"
+                                    className="space-y-8"
+                                >
 
+                                    {/* Full Name */}
                                     <div>
-                                        <label className="block text-sm text-white mb-3">
+                                        <label htmlFor="fullName" className="block text-sm text-white mb-3">
                                             Full Name *
                                         </label>
                                         <input
+                                            id="fullName"
                                             name="fullName"
                                             type="text"
+                                            autoComplete="name"
                                             required
                                             placeholder="Enter your full name"
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
+                                    {/* Phone */}
                                     <div>
-                                        <label className="block text-sm text-white mb-3">
+                                        <label htmlFor="phone" className="block text-sm text-white mb-3">
                                             Phone Number *
                                         </label>
                                         <input
+                                            id="phone"
                                             name="phone"
                                             type="tel"
+                                            autoComplete="tel"
                                             required
-                                            pattern="[0-9]{10}"
-                                            title="Enter a valid 10-digit phone number"
+                                            pattern="[6-9]{1}[0-9]{9}"
+                                            title="Enter a valid 10-digit Indian phone number"
                                             placeholder="Enter your phone number"
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
+                                    {/* Email */}
                                     <div>
-                                        <label className="block text-sm text-white mb-3">
+                                        <label htmlFor="email" className="block text-sm text-white mb-3">
                                             Email Address *
                                         </label>
                                         <input
+                                            id="email"
                                             name="email"
                                             type="email"
+                                            autoComplete="email"
                                             required
                                             placeholder="Enter your email address"
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
                                         />
                                     </div>
 
+                                    {/* Service */}
                                     <div>
-                                        <label className="block text-sm text-white mb-3">
+                                        <label htmlFor="service" className="block text-sm text-white mb-3">
                                             Service Interested In *
                                         </label>
                                         <select
+                                            id="service"
                                             name="service"
+                                            autoComplete="off"
                                             required
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-black text-white focus:outline-none focus:border-orange-400 transition"
                                         >
@@ -246,13 +254,16 @@ export default function ContactPage() {
                                         </select>
                                     </div>
 
+                                    {/* Message */}
                                     <div>
-                                        <label className="block text-sm text-white mb-3">
+                                        <label htmlFor="message" className="block text-sm text-white mb-3">
                                             Project Details *
                                         </label>
                                         <textarea
+                                            id="message"
                                             name="message"
                                             rows={5}
+                                            autoComplete="off"
                                             required
                                             placeholder="Tell us about your project requirements..."
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-transparent resize-none placeholder-gray-500 focus:outline-none focus:border-orange-400 transition"
@@ -263,9 +274,9 @@ export default function ContactPage() {
                                         type="submit"
                                         disabled={loading}
                                         className={`w-full py-4 rounded-full font-semibold text-black 
-bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-transition duration-300 shadow-xl 
-${loading
+                    bg-gradient-to-r from-orange-400 via-yellow-300 to-red-300 
+                    transition duration-300 shadow-xl 
+                    ${loading
                                                 ? "opacity-60 cursor-not-allowed"
                                                 : "hover:scale-105 active:scale-95"}`}
                                     >
