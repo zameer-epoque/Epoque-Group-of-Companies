@@ -69,7 +69,7 @@ export default function Footer() {
 
             {/* Facebook */}
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/EpoqueGroupOfCompanies"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
