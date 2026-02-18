@@ -31,7 +31,7 @@ export default function ContactPage() {
 
             await emailjs.sendForm(
                 "service_93wx9l2",
-                "template_ge5ir2l1",
+                "template_ge5ir2l",
                 formRef.current,
                 "zVIYCzNwWz2NlMQs9"
             )

@@ -64,7 +64,7 @@ export default function Footer() {
     hover:scale-110 active:scale-95
     transition-all duration-300"
             >
-              <Instagram size={18} />
+              <Instagram size={26} />
             </a>
 
             {/* Facebook */}
@@ -78,7 +78,7 @@ export default function Footer() {
     hover:scale-110 active:scale-95
     transition-all duration-300"
             >
-              <Facebook size={18} />
+              <Facebook size={26} />
             </a>
 
             {/* LinkedIn */}
@@ -92,7 +92,7 @@ export default function Footer() {
     hover:scale-110 active:scale-95
     transition-all duration-300"
             >
-              <Linkedin size={18} />
+              <Linkedin size={26} />
             </a>
 
             {/* X (Twitter) */}
@@ -106,7 +106,7 @@ export default function Footer() {
     hover:scale-110 active:scale-95
     transition-all duration-300"
             >
-              <FaXTwitter size={18} />
+              <FaXTwitter size={26} />
             </a>
 
             {/* YouTube */}
@@ -120,7 +120,7 @@ export default function Footer() {
     hover:scale-110 active:scale-95
     transition-all duration-300"
             >
-              <Youtube size={18} />
+              <Youtube size={26} />
             </a>
 
             <a
@@ -133,7 +133,7 @@ export default function Footer() {
   hover:scale-110 active:scale-95
   transition-all duration-300"
             >
-              <FaWhatsapp size={18} />
+              <FaWhatsapp size={26} />
             </a>
 
           </div>
