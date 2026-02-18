@@ -275,7 +275,7 @@ export default function ContactPage() {
                                         disabled={loading}
                                         className={`w-full py-4 rounded-full font-semibold text-black 
                     bg-gradient-to-r from-orange-400 via-yellow-300 to-red-300 
-                    transition duration-300 shadow-xl 
+                    transition duration-300 shadow-xl hover:cursor-pointer
                     ${loading
                                                 ? "opacity-60 cursor-not-allowed"
                                                 : "hover:scale-105 active:scale-95"}`}
