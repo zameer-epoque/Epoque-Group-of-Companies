@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function PremiumCTA() {
     return (
-        <section className="py-8 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400">
+        <section className="py-8 bg-gradient-to-r from-yellow-200 via-amber-300 to-orange-200">
 
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
 

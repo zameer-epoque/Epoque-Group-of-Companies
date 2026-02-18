@@ -9,7 +9,7 @@ import {
   MapPin,
   Phone,
   Mail,
-   Youtube,
+  Youtube,
 } from "lucide-react"
 import { FaWhatsapp, FaXTwitter } from "react-icons/fa6"
 
@@ -53,91 +53,91 @@ export default function Footer() {
           {/* ===== SOCIAL MEDIA ===== */}
           <div className="flex justify-center sm:justify-start gap-4 pt-4">
 
-  {/* Instagram */}
-  <a
-    href="https://instagram.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Instagram"
-    className="w-10 h-10 flex items-center justify-center rounded-full 
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/epoque.digital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="w-10 h-10 flex items-center justify-center rounded-full 
     bg-white/10 hover:bg-pink-600 active:bg-pink-600 
     hover:scale-110 active:scale-95
     transition-all duration-300"
-  >
-    <Instagram size={18} />
-  </a>
+            >
+              <Instagram size={18} />
+            </a>
 
-  {/* Facebook */}
-  <a
-    href="https://facebook.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Facebook"
-    className="w-10 h-10 flex items-center justify-center rounded-full 
+            {/* Facebook */}
+            <a
+              href="https://facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="w-10 h-10 flex items-center justify-center rounded-full 
     bg-white/10 hover:bg-blue-600 active:bg-blue-600
     hover:scale-110 active:scale-95
     transition-all duration-300"
-  >
-    <Facebook size={18} />
-  </a>
+            >
+              <Facebook size={18} />
+            </a>
 
-  {/* LinkedIn */}
-  <a
-    href="https://linkedin.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    className="w-10 h-10 flex items-center justify-center rounded-full 
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/epoquegroupofcompany/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="w-10 h-10 flex items-center justify-center rounded-full 
     bg-white/10 hover:bg-blue-700 active:bg-blue-700
     hover:scale-110 active:scale-95
     transition-all duration-300"
-  >
-    <Linkedin size={18} />
-  </a>
+            >
+              <Linkedin size={18} />
+            </a>
 
-  {/* X (Twitter) */}
-  <a
-    href="https://x.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="X (Twitter)"
-    className="w-10 h-10 flex items-center justify-center rounded-full 
+            {/* X (Twitter) */}
+            <a
+              href="https://x.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+              className="w-10 h-10 flex items-center justify-center rounded-full 
     bg-white/10 hover:bg-gray-800 active:bg-gray-800
     hover:scale-110 active:scale-95
     transition-all duration-300"
-  >
-    <FaXTwitter size={18} />
-  </a>
+            >
+              <FaXTwitter size={18} />
+            </a>
 
-  {/* YouTube */}
-  <a
-    href="https://youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="YouTube"
-    className="w-10 h-10 flex items-center justify-center rounded-full 
+            {/* YouTube */}
+            <a
+              href="https://youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="w-10 h-10 flex items-center justify-center rounded-full 
     bg-white/10 hover:bg-red-600 active:bg-red-600
     hover:scale-110 active:scale-95
     transition-all duration-300"
-  >
-    <Youtube size={18} />
-  </a>
+            >
+              <Youtube size={18} />
+            </a>
 
-  {/* WhatsApp */}
-  <a
-    href="https://wa.me/919133633327"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="WhatsApp"
-    className="w-10 h-10 flex items-center justify-center rounded-full 
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/919133633327"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+              className="w-10 h-10 flex items-center justify-center rounded-full 
     bg-white/10 hover:bg-green-600 active:bg-green-600
     hover:scale-110 active:scale-95
     transition-all duration-300"
-  >
-    <FaWhatsapp size={18} />
-  </a>
+            >
+              <FaWhatsapp size={18} />
+            </a>
 
-</div>
+          </div>
 
         </div>
 
