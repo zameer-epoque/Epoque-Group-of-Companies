@@ -45,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          className="font-heading text-4xl md:text-6xl xl:text-7xl font-semibold leading-tight"
+          className="font-heading text-4xl md:text-5xl xl:text-5xl font-semibold leading-tight"
         >
           Real Estate, Digital Marketing & Strategic{" "}
           <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">

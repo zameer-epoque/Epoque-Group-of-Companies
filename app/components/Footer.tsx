@@ -155,7 +155,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="flex gap-3 items-start hover:text-white transition"
             >
-              <MapPin size={18} className="text-orange-400 mt-1" />
+              <MapPin size={62} className="text-orange-400 mt-1" />
               902, Office No C3, Sattva Magnus Commercial Building,
               Shaikpet, Jubilee Hills, Hyderabad, Telangana, India
             </a>
