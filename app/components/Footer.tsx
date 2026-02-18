@@ -111,7 +111,7 @@ export default function Footer() {
 
             {/* YouTube */}
             <a
-              href="https://youtube.com/"
+              href="https://youtube.com/@epoquegroupofcompanies/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"

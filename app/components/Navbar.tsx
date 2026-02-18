@@ -74,7 +74,7 @@ export default function Navbar() {
                           <li key={sub.href}>
                             <Link
                               href={sub.href}
-                              className={`block px-6 py-3 text-sm transition
+                              className={`block px-6 py-3 text-[22] transition
                                 ${pathname === sub.href
                                   ? "text-[#C79A3B] bg-white/5"
                                   : "text-gray-300 hover:text-[#C79A3B] hover:bg-white/5"
@@ -127,9 +127,8 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       <div
         id="mobile-menu"
-        className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden bg-black ${
-          open ? "max-h-[1000px] opacity-100 py-6" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden bg-black ${open ? "max-h-[1000px] opacity-100 py-6" : "max-h-0 opacity-0"
+          }`}
       >
         <ul className="flex flex-col px-6 gap-6">
 
@@ -147,16 +146,14 @@ export default function Navbar() {
                     {item.label}
                     <ChevronDown
                       size={18}
-                      className={`transition-transform duration-300 ${
-                        mobileDropdown ? "rotate-180" : ""
-                      }`}
+                      className={`transition-transform duration-300 ${mobileDropdown ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 
                   <div
-                    className={`transition-all duration-500 overflow-hidden ${
-                      mobileDropdown ? "max-h-96 mt-4" : "max-h-0"
-                    }`}
+                    className={`transition-all duration-500 overflow-hidden ${mobileDropdown ? "max-h-96 mt-4" : "max-h-0"
+                      }`}
                   >
                     <ul className="flex flex-col gap-4 pl-4">
                       {item.dropdown.map((sub) => (
@@ -164,11 +161,10 @@ export default function Navbar() {
                           <Link
                             href={sub.href}
                             onClick={() => setOpen(false)}
-                            className={`block text-sm transition ${
-                              pathname === sub.href
-                                ? "text-[#C79A3B]"
-                                : "text-gray-300 hover:text-[#C79A3B]"
-                            }`}
+                            className={`block text-sm transition ${pathname === sub.href
+                              ? "text-[#C79A3B]"
+                              : "text-gray-300 hover:text-[#C79A3B]"
+                              }`}
                           >
                             {sub.label}
                           </Link>
@@ -185,11 +181,10 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`uppercase text-sm font-semibold tracking-wider transition ${
-                    pathname === item.href
-                      ? "text-[#C79A3B]"
-                      : "hover:text-[#C79A3B]"
-                  }`}
+                  className={`uppercase text-sm font-semibold tracking-wider transition ${pathname === item.href
+                    ? "text-[#C79A3B]"
+                    : "hover:text-[#C79A3B]"
+                    }`}
                 >
                   {item.label}
                 </Link>
