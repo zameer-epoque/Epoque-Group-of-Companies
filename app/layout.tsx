@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.epoquegroup.in"),
 
   title: {
-    default: "Époque Group | Luxury Real Estate & Interiors",
+    default: "Époque Group",
     template: "%s | Époque Group",
   },
 
@@ -40,6 +40,14 @@ export const metadata: Metadata = {
 
   verification: {
     google: "632da3f0abd94eab",
+  },
+
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
@@ -108,6 +116,23 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-JJLRVZTZKB');
+          `}
+        </Script>
+
+        {/* Organization Schema for Google */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Époque Group",
+              "url": "https://www.epoquegroup.in",
+              "logo": "https://www.epoquegroup.in/icon.png"
+            }
           `}
         </Script>
 
