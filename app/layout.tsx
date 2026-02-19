@@ -74,7 +74,7 @@ export const metadata: Metadata = {
       "Premium villa design and construction Hyderabad",
       "Luxury property advisory Hyderabad",
       "Custom luxury home development India"
-    ]
+    ],
     
 
   verification: {
