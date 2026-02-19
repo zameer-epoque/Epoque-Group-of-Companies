@@ -30,7 +30,7 @@ export default function ContactPage() {
             setLoading(true)
 
             await emailjs.sendForm(
-                "service_93wx9l2",
+                "service_0ngjsts",
                 "template_ge5ir2l",
                 formRef.current,
                 "zVIYCzNwWz2NlMQs9"
