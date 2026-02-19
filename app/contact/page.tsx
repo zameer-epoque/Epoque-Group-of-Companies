@@ -283,20 +283,7 @@ export default function ContactPage() {
                                         {loading ? "Sending..." : "Submit Inquiry"}
                                     </button>
                                     {/* WhatsApp Button */}
-                                    <a
-                                        href="https://wa.me/919133633327"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="block w-full mt-4"
-                                    >
-                                        <div
-                                            className="w-full py-4 rounded-full font-semibold text-white text-center
-    bg-green-600 hover:bg-green-700 active:scale-95
-    transition duration-300 shadow-xl"
-                                        >
-                                            Chat on WhatsApp (+91 9133 633 327)
-                                        </div>
-                                    </a>
+
                                 </form>
 
                             </div>
