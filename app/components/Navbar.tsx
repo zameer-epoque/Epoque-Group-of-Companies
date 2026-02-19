@@ -17,21 +17,8 @@ const navItems = [
       { label: "Search Engine Optimization", href: "/digital/search-engine-optimization" },
       { label: "Google Ads / PPC", href: "/digital/google-ads-ppc" },
       { label: "Content Marketing", href: "/digital/content-marketing" },
-      { label: "Branding & Creative Services", href: "/digital/Branding-Creative-Services" },
-      { label: "Lead Generation Services", href: "/digital/Lead-Generation-Services" },
-    ],
-  },
-
-  {
-    label: "Realty",
-    href: "/realty",
-    dropdown: [
-      { label: "Luxury Villas", href: "/realty/luxury-villas-hyderabad" },
-      { label: "HMDA Plots", href: "/realty/hmda-plots-hyderabad" },
-      { label: "Gated Communities", href: "/realty/gated-community-projects" },
-      { label: "Investment Advisory", href: "/realty/investment-advisory" },
-      { label: "Open Lands & Farm Lands", href: "/realty/open-lands-hyderabad" },
-      { label: "Market Insights", href: "/realty/market-insights" },
+      { label: "Branding & Creative Services", href: "/digital/branding-creative-services" },
+      { label: "Lead Generation Services", href: "/digital/lead-generation-services" },
     ],
   },
 
