@@ -21,7 +21,7 @@ const navItems = [
       { label: "Lead Generation Services", href: "/digital/lead-generation-services" },
     ],
   },
-
+  { label: "REALTY", href: "/realty" },
   { label: "Interiors", href: "/interiors" },
   { label: "Revenue", href: "/revenue" },
   { label: "Contact", href: "/contact" },
