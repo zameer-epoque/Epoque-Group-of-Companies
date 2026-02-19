@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+
 import Image from "next/image"
 import {
   Linkedin,
@@ -185,11 +185,29 @@ export default function Footer() {
           </h3>
 
           <ul className="space-y-4 text-white/80 text-sm md:text-base">
-            <li><Link href="/realty" className="hover:text-orange-400 transition">Real Estate – Villas & Plots</Link></li>
-            <li><Link href="/digital" className="hover:text-orange-400 transition">Digital Marketing & SEO</Link></li>
-            <li><Link href="/interiors" className="hover:text-orange-400 transition">Luxury Interior Design</Link></li>
-            <li><Link href="/revenue" className="hover:text-orange-400 transition">Business Consulting</Link></li>
+            <li>
+              <a href="/realty" className="hover:text-orange-400 transition">
+                Real Estate – Villas & Plots
+              </a>
+            </li>
+            <li>
+              <a href="/digital" className="hover:text-orange-400 transition">
+                Digital Marketing & SEO
+              </a>
+            </li>
+            <li>
+              <a href="/interiors" className="hover:text-orange-400 transition">
+                Luxury Interior Design
+              </a>
+            </li>
+            <li>
+              <a href="/revenue" className="hover:text-orange-400 transition">
+                Business Consulting
+              </a>
+            </li>
           </ul>
+
+
         </div>
 
         {/* QUICK LINKS */}
@@ -199,11 +217,29 @@ export default function Footer() {
           </h3>
 
           <ul className="space-y-4 text-white/80 text-sm md:text-base">
-            <li><Link href="/" className="hover:text-orange-400 transition">Home</Link></li>
-            <li><Link href="/contact" className="hover:text-orange-400 transition">Contact Us</Link></li>
-            <li><Link href="/privacy-policy" className="hover:text-orange-400 transition">Privacy Policy</Link></li>
-            <li><Link href="/terms-of-service" className="hover:text-orange-400 transition">Terms</Link></li>
+            <li>
+              <a href="/" className="hover:text-orange-400 transition">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-orange-400 transition">
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="/privacy-policy" className="hover:text-orange-400 transition">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms-of-service" className="hover:text-orange-400 transition">
+                Terms
+              </a>
+            </li>
           </ul>
+
+
         </div>
 
       </div>
@@ -218,3 +254,5 @@ export default function Footer() {
     </footer>
   )
 }
+
+
