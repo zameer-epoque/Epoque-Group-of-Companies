@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.epoquegroup.in"),
+  metadataBase: new URL("https://epoquegroup.in"),
 
   title: {
     default: "Époque Group",
@@ -31,12 +31,51 @@ export const metadata: Metadata = {
   description:
     "Époque Group delivers luxury real estate, premium interiors, and digital property solutions with strategic excellence.",
 
-  keywords: [
-    "Luxury Real Estate",
-    "Premium Interiors",
-    "Property Investment",
-    "Luxury Homes India",
-  ],
+    keywords: [
+      // Luxury Real Estate - Hyderabad Focus
+      "Luxury real estate in Hyderabad",
+      "Premium villas in Hyderabad",
+      "Luxury apartments in Jubilee Hills",
+      "High-end residential projects Hyderabad",
+      "Ultra luxury homes in Hyderabad",
+      "Gated community villas Hyderabad",
+      "Luxury property investment Hyderabad",
+      "Best luxury real estate company Hyderabad",
+      "Premium residential developers Telangana",
+      "Luxury flats near Hitech City",
+    
+      // Investment Intent Keywords
+      "Luxury property investment in India",
+      "High ROI real estate Hyderabad",
+      "Best areas to invest in Hyderabad real estate",
+      "Premium property for NRI investment",
+      "Luxury homes for sale in Hyderabad",
+      "Pre-launch luxury projects Hyderabad",
+      "Exclusive luxury residences India",
+    
+      // Interior Design + Premium Segment
+      "Luxury interior design company Hyderabad",
+      "Premium home interiors Hyderabad",
+      "High-end villa interior designers",
+      "Luxury apartment interior design India",
+      "Modern luxury home interiors",
+      "Turnkey interior solutions Hyderabad",
+      "Premium residential interior experts",
+    
+      // Brand Authority Keywords
+      "Luxury lifestyle property developers",
+      "Elite real estate developers India",
+      "Boutique luxury real estate firm",
+      "Exclusive real estate consultancy Hyderabad",
+      "Luxury property management services",
+    
+      // Combination Keywords (Low Competition High Conversion)
+      "Luxury real estate and interior solutions",
+      "Premium villa design and construction Hyderabad",
+      "Luxury property advisory Hyderabad",
+      "Custom luxury home development India"
+    ]
+    
 
   verification: {
     google: "URwvOHIEiyvwiJrVDoHIS0UQfmqLfkd0TJMX_C1k_oA",
@@ -54,7 +93,7 @@ export const metadata: Metadata = {
     title: "Époque Group | Luxury Real Estate & Interiors",
     description:
       "Luxury real estate and premium interiors crafted with timeless elegance.",
-    url: "https://www.epoquegroup.in",
+    url: "https://epoquegroup.in",
     siteName: "Époque Group",
     images: [
       {
@@ -71,13 +110,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Époque Group | Luxury Real Estate",
-    description:
-      "Premium real estate and interior excellence.",
+    description: "Premium real estate and interior excellence.",
     images: ["/og-image.jpg"],
   },
 
   alternates: {
-    canonical: "https://www.epoquegroup.in",
+    canonical: "https://epoquegroup.in",
   },
 };
 
@@ -86,6 +124,62 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://epoquegroup.in/#localbusiness",
+    name: "Époque Group",
+    image: "https://epoquegroup.in/icon.png",
+    url: "https://epoquegroup.in",
+    telephone: "+919133633327"
+    ,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "902, Office No C3, Sattva Magnus Commercial Building, Shaikpet",
+      addressLocality: "Hyderabad",
+      addressRegion: "Telangana",
+      postalCode: "500008",
+      addressCountry: "IN",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "17.4239",
+      longitude: "78.4070",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+
+        ],
+        opens: "09:00",
+        closes: "17:00",
+      },
+    ],
+    sameAs: [
+      "https://www.instagram.com/epoque.digital/",
+      "https://www.facebook.com/EpoqueGroupOfCompanies",
+      "https://www.linkedin.com/company/epoquegroupofcompany/",
+      "https://x.com/EpoqueGroup",
+      "https://www.youtube.com/@epoquegroupofcompanies",
+
+    ],
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Époque Group",
+    url: "https://epoquegroup.in",
+    logo: "https://epoquegroup.in/icon.png",
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <body
@@ -109,7 +203,6 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-JJLRVZTZKB"
           strategy="afterInteractive"
         />
-
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -119,23 +212,25 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Organization Schema for Google */}
+        {/* Local Business Schema */}
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+
+        {/* Organization Schema */}
         <Script
           id="organization-schema"
           type="application/ld+json"
           strategy="afterInteractive"
-        >
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Époque Group",
-              "url": "https://www.epoquegroup.in",
-              "logo": "https://www.epoquegroup.in/icon.png"
-            }
-          `}
-        </Script>
-
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
       </body>
     </html>
   );
