@@ -119,7 +119,7 @@ export default function LeadGenerationPage() {
               bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
               hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
                         >
-                            Book Free Strategy Call
+                            Book Free Strategy Call Now
                         </a>
                     </div>
 
