@@ -75,11 +75,7 @@ export default function RevenuePage() {
                 <div className="mt-28 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                     {[
-                        {
-                            icon: <Landmark size={28} />,
-                            title: "DPR & Government Consulting",
-                            desc: "Preparation of Detailed Project Reports (DPR), feasibility studies, PPP frameworks, and institutional compliance documentation."
-                        },
+
                         {
                             icon: <TrendingUp size={28} />,
                             title: "Revenue & Profitability Engineering",
@@ -198,7 +194,7 @@ export default function RevenuePage() {
                 </div>
 
             </div>
-            <PremiumCTA/>
+            <PremiumCTA />
         </section>
     )
 }
