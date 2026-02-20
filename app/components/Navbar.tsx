@@ -11,7 +11,7 @@ const navItems = [
 
   {
     label: "Digital",
-    href: "/digital",
+    href: "/digital/branding-creative-services",
     dropdown: [
       { label: "Social Media Marketing", href: "/digital/social-media-marketing" },
       { label: "Search Engine Optimization", href: "/digital/search-engine-optimization" },
@@ -24,7 +24,10 @@ const navItems = [
   { label: "REALTY", href: "/realty" },
   { label: "Interiors", href: "/interiors" },
   { label: "Revenue", href: "/revenue" },
+  { label: "Our Clients", href: "/clients" },
+  { label: "Faq", href: "/faq" },
   { label: "Contact", href: "/contact" },
+
 ]
 
 export default function Navbar() {

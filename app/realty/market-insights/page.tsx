@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Land rates in Hyderabad 2026",
     "Best areas to invest in Hyderabad",
     "Hyderabad property growth forecast",
-    "ORR impact real estate Hyderabad",
+    "ORR impact real estate Hyderabad", 
   ],
 }
 

@@ -20,7 +20,7 @@ export default function realty() {
     return (
         <section
             className="relative bg-black text-white overflow-hidden"
-            aria-label="Real Estate Company in Hyderabad - Villas and Plots for Sale"
+            aria-label="Real Estate Company in Hyderabad - Villas and  for Sale"
         >
 
             {/* Background Glow */}
@@ -41,7 +41,7 @@ export default function realty() {
                     </span>
 
                     <h1 className="font-heading text-4xl md:text-5xl xl:text-6xl font-semibold mt-6 leading-tight">
-                        Luxury Villas & Plots for Sale in{" "}
+                        Luxury Villas  for Sale in{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Hyderabad
                         </span>
@@ -49,7 +49,7 @@ export default function realty() {
 
                     <p className="mt-6 text-gray-300 max-w-3xl mx-auto leading-relaxed">
                         Époque Realty is a structured real estate platform specializing in
-                        luxury villas, gated community projects, HMDA approved plots,
+                        luxury villas, gated community projects, HMDA approved ,
                         open lands, and premium residential developments across Hyderabad.
                         We empower buyers, investors, and builders with data-driven insights,
                         transparent processes, and high-performance sales systems.
@@ -70,12 +70,12 @@ export default function realty() {
                         {
                             icon: <TrendingUp size={26} />,
                             title: "High-Conversion Sales Systems",
-                            desc: "Strategic marketing and lead qualification frameworks ensuring faster absorption of villas, plots, and independent houses."
+                            desc: "Strategic marketing and lead qualification frameworks ensuring faster absorption of villas, , and independent houses."
                         },
                         {
                             icon: <Building2 size={26} />,
                             title: "Builder Representation",
-                            desc: "Inventory positioning, pricing advisory, and launch strategy for luxury villas, open plots, and residential layouts in Hyderabad."
+                            desc: "Inventory positioning, pricing advisory, and launch strategy for luxury villas, open , and residential layouts in Hyderabad."
                         },
                         {
                             icon: <BarChart3 size={26} />,
@@ -151,7 +151,7 @@ export default function realty() {
 
                         <p className="text-gray-400 leading-relaxed mb-4">
                             We go beyond traditional brokerage models. Whether you are
-                            looking to buy villas in Hyderabad, invest in HMDA plots,
+                            looking to buy villas in Hyderabad, invest in HMDA ,
                             or explore gated community developments, our ecosystem
                             integrates analytics, pricing intelligence, and transparent
                             processes.
