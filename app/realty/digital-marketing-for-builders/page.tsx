@@ -25,7 +25,7 @@ export default function BrandingCreativePage() {
                         We are a strategic branding agency in Hyderabad helping real estate
                         developers, startups and enterprises build powerful brand identities,
                         premium visual systems and high-converting creative assets that drive
-                        authority, trust and long-term growth.
+                        authority, trust and measurable revenue growth.
                     </p>
 
                     <div className="mt-10">
@@ -41,61 +41,60 @@ export default function BrandingCreativePage() {
                 </div>
             </div>
 
-            {/* AUTHORITY SECTION */}
-            <div className="max-w-5xl mx-auto px-6 pb-16 text-gray-400 space-y-6 leading-relaxed">
+            {/* AUTHORITY CONTENT */}
+            <div className="max-w-5xl mx-auto px-6 pb-20 text-gray-400 space-y-6 leading-relaxed">
 
                 <h2 className="text-3xl font-semibold text-white">
-                    Strategic Branding That Drives Revenue
+                    Strategic Branding That Drives Business Growth
                 </h2>
 
                 <p>
-                    In competitive markets like Gachibowli, Kokapet and Financial District,
-                    branding is not just visual design — it is positioning, perception and
-                    psychological influence. Businesses in Hyderabad must differentiate
-                    themselves to attract high-value customers.
+                    In competitive Hyderabad markets like Gachibowli, Kokapet,
+                    Financial District and Hitech City, branding is more than
+                    design — it is positioning, perception and emotional influence.
                 </p>
 
                 <p>
-                    Our branding services combine market research, competitive analysis,
-                    brand psychology and performance marketing alignment to create
-                    brand systems that directly impact revenue.
+                    A strong brand system increases premium perception,
+                    shortens sales cycles and improves conversion performance
+                    across marketing channels.
                 </p>
 
                 <p>
-                    Whether you are launching a luxury real estate project,
-                    scaling a tech startup, or repositioning an enterprise brand,
-                    we create structured identity systems that elevate authority
-                    and accelerate growth.
+                    Our branding frameworks combine market research,
+                    competitor mapping, buyer psychology and performance
+                    marketing alignment to create identity systems that
+                    directly impact revenue.
                 </p>
             </div>
 
-            {/* SERVICES */}
+            {/* SERVICES GRID */}
             <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-10">
 
                 {[
                     {
                         title: "Logo & Brand Identity Design",
-                        desc: "Strategic logo systems, typography architecture, color psychology and complete brand guidelines for long-term market positioning."
+                        desc: "Strategic logo systems, typography architecture, color psychology and complete brand guidelines."
                     },
                     {
-                        title: "Corporate & Real Estate Branding",
-                        desc: "Brochures, investor decks, project profiles and high-end marketing collateral designed for Hyderabad developers."
+                        title: "Real Estate Branding",
+                        desc: "Luxury villa and apartment project branding for Hyderabad developers."
+                    },
+                    {
+                        title: "Corporate & Marketing Collaterals",
+                        desc: "Premium brochures, pitch decks and high-converting marketing assets."
                     },
                     {
                         title: "Creative Campaign Visuals",
-                        desc: "High-converting ad creatives, social media visuals and paid campaign assets."
-                    },
-                    {
-                        title: "Video & Motion Branding",
-                        desc: "Brand films, explainer videos, property walkthroughs and promotional animations."
+                        desc: "Performance ad creatives and social media design systems."
                     },
                     {
                         title: "Website UI/UX Branding",
-                        desc: "Conversion-focused website experiences that strengthen digital authority."
+                        desc: "Conversion-focused website experiences that strengthen authority."
                     },
                     {
                         title: "Rebranding & Positioning Strategy",
-                        desc: "Complete repositioning frameworks for businesses scaling across India."
+                        desc: "Complete repositioning systems for scaling brands across India."
                     }
                 ].map((service, index) => (
                     <motion.div
@@ -113,6 +112,7 @@ export default function BrandingCreativePage() {
                         </div>
                     </motion.div>
                 ))}
+
             </div>
 
             {/* PROCESS */}
@@ -124,10 +124,10 @@ export default function BrandingCreativePage() {
 
                     <div className="grid md:grid-cols-4 gap-10 text-gray-400">
                         {[
-                            "Brand Research & Market Analysis",
+                            "Market Research & Brand Audit",
                             "Positioning & Strategic Framework",
                             "Design Execution & Asset Creation",
-                            "Launch & Performance Alignment"
+                            "Launch & Marketing Alignment"
                         ].map((step, index) => (
                             <div key={index} className="space-y-4">
                                 <div className="text-4xl font-bold text-orange-400">
@@ -140,13 +140,19 @@ export default function BrandingCreativePage() {
                 </div>
             </div>
 
-            {/* INTERNAL LINKING */}
+            {/* INTERNAL LINKS */}
             <div className="max-w-4xl mx-auto px-6 py-16 text-center space-y-6">
                 <h3 className="text-2xl font-semibold">Related Services</h3>
                 <div className="flex flex-wrap justify-center gap-6 text-orange-400">
-                    <Link href="/social-media-marketing">Social Media Marketing</Link>
-                    <Link href="/search-engine-optimization">SEO Services</Link>
-                    <Link href="/digital/google-ads-ppc">Google Ads / PPC</Link>
+                    <Link href="/digital/social-media-marketing">
+                        Social Media Marketing
+                    </Link>
+                    <Link href="/digital/search-engine-optimization">
+                        SEO Services
+                    </Link>
+                    <Link href="/digital/google-ads-ppc">
+                        Google Ads / PPC
+                    </Link>
                 </div>
             </div>
 
@@ -157,13 +163,15 @@ export default function BrandingCreativePage() {
                 </h2>
 
                 <div className="space-y-6 text-gray-400">
+
                     <div>
                         <h3 className="text-orange-400 font-semibold">
                             Why is branding important for Hyderabad businesses?
                         </h3>
                         <p>
-                            Strong branding increases perceived value, builds trust and
-                            differentiates businesses in competitive Hyderabad markets.
+                            Strong branding increases perceived value,
+                            builds trust and differentiates businesses in
+                            competitive Hyderabad markets.
                         </p>
                     </div>
 
@@ -172,20 +180,31 @@ export default function BrandingCreativePage() {
                             Do you provide branding for real estate projects?
                         </h3>
                         <p>
-                            Yes. We specialize in real estate branding including luxury
-                            villa projects, apartment launches and developer positioning.
+                            Yes. We specialize in luxury villa projects,
+                            apartment launches and developer positioning strategies.
                         </p>
                     </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Do you offer complete brand strategy?
+                        </h3>
+                        <p>
+                            Yes. We handle research, positioning,
+                            identity creation and marketing alignment.
+                        </p>
+                    </div>
+
                 </div>
             </div>
 
             {/* CTA */}
             <div className="py-28 px-6 text-center">
                 <h2 className="text-4xl font-semibold">
-                    Ready to Build a Premium Brand?
+                    Ready to Build a Premium Brand in Hyderabad?
                 </h2>
                 <p className="mt-6 text-gray-400">
-                    Let’s create a powerful brand system that drives authority and revenue.
+                    Let’s create a high-authority brand system that drives revenue growth.
                 </p>
 
                 <Link
@@ -198,7 +217,7 @@ export default function BrandingCreativePage() {
                 </Link>
             </div>
 
-            {/* SCHEMA */}
+            {/* SERVICE SCHEMA */}
             <Script
                 id="branding-service-schema"
                 type="application/ld+json"
@@ -213,6 +232,36 @@ export default function BrandingCreativePage() {
                             name: "Epoque Group",
                             url: "https://epoquegroup.in"
                         }
+                    })
+                }}
+            />
+
+            {/* FAQ SCHEMA */}
+            <Script
+                id="branding-faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: "Why is branding important for Hyderabad businesses?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Branding increases perceived value, builds trust and strengthens competitive positioning."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you provide branding for real estate projects?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, we specialize in luxury villa and apartment project branding in Hyderabad."
+                                }
+                            }
+                        ]
                     })
                 }}
             />
