@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react"
 
 const navItems = [
   { label: "Home", href: "/" },
-
+  { label: "About", href: "/about-epoque-group" },
   {
     label: "Digital",
     href: "/digital/branding-creative-services",
