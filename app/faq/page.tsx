@@ -153,9 +153,10 @@ export default function FAQPage() {
           <span className="text-white">FAQ</span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-semibold text-center mb-12">
+
+        <h2 className="text-4xl md:text-5xl font-semibold text-center mb-12 bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
           Frequently Asked Questions
-        </h1>
+        </h2>
 
         <p className="text-gray-400 text-center max-w-3xl mx-auto mb-16">
           Find answers to common questions about our digital marketing and branding services in Hyderabad.

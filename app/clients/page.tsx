@@ -63,7 +63,10 @@ export default function ClientsPage() {
 
                 {/* HERO SECTION */}
                 <h1 className="text-4xl md:text-5xl font-semibold text-center mb-8">
-                    Our Clients & Real Estate Marketing Success Stories
+                    <span className="text-white">Our Clients</span>{" "}
+                    <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                        & Real Estate Marketing Success Stories
+                    </span>
                 </h1>
 
                 <p className="text-gray-400 text-center max-w-3xl mx-auto mb-16 leading-relaxed">
