@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion"
 import { Landmark, TrendingUp, Settings, Brain } from "lucide-react"
 import Link from "next/link"
+import Script from "next/script"
 import PremiumCTA from "../components/PremiumCTA"
 
 const fadeUp: Variants = {
@@ -39,7 +40,7 @@ export default function RevenuePage() {
                     className="text-center max-w-4xl mx-auto"
                 >
                     <span className="text-xs uppercase tracking-[0.4em] text-orange-400">
-                        Business & Revenue Consulting in Hyderabad
+                        Business Consulting & DPR Services in Hyderabad
                     </span>
 
                     <h1 className="font-heading text-5xl md:text-6xl font-semibold mt-6 leading-tight">
@@ -50,15 +51,14 @@ export default function RevenuePage() {
                     </h1>
 
                     <p className="mt-6 text-xl text-gray-300">
-                        DPR Consulting • Financial Modeling • Profit Optimization
+                        DPR Preparation • Financial Modeling • Profit Optimization • Strategic Advisory
                     </p>
 
                     <p className="mt-6 text-gray-400 leading-relaxed max-w-3xl mx-auto">
-                        Revenue Architects is a strategic consulting division specializing in
-                        Detailed Project Reports (DPR), financial modeling, government advisory,
-                        profitability systems, and scalable business frameworks.
-                        We support enterprises, startups, institutions, and government projects
-                        across Hyderabad and India with structured, data-driven growth systems.
+                        Revenue Architects is a strategic consulting division offering Detailed Project Report (DPR) preparation,
+                        financial feasibility analysis, investor documentation, profitability systems,
+                        and structured revenue growth frameworks for startups, enterprises,
+                        real estate developers and government institutions across Hyderabad and India.
                     </p>
 
                     <div className="mt-10 flex justify-center gap-6 flex-wrap">
@@ -75,21 +75,25 @@ export default function RevenuePage() {
                 <div className="mt-28 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                     {[
-
                         {
                             icon: <TrendingUp size={28} />,
-                            title: "Revenue & Profitability Engineering",
-                            desc: "Revenue modeling, pricing strategy, cost optimization, and scalable financial architecture for sustainable growth."
+                            title: "Revenue & Financial Engineering",
+                            desc: "Revenue modeling, pricing strategy, financial forecasting, break-even analysis and scalable profitability systems."
                         },
                         {
                             icon: <Settings size={28} />,
                             title: "Process & Operations Optimization",
-                            desc: "KPI systems, workflow restructuring, automation frameworks, and operational efficiency consulting."
+                            desc: "KPI frameworks, operational restructuring, automation systems and cost optimization consulting."
                         },
                         {
                             icon: <Brain size={28} />,
-                            title: "Leadership & Strategic Advisory",
-                            desc: "Executive alignment, strategic planning workshops, and decision-making frameworks for high-growth organizations."
+                            title: "Strategic Advisory & Leadership Consulting",
+                            desc: "Executive alignment, long-term strategy design and structured decision-making frameworks."
+                        },
+                        {
+                            icon: <Landmark size={28} />,
+                            title: "DPR & Government Project Consulting",
+                            desc: "Detailed Project Report preparation, feasibility studies, compliance documentation and funding advisory."
                         }
                     ].map((item, index) => (
                         <motion.div
@@ -104,7 +108,6 @@ export default function RevenuePage() {
                             }}
                             className="group relative h-full"
                         >
-
                             <div className="relative p-[1.5px] rounded-3xl
                                 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500
                                 transition-all duration-500
@@ -118,82 +121,95 @@ export default function RevenuePage() {
                                     group-hover:-translate-y-3
                                     group-hover:scale-[1.03]">
 
-                                    <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-orange-500/15 to-transparent blur-2xl" />
-
-                                    <div className="relative z-10">
-
-                                        <div className="text-orange-400 mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
-                                            {item.icon}
-                                        </div>
-
-                                        <h3 className="text-lg font-semibold mb-3 group-hover:text-orange-400 transition">
-                                            {item.title}
-                                        </h3>
-
-                                        <div className="w-12 h-[2px] bg-gradient-to-r from-orange-400 to-yellow-500 mb-5 rounded-full group-hover:w-20 transition-all duration-500" />
-
-                                        <p className="text-sm text-gray-400 leading-relaxed">
-                                            {item.desc}
-                                        </p>
-
+                                    <div className="text-orange-400 mb-6">
+                                        {item.icon}
                                     </div>
+
+                                    <h3 className="text-lg font-semibold mb-3">
+                                        {item.title}
+                                    </h3>
+
+                                    <p className="text-sm text-gray-400 leading-relaxed">
+                                        {item.desc}
+                                    </p>
 
                                 </div>
                             </div>
-
                         </motion.div>
                     ))}
                 </div>
 
-                {/* AUTHORITY SEO SECTION */}
+                {/* SEO AUTHORITY CONTENT */}
                 <div className="mt-32 text-center max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-4xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                        Business Consulting Services Across Hyderabad & India
+                    </h2>
 
-                    <motion.h2
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        variants={fadeUp}
-                        className="text-4xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent"
-                    >
-                        Business Consulting & DPR Services Across India
-                    </motion.h2>
+                    <p className="text-gray-400 leading-relaxed">
+                        We assist startups, MSMEs, real estate companies, educational institutions,
+                        healthcare organizations and government-backed projects with structured
+                        revenue frameworks and investor-ready financial documentation.
+                    </p>
 
-                    <motion.p
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        variants={fadeUp}
-                        className="text-gray-400 leading-relaxed"
-                    >
-                        We help organizations design revenue systems, optimize
-                        financial performance, and prepare investor-ready documentation
-                        with clarity and compliance.
-                    </motion.p>
+                    <p className="text-gray-500 leading-relaxed">
+                        Our consulting approach integrates financial analytics,
+                        profitability optimization, compliance clarity and long-term
+                        scalable architecture — ensuring predictable growth instead of reactive management.
+                    </p>
+                </div>
 
-                    <motion.p
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        variants={fadeUp}
-                        className="text-gray-500 leading-relaxed"
-                    >
-                        From government project DPR preparation to private enterprise
-                        profitability consulting, our approach replaces reactive management
-                        with structured, predictable growth architecture.
-                    </motion.p>
+                {/* FAQ SECTION */}
+                <div className="mt-32 max-w-4xl mx-auto space-y-8">
+                    <h2 className="text-3xl font-semibold text-center">
+                        Frequently Asked Questions
+                    </h2>
 
-                    <motion.p
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: true }}
-                        variants={fadeUp}
-                        className="text-xl italic text-orange-400"
-                    >
-                        We don’t just advise — we architect sustainable revenue systems.
-                    </motion.p>
+                    <div className="space-y-6 text-gray-400">
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                What is a Detailed Project Report (DPR)?
+                            </h3>
+                            <p>
+                                A DPR is a structured document outlining project feasibility,
+                                financial projections, cost analysis, revenue forecasting and
+                                compliance requirements for funding or approvals.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Do you provide DPR services in Hyderabad?
+                            </h3>
+                            <p>
+                                Yes, we provide DPR preparation, feasibility studies and
+                                financial modeling services for businesses and institutions
+                                across Hyderabad and India.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            {/* SCHEMA FOR SEO */}
+            <Script
+                id="consulting-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ConsultingService",
+                        name: "Revenue Architects - Business Consulting",
+                        areaServed: "Hyderabad, India",
+                        serviceType: "Business Consulting, DPR Preparation, Financial Modeling",
+                        provider: {
+                            "@type": "Organization",
+                            name: "Epoque Group"
+                        }
+                    })
+                }}
+            />
+
             <PremiumCTA />
         </section>
     )
