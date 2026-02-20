@@ -92,7 +92,7 @@ export default function RevenuePage() {
                         },
                         {
                             icon: <Landmark size={28} />,
-                            title: "DPR & Government Project Consulting",
+                            title: "Sales Out Sourcing Consulting",
                             desc: "Detailed Project Report preparation, feasibility studies, compliance documentation and funding advisory."
                         }
                     ].map((item, index) => (
