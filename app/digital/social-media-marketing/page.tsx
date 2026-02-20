@@ -1,97 +1,94 @@
-import { Metadata } from "next";
-import Link from "next/link";
+import { Metadata } from "next"
+import Link from "next/link"
+import Script from "next/script"
 
 export const metadata: Metadata = {
     title:
-        "Social Media Marketing Services in Hyderabad | Digital Marketing Agency India",
+        "Social Media Marketing Services in Hyderabad | Best SMM Agency India",
     description:
-        "Top Social Media Marketing agency in Hyderabad, India. We provide Instagram marketing, Facebook ads, branding, lead generation & paid advertising services for businesses in India.",
+        "Top Social Media Marketing agency in Hyderabad offering Instagram marketing, Facebook Ads, paid advertising and lead generation services across India.",
     keywords: [
         "Social Media Marketing in Hyderabad",
-        "SMM agency India",
+        "SMM agency Hyderabad",
         "Instagram marketing Hyderabad",
-        "Facebook ads India",
+        "Facebook Ads company India",
         "Digital marketing company Hyderabad",
     ],
+    alternates: {
+        canonical: "https://epoquegroup.in/social-media-marketing",
+    },
     openGraph: {
         title: "Best Social Media Marketing Services in Hyderabad",
         description:
-            "Grow your business with expert Social Media Marketing services in Hyderabad & across India.",
+            "Grow your brand with expert Social Media Marketing services in Hyderabad & across India.",
         url: "https://epoquegroup.in/social-media-marketing",
         type: "website",
     },
-};
+}
 
 export default function SocialMediaMarketing() {
     return (
         <div className="relative bg-black text-white overflow-hidden">
-
-            {/* TOP AMBIENT GLOW */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]
-          bg-gradient-to-r from-[#C79A3B]/25 via-[#D45B5B]/20 to-[#7A2E63]/25
-          blur-[200px]" />
-            </div>
 
             {/* HERO SECTION */}
             <section className="relative py-28 text-center px-6">
                 <div className="max-w-6xl mx-auto">
 
                     <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                        Social Media Marketing Services in{" "}
+                        Social Media Marketing Agency in{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Hyderabad & India
                         </span>
                     </h1>
 
-                    <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto">
-                        We help businesses grow with high-performance Instagram marketing,
-                        Facebook ads, audience targeting, and brand positioning strategies
-                        built for scalable revenue growth.
+                    <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        We help businesses scale revenue through performance-driven
+                        Instagram marketing, Facebook Ads, Meta advertising,
+                        content strategy and audience targeting frameworks.
+                        Our campaigns are engineered for high-intent leads,
+                        measurable ROI and long-term brand authority.
                     </p>
 
                     <Link
                         href="/contact"
                         className="inline-block mt-10 px-10 py-4 rounded-full font-semibold
-  bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-  text-black hover:scale-105 transition duration-300 shadow-xl"
+            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+            text-black hover:scale-105 transition duration-300 shadow-xl"
                     >
                         Get Free Consultation
                     </Link>
 
-
                 </div>
             </section>
 
-            {/* ABOUT SECTION */}
-            <section className="relative py-24 border-t border-white/5 px-6">
-                <div className="max-w-6xl mx-auto text-center">
+            {/* AUTHORITY CONTENT */}
+            <section className="py-24 border-t border-white/5 px-6">
+                <div className="max-w-5xl mx-auto text-gray-400 space-y-8 leading-relaxed">
 
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-10">
-                        Premium Social Media Marketing Agency in Hyderabad
+                    <h2 className="text-3xl font-semibold text-white">
+                        High-Performance Social Media Marketing for Hyderabad Brands
                     </h2>
 
-                    <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
-                        Our Social Media Marketing services are structured for startups,
-                        enterprises, and growing brands across Hyderabad and India.
-                        We combine creative storytelling, performance marketing, and
-                        data-driven insights to generate qualified leads and increase ROI.
+                    <p>
+                        Hyderabad is one of India’s fastest-growing business hubs.
+                        Whether you operate in Gachibowli, Financial District,
+                        Hitech City, Banjara Hills or Jubilee Hills,
+                        social media visibility directly impacts brand credibility
+                        and customer acquisition.
+                    </p>
+
+                    <p>
+                        Our Social Media Marketing services combine creative storytelling,
+                        advanced audience targeting, conversion-focused paid advertising
+                        and structured analytics to deliver consistent growth.
                     </p>
 
                 </div>
             </section>
 
             {/* SERVICES GRID */}
-            <section className="relative py-28 px-6 border-t border-white/5">
-
-                {/* Bottom Glow */}
-                <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute bottom-[-250px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px]
-            bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/15 to-[#7A2E63]/20
-            blur-[220px]" />
-                </div>
-
-                <div className="relative max-w-6xl mx-auto">
+            <section className="py-28 px-6 border-t border-white/5">
+                <div className="max-w-6xl mx-auto">
 
                     <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
                         Our Social Media Marketing Services
@@ -102,38 +99,46 @@ export default function SocialMediaMarketing() {
                         {[
                             {
                                 title: "Instagram Marketing",
-                                desc: "Reels, influencer strategies, paid campaigns, and brand storytelling designed to scale visibility and engagement.",
+                                desc: "Reels strategy, influencer collaborations, content calendars and paid campaigns designed to scale engagement and visibility.",
                             },
                             {
                                 title: "Facebook & Meta Ads",
-                                desc: "Conversion-driven paid advertising strategies engineered to generate high-quality leads and measurable ROI.",
+                                desc: "Conversion-driven advertising campaigns optimized for lead generation and high ROI.",
                             },
                             {
-                                title: "Social Media Branding",
-                                desc: "Creative content frameworks, brand positioning, and audience growth strategies for long-term authority.",
+                                title: "Brand Positioning & Content Strategy",
+                                desc: "Structured content frameworks that strengthen brand authority and audience loyalty.",
+                            },
+                            {
+                                title: "Performance Campaign Scaling",
+                                desc: "Data-driven ad optimization to reduce cost-per-lead and increase revenue efficiency.",
+                            },
+                            {
+                                title: "Social Media Analytics & Reporting",
+                                desc: "Transparent monthly reports with actionable insights and growth metrics.",
+                            },
+                            {
+                                title: "Lead Generation Funnels",
+                                desc: "Integrated landing pages and CRM automation systems for maximum conversion rates.",
                             },
                         ].map((service, index) => (
                             <div
                                 key={index}
                                 className="group relative p-[1.5px] rounded-3xl
-                  bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-                  hover:shadow-[0_0_50px_rgba(199,154,59,0.6)]
-                  transition-all duration-500"
+                bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+                hover:shadow-[0_0_50px_rgba(199,154,59,0.6)]
+                transition-all duration-500"
                             >
                                 <div className="rounded-3xl p-10
-                  bg-gradient-to-br from-[#111111] to-[#1a1a1a]
-                  border border-white/5
-                  group-hover:-translate-y-3
-                  group-hover:scale-[1.04]
-                  transition-all duration-500">
+                bg-gradient-to-br from-[#111111] to-[#1a1a1a]
+                border border-white/5
+                group-hover:-translate-y-3
+                group-hover:scale-[1.04]
+                transition-all duration-500">
 
                                     <h3 className="text-xl font-semibold mb-6 group-hover:text-[#C79A3B] transition">
                                         {service.title}
                                     </h3>
-
-                                    <div className="w-14 h-[2px]
-                    bg-gradient-to-r from-[#C79A3B] to-[#D45B5B]
-                    mb-6 rounded-full group-hover:w-24 transition-all duration-500" />
 
                                     <p className="text-gray-400 text-sm leading-relaxed">
                                         {service.desc}
@@ -144,51 +149,103 @@ export default function SocialMediaMarketing() {
                         ))}
 
                     </div>
-
                 </div>
             </section>
 
-            {/* WHY SECTION */}
+            {/* WHY CHOOSE US */}
             <section className="py-24 border-t border-white/5 px-6">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
                     <ul className="space-y-6 text-lg text-gray-400">
                         <li>✔ Hyderabad Market Expertise</li>
-                        <li>✔ Advanced Audience Targeting</li>
-                        <li>✔ Data-Driven Performance Campaigns</li>
-                        <li>✔ Transparent Reporting</li>
-                        <li>✔ ROI-Focused Growth Strategy</li>
+                        <li>✔ Advanced Audience Targeting Systems</li>
+                        <li>✔ ROI-Focused Paid Advertising</li>
+                        <li>✔ Creative + Performance Hybrid Strategy</li>
+                        <li>✔ Transparent Growth Reporting</li>
                     </ul>
 
                     <p className="text-gray-400 text-lg leading-relaxed">
-                        As a trusted Social Media Marketing company in Hyderabad,
-                        we design strategic paid and organic growth frameworks
-                        that connect brands with high-value customers through
-                        precision targeting and performance analytics.
+                        Unlike generic agencies, we combine branding psychology
+                        with performance marketing systems to ensure your social
+                        media investment drives real business growth.
                     </p>
 
                 </div>
             </section>
 
-            {/* CTA SECTION */}
-            <section className="py-24 text-center border-t border-white/5">
+            {/* FAQ SECTION */}
+            <section className="py-24 border-t border-white/5 px-6">
+                <div className="max-w-4xl mx-auto">
 
+                    <h2 className="text-3xl font-semibold text-center mb-14">
+                        Frequently Asked Questions
+                    </h2>
+
+                    <div className="space-y-10 text-gray-400">
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">
+                                Why is social media marketing important in Hyderabad?
+                            </h3>
+                            <p className="mt-3">
+                                Social media increases brand visibility, builds trust
+                                and generates qualified leads in competitive markets.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">
+                                Do you run paid ads on Instagram and Facebook?
+                            </h3>
+                            <p className="mt-3">
+                                Yes, we manage performance-driven Meta advertising
+                                campaigns optimized for conversions and ROI.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-24 text-center border-t border-white/5">
                 <h2 className="text-3xl md:text-4xl font-semibold">
                     Ready to Scale Your Brand in Hyderabad?
                 </h2>
 
                 <p className="mt-6 text-gray-400 text-lg">
-                    Let’s build a powerful, conversion-driven social media presence.
+                    Let’s build a high-performance social media strategy for your business.
                 </p>
 
-                <button className="mt-10 px-12 py-4 rounded-full font-semibold
+                <Link
+                    href="/contact"
+                    className="inline-block mt-10 px-12 py-4 rounded-full font-semibold
           bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-          text-black hover:scale-105 transition duration-300 shadow-xl">
+          text-black hover:scale-105 transition duration-300 shadow-xl"
+                >
                     Contact Our Experts
-                </button>
-
+                </Link>
             </section>
 
+            {/* SCHEMA */}
+            <Script
+                id="smm-service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        name: "Social Media Marketing Services",
+                        areaServed: "Hyderabad & India",
+                        provider: {
+                            "@type": "Organization",
+                            name: "Epoque Group",
+                            url: "https://epoquegroup.in"
+                        }
+                    })
+                }}
+            />
+
         </div>
-    );
+    )
 }

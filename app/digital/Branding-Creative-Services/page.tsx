@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Script from "next/script"
 
 export default function BrandingCreativePage() {
     return (
@@ -13,17 +14,17 @@ export default function BrandingCreativePage() {
 
                 <div className="relative max-w-4xl mx-auto">
                     <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
-                        Powerful{" "}
+                        Branding & Creative Agency in{" "}
                         <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Branding & Creative
-                        </span>{" "}
-                        Solutions
+                            Hyderabad
+                        </span>
                     </h1>
 
                     <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                        We craft strong brand identities, stunning visuals, and
-                        high-impact creative assets that position your business
-                        as a market leader.
+                        We build powerful brand identities, high-converting creative assets,
+                        and premium visual systems that position your business as a market leader
+                        in Hyderabad and beyond. From real estate developers to growing enterprises,
+                        we create brands that inspire trust, authority, and long-term growth.
                     </p>
 
                     <div className="mt-10">
@@ -39,33 +40,54 @@ export default function BrandingCreativePage() {
                 </div>
             </div>
 
+            {/* ================= SEO CONTENT SECTION ================= */}
+            <div className="max-w-5xl mx-auto px-6 pb-16 text-gray-400 space-y-6 leading-relaxed">
+                <h2 className="text-3xl font-semibold text-white">
+                    Strategic Branding That Drives Business Growth
+                </h2>
+
+                <p>
+                    In today’s competitive Hyderabad market, branding is more than just
+                    a logo. It is your reputation, positioning, perception, and emotional
+                    connection with your audience. Our branding and creative services
+                    are designed to build clarity, authority, and differentiation.
+                </p>
+
+                <p>
+                    Whether you are a real estate developer in Kokapet,
+                    a startup in Gachibowli, or a growing enterprise in
+                    Financial District, we create brand systems that align
+                    with your long-term revenue strategy.
+                </p>
+            </div>
+
             {/* ================= SERVICES SECTION ================= */}
             <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-10">
 
                 {[
                     {
                         title: "Logo & Brand Identity",
-                        desc: "Memorable logos, typography systems, color palettes, and brand guidelines."
+                        desc: "Strategic logo systems, typography, color palettes and brand guidelines designed for long-term market recognition."
                     },
                     {
                         title: "Corporate & Marketing Collaterals",
-                        desc: "Brochures, pitch decks, business profiles, real estate project branding."
+                        desc: "Premium brochures, pitch decks, business profiles and real estate project branding assets."
                     },
                     {
-                        title: "Creative Design & Visuals",
-                        desc: "Social media creatives, ad designs, banners, and campaign visuals."
+                        title: "Creative Design & Campaign Visuals",
+                        desc: "High-impact ad creatives, social media designs and performance marketing visuals."
                     },
                     {
                         title: "Video & Motion Graphics",
-                        desc: "Brand promos, ad videos, explainer animations, and reels."
+                        desc: "Brand promos, explainer videos, real estate walkthroughs and animation reels."
                     },
                     {
                         title: "Website UI/UX Design",
-                        desc: "Premium user experiences designed to elevate your brand presence."
+                        desc: "Conversion-focused digital experiences that elevate brand perception."
                     },
                     {
-                        title: "Rebranding & Strategy",
-                        desc: "Complete brand repositioning to help you scale and dominate your market."
+                        title: "Rebranding & Positioning Strategy",
+                        desc: "Complete brand transformation frameworks for scaling businesses."
                     }
                 ].map((service, index) => (
                     <motion.div
@@ -91,16 +113,16 @@ export default function BrandingCreativePage() {
                 <div className="max-w-5xl mx-auto text-center">
 
                     <h2 className="text-4xl font-semibold mb-16">
-                        Our Creative Process
+                        Our Proven Creative Process
                     </h2>
 
                     <div className="grid md:grid-cols-4 gap-10 text-gray-400">
 
                         {[
-                            "Brand Discovery",
-                            "Creative Strategy",
-                            "Design Execution",
-                            "Launch & Scale"
+                            "Brand Discovery & Research",
+                            "Creative Strategy & Positioning",
+                            "Design & Asset Development",
+                            "Launch, Optimization & Scale"
                         ].map((step, index) => (
                             <div key={index} className="space-y-4">
                                 <div className="text-4xl font-bold text-orange-400">
@@ -114,17 +136,46 @@ export default function BrandingCreativePage() {
                 </div>
             </div>
 
+            {/* ================= FAQ SECTION ================= */}
+            <div className="max-w-4xl mx-auto px-6 py-24 space-y-10">
+                <h2 className="text-3xl font-semibold text-center">
+                    Frequently Asked Questions
+                </h2>
+
+                <div className="space-y-6 text-gray-400">
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Why is branding important for businesses in Hyderabad?
+                        </h3>
+                        <p>
+                            Strong branding increases trust, improves premium perception,
+                            and differentiates your business in competitive markets.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Do you provide branding for real estate developers?
+                        </h3>
+                        <p>
+                            Yes, we specialize in real estate branding including project
+                            identity, brochures, and campaign creative systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             {/* ================= CTA SECTION ================= */}
             <div className="py-28 px-6 text-center">
                 <div className="max-w-3xl mx-auto">
 
                     <h2 className="text-4xl font-semibold leading-tight">
-                        Ready to Create a Powerful Brand Presence?
+                        Ready to Build a Powerful Brand in Hyderabad?
                     </h2>
 
                     <p className="mt-6 text-gray-400">
-                        Let’s design a brand that builds trust, attracts attention,
-                        and drives long-term growth.
+                        Let’s design a brand that builds authority, attracts attention,
+                        and drives sustainable business growth.
                     </p>
 
                     <div className="mt-10">
@@ -134,12 +185,34 @@ export default function BrandingCreativePage() {
               bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
               hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
                         >
-                            Start Your Branding Project ?
+                            Start Your Branding Project
                         </a>
                     </div>
 
                 </div>
             </div>
+
+            {/* ================= FAQ SCHEMA ================= */}
+            <Script
+                id="faq-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: "Why is branding important for businesses?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Branding builds trust, improves perception, and strengthens competitive positioning."
+                                }
+                            }
+                        ]
+                    })
+                }}
+            />
 
         </section>
     )

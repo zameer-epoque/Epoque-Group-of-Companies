@@ -21,13 +21,25 @@ const navItems = [
       { label: "Lead Generation Services", href: "/digital/Lead-Generation-Services" },
     ],
   },
-  { label: "REALTY", href: "/realty" },
+
+  {
+    label: "REALTY",
+    href: "/realty",
+    dropdown: [
+      { label: "Real Estate Sales Strategy", href: "/realty/real-estate-sales-strategy" },
+      { label: "Luxury Villa Marketing", href: "/realty/luxury-villa-marketing" },
+      { label: "Property Lead Generation", href: "/realty/property-lead-generation" },
+      { label: "Real Estate Branding", href: "/realty/real-estate-branding" },
+      { label: "Project Launch Marketing", href: "/realty/project-launch-marketing" },
+      { label: "Digital Marketing for Builders", href: "/realty/digital-marketing-for-builders" },
+    ],
+  },
+
   { label: "Interiors", href: "/interiors" },
   { label: "Revenue", href: "/revenue" },
   { label: "Our Clients", href: "/clients" },
   { label: "Faq", href: "/faq" },
   { label: "Contact", href: "/contact" },
-
 ]
 
 export default function Navbar() {
