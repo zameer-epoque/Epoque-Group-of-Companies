@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.epoquegroup.in"
+  const baseUrl = "https://epoquegroup.in"
 
   const appDir = path.join(process.cwd(), "app")
 

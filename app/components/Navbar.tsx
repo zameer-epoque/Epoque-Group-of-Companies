@@ -8,7 +8,7 @@ import { ChevronDown } from "lucide-react"
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about-epoque-group" },
+  { label: "About Us", href: "/about-epoque-group" },
   {
     label: "Digital",
     href: "/digital/branding-creative-services",
@@ -47,7 +47,17 @@ const navItems = [
       { label: "Turnkey Interior Solutions", href: "/interiors/turnkey-interior-solutions" },
     ],
   },
-  { label: "Revenue", href: "/revenue" },
+  {
+    label: "Revenue",
+    href: "/revenue/sales-funnel-building",
+    dropdown: [
+      { label: "Sales Funnel Building", href: "/revenue/sales-funnel-building" },
+      { label: "Conversion Rate Optimization", href: "/revenue/conversion-rate-optimization" },
+      { label: "Marketing Automation", href: "/revenue/marketing-automation" },
+      { label: "Revenue Growth Consulting", href: "/revenue/revenue-growth-consulting" },
+      { label: "B2B Lead Generation", href: "/revenue/b2b-lead-generation" },
+    ],
+  },
   { label: "Our Clients", href: "/clients" },
   { label: "Faq", href: "/faq" },
   { label: "Contact", href: "/contact" },
