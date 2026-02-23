@@ -26,6 +26,13 @@ export default function LuxuryInteriorClient() {
                         Gachibowli, Jubilee Hills and Banjara Hills.
                     </p>
 
+                    {/* ✅ Added Extra SEO Paragraph */}
+                    <p className="mt-6 text-gray-400 text-lg leading-relaxed">
+                        As one of the top luxury interior designers in Hyderabad,
+                        we focus on delivering bespoke interiors that combine
+                        sophistication, comfort and functionality with world-class finishes.
+                    </p>
+
                     <div className="mt-10">
                         <Link
                             href="/contact"
@@ -53,6 +60,19 @@ export default function LuxuryInteriorClient() {
                 <p>
                     We use Italian marble, designer lighting, custom furniture
                     and imported finishes to create extraordinary living spaces.
+                </p>
+
+                {/* ✅ Added More Relevant Content */}
+                <p>
+                    Our luxury interior design services include complete space planning,
+                    3D visualization, material selection, customized furniture,
+                    lighting concepts and turnkey project execution across Hyderabad.
+                </p>
+
+                <p>
+                    Whether you are renovating your villa or designing a new penthouse,
+                    our team ensures flawless craftsmanship, premium finishes and
+                    timely delivery of every project.
                 </p>
             </div>
 
@@ -90,6 +110,26 @@ export default function LuxuryInteriorClient() {
                 ))}
             </div>
 
+            {/* ✅ NEW SEO CONTENT SECTION (No Design Change) */}
+            <div className="max-w-6xl mx-auto px-6 py-20 text-gray-400 space-y-6">
+                <h2 className="text-3xl font-semibold text-white">
+                    Why Choose Our Luxury Interior Designers?
+                </h2>
+
+                <p>
+                    Our team combines creativity, technical expertise and premium materials
+                    to deliver interiors that reflect elegance and exclusivity.
+                    We understand modern design trends and customize each project
+                    according to client preferences and lifestyle.
+                </p>
+
+                <p>
+                    From concept development to final installation, we ensure
+                    seamless coordination, transparent pricing and unmatched
+                    attention to detail in every luxury interior project.
+                </p>
+            </div>
+
             {/* FAQ SECTION */}
             <div className="max-w-4xl mx-auto px-6 py-20 space-y-6">
                 <h2 className="text-3xl text-center font-semibold">
@@ -103,6 +143,17 @@ export default function LuxuryInteriorClient() {
                     <p className="text-gray-400">
                         We are among the top luxury interior design companies in Hyderabad
                         delivering premium villa and apartment interiors.
+                    </p>
+                </div>
+
+                {/* ✅ Added Another FAQ */}
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide complete turnkey luxury interiors?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we offer end-to-end luxury interior solutions including
+                        design, material sourcing, execution and final handover.
                     </p>
                 </div>
             </div>
@@ -124,6 +175,16 @@ export default function LuxuryInteriorClient() {
                                     "@type": "Answer",
                                     text:
                                         "We provide premium luxury interior design services across Hyderabad."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name:
+                                    "Do you provide complete turnkey luxury interiors?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text:
+                                        "Yes, we provide end-to-end luxury interior design services including execution and installation."
                                 }
                             }
                         ]

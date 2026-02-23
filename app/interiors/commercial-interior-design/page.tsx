@@ -27,7 +27,6 @@ export default function InteriorDesignersHyderabad() {
             {/* HERO */}
             <section className="relative py-32 px-6 text-center overflow-hidden">
 
-                {/* Glow Effects */}
                 <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
                 <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
 
@@ -42,6 +41,14 @@ export default function InteriorDesignersHyderabad() {
                     <p className="max-w-3xl mx-auto text-lg mt-8 text-gray-300 leading-relaxed">
                         We create ultra-premium home interiors, villa interiors and office interiors
                         across Kokapet, Gachibowli, Jubilee Hills, Financial District and Madhapur.
+                    </p>
+
+                    {/* ✅ Added More SEO Content */}
+                    <p className="max-w-3xl mx-auto text-gray-300 mt-6 leading-relaxed">
+                        As one of the top interior designers in Hyderabad, we focus on creating
+                        sophisticated living spaces that blend aesthetics, comfort and functionality.
+                        Our expert team handles everything from concept development to final execution,
+                        ensuring flawless results for every project.
                     </p>
 
                     <div className="mt-12">
@@ -70,6 +77,20 @@ export default function InteriorDesignersHyderabad() {
                 <p className="text-gray-300 max-w-3xl mx-auto">
                     Whether building a new home or renovating an apartment, we ensure
                     premium finishes, modern layouts and timely execution.
+                </p>
+
+                {/* ✅ Added SEO Paragraphs */}
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                    We provide customized interior solutions for apartments, independent houses,
+                    villas and office spaces across Hyderabad. Our team uses premium materials,
+                    advanced design tools and innovative layouts to deliver interiors that are
+                    both visually stunning and highly practical.
+                </p>
+
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                    With years of experience in luxury interior design, we understand
+                    client preferences, modern trends and Vastu-friendly planning,
+                    making us a trusted choice for interior design services in Hyderabad.
                 </p>
             </section>
 
@@ -114,6 +135,21 @@ export default function InteriorDesignersHyderabad() {
                         ))}
 
                     </div>
+
+                    {/* ✅ Added Service SEO Content */}
+                    <div className="mt-16 text-center space-y-6">
+                        <p className="text-gray-300 max-w-3xl mx-auto">
+                            Our turnkey interior design services include space planning,
+                            3D visualization, material selection, furniture customization,
+                            lighting design and project management.
+                        </p>
+                        <p className="text-gray-300 max-w-3xl mx-auto">
+                            We have successfully delivered projects in Kokapet, Gachibowli,
+                            Jubilee Hills, Financial District, Madhapur and Banjara Hills,
+                            ensuring quality craftsmanship and timely completion.
+                        </p>
+                    </div>
+
                 </div>
             </section>
 
@@ -131,6 +167,13 @@ export default function InteriorDesignersHyderabad() {
                     <span>Madhapur</span>
                     <span>Banjara Hills</span>
                 </div>
+
+                {/* ✅ Added Location Content */}
+                <p className="text-gray-300 max-w-3xl mx-auto mt-10">
+                    If you are searching for interior designers near me in Hyderabad,
+                    our team is ready to deliver luxury interior solutions tailored
+                    to your space and requirements.
+                </p>
             </section>
 
             {/* FAQ */}

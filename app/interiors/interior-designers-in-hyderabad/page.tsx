@@ -27,7 +27,6 @@ export default function InteriorDesignersHyderabad() {
             {/* HERO SECTION */}
             <section className="relative py-32 px-6 text-center overflow-hidden">
 
-                {/* Glow Effects */}
                 <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
                 <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
 
@@ -44,6 +43,14 @@ export default function InteriorDesignersHyderabad() {
                         luxury residential interiors, villa interiors and commercial
                         interior solutions across Kokapet, Gachibowli, Jubilee Hills,
                         Financial District and Banjara Hills.
+                    </p>
+
+                    {/* ✅ Added SEO Content */}
+                    <p className="max-w-3xl mx-auto text-gray-300 mt-6 leading-relaxed">
+                        As one of the leading interior designers in Hyderabad, we specialize
+                        in creating bespoke interiors that combine functionality, aesthetics
+                        and long-lasting quality. Our team handles everything from design
+                        planning to final installation with precision and professionalism.
                     </p>
 
                     <div className="mt-12">
@@ -63,6 +70,14 @@ export default function InteriorDesignersHyderabad() {
                 <h2 className="text-3xl md:text-4xl font-semibold text-center">
                     Complete Interior Design Services in Hyderabad
                 </h2>
+
+                {/* ✅ Added Intro Paragraph */}
+                <p className="text-gray-300 max-w-4xl mx-auto text-center">
+                    Our interior design services cover residential, commercial and luxury
+                    interior projects across Hyderabad. We focus on smart space planning,
+                    premium materials, modern layouts and customized design concepts
+                    tailored to each client’s needs.
+                </p>
 
                 <div className="grid md:grid-cols-2 gap-10">
 
@@ -108,6 +123,23 @@ export default function InteriorDesignersHyderabad() {
 
                 </div>
 
+                {/* ✅ Added Detailed Service Paragraph */}
+                <div className="text-center mt-10 space-y-6">
+                    <p className="text-gray-300 max-w-4xl mx-auto">
+                        Our turnkey interior design approach ensures a seamless process
+                        from concept development and 3D visualization to execution and handover.
+                        We coordinate design, carpentry, electrical work, painting,
+                        ceiling installation and furnishing to deliver flawless results.
+                    </p>
+
+                    <p className="text-gray-300 max-w-4xl mx-auto">
+                        We have successfully completed interior design projects in
+                        Kokapet, Gachibowli, Jubilee Hills, Financial District,
+                        Banjara Hills and Madhapur, delivering high-end luxury interiors
+                        with attention to detail and timely completion.
+                    </p>
+                </div>
+
                 <div className="text-center mt-10">
                     <Link
                         href="/interiors/villa-interior-designers-hyderabad"
@@ -117,6 +149,26 @@ export default function InteriorDesignersHyderabad() {
                     </Link>
                 </div>
 
+            </section>
+
+            {/* NEW SEO SECTION (ADDED WITHOUT CHANGING STRUCTURE) */}
+            <section className="py-24 px-6 max-w-6xl mx-auto text-center space-y-6">
+                <h2 className="text-3xl font-semibold">
+                    Why Choose Our Interior Designers in Hyderabad?
+                </h2>
+
+                <p className="text-gray-300 max-w-4xl mx-auto">
+                    Our experienced team combines creativity, technical expertise
+                    and project management skills to deliver interiors that exceed expectations.
+                    We use premium materials, modern technology and innovative layouts
+                    to create luxurious and functional living spaces.
+                </p>
+
+                <p className="text-gray-300 max-w-4xl mx-auto">
+                    Whether you are renovating your apartment or building a new villa,
+                    our interior designers ensure personalized attention,
+                    transparent pricing and timely project completion.
+                </p>
             </section>
 
             {/* LOCAL BUSINESS SCHEMA */}
