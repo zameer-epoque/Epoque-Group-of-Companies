@@ -42,6 +42,8 @@ const navItems = [
       { label: "Interior Designers in Hyderabad", href: "/interiors/interior-designers-in-hyderabad" },
       { label: "Luxury Interior Design", href: "/interiors/luxury-interior-design" },
       { label: "Commercial Interior Design", href: "/interiors/commercial-interior-design" },
+      { label: "Residential Interior Design", href: "/interiors/residential-interior-designers-in-hyderabad" },
+
       { label: "Turnkey Interior Solutions", href: "/interiors/turnkey-interior-solutions" },
     ],
   },

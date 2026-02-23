@@ -9,13 +9,13 @@ export const metadata: Metadata = {
         "Top interior designers in Hyderabad offering luxury villa interiors, modular kitchens, office interiors and turnkey solutions in Kokapet, Gachibowli, Jubilee Hills & Financial District.",
     alternates: {
         canonical:
-            "https://yourdomain.com/interiors/interior-designers-in-hyderabad",
+            "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
     },
     openGraph: {
         title: "Best Interior Designers in Hyderabad",
         description:
             "Luxury residential and commercial interior designers in Hyderabad.",
-        url: "https://yourdomain.com/interiors/interior-designers-in-hyderabad",
+        url: "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
         type: "website",
     },
 }

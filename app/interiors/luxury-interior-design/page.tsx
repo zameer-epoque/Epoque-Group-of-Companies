@@ -146,7 +146,7 @@ export default function LuxuryInteriorClient() {
                         },
                         provider: {
                             "@type": "Organization",
-                            name: "Your Company Name"
+                            name: "Epoque Group Of Companies"
                         }
                     })
                 }}
