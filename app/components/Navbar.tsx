@@ -11,7 +11,7 @@ const navItems = [
   { label: "About Us", href: "/about-epoque-group" },
   {
     label: "Digital",
-    href: "/digital/branding-creative-services",
+    href: "/digital",
     dropdown: [
       { label: "Social Media Marketing", href: "/digital/social-media-marketing" },
       { label: "Search Engine Optimization", href: "/digital/search-engine-optimization" },
