@@ -35,7 +35,16 @@ const navItems = [
     ],
   },
 
-  { label: "Interiors", href: "/interiors" },
+  {
+    label: "Interiors",
+    href: "/interiors",
+    dropdown: [
+      { label: "Interior Designers in Hyderabad", href: "/interiors/interior-designers-in-hyderabad" },
+      { label: "Luxury Interior Design", href: "/interiors/luxury-interior-design" },
+      { label: "Commercial Interior Design", href: "/interiors/commercial-interior-design" },
+      { label: "Turnkey Interior Solutions", href: "/interiors/turnkey-interior-solutions" },
+    ],
+  },
   { label: "Revenue", href: "/revenue" },
   { label: "Our Clients", href: "/clients" },
   { label: "Faq", href: "/faq" },

@@ -31,51 +31,51 @@ export const metadata: Metadata = {
   description:
     "Époque Group delivers luxury real estate, premium interiors, and digital property solutions with strategic excellence.",
 
-    keywords: [
-      // Luxury Real Estate - Hyderabad Focus
-      "Luxury real estate in Hyderabad",
-      "Premium villas in Hyderabad",
-      "Luxury apartments in Jubilee Hills",
-      "High-end residential projects Hyderabad",
-      "Ultra luxury homes in Hyderabad",
-      "Gated community villas Hyderabad",
-      "Luxury property investment Hyderabad",
-      "Best luxury real estate company Hyderabad",
-      "Premium residential developers Telangana",
-      "Luxury flats near Hitech City",
-    
-      // Investment Intent Keywords
-      "Luxury property investment in India",
-      "High ROI real estate Hyderabad",
-      "Best areas to invest in Hyderabad real estate",
-      "Premium property for NRI investment",
-      "Luxury homes for sale in Hyderabad",
-      "Pre-launch luxury projects Hyderabad",
-      "Exclusive luxury residences India",
-    
-      // Interior Design + Premium Segment
-      "Luxury interior design company Hyderabad",
-      "Premium home interiors Hyderabad",
-      "High-end villa interior designers",
-      "Luxury apartment interior design India",
-      "Modern luxury home interiors",
-      "Turnkey interior solutions Hyderabad",
-      "Premium residential interior experts",
-    
-      // Brand Authority Keywords
-      "Luxury lifestyle property developers",
-      "Elite real estate developers India",
-      "Boutique luxury real estate firm",
-      "Exclusive real estate consultancy Hyderabad",
-      "Luxury property management services",
-    
-      // Combination Keywords (Low Competition High Conversion)
-      "Luxury real estate and interior solutions",
-      "Premium villa design and construction Hyderabad",
-      "Luxury property advisory Hyderabad",
-      "Custom luxury home development India"
-    ],
-    
+  keywords: [
+    // Luxury Real Estate - Hyderabad Focus
+    "Luxury real estate in Hyderabad",
+    "Premium villas in Hyderabad",
+    "Luxury apartments in Jubilee Hills",
+    "High-end residential projects Hyderabad",
+    "Ultra luxury homes in Hyderabad",
+    "Gated community villas Hyderabad",
+    "Luxury property investment Hyderabad",
+    "Best luxury real estate company Hyderabad",
+    "Premium residential developers Telangana",
+    "Luxury flats near Hitech City",
+
+    // Investment Intent Keywords
+    "Luxury property investment in India",
+    "High ROI real estate Hyderabad",
+    "Best areas to invest in Hyderabad real estate",
+    "Premium property for NRI investment",
+    "Luxury homes for sale in Hyderabad",
+    "Pre-launch luxury projects Hyderabad",
+    "Exclusive luxury residences India",
+
+    // Interior Design + Premium Segment
+    "Luxury interior design company Hyderabad",
+    "Premium home interiors Hyderabad",
+    "High-end villa interior designers",
+    "Luxury apartment interior design India",
+    "Modern luxury home interiors",
+    "Turnkey interior solutions Hyderabad",
+    "Premium residential interior experts",
+
+    // Brand Authority Keywords
+    "Luxury lifestyle property developers",
+    "Elite real estate developers India",
+    "Boutique luxury real estate firm",
+    "Exclusive real estate consultancy Hyderabad",
+    "Luxury property management services",
+
+    // Combination Keywords (Low Competition High Conversion)
+    "Luxury real estate and interior solutions",
+    "Premium villa design and construction Hyderabad",
+    "Luxury property advisory Hyderabad",
+    "Custom luxury home development India"
+  ],
+
 
   verification: {
     google: "URwvOHIEiyvwiJrVDoHIS0UQfmqLfkd0TJMX_C1k_oA",
@@ -197,7 +197,22 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </ClientLayout>
-
+        {/* Meta Pixel */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1434477401388550');
+    fbq('track', 'PageView');
+  `}
+        </Script>
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JJLRVZTZKB"
