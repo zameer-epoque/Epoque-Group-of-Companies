@@ -1,197 +1,175 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Script from "next/script"
 
 export const metadata: Metadata = {
     title:
         "Best Interior Designers in Hyderabad | Luxury Home & Office Interiors",
     description:
-        "Looking for the best interior designers in Hyderabad? We provide luxury home interiors, commercial interiors, modular kitchens, office interiors and turnkey interior solutions in Kokapet, Gachibowli, Jubilee Hills & Financial District.",
-    keywords: [
-        "Interior Designers in Hyderabad",
-        "Best Interior Designers Hyderabad",
-        "Luxury Interior Designers Hyderabad",
-        "Home Interiors Hyderabad",
-        "Office Interior Designers Hyderabad",
-        "Modular Kitchen Hyderabad",
-        "Interior Company in Kokapet",
-        "Interior Designers in Gachibowli",
-        "Jubilee Hills Interior Design",
-        "Financial District Interior Company"
-    ],
+        "Epoque Group is one of the best interior designers in Hyderabad offering luxury home interiors, villa interiors, office interiors and turnkey interior solutions in Kokapet, Gachibowli, Jubilee Hills & Financial District.",
     alternates: {
         canonical:
             "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
     },
     openGraph: {
-        title: "Best Interior Designers in Hyderabad",
+        title: "Best Interior Designers in Hyderabad | Epoque Group",
         description:
-            "Luxury residential and commercial interior designers in Hyderabad.",
+            "Premium residential and commercial interior designers in Hyderabad.",
         url: "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
-        siteName: "Your Company Name",
+        siteName: "Epoque Group",
         type: "website",
     },
 }
 
 export default function InteriorDesignersHyderabad() {
     return (
-        <main className="bg-white text-gray-800">
+        <main className="bg-[#0a0a0a] text-white">
 
             {/* HERO */}
-            <section className="py-24 px-6 text-center bg-gray-100">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                    Best Interior Designers in Hyderabad
-                </h1>
-                <p className="max-w-3xl mx-auto text-lg leading-relaxed">
-                    We are a leading interior design company in Hyderabad offering luxury
-                    home interiors, villa interiors, apartment interiors and office
-                    interior solutions across Kokapet, Gachibowli, Jubilee Hills,
-                    Financial District and Madhapur.
-                </p>
+            <section className="relative py-32 px-6 text-center overflow-hidden">
+
+                {/* Glow Effects */}
+                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+                <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
+
+                <div className="relative max-w-4xl mx-auto">
+                    <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                        Best Interior Designers in{" "}
+                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                            Hyderabad
+                        </span>
+                    </h1>
+
+                    <p className="max-w-3xl mx-auto text-lg mt-8 text-gray-300 leading-relaxed">
+                        We create ultra-premium home interiors, villa interiors and office interiors
+                        across Kokapet, Gachibowli, Jubilee Hills, Financial District and Madhapur.
+                    </p>
+
+                    <div className="mt-12">
+                        <Link
+                            href="/contact"
+                            className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold hover:scale-105 transition duration-300 shadow-xl"
+                        >
+                            Get Free Consultation
+                        </Link>
+                    </div>
+                </div>
             </section>
 
             {/* ABOUT */}
-            <section className="py-16 px-6 max-w-6xl mx-auto space-y-6">
-                <h2 className="text-3xl font-semibold">
+            <section className="py-24 px-6 max-w-6xl mx-auto text-center space-y-6">
+                <h2 className="text-3xl md:text-4xl font-semibold">
                     Top Interior Design Company in Hyderabad
                 </h2>
 
-                <p>
-                    Our expert interior designers in Hyderabad specialize in
-                    residential and commercial interior design projects. From
-                    modular kitchens and wardrobe designs to luxury villa interiors,
-                    we create functional and aesthetic spaces tailored to your lifestyle.
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                    Our expert interior designers specialize in residential and commercial
+                    interior design projects. From modular kitchens and wardrobes to luxury
+                    villa interiors, we create elegant and functional spaces tailored to your lifestyle.
                 </p>
 
-                <p>
-                    Whether you are building a new home in Kokapet or renovating
-                    an apartment in Gachibowli, our team ensures premium finishes,
-                    modern layouts and timely project execution.
+                <p className="text-gray-300 max-w-3xl mx-auto">
+                    Whether building a new home or renovating an apartment, we ensure
+                    premium finishes, modern layouts and timely execution.
                 </p>
             </section>
 
             {/* SERVICES */}
-            <section className="py-16 px-6 bg-gray-50">
+            <section className="py-24 px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-semibold mb-10 text-center">
-                        Our Interior Design Services in Hyderabad
+                    <h2 className="text-3xl font-semibold mb-16 text-center">
+                        Our Interior Design Services
                     </h2>
 
                     <div className="grid md:grid-cols-2 gap-10">
 
-                        <div>
-                            <h3 className="text-xl font-bold mb-3">
-                                Luxury Home & Villa Interiors
-                            </h3>
-                            <p>
-                                Premium living room, bedroom, dining and villa interiors
-                                designed with imported materials and elegant finishes.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-bold mb-3">
-                                Modular Kitchen & Wardrobes
-                            </h3>
-                            <p>
-                                Modern modular kitchens with smart storage solutions
-                                and high-quality hardware systems.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-bold mb-3">
-                                Office & Commercial Interiors
-                            </h3>
-                            <p>
-                                Functional office interiors for startups and corporate
-                                spaces in Financial District & Gachibowli.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-bold mb-3">
-                                Turnkey Interior Solutions
-                            </h3>
-                            <p>
-                                Complete end-to-end interior execution including
-                                design, 3D visualization, material selection and installation.
-                            </p>
-                        </div>
+                        {[
+                            {
+                                title: "Luxury Home & Villa Interiors",
+                                desc: "Premium living spaces crafted with imported materials and elegant finishes."
+                            },
+                            {
+                                title: "Modular Kitchen & Wardrobes",
+                                desc: "Smart storage kitchens with high-quality fittings and modern design."
+                            },
+                            {
+                                title: "Office & Commercial Interiors",
+                                desc: "Corporate interiors designed for productivity and brand presence."
+                            },
+                            {
+                                title: "Turnkey Interior Solutions",
+                                desc: "Complete end-to-end interior execution from design to installation."
+                            }
+                        ].map((item, i) => (
+                            <div
+                                key={i}
+                                className="p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500"
+                            >
+                                <div className="p-8 rounded-3xl bg-[#111111] border border-white/5 backdrop-blur-xl">
+                                    <h3 className="text-xl font-semibold mb-4 text-orange-400">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-gray-300">{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
 
                     </div>
                 </div>
             </section>
 
             {/* LOCATIONS */}
-            <section className="py-16 px-6 max-w-6xl mx-auto">
-                <h2 className="text-3xl font-semibold mb-6">
+            <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+                <h2 className="text-3xl font-semibold mb-12">
                     Interior Designers Near You in Hyderabad
                 </h2>
 
-                <ul className="grid md:grid-cols-2 gap-4 list-disc pl-6">
-                    <li>Interior Designers in Kokapet</li>
-                    <li>Interior Designers in Gachibowli</li>
-                    <li>Interior Designers in Jubilee Hills</li>
-                    <li>Interior Designers in Financial District</li>
-                    <li>Interior Designers in Madhapur</li>
-                    <li>Interior Designers in Banjara Hills</li>
-                </ul>
+                <div className="grid md:grid-cols-3 gap-6 text-gray-300">
+                    <span>Kokapet</span>
+                    <span>Gachibowli</span>
+                    <span>Jubilee Hills</span>
+                    <span>Financial District</span>
+                    <span>Madhapur</span>
+                    <span>Banjara Hills</span>
+                </div>
             </section>
 
             {/* FAQ */}
-            <section className="py-16 px-6 bg-gray-100 max-w-5xl mx-auto space-y-8">
-                <h2 className="text-3xl font-semibold text-center">
-                    Frequently Asked Questions
-                </h2>
+            <section className="py-24 px-6 bg-[#111111]">
+                <div className="max-w-4xl mx-auto space-y-10">
+                    <h2 className="text-3xl font-semibold text-center">
+                        Frequently Asked Questions
+                    </h2>
 
-                <div>
-                    <h3 className="font-semibold">
-                        How much do interior designers charge in Hyderabad?
-                    </h3>
-                    <p>
-                        Interior design costs depend on project size, material selection
-                        and customization. We provide transparent pricing and tailored packages.
-                    </p>
-                </div>
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            How much do interior designers charge in Hyderabad?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Interior costs depend on project size, materials and customization level.
+                            We provide transparent pricing and flexible luxury packages.
+                        </p>
+                    </div>
 
-                <div>
-                    <h3 className="font-semibold">
-                        Do you provide turnkey interior solutions?
-                    </h3>
-                    <p>
-                        Yes, we offer complete end-to-end interior execution from
-                        design to final installation.
-                    </p>
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Do you provide turnkey interior solutions?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Yes, we manage complete end-to-end interior execution from concept to completion.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-20 px-6 text-center">
-                <h2 className="text-3xl font-bold mb-6">
-                    Looking for Interior Designers in Hyderabad?
-                </h2>
-                <p className="mb-8">
-                    Contact us today for a free consultation and transform your
-                    home or office into a luxurious space.
-                </p>
-                <Link
-                    href="/contact"
-                    className="bg-black text-white px-8 py-3 rounded-lg"
-                >
-                    Get Free Consultation
-                </Link>
-            </section>
-
-            {/* LOCAL BUSINESS SCHEMA */}
-            <Script
-                id="local-business-schema"
+            {/* SCHEMA */}
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "LocalBusiness",
-                        name: "Epoque Group Of Companies",
+                        name: "Epoque Group",
+                        url: "https://epoquegroup.in",
                         areaServed: "Hyderabad",
                         address: {
                             "@type": "PostalAddress",
