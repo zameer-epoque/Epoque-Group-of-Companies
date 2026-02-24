@@ -184,7 +184,7 @@ export default function SEOPage() {
     <div className="space-y-10 text-gray-400">
 
       <div>
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-orange-400">
           How long does SEO take?
         </h3>
         <p className="mt-3">
@@ -194,7 +194,7 @@ export default function SEOPage() {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-orange-400">
           Why is Local SEO important in Hyderabad?
         </h3>
         <p className="mt-3">
@@ -204,7 +204,7 @@ export default function SEOPage() {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-orange-400">
           What is the difference between SEO and PPC?
         </h3>
         <p className="mt-3">
@@ -215,7 +215,7 @@ export default function SEOPage() {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-orange-400">
           Do you provide technical SEO services?
         </h3>
         <p className="mt-3">
@@ -226,7 +226,7 @@ export default function SEOPage() {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-orange-400">
           How do you choose keywords for SEO campaigns?
         </h3>
         <p className="mt-3">
@@ -237,7 +237,7 @@ export default function SEOPage() {
       </div>
 
       <div>
-        <h3 className="text-xl font-semibold text-white">
+        <h3 className="text-xl font-semibold text-orange-400">
           Do you provide monthly SEO reports?
         </h3>
         <p className="mt-3">

@@ -184,7 +184,7 @@ export default function SocialMediaMarketing() {
                     <div className="space-y-10 text-gray-400">
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Why is social media marketing important in Hyderabad?
                             </h3>
                             <p className="mt-3">
@@ -194,7 +194,7 @@ export default function SocialMediaMarketing() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Do you run paid ads on Instagram and Facebook?
                             </h3>
                             <p className="mt-3">
@@ -204,7 +204,7 @@ export default function SocialMediaMarketing() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Which social media platforms do you manage?
                             </h3>
                             <p className="mt-3">
@@ -214,7 +214,7 @@ export default function SocialMediaMarketing() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 How often do you post content?
                             </h3>
                             <p className="mt-3">
@@ -225,7 +225,7 @@ export default function SocialMediaMarketing() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Can social media generate real leads?
                             </h3>
                             <p className="mt-3">
@@ -236,7 +236,7 @@ export default function SocialMediaMarketing() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Do you provide monthly performance reports?
                             </h3>
                             <p className="mt-3">
