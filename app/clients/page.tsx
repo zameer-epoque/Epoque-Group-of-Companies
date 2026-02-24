@@ -4,38 +4,39 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
+
 const clients = [
     {
         name: "Vasavi Group",
-        image: "/vasavigroup.jpg",
+        image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
             "Premium real estate developer in Hyderabad. Delivered branding, Google Ads and high-conversion lead generation campaigns.",
         stats: { leads: 3200, projects: 4 }
     },
     {
-        name: "Etereo Realty",
-        image: "/goa.jpg",
+        name: "Etereo Realty Goa",
+        image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
             "Luxury villa and gated community developer. Executed SEO, paid ads and full-scale digital launch strategy.",
         stats: { leads: 2100, projects: 3 }
     },
     {
         name: "Orange County Homes",
-        image: "/orange-county.jpg",
+        image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
             "High-end villa development brand. Built performance funnels and optimized cost-per-lead campaigns.",
         stats: { leads: 1800, projects: 2 }
     },
     {
         name: "GRSV Infra",
-        image: "/gsrvinfra.jpg",
+        image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.jpg",
         description:
             "Infrastructure and residential builder. Implemented structured branding and performance marketing systems.",
         stats: { leads: 2400, projects: 4 }
     },
     {
         name: "P R Constructions",
-        image: "/pr-construct.jpg",
+        image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
         description:
             "Residential construction company. Scaled visibility through digital outreach and ROI-driven campaigns.",
         stats: { leads: 2000, projects: 4 }
