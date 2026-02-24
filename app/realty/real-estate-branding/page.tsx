@@ -192,9 +192,40 @@ export default function Page() {
                             </p>
                         </div>
 
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                How long does a real estate branding project take?
+                            </h3>
+                            <p>
+                                Typically, a complete branding project takes 2–4 weeks
+                                depending on project scale, revisions and launch timelines.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Do you provide marketing creatives for project launches?
+                            </h3>
+                            <p>
+                                Yes. We design brochures, hoardings, digital ads,
+                                landing pages and launch creatives aligned with
+                                the project’s positioning strategy.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Can branding improve booking conversions?
+                            </h3>
+                            <p>
+                                Absolutely. Strong branding enhances buyer confidence,
+                                differentiates the project from competitors,
+                                and improves overall conversion rates.
+                            </p>
+                        </div>
+
                     </div>
                 </section>
-
                 {/* CTA */}
                 <section className="pt-20 text-center">
                     <h2 className="text-3xl font-semibold">

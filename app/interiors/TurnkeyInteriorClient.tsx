@@ -175,28 +175,136 @@ export default function TurnkeyInteriorClient() {
                     })
                 }}
             />
+            {/* FAQ SECTION */}
+            <div className="max-w-4xl mx-auto px-6 py-20 space-y-6">
+                <h2 className="text-3xl text-center font-semibold">
+                    Frequently Asked Questions
+                </h2>
 
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        What are turnkey interior solutions?
+                    </h3>
+                    <p className="text-gray-400">
+                        Turnkey interior solutions include complete design,
+                        material procurement, execution, supervision and final delivery
+                        handled by a single interior contractor.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you handle complete interior execution?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we manage the entire interior project including
+                        civil work, electrical, plumbing, carpentry and finishing.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How much do turnkey interiors cost in Hyderabad?
+                    </h3>
+                    <p className="text-gray-400">
+                        Turnkey interior costs typically range from ₹1,500 to ₹3,500 per sq.ft
+                        depending on materials, customization and project scale.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does a turnkey interior project take?
+                    </h3>
+                    <p className="text-gray-400">
+                        Apartment interiors usually take 30–60 days,
+                        while larger villas may require 60–120 days
+                        based on complexity and finishes.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Which areas in Hyderabad do you serve?
+                    </h3>
+                    <p className="text-gray-400">
+                        We serve Kokapet, Gachibowli, Jubilee Hills,
+                        Financial District, Banjara Hills and Madhapur.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide project supervision and quality control?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, our team ensures strict quality checks,
+                        structured timelines and professional supervision
+                        throughout the turnkey execution process.
+                    </p>
+                </div>
+            </div>
             {/* SERVICE SCHEMA */}
             <Script
-                id="turnkey-schema"
+                id="turnkey-faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Service",
-                        name: "Turnkey Interior Solutions in Hyderabad",
-                        areaServed: {
-                            "@type": "City",
-                            name: "Hyderabad"
-                        },
-                        provider: {
-                            "@type": "Organization",
-                            name: "Epoque Group Of Companies"
-                        }
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: "What are turnkey interior solutions?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Turnkey interior solutions include complete design, procurement, execution and supervision handled by a single contractor."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you handle complete interior execution?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, we manage the entire interior execution including civil, electrical, plumbing and finishing."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "How much do turnkey interiors cost in Hyderabad?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Turnkey interior costs typically range from ₹1,500 to ₹3,500 per sq.ft depending on materials and customization."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "How long does a turnkey interior project take?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Apartment interiors take 30–60 days while villas may require 60–120 days depending on scope."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Which areas in Hyderabad do you serve?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "We serve Kokapet, Gachibowli, Jubilee Hills, Financial District, Banjara Hills and Madhapur."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you provide project supervision and quality control?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, we ensure structured supervision and strict quality control throughout the project."
+                                }
+                            }
+                        ]
                     })
                 }}
             />
-
         </section>
     )
 }

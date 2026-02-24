@@ -177,6 +177,49 @@ export default function Page() {
                             </p>
                         </div>
 
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Which platforms work best for villa lead generation?
+                            </h3>
+                            <p>
+                                Google Ads, Meta Ads, YouTube campaigns,
+                                and high-converting landing pages perform best
+                                for luxury villa and gated community projects.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                How do you attract high-net-worth buyers?
+                            </h3>
+                            <p>
+                                We use premium creatives, strategic audience targeting,
+                                lookalike campaigns, and advanced remarketing funnels
+                                to attract serious high-value investors.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Do you provide complete campaign management?
+                            </h3>
+                            <p>
+                                Yes. We handle ad creation, targeting, landing page optimization,
+                                CRM integration, and full funnel performance tracking.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                How quickly can villa campaigns generate leads?
+                            </h3>
+                            <p>
+                                Paid campaigns can start generating qualified leads
+                                within a few days, depending on targeting strategy
+                                and project positioning.
+                            </p>
+                        </div>
+
                     </div>
                 </section>
 

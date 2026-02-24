@@ -195,7 +195,7 @@ export default function ContentMarketingPage() {
                     <div className="space-y-10 text-gray-400">
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Why is content marketing important for SEO?
                             </h3>
                             <p className="mt-3">
@@ -205,7 +205,7 @@ export default function ContentMarketingPage() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Do you provide services across India?
                             </h3>
                             <p className="mt-3">
@@ -216,12 +216,44 @@ export default function ContentMarketingPage() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 How long does content marketing take to show results?
                             </h3>
                             <p className="mt-3">
                                 Typically 3–6 months are required to see measurable organic growth,
                                 depending on competition and industry.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-orange-400">
+                                What types of content do you create?
+                            </h3>
+                            <p className="mt-3">
+                                We create SEO blog articles, website content, landing pages,
+                                case studies, email content, and social media content tailored
+                                to your business goals.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-orange-400">
+                                Is content marketing better than paid ads?
+                            </h3>
+                            <p className="mt-3">
+                                Content marketing delivers long-term organic growth and brand authority,
+                                while paid ads provide short-term traffic. A strategic combination of both
+                                produces the best results.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-orange-400">
+                                Do you provide keyword research before content creation?
+                            </h3>
+                            <p className="mt-3">
+                                Yes, we conduct detailed keyword research and competitor analysis
+                                to ensure every piece of content targets high-intent search terms.
                             </p>
                         </div>
 

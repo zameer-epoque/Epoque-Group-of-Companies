@@ -182,6 +182,39 @@ export default function Page() {
                             </p>
                         </div>
 
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Which platforms work best for real estate lead generation?
+                            </h3>
+                            <p>
+                                Google Ads and Meta Ads deliver strong performance,
+                                supported by SEO content marketing and remarketing
+                                campaigns for higher conversion rates.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Do you provide landing page optimization?
+                            </h3>
+                            <p>
+                                Yes. We build and optimize high-converting landing
+                                pages with fast loading speed, clear CTAs and
+                                integrated lead tracking systems.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                How soon can we start receiving property inquiries?
+                            </h3>
+                            <p>
+                                Paid campaigns can start generating inquiries
+                                within a few days, while SEO-driven traffic
+                                typically builds consistent momentum over time.
+                            </p>
+                        </div>
+
                     </div>
                 </section>
 

@@ -127,7 +127,7 @@ export default function SalesFunnelClient() {
                 </h2>
 
                 <div>
-                    <h3 className="text-purple-400 font-semibold">
+                    <h3 className="text-orange-400 font-semibold">
                         What is a sales funnel?
                     </h3>
                     <p className="text-gray-400">
@@ -137,12 +137,56 @@ export default function SalesFunnelClient() {
                 </div>
 
                 <div>
-                    <h3 className="text-purple-400 font-semibold">
+                    <h3 className="text-orange-400 font-semibold">
                         Do you provide complete funnel automation?
                     </h3>
                     <p className="text-gray-400">
                         Yes, we provide end-to-end funnel systems including strategy,
                         landing pages, email automation and CRM integration.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Which tools do you use for funnel building?
+                    </h3>
+                    <p className="text-gray-400">
+                        We use high-converting landing page builders, CRM platforms,
+                        email automation tools, and analytics tracking systems
+                        to create optimized funnel ecosystems.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does it take to build a sales funnel?
+                    </h3>
+                    <p className="text-gray-400">
+                        A complete funnel system typically takes 1–3 weeks
+                        depending on complexity, automation layers,
+                        and integration requirements.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Can sales funnels improve conversion rates?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, structured funnels increase lead nurturing efficiency,
+                        reduce drop-offs, and significantly improve
+                        overall conversion ratios.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide performance tracking and analytics?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we implement tracking systems to monitor
+                        user behavior, conversions, cost-per-lead,
+                        and ROI performance metrics.
                     </p>
                 </div>
             </div>

@@ -170,26 +170,137 @@ export default function InteriorDesignersHyderabad() {
                     transparent pricing and timely project completion.
                 </p>
             </section>
+{/* FAQ SECTION */}
+<section className="py-24 px-6 bg-[#111111]">
+    <div className="max-w-4xl mx-auto space-y-10">
+        <h2 className="text-3xl font-semibold text-center">
+            Frequently Asked Questions
+        </h2>
 
-            {/* LOCAL BUSINESS SCHEMA */}
-            <Script
-                id="local-business-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "LocalBusiness",
-                        name: "Epoque Group Of Companies",
-                        url: "https://epoquegroup.in/",
-                        areaServed: "Hyderabad",
-                        address: {
-                            "@type": "PostalAddress",
-                            addressLocality: "Hyderabad",
-                            addressCountry: "India"
-                        }
-                    })
-                }}
-            />
+        <div>
+            <h3 className="text-orange-400 font-semibold text-lg">
+                How much does interior design cost in Hyderabad?
+            </h3>
+            <p className="text-gray-300 mt-3">
+                Interior design costs in Hyderabad typically range from
+                ₹1,200 to ₹2,500 per sq.ft depending on materials,
+                customization level and project complexity.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold text-lg">
+                Do you provide turnkey interior solutions?
+            </h3>
+            <p className="text-gray-300 mt-3">
+                Yes, we provide complete turnkey interior execution including
+                design planning, 3D visualization, material selection,
+                manufacturing and installation.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold text-lg">
+                How long does a home interior project take?
+            </h3>
+            <p className="text-gray-300 mt-3">
+                A standard 2BHK interior project takes around 30–45 days,
+                while larger villas may require 60–90 days
+                depending on customization and scope.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold text-lg">
+                Which areas in Hyderabad do you serve?
+            </h3>
+            <p className="text-gray-300 mt-3">
+                We serve Kokapet, Gachibowli, Jubilee Hills,
+                Financial District, Banjara Hills and surrounding areas.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold text-lg">
+                Do you provide warranty on interior work?
+            </h3>
+            <p className="text-gray-300 mt-3">
+                Yes, we provide warranty coverage on modular installations,
+                hardware fittings and workmanship depending on the package selected.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold text-lg">
+                Can you customize interiors as per Vastu?
+            </h3>
+            <p className="text-gray-300 mt-3">
+                Yes, we design interiors aligned with Vastu principles
+                while maintaining modern aesthetics and functionality.
+            </p>
+        </div>
+    </div>
+</section>
+<Script
+    id="faq-schema"
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How much does interior design cost in Hyderabad?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Interior design costs in Hyderabad typically range from ₹1,200 to ₹2,500 per sq.ft depending on materials and customization."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you provide turnkey interior solutions?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we provide complete turnkey interior execution including design planning, 3D visualization and installation."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How long does a home interior project take?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "A 2BHK project takes 30–45 days, while villas may require 60–90 days depending on scope."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Which areas in Hyderabad do you serve?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We serve Kokapet, Gachibowli, Jubilee Hills, Financial District and Banjara Hills."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you provide warranty on interior work?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we provide warranty coverage on modular installations and workmanship."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can you customize interiors as per Vastu?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, we design interiors aligned with Vastu principles while maintaining modern aesthetics."
+                    }
+                }
+            ]
+        })
+    }}
+/>
 
         </main>
     )

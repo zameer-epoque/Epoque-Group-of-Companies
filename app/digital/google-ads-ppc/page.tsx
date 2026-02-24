@@ -193,7 +193,7 @@ export default function GoogleAdsPage() {
                     <div className="space-y-10 text-gray-400">
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 How quickly can Google Ads generate results?
                             </h3>
                             <p className="mt-3">
@@ -204,7 +204,7 @@ export default function GoogleAdsPage() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 Is PPC better than SEO?
                             </h3>
                             <p className="mt-3">
@@ -215,13 +215,46 @@ export default function GoogleAdsPage() {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-orange-400">
                                 What is the minimum Google Ads budget in India?
                             </h3>
                             <p className="mt-3">
                                 Budget varies by industry competition, but even small
                                 businesses in Hyderabad can start with optimized,
                                 performance-focused campaigns.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-orange-400">
+                                Do you provide keyword research for PPC campaigns?
+                            </h3>
+                            <p className="mt-3">
+                                Yes, we conduct detailed keyword research, competitor analysis,
+                                and audience targeting to ensure your ads reach high-intent
+                                customers and maximize return on investment.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-orange-400">
+                                How do you improve conversion rates in Google Ads?
+                            </h3>
+                            <p className="mt-3">
+                                We optimize ad copy, landing pages, bidding strategies,
+                                and audience segmentation to reduce cost-per-click and
+                                improve overall campaign conversions.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-orange-400">
+                                Do you manage remarketing campaigns?
+                            </h3>
+                            <p className="mt-3">
+                                Yes, we create advanced remarketing campaigns to re-target
+                                previous website visitors and increase lead conversions
+                                across search, display, and YouTube networks.
                             </p>
                         </div>
 

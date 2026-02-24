@@ -66,7 +66,77 @@ export default function MarketingAutomationClient() {
                     </motion.div>
                 ))}
             </div>
+            {/* FAQ SECTION */}
+            <div className="max-w-4xl mx-auto px-6 py-20 space-y-6">
+                <h2 className="text-3xl text-center font-semibold">
+                    Frequently Asked Questions
+                </h2>
 
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        What is marketing automation?
+                    </h3>
+                    <p className="text-gray-400">
+                        Marketing automation uses software tools to automate repetitive
+                        marketing tasks such as email campaigns, lead nurturing,
+                        CRM updates, and customer segmentation.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How can marketing automation increase revenue?
+                    </h3>
+                    <p className="text-gray-400">
+                        Automation improves lead follow-up speed, nurtures prospects
+                        consistently, reduces manual errors, and increases
+                        conversion rates through personalized communication.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you integrate with existing CRM systems?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we integrate automation workflows with popular CRM
+                        platforms to ensure seamless lead tracking,
+                        reporting, and sales coordination.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does it take to implement automation?
+                    </h3>
+                    <p className="text-gray-400">
+                        Implementation typically takes 2–4 weeks depending on
+                        business complexity, CRM integrations, and workflow design.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Can automation improve lead quality?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, with lead scoring and behavioral tracking,
+                        automation filters high-intent prospects and
+                        prioritizes them for your sales team.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide reporting and performance tracking?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we implement dashboards and tracking systems
+                        that monitor conversions, campaign performance,
+                        and ROI metrics in real time.
+                    </p>
+                </div>
+            </div>
             {/* SERVICE SCHEMA */}
             <Script
                 id="service-schema"

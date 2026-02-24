@@ -175,37 +175,80 @@ export default function SEOPage() {
 
             {/* ================= FAQ ================= */}
             <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-4xl mx-auto">
+  <div className="max-w-4xl mx-auto">
 
-                    <h2 className="text-3xl font-semibold text-center mb-14">
-                        Frequently Asked Questions
-                    </h2>
+    <h2 className="text-3xl font-semibold text-center mb-14">
+      Frequently Asked Questions
+    </h2>
 
-                    <div className="space-y-10 text-gray-400">
+    <div className="space-y-10 text-gray-400">
 
-                        <div>
-                            <h3 className="text-xl font-semibold text-white">
-                                How long does SEO take?
-                            </h3>
-                            <p className="mt-3">
-                                SEO typically takes 3–6 months to show measurable improvements,
-                                depending on industry competition and website authority.
-                            </p>
-                        </div>
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          How long does SEO take?
+        </h3>
+        <p className="mt-3">
+          SEO typically takes 3–6 months to show measurable improvements,
+          depending on industry competition and website authority.
+        </p>
+      </div>
 
-                        <div>
-                            <h3 className="text-xl font-semibold text-white">
-                                Why is Local SEO important in Hyderabad?
-                            </h3>
-                            <p className="mt-3">
-                                Local SEO increases visibility in Google Maps and helps
-                                businesses attract nearby customers actively searching for services.
-                            </p>
-                        </div>
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Why is Local SEO important in Hyderabad?
+        </h3>
+        <p className="mt-3">
+          Local SEO increases visibility in Google Maps and helps
+          businesses attract nearby customers actively searching for services.
+        </p>
+      </div>
 
-                    </div>
-                </div>
-            </section>
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          What is the difference between SEO and PPC?
+        </h3>
+        <p className="mt-3">
+          SEO focuses on organic rankings and long-term growth,
+          while PPC provides immediate paid visibility on search engines.
+          A combined strategy delivers the best digital results.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Do you provide technical SEO services?
+        </h3>
+        <p className="mt-3">
+          Yes, we handle technical SEO including site audits,
+          page speed optimization, schema implementation,
+          indexing fixes, and crawl error resolution.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          How do you choose keywords for SEO campaigns?
+        </h3>
+        <p className="mt-3">
+          We perform detailed keyword research based on search intent,
+          competition level, and business goals to target high-converting
+          and relevant keywords.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-xl font-semibold text-white">
+          Do you provide monthly SEO reports?
+        </h3>
+        <p className="mt-3">
+          Yes, we provide transparent monthly reports including keyword rankings,
+          traffic growth, backlinks, and performance insights.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
             {/* ================= CTA ================= */}
             <section className="py-24 text-center border-t border-white/5">

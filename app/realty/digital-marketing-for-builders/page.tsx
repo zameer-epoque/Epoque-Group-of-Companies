@@ -195,6 +195,39 @@ export default function BrandingCreativePage() {
                         </p>
                     </div>
 
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            How long does a branding project take?
+                        </h3>
+                        <p>
+                            A complete branding project typically takes
+                            2 to 4 weeks depending on research depth,
+                            revisions and approval cycles.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Do you provide logo design separately?
+                        </h3>
+                        <p>
+                            Yes. We offer standalone logo design services
+                            as well as complete brand identity packages
+                            including brand guidelines.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Will I receive brand guidelines and source files?
+                        </h3>
+                        <p>
+                            Yes. After completion, you receive all source files,
+                            brand assets and structured guidelines for consistent
+                            future marketing usage.
+                        </p>
+                    </div>
+
                 </div>
             </div>
 

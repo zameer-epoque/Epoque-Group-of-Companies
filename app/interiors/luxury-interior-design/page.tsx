@@ -191,24 +191,130 @@ export default function LuxuryInteriorClient() {
                     })
                 }}
             />
+            {/* FAQ SECTION */}
+            <div className="max-w-4xl mx-auto px-6 py-20 space-y-6">
+                <h2 className="text-3xl text-center font-semibold">
+                    Frequently Asked Questions
+                </h2>
 
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Who are the best luxury interior designers in Hyderabad?
+                    </h3>
+                    <p className="text-gray-400">
+                        We are among the top luxury interior design companies in Hyderabad
+                        delivering premium villa and apartment interiors.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide complete turnkey luxury interiors?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we offer end-to-end luxury interior solutions including
+                        design, material sourcing, execution and final handover.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How much do luxury interiors cost in Hyderabad?
+                    </h3>
+                    <p className="text-gray-400">
+                        Luxury interior costs typically range from ₹2,500 to ₹5,000 per sq.ft
+                        depending on materials, customization level and imported finishes.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does a luxury villa interior project take?
+                    </h3>
+                    <p className="text-gray-400">
+                        Luxury villa projects usually take 60–120 days depending on
+                        project size, customization and design complexity.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Which areas do you serve in Hyderabad?
+                    </h3>
+                    <p className="text-gray-400">
+                        We provide luxury interior services in Kokapet, Financial District,
+                        Gachibowli, Jubilee Hills, Banjara Hills and surrounding premium locations.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you customize interiors based on client lifestyle?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, every luxury interior project is fully customized
+                        based on client preferences, lifestyle requirements and design vision.
+                    </p>
+                </div>
+            </div>
             {/* SERVICE SCHEMA */}
             <Script
-                id="service-schema"
+                id="faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Service",
-                        name: "Luxury Interior Design in Hyderabad",
-                        areaServed: {
-                            "@type": "City",
-                            name: "Hyderabad"
-                        },
-                        provider: {
-                            "@type": "Organization",
-                            name: "Epoque Group Of Companies"
-                        }
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: "Who are the best luxury interior designers in Hyderabad?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "We are among the top luxury interior design companies in Hyderabad delivering premium villa and apartment interiors."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you provide complete turnkey luxury interiors?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, we offer end-to-end luxury interior solutions including design, material sourcing and execution."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "How much do luxury interiors cost in Hyderabad?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Luxury interior costs typically range from ₹2,500 to ₹5,000 per sq.ft depending on customization and finishes."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "How long does a luxury villa interior project take?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Luxury villa interior projects usually take 60–120 days depending on scope and complexity."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Which areas do you serve in Hyderabad?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "We serve Kokapet, Financial District, Gachibowli, Jubilee Hills and Banjara Hills."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you customize interiors based on client lifestyle?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, all luxury interior projects are customized according to client lifestyle and preferences."
+                                }
+                            }
+                        ]
                     })
                 }}
             />

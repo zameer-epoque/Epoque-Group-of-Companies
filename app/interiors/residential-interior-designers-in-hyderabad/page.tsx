@@ -182,24 +182,133 @@ export default function ResidentialInteriorHyderabad() {
                     </Link>
                 </div>
             </section>
+            {/* FAQ SECTION */}
+            <section className="py-24 px-6 bg-[#111111]">
+                <div className="max-w-4xl mx-auto space-y-10">
+                    <h2 className="text-3xl font-semibold text-center">
+                        Frequently Asked Questions
+                    </h2>
 
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            How much does residential interior design cost in Hyderabad?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Residential interior costs typically range from ₹1,200 to ₹2,500 per sq.ft
+                            depending on materials, customization and project size.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Do you provide turnkey residential interior solutions?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Yes, we provide complete turnkey services including design planning,
+                            3D visualization, material selection, furniture customization
+                            and final installation.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            How long does a residential interior project take?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            A typical apartment project takes 30–45 days,
+                            while villas may take 60–90 days depending on scope.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Do you customize designs as per client preferences?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Yes, every residential interior project is fully customized
+                            based on lifestyle, design vision and space requirements.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Which areas in Hyderabad do you serve?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            We serve Kokapet, Gachibowli, Jubilee Hills,
+                            Financial District, Banjara Hills and Madhapur.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Do you provide warranty on residential interior work?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Yes, we provide warranty coverage on modular installations,
+                            fittings and workmanship depending on selected materials.
+                        </p>
+                    </div>
+                </div>
+            </section>
             {/* LOCAL BUSINESS SCHEMA */}
             <Script
-                id="residential-schema"
+                id="residential-faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "Service",
-                        name: "Residential Interior Design in Hyderabad",
-                        areaServed: {
-                            "@type": "City",
-                            name: "Hyderabad"
-                        },
-                        provider: {
-                            "@type": "Organization",
-                            name: "Epoque Group Of Companies"
-                        }
+                        "@type": "FAQPage",
+                        mainEntity: [
+                            {
+                                "@type": "Question",
+                                name: "How much does residential interior design cost in Hyderabad?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Residential interior costs typically range from ₹1,200 to ₹2,500 per sq.ft depending on materials and customization."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you provide turnkey residential interior solutions?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, we provide complete turnkey services including design, visualization and installation."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "How long does a residential interior project take?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Apartment interiors take 30–45 days while villas may take 60–90 days depending on scope."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you customize designs as per client preferences?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, all residential interior projects are fully customized based on client requirements."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Which areas in Hyderabad do you serve?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "We serve Kokapet, Gachibowli, Jubilee Hills, Financial District, Banjara Hills and Madhapur."
+                                }
+                            },
+                            {
+                                "@type": "Question",
+                                name: "Do you provide warranty on residential interior work?",
+                                acceptedAnswer: {
+                                    "@type": "Answer",
+                                    text: "Yes, we provide warranty coverage on modular installations and workmanship."
+                                }
+                            }
+                        ]
                     })
                 }}
             />

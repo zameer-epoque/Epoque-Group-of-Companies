@@ -126,33 +126,77 @@ export default function LeadGenerationPage() {
 
             {/* ================= FAQ SECTION ================= */}
             <div className="max-w-4xl mx-auto px-6 py-24 space-y-10">
-                <h2 className="text-3xl font-semibold text-center">
-                    Frequently Asked Questions
-                </h2>
+    <h2 className="text-3xl font-semibold text-center">
+        Frequently Asked Questions
+    </h2>
 
-                <div className="space-y-6 text-gray-400">
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            What is lead generation in digital marketing?
-                        </h3>
-                        <p>
-                            Lead generation is the process of attracting and converting
-                            potential customers into inquiries using paid ads, SEO,
-                            landing pages and automation systems.
-                        </p>
-                    </div>
+    <div className="space-y-6 text-gray-400">
+        <div>
+            <h3 className="text-orange-400 font-semibold">
+                What is lead generation in digital marketing?
+            </h3>
+            <p>
+                Lead generation is the process of attracting and converting
+                potential customers into inquiries using paid ads, SEO,
+                landing pages and automation systems.
+            </p>
+        </div>
 
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Do you provide real estate lead generation in Hyderabad?
-                        </h3>
-                        <p>
-                            Yes, we specialize in real estate and high-ticket lead
-                            generation campaigns targeting Hyderabad’s premium markets.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <h3 className="text-orange-400 font-semibold">
+                Do you provide real estate lead generation in Hyderabad?
+            </h3>
+            <p>
+                Yes, we specialize in real estate and high-ticket lead
+                generation campaigns targeting Hyderabad’s premium markets.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold">
+                Which platforms do you use for lead generation?
+            </h3>
+            <p>
+                We use Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads,
+                SEO strategies, and optimized landing pages to generate
+                high-quality leads across India.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold">
+                How much does lead generation cost in India?
+            </h3>
+            <p>
+                The cost depends on industry competition and targeting.
+                We create performance-focused campaigns that optimize
+                cost-per-lead while maximizing return on investment.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold">
+                How long does it take to start receiving leads?
+            </h3>
+            <p>
+                Paid campaigns can start generating leads within a few days,
+                while organic lead generation through SEO may take
+                2–3 months for consistent growth.
+            </p>
+        </div>
+
+        <div>
+            <h3 className="text-orange-400 font-semibold">
+                Do you provide landing page optimization?
+            </h3>
+            <p>
+                Yes, we design and optimize high-converting landing pages
+                with strong CTAs, fast loading speed, and conversion tracking
+                to improve overall lead quality.
+            </p>
+        </div>
+    </div>
+</div>
 
             {/* ================= CTA SECTION ================= */}
             <div className="py-28 px-6 text-center">

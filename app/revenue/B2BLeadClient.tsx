@@ -67,7 +67,78 @@ export default function B2BLeadClient() {
                     </motion.div>
                 ))}
             </div>
+            {/* FAQ SECTION */}
+            <div className="max-w-4xl mx-auto px-6 pb-24 space-y-6">
+                <h2 className="text-3xl text-center font-semibold">
+                    Frequently Asked Questions
+                </h2>
 
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        What is B2B lead generation?
+                    </h3>
+                    <p className="text-gray-400">
+                        B2B lead generation is the process of identifying and
+                        attracting potential business clients through targeted
+                        outreach, campaigns and structured sales funnels.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Which platforms work best for B2B leads?
+                    </h3>
+                    <p className="text-gray-400">
+                        LinkedIn, cold email outreach, Google Ads and
+                        account-based marketing strategies are highly effective
+                        for generating qualified B2B opportunities.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does it take to generate qualified leads?
+                    </h3>
+                    <p className="text-gray-400">
+                        Initial leads can start within a few weeks,
+                        but consistent pipeline growth typically
+                        builds over 30–60 days of structured campaigns.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you target specific industries?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we create industry-specific targeting strategies
+                        based on decision-maker roles, company size,
+                        and revenue segments.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide CRM integration?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we integrate campaigns with CRM systems
+                        to track conversations, lead status,
+                        and pipeline performance.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How do you ensure lead quality?
+                    </h3>
+                    <p className="text-gray-400">
+                        We use qualification filters, intent-based targeting,
+                        personalized messaging and funnel optimization
+                        to attract high-quality business prospects.
+                    </p>
+                </div>
+            </div>
             {/* SCHEMA */}
             <Script
                 id="service-schema"

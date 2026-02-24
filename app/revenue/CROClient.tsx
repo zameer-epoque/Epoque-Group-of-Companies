@@ -76,7 +76,78 @@ export default function CROClient() {
                 ))}
 
             </div>
+            {/* FAQ SECTION */}
+            <div className="max-w-4xl mx-auto px-6 pb-24 space-y-6">
+                <h2 className="text-3xl text-center font-semibold">
+                    Frequently Asked Questions
+                </h2>
 
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        What is Conversion Rate Optimization (CRO)?
+                    </h3>
+                    <p className="text-gray-400">
+                        CRO is the process of improving your website experience
+                        to increase the percentage of visitors who take
+                        desired actions such as purchases or form submissions.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does CRO take to show results?
+                    </h3>
+                    <p className="text-gray-400">
+                        Initial improvements can be seen within a few weeks,
+                        but structured A/B testing and funnel optimization
+                        typically require 30–90 days for measurable impact.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you conduct A/B testing?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we run structured A/B and multivariate tests
+                        to identify high-performing variations and maximize
+                        conversion performance.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Can CRO increase revenue without increasing traffic?
+                    </h3>
+                    <p className="text-gray-400">
+                        Absolutely. By improving conversion rates,
+                        businesses can generate more revenue
+                        from the same amount of website traffic.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        What tools do you use for CRO?
+                    </h3>
+                    <p className="text-gray-400">
+                        We use analytics platforms, heatmaps,
+                        user behavior tracking, and testing tools
+                        to optimize landing pages and sales funnels.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide performance tracking reports?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we provide detailed performance reports
+                        including conversion rate improvements,
+                        funnel metrics, and revenue impact analysis.
+                    </p>
+                </div>
+            </div>
             {/* SERVICE SCHEMA */}
             <Script
                 id="service-schema"

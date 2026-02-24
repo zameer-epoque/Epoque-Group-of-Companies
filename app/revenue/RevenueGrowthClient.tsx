@@ -67,7 +67,78 @@ export default function RevenueGrowthClient() {
                     </motion.div>
                 ))}
             </div>
+            {/* FAQ SECTION */}
+            <div className="max-w-4xl mx-auto px-6 pb-24 space-y-6">
+                <h2 className="text-3xl text-center font-semibold">
+                    Frequently Asked Questions
+                </h2>
 
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        What is revenue growth consulting?
+                    </h3>
+                    <p className="text-gray-400">
+                        Revenue growth consulting focuses on identifying
+                        opportunities to increase sales, improve margins
+                        and build scalable growth systems within a business.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How do you identify revenue gaps?
+                    </h3>
+                    <p className="text-gray-400">
+                        We conduct detailed audits of marketing channels,
+                        sales funnels, pricing models and customer journeys
+                        to uncover bottlenecks and revenue leakage points.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Can you help increase profit margins?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, by optimizing pricing strategy, reducing
+                        acquisition costs and improving conversion rates,
+                        we help businesses enhance overall profitability.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        How long does it take to see measurable growth?
+                    </h3>
+                    <p className="text-gray-400">
+                        Initial improvements can be visible within 30–60 days,
+                        while structured growth systems typically show
+                        consistent scaling over 3–6 months.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you work with startups and established companies?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we tailor strategies for startups, SMEs
+                        and enterprise businesses depending on
+                        growth stage and revenue goals.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 className="text-orange-400 font-semibold">
+                        Do you provide ongoing performance tracking?
+                    </h3>
+                    <p className="text-gray-400">
+                        Yes, we implement reporting dashboards
+                        and KPI tracking systems to monitor
+                        revenue performance and growth metrics.
+                    </p>
+                </div>
+            </div>
             {/* SCHEMA */}
             <Script
                 id="service-schema"

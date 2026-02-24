@@ -162,9 +162,49 @@ export default function BrandingCreativePage() {
                             identity, brochures, and campaign creative systems.
                         </p>
                     </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            What industries do you offer branding services for?
+                        </h3>
+                        <p>
+                            We provide branding services for real estate, startups, retail,
+                            healthcare, hospitality, and corporate businesses looking to
+                            build a strong market presence.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            How long does a branding project take?
+                        </h3>
+                        <p>
+                            A complete branding project typically takes 2 to 4 weeks
+                            depending on research, strategy development, and design approvals.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Do you offer logo design separately?
+                        </h3>
+                        <p>
+                            Yes, we offer standalone logo design services as well as
+                            complete brand identity packages including brand guidelines.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold">
+                            Will I receive all source files after project completion?
+                        </h3>
+                        <p>
+                            Yes, after project completion you will receive all required
+                            source files, brand assets, and usage guidelines for future marketing.
+                        </p>
+                    </div>
                 </div>
             </div>
-
             {/* ================= CTA SECTION ================= */}
             <div className="py-28 px-6 text-center">
                 <div className="max-w-3xl mx-auto">

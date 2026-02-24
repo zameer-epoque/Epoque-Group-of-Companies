@@ -177,6 +177,7 @@ export default function InteriorDesignersHyderabad() {
             </section>
 
             {/* FAQ */}
+            {/* FAQ */}
             <section className="py-24 px-6 bg-[#111111]">
                 <div className="max-w-4xl mx-auto space-y-10">
                     <h2 className="text-3xl font-semibold text-center">
@@ -189,7 +190,8 @@ export default function InteriorDesignersHyderabad() {
                         </h3>
                         <p className="text-gray-300 mt-3">
                             Interior costs depend on project size, materials and customization level.
-                            We provide transparent pricing and flexible luxury packages.
+                            On average, pricing ranges from ₹1,200 to ₹2,500 per sq.ft depending on finishes
+                            and design complexity.
                         </p>
                     </div>
 
@@ -198,12 +200,52 @@ export default function InteriorDesignersHyderabad() {
                             Do you provide turnkey interior solutions?
                         </h3>
                         <p className="text-gray-300 mt-3">
-                            Yes, we manage complete end-to-end interior execution from concept to completion.
+                            Yes, we manage complete end-to-end interior execution from concept,
+                            design planning and material selection to final installation.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            How long does a 2BHK interior project take?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            A standard 2BHK interior project usually takes 30–45 days,
+                            depending on customization, approvals and material availability.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Do you offer customized interior designs?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Yes, all our interior designs are fully customized based on
+                            client lifestyle, space requirements and budget preferences.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Which areas in Hyderabad do you serve?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            We serve Kokapet, Gachibowli, Jubilee Hills, Financial District,
+                            Madhapur, Banjara Hills and surrounding premium locations.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 className="text-orange-400 font-semibold text-lg">
+                            Do you provide warranty on interior work?
+                        </h3>
+                        <p className="text-gray-300 mt-3">
+                            Yes, we provide warranty coverage on modular installations,
+                            fittings and workmanship depending on the selected package.
                         </p>
                     </div>
                 </div>
             </section>
-
             {/* SCHEMA */}
             <script
                 type="application/ld+json"

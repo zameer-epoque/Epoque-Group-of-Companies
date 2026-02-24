@@ -203,10 +203,51 @@ export default function SocialMediaMarketing() {
                             </p>
                         </div>
 
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">
+                                Which social media platforms do you manage?
+                            </h3>
+                            <p className="mt-3">
+                                We manage Instagram, Facebook, LinkedIn, YouTube, and Twitter
+                                accounts with content strategy, creative design, and paid promotions.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">
+                                How often do you post content?
+                            </h3>
+                            <p className="mt-3">
+                                Posting frequency depends on your package, but typically
+                                we publish 12–20 high-quality posts per month along with stories
+                                and engagement campaigns.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">
+                                Can social media generate real leads?
+                            </h3>
+                            <p className="mt-3">
+                                Yes, with the right targeting and creative strategy,
+                                social media campaigns can generate high-quality
+                                leads and measurable business growth.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold text-white">
+                                Do you provide monthly performance reports?
+                            </h3>
+                            <p className="mt-3">
+                                Yes, we provide detailed monthly reports including reach,
+                                engagement, leads generated, ad spend analysis, and ROI tracking.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </section>
-
             {/* CTA */}
             <section className="py-24 text-center border-t border-white/5">
                 <h2 className="text-3xl md:text-4xl font-semibold">

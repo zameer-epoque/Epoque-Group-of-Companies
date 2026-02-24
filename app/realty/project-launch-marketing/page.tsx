@@ -181,6 +181,39 @@ export default function Page() {
                             </p>
                         </div>
 
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Which platforms are used for project launch marketing?
+                            </h3>
+                            <p>
+                                We use Google Ads, Meta Ads, YouTube campaigns,
+                                landing pages, and CRM integrations to generate
+                                qualified buyer inquiries at scale.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Do you create branding and creative assets for launch?
+                            </h3>
+                            <p>
+                                Yes. We develop project branding, ad creatives,
+                                brochures, landing pages, and complete campaign
+                                messaging aligned with launch positioning.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-orange-400 font-semibold">
+                                Do you provide post-launch remarketing campaigns?
+                            </h3>
+                            <p>
+                                Yes. We implement remarketing strategies to re-engage
+                                interested buyers and improve booking conversion rates
+                                after the initial launch phase.
+                            </p>
+                        </div>
+
                     </div>
                 </section>
 
