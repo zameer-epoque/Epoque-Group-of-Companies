@@ -42,40 +42,35 @@ const clients = [
         image:
             "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Premium real estate developer in Hyderabad. Delivered branding, Google Ads and high-conversion lead generation campaigns.",
-        leads: "3,200+"
+            "Delivered structured real estate branding, Google Ads and SEO campaigns generating high-intent property leads across Hyderabad micro-markets."
     },
     {
         name: "Etereo Realty Goa",
         image:
             "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Luxury villa and gated community developer. Executed SEO, paid ads and full-scale digital launch strategy.",
-
+            "Executed full-scale digital launch strategy including villa marketing funnels, Meta Ads campaigns and qualified buyer acquisition."
     },
     {
         name: "Orange County Homes",
         image:
             "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
-            "High-end villa development brand. Built performance funnels and optimized cost-per-lead campaigns.",
-
+            "Built conversion-optimized landing pages and performance marketing systems reducing cost-per-lead significantly."
     },
     {
         name: "GRSV Infra",
         image:
             "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.jpg",
         description:
-            "Infrastructure and residential builder. Implemented structured branding and performance marketing systems.",
-
+            "Implemented SEO-driven real estate marketing strategy improving search visibility and booking pipeline growth."
     },
     {
         name: "P R Constructions",
         image:
             "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Residential construction company. Scaled visibility through digital outreach and ROI-driven campaigns.",
-
+            "Scaled project visibility through structured branding, paid advertising and ROI-focused digital outreach campaigns."
     }
 ]
 
@@ -94,50 +89,65 @@ export default function ClientsPage() {
                 </h1>
 
                 {/* SEO Intro */}
-                <p className="text-gray-400 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
-                    Epoque Group is a specialized real estate marketing agency in Hyderabad,
-                    helping premium builders like Vasavi Group, Orange County Homes,
-                    GRSV Infra and Etereo Realty generate qualified property leads through
-                    SEO, Google Ads, Meta Ads and performance-driven digital strategies.
+                <p className="text-gray-400 max-w-3xl mx-auto text-center mb-20 leading-relaxed">
+                    Epoque Group is a performance-driven real estate marketing agency in Hyderabad,
+                    helping builders and developers scale projects using SEO, Google Ads,
+                    Meta Ads and structured lead generation strategies.
                 </p>
 
                 {/* CLIENT GRID */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
 
                     {clients.map((client, index) => (
-                        <div
-                            key={index}
-                            className="border border-white/10 rounded-3xl bg-[#111111] overflow-hidden hover:-translate-y-2 transition duration-300"
-                        >
-                            <div className="relative h-60 w-full">
-                                <Image
-                                    src={client.image}
-                                    alt={`${client.name} real estate marketing campaign in Hyderabad by Epoque Group`}
-                                    fill
-                                    sizes="(max-width:768px) 100vw, 33vw"
-                                    priority={index === 0}
-                                    className="object-cover transition duration-500 hover:scale-105"
-                                />
+                        <div key={index} className="relative group">
+
+                            {/* Gradient Hover Glow */}
+                            <div className="absolute -inset-1 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+
+                            {/* Card Wrapper */}
+                            <div className="relative p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 transition duration-300 group-hover:scale-[1.03]">
+
+                                <div className="rounded-3xl bg-[#111111] overflow-hidden border border-white/5 h-full transition duration-300 group-hover:border-orange-400/30">
+
+                                    {/* IMAGE */}
+                                    <div className="relative h-60 w-full overflow-hidden">
+                                        <Image
+                                            src={client.image}
+                                            alt={`${client.name} real estate marketing campaign in Hyderabad by Epoque Group`}
+                                            fill
+                                            sizes="(max-width:768px) 100vw, 33vw"
+                                            priority={index === 0}
+                                            className="object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-110"
+                                        />
+                                    </div>
+
+                                    {/* CONTENT */}
+                                    <div className="p-8 space-y-4">
+
+                                        <h2 className="text-2xl font-semibold text-orange-400 transition duration-300 group-hover:text-yellow-400">
+                                            {client.name}
+                                        </h2>
+
+                                        <p className="text-gray-400 text-sm leading-relaxed transition duration-300 group-hover:text-gray-300">
+                                            {client.description}
+                                        </p>
+
+                                    </div>
+
+                                </div>
                             </div>
 
-                            <div className="p-8 space-y-4">
-                                <h2 className="text-2xl font-semibold text-orange-400">
-                                    {client.name}
-                                </h2>
-
-                                <p className="text-gray-400 text-sm leading-relaxed">
-                                    {client.description}
-                                </p>
-
-
-                            </div>
                         </div>
                     ))}
 
                 </div>
-
+                {/* PREMIUM GRADIENT DIVIDER */}
+                <div className="relative my-12">
+                    <div className="h-[2px] w-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 rounded-full"></div>
+                    <div className="absolute inset-0 h-[6px] bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 blur-md opacity-40"></div>
+                </div>
                 {/* CONTACT CTA SECTION */}
-                <div className="mt-28 text-center">
+                <div className="mt-12 text-center">
 
                     <h2 className="text-4xl font-semibold mb-6">
                         Want Similar Results for Your Project?
@@ -146,7 +156,7 @@ export default function ClientsPage() {
                     <p className="text-gray-400 max-w-2xl mx-auto mb-10">
                         Partner with Epoque Group and scale your real estate project
                         through structured branding, SEO, Google Ads and
-                        high-conversion lead generation strategies.
+                        high-conversion lead generation systems.
                     </p>
 
                     <Link
@@ -170,7 +180,7 @@ export default function ClientsPage() {
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "ItemList",
-                        name: "Real Estate Marketing Clients",
+                        name: "Real Estate Marketing Case Studies",
                         itemListElement: clients.map((client, index) => ({
                             "@type": "ListItem",
                             position: index + 1,
