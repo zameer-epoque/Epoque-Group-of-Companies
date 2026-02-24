@@ -64,7 +64,7 @@ export default function VisionMissionPromise() {
                             icon: "🚀",
                             title: "Our Vision",
                             subtitle: "Redefining Real Estate & Business Growth",
-                            desc: "To become Hyderabad’s most trusted platform for luxury villas, gated community plots, performance-driven digital marketing, and scalable revenue architecture — shaping modern enterprises and high-value property ecosystems.",
+                            desc: "To become Hyderabad’s most trusted platform for luxury villas, gated community , performance-driven digital marketing, and scalable revenue architecture — shaping modern enterprises and high-value property ecosystems.",
                             color: "#facc15",
                         },
                         {

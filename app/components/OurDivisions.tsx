@@ -20,10 +20,10 @@ const divisions = [
         id: "02",
         title: "Époque Realty",
         description:
-            "Luxury villas, gated community plots, HMDA approved lands, and premium real estate opportunities across Hyderabad’s fastest growing investment corridors.",
+            "Luxury villas, gated community , HMDA approved lands, and premium real estate opportunities across Hyderabad’s fastest growing investment corridors.",
         image: "/reality.jpg",
         href: "/realty",
-        cta: "Get More Villas & Plots",
+        cta: "Get More Villas ",
         alt: "Luxury villas and plots for sale in Hyderabad",
     },
     {

@@ -61,7 +61,7 @@ export default function Hero() {
           transition={{ duration: 1.4, delay: 0.3 }}
           className="mt-8 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-gray-300"
         >
-          Époque Group delivers luxury villas and plots in Hyderabad,
+          Époque Group delivers luxury villas  in Hyderabad,
           performance-driven digital marketing services, premium interior
           design execution, and revenue growth consulting frameworks
           engineered to scale modern enterprises and high-value property ventures.

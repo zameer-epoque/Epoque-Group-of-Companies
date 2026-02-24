@@ -46,7 +46,7 @@ export default function Footer() {
 
           <p className="text-white/80 text-sm md:text-base leading-relaxed">
             Epoque Group is a Hyderabad-based enterprise specializing in
-            luxury villas, HMDA approved plots, premium interior design,
+            luxury villas, HMDA approved, premium interior design,
             digital marketing services, and structured revenue consulting.
           </p>
 

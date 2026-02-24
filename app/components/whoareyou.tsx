@@ -89,7 +89,7 @@ export default function WhoWeAre() {
                         {
                             icon: "🏡",
                             title: "Real Estate Excellence",
-                            desc: "Delivering premium villas, gated community plots, and investment-driven real estate opportunities across Hyderabad’s fastest growing corridors.",
+                            desc: "Delivering premium villas, gated community , and investment-driven real estate opportunities across Hyderabad’s fastest growing corridors.",
                             color: "#facc15",
                         },
                         {
