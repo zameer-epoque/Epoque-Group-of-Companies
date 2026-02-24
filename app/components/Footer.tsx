@@ -187,7 +187,7 @@ export default function Footer() {
           <ul className="space-y-4 text-white/80 text-sm md:text-base">
             <li>
               <a href="/realty" className="hover:text-orange-400 transition">
-                Real Estate – Villas
+                Real Estate – Apartments & Villas
               </a>
             </li>
             <li>
