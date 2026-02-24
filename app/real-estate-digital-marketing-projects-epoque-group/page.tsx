@@ -17,14 +17,14 @@ export const metadata: Metadata = {
         "Epoque Group case studies"
     ],
     alternates: {
-        canonical: "https://epoquegroup.in/clients"
+        canonical: "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group"
     },
     openGraph: {
         title:
             "Real Estate Marketing Case Studies | Epoque Group Hyderabad",
         description:
             "See how Epoque Group scales real estate brands through SEO, Google Ads and performance marketing strategies.",
-        url: "https://epoquegroup.in/clients",
+        url: "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group",
         siteName: "Epoque Group",
         type: "website"
     },

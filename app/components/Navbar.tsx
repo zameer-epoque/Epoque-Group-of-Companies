@@ -58,7 +58,7 @@ const navItems = [
       { label: "B2B Lead Generation", href: "/revenue/b2b-lead-generation" },
     ],
   },
-  { label: "Our Clients", href: "/clients" },
+  { label: "Our Clients", href: "/real-estate-digital-marketing-projects-epoque-group" },
   { label: "Faq", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ]
