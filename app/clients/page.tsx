@@ -1,150 +1,186 @@
-"use client"
-
-import { motion } from "framer-motion"
+import type { Metadata } from "next"
+import Script from "next/script"
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import Link from "next/link"
 
+export const metadata: Metadata = {
+    title:
+        "Real Estate Marketing Case Studies in Hyderabad | Epoque Group Clients",
+    description:
+        "Explore real estate marketing case studies by Epoque Group in Hyderabad including Vasavi Group, Orange County Homes, GRSV Infra and more. SEO, Google Ads and high-conversion lead generation campaigns.",
+    keywords: [
+        "Real estate marketing Hyderabad",
+        "Vasavi Group marketing",
+        "Orange County Homes marketing",
+        "Real estate lead generation Hyderabad",
+        "Builders digital marketing Hyderabad",
+        "Epoque Group case studies"
+    ],
+    alternates: {
+        canonical: "https://epoquegroup.in/clients"
+    },
+    openGraph: {
+        title:
+            "Real Estate Marketing Case Studies | Epoque Group Hyderabad",
+        description:
+            "See how Epoque Group scales real estate brands through SEO, Google Ads and performance marketing strategies.",
+        url: "https://epoquegroup.in/clients",
+        siteName: "Epoque Group",
+        type: "website"
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Real Estate Marketing Clients | Epoque Group",
+        description:
+            "Hyderabad real estate marketing case studies and project growth results."
+    }
+}
 
 const clients = [
     {
         name: "Vasavi Group",
-        image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
+        image:
+            "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
             "Premium real estate developer in Hyderabad. Delivered branding, Google Ads and high-conversion lead generation campaigns.",
-        stats: { leads: 3200, projects: 4 }
+        leads: "3,200+"
     },
     {
         name: "Etereo Realty Goa",
-        image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
+        image:
+            "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
             "Luxury villa and gated community developer. Executed SEO, paid ads and full-scale digital launch strategy.",
-        stats: { leads: 2100, projects: 3 }
+
     },
     {
         name: "Orange County Homes",
-        image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
+        image:
+            "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
             "High-end villa development brand. Built performance funnels and optimized cost-per-lead campaigns.",
-        stats: { leads: 1800, projects: 2 }
+
     },
     {
         name: "GRSV Infra",
-        image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.jpg",
+        image:
+            "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.jpg",
         description:
             "Infrastructure and residential builder. Implemented structured branding and performance marketing systems.",
-        stats: { leads: 2400, projects: 4 }
+
     },
     {
         name: "P R Constructions",
-        image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
+        image:
+            "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
         description:
             "Residential construction company. Scaled visibility through digital outreach and ROI-driven campaigns.",
-        stats: { leads: 2000, projects: 4 }
+
     }
 ]
 
-function Counter({ value }: { value: number }) {
-    const [count, setCount] = useState(0)
-
-    useEffect(() => {
-        let start = 0
-        const duration = 1000
-        const increment = value / (duration / 16)
-
-        const counter = setInterval(() => {
-            start += increment
-            if (start >= value) {
-                setCount(value)
-                clearInterval(counter)
-            } else {
-                setCount(Math.floor(start))
-            }
-        }, 16)
-
-        return () => clearInterval(counter)
-    }, [value])
-
-    return <span>{count.toLocaleString()}</span>
-}
-
-export default function ClientsPremiumPage() {
+export default function ClientsPage() {
     return (
-        <section className="bg-black text-white py-24 px-6">
+        <main className="bg-black text-white min-h-screen">
 
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto px-6 py-24">
 
-                <h1 className="text-5xl font-semibold text-center mb-20">
-                    Our{" "}
-                    <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                        Clients
+                {/* H1 */}
+                <h1 className="text-5xl font-semibold text-center mb-8">
+                    Real Estate Marketing Case Studies in{" "}
+                    <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                        Hyderabad
                     </span>
                 </h1>
 
+                {/* SEO Intro */}
+                <p className="text-gray-400 max-w-3xl mx-auto text-center mb-16 leading-relaxed">
+                    Epoque Group is a specialized real estate marketing agency in Hyderabad,
+                    helping premium builders like Vasavi Group, Orange County Homes,
+                    GRSV Infra and Etereo Realty generate qualified property leads through
+                    SEO, Google Ads, Meta Ads and performance-driven digital strategies.
+                </p>
+
+                {/* CLIENT GRID */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
 
                     {clients.map((client, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{ opacity: 0, y: 40 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            whileHover={{ y: -10 }}
-                            className="relative group"
+                            className="border border-white/10 rounded-3xl bg-[#111111] overflow-hidden hover:-translate-y-2 transition duration-300"
                         >
-                            {/* Glow */}
-                            <div className="absolute -inset-1 bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] rounded-3xl blur opacity-0 group-hover:opacity-80 transition duration-500"></div>
+                            <div className="relative h-60 w-full">
+                                <Image
+                                    src={client.image}
+                                    alt={`${client.name} real estate marketing campaign in Hyderabad by Epoque Group`}
+                                    fill
+                                    sizes="(max-width:768px) 100vw, 33vw"
+                                    priority={index === 0}
+                                    className="object-cover transition duration-500 hover:scale-105"
+                                />
+                            </div>
 
-                            <div className="relative bg-[#111111] rounded-3xl overflow-hidden border border-white/10">
+                            <div className="p-8 space-y-4">
+                                <h2 className="text-2xl font-semibold text-orange-400">
+                                    {client.name}
+                                </h2>
 
-                                {/* Image */}
-                                <div className="relative h-60 w-full overflow-hidden">
-                                    <Image
-                                        src={client.image}
-                                        alt={client.name}
-                                        fill
-                                        className="object-cover transition duration-500 group-hover:scale-105"
-                                    />
-                                </div>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    {client.description}
+                                </p>
 
-                                {/* Content Always Visible */}
-                                <div className="p-8 space-y-5">
-
-                                    <h2 className="text-2xl font-semibold text-[#C79A3B]">
-                                        {client.name}
-                                    </h2>
-
-                                    <p className="text-gray-400 text-sm leading-relaxed">
-                                        {client.description}
-                                    </p>
-
-                                    {/* Stats */}
-                                    <div className="flex justify-between text-sm text-gray-400 border-t border-white/10 pt-4">
-
-                                        <div>
-                                            <div className="text-white font-semibold text-lg">
-                                                <Counter value={client.stats.leads} />+
-                                            </div>
-                                            Leads
-                                        </div>
-
-                                        <div>
-                                            <div className="text-white font-semibold text-lg">
-                                                <Counter value={client.stats.projects} />
-                                            </div>
-                                            Projects
-                                        </div>
-
-                                    </div>
-
-                                </div>
 
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
 
                 </div>
+
+                {/* CONTACT CTA SECTION */}
+                <div className="mt-28 text-center">
+
+                    <h2 className="text-4xl font-semibold mb-6">
+                        Want Similar Results for Your Project?
+                    </h2>
+
+                    <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+                        Partner with Epoque Group and scale your real estate project
+                        through structured branding, SEO, Google Ads and
+                        high-conversion lead generation strategies.
+                    </p>
+
+                    <Link
+                        href="/contact"
+                        className="inline-block px-10 py-4 rounded-full font-semibold text-black 
+            bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
+            hover:scale-105 transition duration-300 shadow-xl"
+                    >
+                        Book Strategy Consultation
+                    </Link>
+
+                </div>
+
             </div>
-        </section>
+
+            {/* STRUCTURED DATA */}
+            <Script
+                id="clients-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        name: "Real Estate Marketing Clients",
+                        itemListElement: clients.map((client, index) => ({
+                            "@type": "ListItem",
+                            position: index + 1,
+                            name: client.name,
+                            description: client.description
+                        }))
+                    })
+                }}
+            />
+
+        </main>
     )
 }
