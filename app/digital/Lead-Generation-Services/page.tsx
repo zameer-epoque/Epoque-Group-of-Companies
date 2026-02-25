@@ -1,270 +1,183 @@
-"use client"
+import { Metadata } from "next";
+import Link from "next/link";
+import Script from "next/script";
+import LeadGenerationFAQSection from "./LeadGenerationFAQSection";
+import WhyChooseLeadGenerationSection from "./WhyChooseLeadGenerationSection";
 
-import { motion } from "framer-motion"
-import Script from "next/script"
+
+export const metadata: Metadata = {
+    title:
+        "Lead Generation Services in Hyderabad | Performance Marketing Agency",
+    description:
+        "Top Lead Generation agency in Hyderabad offering Google Ads, Meta Ads, landing page funnels, CRM automation, and ROI-driven performance marketing solutions.",
+    keywords: [
+        "Lead Generation Services Hyderabad",
+        "Real Estate Lead Generation Hyderabad",
+        "B2B Lead Generation Agency India",
+        "Performance Marketing Agency Hyderabad",
+        "Google Ads Lead Generation",
+    ],
+    alternates: {
+        canonical:
+            "https://epoquegroup.in/digital/lead-generation-services",
+    },
+    openGraph: {
+        title:
+            "Lead Generation Agency in Hyderabad | High-Intent Business Leads",
+        description:
+            "Generate consistent, high-quality leads with structured marketing funnels and paid advertising strategies.",
+        url: "https://epoquegroup.in/digital/lead-generation-services",
+        type: "website",
+    },
+};
 
 export default function LeadGenerationPage() {
     return (
-        <section className="bg-black text-white">
+        <div className="relative bg-black text-white overflow-hidden">
 
-            {/* ================= HERO SECTION ================= */}
-            <div className="relative overflow-hidden py-28 px-6 text-center">
-                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+            {/* Glow Effects */}
+            <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+            <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-yellow-500/20 blur-[150px] rounded-full"></div>
 
-                <div className="relative max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
+            {/* ================= HERO ================= */}
+            <section className="relative py-32 text-center px-6">
+
+                <div className="relative max-w-5xl mx-auto">
+
+                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
                         Lead Generation Agency in{" "}
                         <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Hyderabad
+                            Hyderabad & Across India
                         </span>
                     </h1>
 
-                    <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                        We design high-converting lead generation systems that attract,
-                        qualify and convert prospects into real customers. From real estate
-                        developers to growing businesses in Hyderabad, we build predictable
-                        revenue-focused funnels.
+                    <div className="inline-block px-6 py-4 mt-6 rounded-full border border-orange-400 bg-white/5 text-[18px] text-gray-300 tracking-wide mb-8">
+                        Performance-Driven Lead Generation Experts
+                    </div>
+
+                    <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        Epoque Group is a leading Lead Generation agency in Hyderabad
+                        specializing in Google Ads, Meta Ads, high-converting landing pages,
+                        and CRM automation systems. We help real estate developers, B2B
+                        businesses, and service brands generate consistent high-intent
+                        inquiries with measurable ROI.
                     </p>
 
-                    <div className="mt-10">
-                        <a
-                            href="/contact"
-                            className="inline-block px-8 py-4 rounded-full font-semibold text-black 
-              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-              hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
-                        >
-                            Start Generating Leads
-                        </a>
+                    <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                        <span>✔ High-Intent Paid Campaigns</span>
+                        <span>✔ Conversion-Focused Landing Pages</span>
+                        <span>✔ CRM & WhatsApp Automation</span>
+                        <span>✔ ROI-Based Funnel Strategy</span>
                     </div>
+
+                    <div className="mt-14 flex flex-col md:flex-row justify-center gap-6">
+
+                        <Link
+                            href="/contact"
+                            className="px-10 py-4 rounded-full font-semibold
+              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
+              text-black hover:scale-105 transition duration-300 shadow-xl"
+                        >
+                            Get Free Lead Strategy Session
+                        </Link>
+
+                        <Link
+                            href="/real-estate-digital-marketing-projects-epoque-group"
+                            className="px-10 py-4 rounded-full font-semibold border border-white/20
+              hover:border-orange-400 hover:text-orange-400
+              transition duration-300"
+                        >
+                            View Lead Case Studies
+                        </Link>
+
+                    </div>
+
                 </div>
-            </div>
+            </section>
 
-            {/* ================= SEO CONTENT SECTION ================= */}
-            <div className="max-w-5xl mx-auto px-6 pb-16 text-gray-400 space-y-6 leading-relaxed">
-                <h2 className="text-3xl font-semibold text-white">
-                    High-Intent Lead Generation Systems That Scale
-                </h2>
+            {/* ================= SERVICES ================= */}
+            <section className="relative py-20 px-6 bg-[#0c0c0d]">
 
-                <p>
-                    In competitive markets like Hyderabad, simply running ads
-                    is not enough. Businesses need structured lead funnels,
-                    audience targeting precision, and automated nurturing systems.
-                    We build data-driven strategies that reduce cost-per-lead
-                    while improving conversion quality.
-                </p>
+                <div className="max-w-7xl mx-auto">
 
-                <p>
-                    Whether you are targeting buyers in Gachibowli,
-                    Kokapet, Financial District or scaling across India,
-                    our performance marketing approach ensures predictable
-                    lead flow and measurable ROI.
-                </p>
-            </div>
+                    <div className="max-w-3xl mx-auto text-center mb-20">
+                        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                            Lead Generation Services in Hyderabad
+                        </h2>
 
-            {/* ================= SERVICES SECTION ================= */}
-            <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-10">
+                        <p className="mt-8 text-gray-400 text-lg leading-relaxed">
+                            Our lead generation services are designed to attract,
+                            qualify, and convert high-intent prospects into business
+                            opportunities. We build structured marketing funnels that
+                            reduce cost-per-lead (CPL) while increasing lead quality.
+                        </p>
+                    </div>
 
-                {[
-                    {
-                        title: "Landing Page Funnels",
-                        desc: "Conversion-optimized landing pages built to capture high-quality leads."
-                    },
-                    {
-                        title: "Google & Meta Ads Campaigns",
-                        desc: "Paid advertising campaigns engineered for maximum ROI and scalability."
-                    },
-                    {
-                        title: "CRM & Automation Systems",
-                        desc: "WhatsApp, email nurturing and automated follow-up systems to increase conversions."
-                    }
-                ].map((item, i) => (
-                    <motion.div
-                        key={i}
-                        whileHover={{ scale: 1.05 }}
-                        className="p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500"
-                    >
-                        <div className="p-10 rounded-3xl bg-[#121212] border border-orange-500/20 h-full">
-                            <h3 className="text-xl font-semibold text-orange-400 mb-4">
-                                {item.title}
-                            </h3>
-                            <p className="text-gray-400 leading-relaxed">
-                                {item.desc}
-                            </p>
-                        </div>
-                    </motion.div>
-                ))}
-
-            </div>
-
-            {/* ================= PROCESS SECTION ================= */}
-            <div className="bg-[#111111] py-24 px-6">
-                <div className="max-w-5xl mx-auto text-center">
-
-                    <h2 className="text-4xl font-semibold mb-16">
-                        Our Proven Lead Generation Process
-                    </h2>
-
-                    <div className="grid md:grid-cols-4 gap-10 text-gray-400">
+                    <div className="grid md:grid-cols-3 gap-16">
 
                         {[
-                            "Audience Research & Buyer Intent Mapping",
-                            "Funnel & Landing Page Creation",
-                            "Traffic & Paid Ads Scaling",
-                            "Conversion Optimization & Automation"
-                        ].map((step, index) => (
-                            <div key={index} className="space-y-4">
-                                <div className="text-4xl font-bold text-orange-400">
-                                    0{index + 1}
+                            "Google Ads Lead Generation Campaigns",
+                            "Meta (Facebook & Instagram) Lead Funnels",
+                            "Landing Page & Funnel Optimization",
+                            "Real Estate Lead Generation Systems",
+                            "CRM & Automation Integration",
+                            "Performance Analytics & Reporting",
+                        ].map((service, index) => (
+                            <div key={index} className="group relative">
+
+                                <div className="absolute inset-0 rounded-xl bg-[#151516] opacity-0 group-hover:opacity-100 transition duration-500 border border-orange-500"></div>
+
+                                <div className="relative p-10 transition duration-500 group-hover:-translate-y-3">
+
+                                    <span className="text-sm text-orange-400 tracking-widest uppercase">
+                                        0{index + 1}
+                                    </span>
+
+                                    <h3 className="text-2xl font-medium mt-6 mb-6 group-hover:text-orange-400 transition">
+                                        {service}
+                                    </h3>
+
+                                    <p className="text-gray-400 leading-relaxed text-base">
+                                        Performance-driven marketing systems engineered to
+                                        generate consistent high-quality leads and scalable
+                                        revenue growth.
+                                    </p>
+
+                                    <div className="mt-8 h-[3px] w-12 bg-orange-400 group-hover:w-full transition-all duration-500"></div>
+
                                 </div>
-                                <p>{step}</p>
                             </div>
                         ))}
 
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* ================= FAQ SECTION ================= */}
-            <div className="max-w-4xl mx-auto px-6 py-24 space-y-10">
-    <h2 className="text-3xl font-semibold text-center">
-        Frequently Asked Questions
-    </h2>
+            {/* Why Choose Section */}
+            <WhyChooseLeadGenerationSection />
 
-    <div className="space-y-6 text-gray-400">
-        <div>
-            <h3 className="text-orange-400 font-semibold">
-                What is lead generation in digital marketing?
-            </h3>
-            <p>
-                Lead generation is the process of attracting and converting
-                potential customers into inquiries using paid ads, SEO,
-                landing pages and automation systems.
-            </p>
-        </div>
+            {/* FAQ Section */}
+            <LeadGenerationFAQSection />
 
-        <div>
-            <h3 className="text-orange-400 font-semibold">
-                Do you provide real estate lead generation in Hyderabad?
-            </h3>
-            <p>
-                Yes, we specialize in real estate and high-ticket lead
-                generation campaigns targeting Hyderabad’s premium markets.
-            </p>
-        </div>
-
-        <div>
-            <h3 className="text-orange-400 font-semibold">
-                Which platforms do you use for lead generation?
-            </h3>
-            <p>
-                We use Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads,
-                SEO strategies, and optimized landing pages to generate
-                high-quality leads across India.
-            </p>
-        </div>
-
-        <div>
-            <h3 className="text-orange-400 font-semibold">
-                How much does lead generation cost in India?
-            </h3>
-            <p>
-                The cost depends on industry competition and targeting.
-                We create performance-focused campaigns that optimize
-                cost-per-lead while maximizing return on investment.
-            </p>
-        </div>
-
-        <div>
-            <h3 className="text-orange-400 font-semibold">
-                How long does it take to start receiving leads?
-            </h3>
-            <p>
-                Paid campaigns can start generating leads within a few days,
-                while organic lead generation through SEO may take
-                2–3 months for consistent growth.
-            </p>
-        </div>
-
-        <div>
-            <h3 className="text-orange-400 font-semibold">
-                Do you provide landing page optimization?
-            </h3>
-            <p>
-                Yes, we design and optimize high-converting landing pages
-                with strong CTAs, fast loading speed, and conversion tracking
-                to improve overall lead quality.
-            </p>
-        </div>
-    </div>
-</div>
-
-            {/* ================= CTA SECTION ================= */}
-            <div className="py-28 px-6 text-center">
-                <div className="max-w-3xl mx-auto">
-
-                    <h2 className="text-4xl font-semibold leading-tight">
-                        Ready to Build a Predictable Lead System?
-                    </h2>
-
-                    <p className="mt-6 text-gray-400">
-                        Let’s create a scalable lead generation strategy that
-                        drives consistent growth and measurable ROI.
-                    </p>
-
-                    <div className="mt-10">
-                        <a
-                            href="/contact"
-                            className="inline-block px-10 py-4 rounded-full font-semibold text-black 
-              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-              hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
-                        >
-                            Book Free Strategy Call
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            {/* ================= FAQ SCHEMA ================= */}
+            {/* SERVICE SCHEMA */}
             <Script
-                id="faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "What is lead generation?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Lead generation is the process of attracting and converting potential customers into inquiries using paid ads, SEO and landing pages."
-                                }
-                            }
-                        ]
-                    })
-                }}
-            />
-
-            {/* ================= SERVICE SCHEMA ================= */}
-            <Script
-                id="service-schema"
+                id="lead-service-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
                         name: "Lead Generation Services",
-                        areaServed: "Hyderabad",
+                        areaServed: "Hyderabad & India",
                         provider: {
                             "@type": "Organization",
-                            name: "Epoque Group"
-                        }
-                    })
+                            name: "Epoque Group",
+                            url: "https://epoquegroup.in",
+                        },
+                    }),
                 }}
             />
 
-        </section>
-    )
+        </div>
+    );
 }

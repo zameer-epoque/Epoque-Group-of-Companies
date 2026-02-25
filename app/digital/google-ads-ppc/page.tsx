@@ -1,26 +1,31 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
+import Script from "next/script";
+import GoogleAdsFAQSection from "./GoogleAdsFAQSection";
+import WhyChooseGoogleAdsSection from "./WhyChooseGoogleAdsSection";
 
 export const metadata: Metadata = {
     title:
-        "Google Ads Services in Hyderabad | PPC Advertising Agency India",
+        "Google Ads & PPC Services in Hyderabad | Certified PPC Agency",
     description:
-        "Performance-driven Google Ads and PPC advertising agency in Hyderabad, India offering Search Ads, Display Ads, YouTube Ads, remarketing and ROI-focused paid campaigns.",
+        "Performance-driven Google Ads agency in Hyderabad offering PPC management, search ads, display campaigns, YouTube ads, and ROI-focused paid advertising solutions.",
     keywords: [
-        "Google Ads services in Hyderabad",
-        "PPC advertising agency India",
-        "Google Ads company Hyderabad",
-        "Paid ads management India",
-        "YouTube ads Hyderabad",
-        "Search engine marketing India",
-        "Performance marketing agency Hyderabad"
+        "Google Ads Services Hyderabad",
+        "PPC Agency Hyderabad",
+        "Google Ads Management India",
+        "Pay Per Click Advertising Hyderabad",
+        "Search Ads Agency Hyderabad",
     ],
+    alternates: {
+        canonical:
+            "https://epoquegroup.in/digital/google-ads-ppc",
+    },
     openGraph: {
-        title: "Professional Google Ads & PPC Services in Hyderabad",
+        title:
+            "Google Ads & PPC Agency in Hyderabad | High-ROI Campaigns",
         description:
-            "Scale your business with high-converting Google Ads and PPC advertising services in Hyderabad and across India.",
-        url: "https://yourwebsite.com/google-ads-ppc",
+            "Scale your business with performance-driven Google Ads and PPC campaigns.",
+        url: "https://epoquegroup.in/digital/google-ads-ppc",
         type: "website",
     },
 };
@@ -29,261 +34,148 @@ export default function GoogleAdsPage() {
     return (
         <div className="relative bg-black text-white overflow-hidden">
 
-            {/* TOP GOLD AMBIENT GLOW */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]
-          bg-gradient-to-r from-[#C79A3B]/25 via-[#D45B5B]/20 to-[#7A2E63]/25
-          blur-[200px]" />
-            </div>
+            {/* FULL PAGE PREMIUM ORANGE GRADIENT OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-yellow-500/5 to-red-500/10 pointer-events-none"></div>
 
-            {/* HERO SECTION */}
-            <section className="relative py-28 px-6 text-center">
-                <div className="max-w-6xl mx-auto">
+            {/* Glow Effects */}
+            <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+            <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
+
+            {/* ================= HERO ================= */}
+            <section className="relative py-32 text-center px-6">
+
+                <div className="relative max-w-5xl mx-auto">
 
                     <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                        Google Ads & PPC Advertising Services in{" "}
-                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                            Hyderabad & India
+                        Google Ads & PPC Agency in{" "}
+                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                            Hyderabad & Across India
                         </span>
                     </h1>
 
-                    <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                        Generate instant leads, increase conversions, and maximize ROI
-                        with strategic Google Ads management and performance marketing
-                        campaigns tailored for businesses in Hyderabad and across India.
+                    <div className="inline-block px-6 py-4 mt-6 rounded-full border border-orange-400/40 bg-white/5 text-[18px] text-gray-300 tracking-wide mb-8 backdrop-blur">
+                        ROI-Focused Pay Per Click Advertising Experts
+                    </div>
+
+                    <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        Epoque Group is a leading Google Ads agency in Hyderabad
+                        specializing in high-converting search campaigns, display ads,
+                        YouTube advertising, and performance-driven PPC strategies.
+                        We help businesses generate instant traffic, qualified leads,
+                        and measurable ROI through data-backed paid advertising systems.
                     </p>
 
-                    <button className="mt-10 px-10 py-4 rounded-full font-semibold
-            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-            text-black hover:scale-105 transition duration-300 shadow-xl">
-                        Get Free PPC Audit
-                    </button>
+                    <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+                        <span>✔ Search & Display Ads</span>
+                        <span>✔ YouTube Advertising</span>
+                        <span>✔ Conversion Tracking Setup</span>
+                        <span>✔ ROI & ROAS Optimization</span>
+                    </div>
+
+                    <div className="mt-14 flex flex-col md:flex-row justify-center gap-6">
+
+                        <Link
+                            href="/contact"
+                            className="px-10 py-4 rounded-full font-semibold
+              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
+              text-black hover:scale-105 transition duration-300 shadow-2xl"
+                        >
+                            Get Free PPC Audit
+                        </Link>
+
+                        <Link
+                            href="/real-estate-digital-marketing-projects-epoque-group"
+                            className="px-10 py-4 rounded-full font-semibold border border-white/20
+              hover:border-orange-400 hover:text-orange-400
+              transition duration-300"
+                        >
+                            View PPC Case Studies
+                        </Link>
+
+                    </div>
 
                 </div>
             </section>
 
-            {/* ABOUT PPC */}
-            <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-6xl mx-auto text-center">
+            {/* ================= SERVICES ================= */}
+            <section className="relative py-20 px-6 bg-gradient-to-b from-[#0c0c0d] to-[#101114]">
 
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-10">
-                        Performance-Driven PPC Agency in Hyderabad
-                    </h2>
+                <div className="max-w-7xl mx-auto">
 
-                    <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
-                        As a leading Google Ads agency in Hyderabad, we build
-                        data-driven paid advertising systems designed to scale
-                        revenue efficiently. Our PPC strategies focus on keyword
-                        precision, audience targeting, smart bidding, and
-                        conversion rate optimization for measurable growth.
-                    </p>
+                    <div className="max-w-3xl mx-auto text-center mb-20">
+                        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                            Google Ads & PPC Services in Hyderabad
+                        </h2>
 
-                </div>
-            </section>
+                        <p className="mt-8 text-gray-400 text-lg leading-relaxed">
+                            Our PPC services are designed to generate immediate visibility,
+                            high-intent traffic, and measurable conversions. We build
+                            structured paid advertising campaigns focused on reducing
+                            cost-per-click (CPC) while maximizing return on ad spend (ROAS).
+                        </p>
+                    </div>
 
-            {/* SERVICES GRID */}
-            <section className="relative py-28 px-6 border-t border-white/5">
-
-                {/* Bottom Glow */}
-                <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute bottom-[-250px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px]
-            bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/15 to-[#7A2E63]/20
-            blur-[220px]" />
-                </div>
-
-                <div className="relative max-w-6xl mx-auto">
-
-                    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-                        Our Google Ads & PPC Services
-                    </h2>
-
-                    <div className="grid md:grid-cols-3 gap-10">
+                    <div className="grid md:grid-cols-3 gap-16">
 
                         {[
-                            {
-                                title: "Google Search Ads",
-                                desc: "Target high-intent customers actively searching for your services in Hyderabad and across India with precision keyword bidding strategies.",
-                            },
-                            {
-                                title: "Display & Remarketing Ads",
-                                desc: "Re-engage website visitors and increase brand recall using advanced remarketing campaigns across the Google Display Network.",
-                            },
-                            {
-                                title: "YouTube Advertising",
-                                desc: "Reach millions of potential customers in India through targeted YouTube video advertising campaigns optimized for engagement and conversions.",
-                            },
-                            {
-                                title: "Conversion Tracking & Analytics",
-                                desc: "Advanced tracking setup, performance monitoring, and detailed ROI analysis to eliminate wasted ad spend.",
-                            },
-                            {
-                                title: "Landing Page Optimization",
-                                desc: "High-converting landing pages designed specifically for PPC campaigns to improve lead generation and sales.",
-                            },
-                            {
-                                title: "Ecommerce PPC Management",
-                                desc: "Google Shopping campaigns and product-based advertising strategies for online stores in Hyderabad and across India.",
-                            },
+                            "Google Search Ads Management",
+                            "Display & Remarketing Campaigns",
+                            "YouTube Video Advertising",
+                            "Shopping & Performance Max Campaigns",
+                            "Conversion Tracking & Analytics Setup",
+                            "ROAS & Campaign Optimization",
                         ].map((service, index) => (
-                            <div
-                                key={index}
-                                className="group relative p-[1.5px] rounded-3xl
-                  bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-                  hover:shadow-[0_0_50px_rgba(199,154,59,0.6)]
-                  transition-all duration-500"
-                            >
-                                <div className="rounded-3xl p-10
-                  bg-gradient-to-br from-[#111111] to-[#1a1a1a]
-                  border border-white/5
-                  group-hover:-translate-y-3
-                  group-hover:scale-[1.04]
-                  transition-all duration-500">
+                            <div key={index} className="group relative">
 
-                                    <h3 className="text-xl font-semibold mb-6 group-hover:text-[#C79A3B] transition">
-                                        {service.title}
+                                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500 border border-orange-500/30"></div>
+
+                                <div className="relative p-10 transition duration-500 group-hover:-translate-y-3 bg-[#121212] rounded-xl border border-white/5">
+
+                                    <span className="text-sm text-orange-400 tracking-widest uppercase">
+                                        0{index + 1}
+                                    </span>
+
+                                    <h3 className="text-2xl font-medium mt-6 mb-6 group-hover:text-orange-400 transition">
+                                        {service}
                                     </h3>
 
-                                    <div className="w-14 h-[2px]
-                    bg-gradient-to-r from-[#C79A3B] to-[#D45B5B]
-                    mb-6 rounded-full group-hover:w-24 transition-all duration-500" />
-
-                                    <p className="text-gray-400 text-sm leading-relaxed">
-                                        {service.desc}
+                                    <p className="text-gray-400 leading-relaxed text-base">
+                                        High-performance PPC strategies engineered to increase
+                                        qualified traffic, reduce ad waste, and deliver
+                                        measurable business growth.
                                     </p>
+
+                                    <div className="mt-8 h-[3px] w-12 bg-orange-400 group-hover:w-full transition-all duration-500"></div>
 
                                 </div>
                             </div>
                         ))}
 
                     </div>
-
                 </div>
             </section>
 
-            {/* WHY CHOOSE US */}
-            <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <WhyChooseGoogleAdsSection />
+            <GoogleAdsFAQSection />
 
-                    <ul className="space-y-6 text-gray-400 text-lg">
-                        <li>✔ Certified Google Ads Specialists</li>
-                        <li>✔ Hyderabad Market Expertise</li>
-                        <li>✔ ROI-Focused Campaign Strategy</li>
-                        <li>✔ Transparent Reporting & Analytics</li>
-                        <li>✔ Continuous A/B Testing & Optimization</li>
-                    </ul>
-
-                    <p className="text-gray-400 text-lg leading-relaxed">
-                        Our PPC advertising services in Hyderabad are engineered
-                        to scale businesses faster through precision targeting,
-                        smart automation, and high-converting ad creatives.
-                        We focus on sustainable growth with measurable ROI.
-                    </p>
-
-                </div>
-            </section>
-
-            {/* FAQ SECTION */}
-            <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-4xl mx-auto">
-
-                    <h2 className="text-3xl font-semibold text-center mb-14">
-                        Google Ads & PPC FAQs
-                    </h2>
-
-                    <div className="space-y-10 text-gray-400">
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                How quickly can Google Ads generate results?
-                            </h3>
-                            <p className="mt-3">
-                                Google Ads can start generating traffic and leads
-                                immediately after launch, making it ideal for
-                                Hyderabad-based businesses seeking instant growth.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Is PPC better than SEO?
-                            </h3>
-                            <p className="mt-3">
-                                PPC delivers immediate results, while SEO provides
-                                long-term organic growth. Combining both strategies
-                                ensures maximum online visibility across India.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                What is the minimum Google Ads budget in India?
-                            </h3>
-                            <p className="mt-3">
-                                Budget varies by industry competition, but even small
-                                businesses in Hyderabad can start with optimized,
-                                performance-focused campaigns.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Do you provide keyword research for PPC campaigns?
-                            </h3>
-                            <p className="mt-3">
-                                Yes, we conduct detailed keyword research, competitor analysis,
-                                and audience targeting to ensure your ads reach high-intent
-                                customers and maximize return on investment.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                How do you improve conversion rates in Google Ads?
-                            </h3>
-                            <p className="mt-3">
-                                We optimize ad copy, landing pages, bidding strategies,
-                                and audience segmentation to reduce cost-per-click and
-                                improve overall campaign conversions.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Do you manage remarketing campaigns?
-                            </h3>
-                            <p className="mt-3">
-                                Yes, we create advanced remarketing campaigns to re-target
-                                previous website visitors and increase lead conversions
-                                across search, display, and YouTube networks.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA SECTION */}
-            <section className="py-24 text-center border-t border-white/5">
-
-                <h2 className="text-3xl md:text-4xl font-semibold">
-                    Ready to Scale with Google Ads?
-                </h2>
-
-                <p className="mt-6 text-gray-400 text-lg">
-                    Let our Hyderabad PPC experts drive more traffic, leads, and revenue.
-                </p>
-
-                <Link
-                    href="/contact"
-                    className="inline-block mt-10 px-12 py-4 rounded-full font-semibold
-  bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-  text-black hover:scale-105 transition duration-300 shadow-xl"
-                >
-                    Talk to PPC Expert
-                </Link>
-
-
-            </section>
+            {/* SERVICE SCHEMA */}
+            <Script
+                id="ppc-service-schema"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        name: "Google Ads & PPC Services",
+                        areaServed: "Hyderabad & India",
+                        provider: {
+                            "@type": "Organization",
+                            name: "Epoque Group",
+                            url: "https://epoquegroup.in",
+                        },
+                    }),
+                }}
+            />
 
         </div>
     );

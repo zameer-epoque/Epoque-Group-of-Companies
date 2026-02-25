@@ -13,7 +13,8 @@ const navItems = [
     label: "Digital",
     href: "/digital",
     dropdown: [
-      { label: "Social Media Marketing", href: "/digital/social-media-marketing" },
+      { label: "Digital Marketing Hyderabad", href: "/digital/best-digital-marketing-agency-in-hyderabad" },
+      { label: "Social Media Marketing", href: "/digital/social-media-marketing-hyderabad-india" },
       { label: "Search Engine Optimization", href: "/digital/search-engine-optimization" },
       { label: "Google Ads / PPC", href: "/digital/google-ads-ppc" },
       { label: "Content Marketing", href: "/digital/content-marketing" },

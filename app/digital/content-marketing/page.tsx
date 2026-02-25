@@ -1,289 +1,172 @@
 import { Metadata } from "next";
 import Link from "next/link";
-
+import Script from "next/script";
+import ContentMarketingFAQSection from "./ContentMarketingFAQSection";
+import WhyChooseContentMarketingSection from "./WhyChooseContentMarketingSection";
+ 
 
 export const metadata: Metadata = {
+  title:
+    "Content Marketing Services in Hyderabad | SEO Content Marketing Agency",
+  description:
+    "Leading content marketing agency in Hyderabad offering SEO content writing, blog marketing, website copywriting, and organic lead generation strategies.",
+  keywords: [
+    "Content Marketing Services Hyderabad",
+    "SEO Content Writing Hyderabad",
+    "Blog Writing Services India",
+    "Website Content Development Hyderabad",
+    "Content Marketing Agency India",
+  ],
+  alternates: {
+    canonical: "https://epoquegroup.in/digital/content-marketing",
+  },
+  openGraph: {
     title:
-        "Content Marketing Services in Hyderabad | Content Marketing Agency India",
+      "Content Marketing Agency in Hyderabad | SEO Content Experts",
     description:
-        "Leading content marketing agency in Hyderabad, India offering SEO content writing, blog marketing, website copywriting, and lead generation strategies.",
-    keywords: [
-        "Content marketing services in Hyderabad",
-        "Content marketing agency India",
-        "SEO content writing Hyderabad",
-        "Blog writing services India",
-        "Website content development Hyderabad",
-        "Digital content marketing India",
-    ],
-    openGraph: {
-        title: "Professional Content Marketing Services in Hyderabad & India",
-        description:
-            "Grow your brand visibility and organic traffic with strategic content marketing services in Hyderabad and across India.",
-        url: "https://epoquegroup.in/content-marketing",
-        type: "website",
-    },
+      "Grow organic traffic and brand authority with performance-driven content marketing strategies.",
+    url: "https://epoquegroup.in/digital/content-marketing",
+    type: "website",
+  },
 };
 
 export default function ContentMarketingPage() {
-    return (
-        <div className="relative bg-black text-white overflow-hidden">
+  return (
+    <div className="relative bg-black text-white overflow-hidden">
 
-            {/* TOP GOLD AMBIENT GLOW */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]
-          bg-gradient-to-r from-[#C79A3B]/25 via-[#D45B5B]/20 to-[#7A2E63]/25
-          blur-[200px]" />
-            </div>
+      {/* FULL PAGE PREMIUM ORANGE GRADIENT OVERLAY */}
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-yellow-500/5 to-red-500/10 pointer-events-none"></div>
 
-            {/* HERO SECTION */}
-            <section className="relative py-28 px-6 text-center">
-                <div className="max-w-6xl mx-auto">
+      {/* Glow Effects */}
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+      <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
 
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                        Content Marketing Services in{" "}
-                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                            Hyderabad & India
-                        </span>
-                    </h1>
+      {/* ================= HERO ================= */}
+      <section className="relative py-32 text-center px-6">
 
-                    <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-                        Attract, engage, and convert your target audience with
-                        high-performance content marketing strategies designed
-                        to increase organic traffic, brand authority, and lead generation.
-                    </p>
+        <div className="relative max-w-5xl mx-auto">
 
-                    <Link
-                        href="/contact"
-                        className="inline-block mt-10 px-10 py-4 rounded-full font-semibold
-  bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-  text-black hover:scale-105 transition duration-300 shadow-xl"
-                    >
-                        Get Free Content Strategy
-                    </Link>
+          <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+            Content Marketing Agency in{" "}
+            <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+              Hyderabad & Across India
+            </span>
+          </h1>
 
-                </div>
-            </section>
+          <div className="inline-block px-6 py-4 mt-6 rounded-full border border-orange-400/40 bg-white/5 text-[18px] text-gray-300 tracking-wide mb-8 backdrop-blur">
+            SEO-Focused Content That Builds Authority & Leads
+          </div>
 
-            {/* ABOUT SECTION */}
-            <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-6xl mx-auto text-center">
+          <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            Epoque Group is a leading content marketing agency in Hyderabad
+            specializing in SEO content writing, blog marketing, website copywriting,
+            and long-term organic growth strategies that generate qualified leads
+            and increase brand visibility.
+          </p>
 
-                    <h2 className="text-3xl md:text-4xl font-semibold mb-10">
-                        Leading Content Marketing Agency in Hyderabad
-                    </h2>
+          <div className="mt-14 flex flex-col md:flex-row justify-center gap-6">
 
-                    <p className="text-gray-400 text-lg max-w-4xl mx-auto leading-relaxed">
-                        As a trusted content marketing company in Hyderabad, we help
-                        startups, enterprises, and growing brands across India
-                        develop powerful SEO-focused content frameworks.
-                        Our approach combines storytelling, keyword strategy,
-                        and conversion optimization to drive measurable business growth.
-                    </p>
+            <Link
+              href="/contact"
+              className="px-10 py-4 rounded-full font-semibold
+              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
+              text-black hover:scale-105 transition duration-300 shadow-2xl"
+            >
+              Get Free Content Strategy
+            </Link>
 
-                </div>
-            </section>
+            <Link
+              href="/real-estate-digital-marketing-projects-epoque-group"
+              className="px-10 py-4 rounded-full font-semibold border border-white/20
+              hover:border-orange-400 hover:text-orange-400
+              transition duration-300"
+            >
+              View Case Studies
+            </Link>
 
-            {/* SERVICES GRID */}
-            <section className="relative py-28 px-6 border-t border-white/5">
-
-                {/* Bottom Glow */}
-                <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute bottom-[-250px] left-1/2 -translate-x-1/2 w-[1000px] h-[600px]
-            bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/15 to-[#7A2E63]/20
-            blur-[220px]" />
-                </div>
-
-                <div className="relative max-w-6xl mx-auto">
-
-                    <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-                        Our Content Marketing Services
-                    </h2>
-
-                    <div className="grid md:grid-cols-3 gap-10">
-
-                        {[
-                            {
-                                title: "SEO Content Writing",
-                                desc: "Keyword-optimized blog posts, landing pages, and website content to improve search rankings in Hyderabad and across India.",
-                            },
-                            {
-                                title: "Blog Marketing",
-                                desc: "High-quality content strategies that increase organic visibility, engagement, and brand authority in competitive markets.",
-                            },
-                            {
-                                title: "Website Copywriting",
-                                desc: "Conversion-focused website copy designed to build trust and generate leads for startups and enterprises.",
-                            },
-                            {
-                                title: "Email Marketing Content",
-                                desc: "Persuasive email campaigns that nurture leads, improve engagement, and increase customer retention.",
-                            },
-                            {
-                                title: "Social Media Content Creation",
-                                desc: "Strategic captions, scripts, and creative frameworks for Instagram, Facebook, and LinkedIn marketing.",
-                            },
-                            {
-                                title: "Content Strategy & Planning",
-                                desc: "Data-driven content calendars, keyword mapping, and performance analysis for sustainable digital growth.",
-                            },
-                        ].map((service, index) => (
-                            <div
-                                key={index}
-                                className="group relative p-[1.5px] rounded-3xl
-                  bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-                  hover:shadow-[0_0_50px_rgba(199,154,59,0.6)]
-                  transition-all duration-500"
-                            >
-                                <div className="rounded-3xl p-10
-                  bg-gradient-to-br from-[#111111] to-[#1a1a1a]
-                  border border-white/5
-                  group-hover:-translate-y-3
-                  group-hover:scale-[1.04]
-                  transition-all duration-500">
-
-                                    <h3 className="text-xl font-semibold mb-6 group-hover:text-[#C79A3B] transition">
-                                        {service.title}
-                                    </h3>
-
-                                    <div className="w-14 h-[2px]
-                    bg-gradient-to-r from-[#C79A3B] to-[#D45B5B]
-                    mb-6 rounded-full group-hover:w-24 transition-all duration-500" />
-
-                                    <p className="text-gray-400 text-sm leading-relaxed">
-                                        {service.desc}
-                                    </p>
-
-                                </div>
-                            </div>
-                        ))}
-
-                    </div>
-
-                </div>
-            </section>
-
-            {/* WHY CHOOSE US */}
-            <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-
-                    <ul className="space-y-6 text-gray-400 text-lg">
-                        <li>✔ SEO-Focused Content Strategy</li>
-                        <li>✔ Hyderabad Market Understanding</li>
-                        <li>✔ Research-Based High-Quality Writing</li>
-                        <li>✔ Brand Authority Building</li>
-                        <li>✔ Lead Generation Driven Approach</li>
-                    </ul>
-
-                    <p className="text-gray-400 text-lg leading-relaxed">
-                        Our content marketing services in Hyderabad combine SEO,
-                        storytelling, and performance strategy to build sustainable
-                        brand visibility. We help Indian businesses grow organically
-                        with structured content ecosystems.
-                    </p>
-
-                </div>
-            </section>
-
-            {/* FAQ SECTION */}
-            <section className="py-24 border-t border-white/5 px-6">
-                <div className="max-w-4xl mx-auto">
-
-                    <h2 className="text-3xl font-semibold text-center mb-14">
-                        Content Marketing FAQs
-                    </h2>
-
-                    <div className="space-y-10 text-gray-400">
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Why is content marketing important for SEO?
-                            </h3>
-                            <p className="mt-3">
-                                High-quality content improves keyword rankings,
-                                attracts organic traffic, and builds long-term brand authority.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Do you provide services across India?
-                            </h3>
-                            <p className="mt-3">
-                                Yes, we offer content marketing solutions for businesses
-                                throughout India including Hyderabad, Bangalore, Mumbai,
-                                Chennai, and Delhi.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                How long does content marketing take to show results?
-                            </h3>
-                            <p className="mt-3">
-                                Typically 3–6 months are required to see measurable organic growth,
-                                depending on competition and industry.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                What types of content do you create?
-                            </h3>
-                            <p className="mt-3">
-                                We create SEO blog articles, website content, landing pages,
-                                case studies, email content, and social media content tailored
-                                to your business goals.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Is content marketing better than paid ads?
-                            </h3>
-                            <p className="mt-3">
-                                Content marketing delivers long-term organic growth and brand authority,
-                                while paid ads provide short-term traffic. A strategic combination of both
-                                produces the best results.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-xl font-semibold text-orange-400">
-                                Do you provide keyword research before content creation?
-                            </h3>
-                            <p className="mt-3">
-                                Yes, we conduct detailed keyword research and competitor analysis
-                                to ensure every piece of content targets high-intent search terms.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA SECTION */}
-            <section className="py-24 text-center border-t border-white/5">
-
-                <h2 className="text-3xl md:text-4xl font-semibold">
-                    Ready to Build Brand Authority with Content?
-                </h2>
-
-                <p className="mt-6 text-gray-400 text-lg">
-                    Let our Hyderabad content marketing experts grow your visibility and leads.
-                </p>
-
-                <Link
-                    href="/contact"
-                    className="inline-block mt-10 px-12 py-4 rounded-full font-semibold
-  bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-  text-black hover:scale-105 transition duration-300 shadow-xl"
-                >
-                    Talk to Content Experts
-                </Link>
-
-
-            </section>
+          </div>
 
         </div>
-    );
+      </section>
+
+      {/* ================= SERVICES ================= */}
+      <section className="relative py-20 px-6 bg-gradient-to-b from-[#0c0c0d] to-[#101114]">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="max-w-3xl mx-auto text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+              Content Marketing Services in Hyderabad
+            </h2>
+
+            <p className="mt-8 text-gray-400 text-lg leading-relaxed">
+              Our content marketing services are designed to increase organic
+              rankings, build domain authority, and convert traffic into
+              measurable business growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-16">
+
+            {[
+              "SEO Blog Writing & Keyword Strategy",
+              "Website & Landing Page Copywriting",
+              "Authority & Thought Leadership Content",
+              "Email Marketing Content Funnels",
+              "Content Strategy & Editorial Planning",
+              "Content Optimization & Performance Reporting",
+            ].map((service, index) => (
+              <div key={index} className="group relative">
+
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500 border border-orange-500/30"></div>
+
+                <div className="relative p-10 transition duration-500 group-hover:-translate-y-3 bg-[#121212] rounded-xl border border-white/5">
+
+                  <span className="text-sm text-orange-400 tracking-widest uppercase">
+                    0{index + 1}
+                  </span>
+
+                  <h3 className="text-2xl font-medium mt-6 mb-6 group-hover:text-orange-400 transition">
+                    {service}
+                  </h3>
+
+                  <p className="text-gray-400 leading-relaxed text-base">
+                    Structured SEO-driven content strategies engineered to improve
+                    search visibility, audience engagement, and inbound lead generation.
+                  </p>
+
+                  <div className="mt-8 h-[3px] w-12 bg-orange-400 group-hover:w-full transition-all duration-500"></div>
+
+                </div>
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
+
+      <WhyChooseContentMarketingSection />
+      <ContentMarketingFAQSection />
+
+      {/* SERVICE SCHEMA */}
+      <Script
+        id="content-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Content Marketing Services",
+            areaServed: "Hyderabad & India",
+            provider: {
+              "@type": "Organization",
+              name: "Epoque Group",
+              url: "https://epoquegroup.in",
+            },
+          }),
+        }}
+      />
+
+    </div>
+  );
 }

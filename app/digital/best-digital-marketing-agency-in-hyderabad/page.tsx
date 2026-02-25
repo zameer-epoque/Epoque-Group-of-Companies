@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, Variants } from "framer-motion"
-import PremiumCTA from "../components/PremiumCTA"
+import PremiumCTA from "../../components/PremiumCTA"
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 60 },

@@ -1,259 +1,170 @@
-"use client"
+import { Metadata } from "next";
+import Link from "next/link";
+import Script from "next/script";
+import BrandingFAQSection from "./BrandingFAQSection";
+import WhyChooseBrandingSection from "./WhyChooseBrandingSection";
 
-import { motion } from "framer-motion"
-import Script from "next/script"
+export const metadata: Metadata = {
+    title:
+        "Branding & Creative Services in Hyderabad | Brand Identity Agency",
+    description:
+        "Premium branding and creative agency in Hyderabad offering logo design, brand identity, corporate collaterals, creative campaigns, and digital brand systems.",
+    keywords: [
+        "Branding Agency Hyderabad",
+        "Creative Agency Hyderabad",
+        "Logo Design Hyderabad",
+        "Brand Identity Services India",
+        "Corporate Branding Hyderabad",
+    ],
+    alternates: {
+        canonical:
+            "https://epoquegroup.in/digital/branding-creative-services",
+    },
+    openGraph: {
+        title:
+            "Branding & Creative Agency in Hyderabad | Premium Brand Identity Experts",
+        description:
+            "Build powerful brand identities and creative systems that position your business as a market leader.",
+        url: "https://epoquegroup.in/digital/branding-creative-services",
+        type: "website",
+    },
+};
 
-export default function BrandingCreativePage() {
+export default function BrandingCreativeServicesPage() {
     return (
-        <section className="bg-black text-white">
+        <div className="relative bg-black text-white overflow-hidden">
 
-            {/* ================= HERO SECTION ================= */}
-            <div className="relative overflow-hidden py-28 px-6 text-center">
-                <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
-                <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+            {/* FULL PAGE ORANGE GRADIENT OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-yellow-500/5 to-red-500/10 pointer-events-none"></div>
 
-                <div className="relative max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
-                        Branding & Creative Agency in{" "}
+            {/* Glow Effects */}
+            <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
+            <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
+
+            {/* ================= HERO ================= */}
+            <section className="relative py-32 text-center px-6">
+                <div className="relative max-w-5xl mx-auto">
+
+                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+                        Branding & Creative Services in{" "}
                         <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Hyderabad
+                            Hyderabad & Across India
                         </span>
                     </h1>
 
-                    <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                        We build powerful brand identities, high-converting creative assets,
-                        and premium visual systems that position your business as a market leader
-                        in Hyderabad and beyond. From real estate developers to growing enterprises,
-                        we create brands that inspire trust, authority, and long-term growth.
+                    <div className="inline-block px-6 py-4 mt-6 rounded-full border border-orange-400/40 bg-white/5 text-[18px] text-gray-300 tracking-wide mb-8 backdrop-blur">
+                        Strategic Brand Identity & Creative Design Experts
+                    </div>
+
+                    <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        Epoque Group is a premium branding agency in Hyderabad
+                        specializing in brand identity systems, logo design,
+                        corporate branding, creative campaigns, and digital
+                        brand experiences that build authority and drive growth.
                     </p>
 
-                    <div className="mt-10">
-                        <a
+                    <div className="mt-14 flex flex-col md:flex-row justify-center gap-6">
+
+                        <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 rounded-full font-semibold text-black 
-              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-              hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
+                            className="px-10 py-4 rounded-full font-semibold
+              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
+              text-black hover:scale-105 transition duration-300 shadow-2xl"
                         >
                             Build Your Brand
-                        </a>
+                        </Link>
+
+                        <Link
+                            href="/real-estate-digital-marketing-projects-epoque-group"
+                            className="px-10 py-4 rounded-full font-semibold border border-white/20
+              hover:border-orange-400 hover:text-orange-400
+              transition duration-300"
+                        >
+                            View Creative Portfolio
+                        </Link>
+
                     </div>
+
                 </div>
-            </div>
+            </section>
 
-            {/* ================= SEO CONTENT SECTION ================= */}
-            <div className="max-w-5xl mx-auto px-6 pb-16 text-gray-400 space-y-6 leading-relaxed">
-                <h2 className="text-3xl font-semibold text-white">
-                    Strategic Branding That Drives Business Growth
-                </h2>
+            {/* ================= SERVICES ================= */}
+            <section className="relative py-20 px-6 bg-gradient-to-b from-[#0c0c0d] to-[#101114]">
+                <div className="max-w-7xl mx-auto">
 
-                <p>
-                    In today’s competitive Hyderabad market, branding is more than just
-                    a logo. It is your reputation, positioning, perception, and emotional
-                    connection with your audience. Our branding and creative services
-                    are designed to build clarity, authority, and differentiation.
-                </p>
+                    <div className="max-w-3xl mx-auto text-center mb-20">
+                        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                            Our Branding & Creative Services
+                        </h2>
 
-                <p>
-                    Whether you are a real estate developer in Kokapet,
-                    a startup in Gachibowli, or a growing enterprise in
-                    Financial District, we create brand systems that align
-                    with your long-term revenue strategy.
-                </p>
-            </div>
+                        <p className="mt-8 text-gray-400 text-lg leading-relaxed">
+                            We design structured brand systems that combine creative
+                            storytelling, visual excellence, and strategic positioning
+                            to differentiate your business in competitive markets.
+                        </p>
+                    </div>
 
-            {/* ================= SERVICES SECTION ================= */}
-            <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-10">
-
-                {[
-                    {
-                        title: "Logo & Brand Identity",
-                        desc: "Strategic logo systems, typography, color palettes and brand guidelines designed for long-term market recognition."
-                    },
-                    {
-                        title: "Corporate & Marketing Collaterals",
-                        desc: "Premium brochures, pitch decks, business profiles and real estate project branding assets."
-                    },
-                    {
-                        title: "Creative Design & Campaign Visuals",
-                        desc: "High-impact ad creatives, social media designs and performance marketing visuals."
-                    },
-                    {
-                        title: "Video & Motion Graphics",
-                        desc: "Brand promos, explainer videos, real estate walkthroughs and animation reels."
-                    },
-                    {
-                        title: "Website UI/UX Design",
-                        desc: "Conversion-focused digital experiences that elevate brand perception."
-                    },
-                    {
-                        title: "Rebranding & Positioning Strategy",
-                        desc: "Complete brand transformation frameworks for scaling businesses."
-                    }
-                ].map((service, index) => (
-                    <motion.div
-                        key={index}
-                        whileHover={{ scale: 1.05 }}
-                        className="p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500"
-                    >
-                        <div className="p-10 rounded-3xl bg-[#121212] border border-orange-500/20 h-full transition-all duration-300">
-                            <h3 className="text-xl font-semibold text-orange-400 mb-4">
-                                {service.title}
-                            </h3>
-                            <p className="text-gray-400 leading-relaxed">
-                                {service.desc}
-                            </p>
-                        </div>
-                    </motion.div>
-                ))}
-
-            </div>
-
-            {/* ================= PROCESS SECTION ================= */}
-            <div className="bg-[#111111] py-24 px-6">
-                <div className="max-w-5xl mx-auto text-center">
-
-                    <h2 className="text-4xl font-semibold mb-16">
-                        Our Proven Creative Process
-                    </h2>
-
-                    <div className="grid md:grid-cols-4 gap-10 text-gray-400">
+                    <div className="grid md:grid-cols-3 gap-16">
 
                         {[
-                            "Brand Discovery & Research",
-                            "Creative Strategy & Positioning",
-                            "Design & Asset Development",
-                            "Launch, Optimization & Scale"
-                        ].map((step, index) => (
-                            <div key={index} className="space-y-4">
-                                <div className="text-4xl font-bold text-orange-400">
-                                    0{index + 1}
+                            "Logo & Brand Identity Design",
+                            "Corporate Brochures & Pitch Decks",
+                            "Creative Advertising Campaigns",
+                            "Social Media Creative Design",
+                            "Video Production & Motion Graphics",
+                            "Rebranding & Market Positioning Strategy",
+                        ].map((service, index) => (
+                            <div key={index} className="group relative">
+
+                                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-orange-500/10 to-red-500/10 opacity-0 group-hover:opacity-100 transition duration-500 border border-orange-500/30"></div>
+
+                                <div className="relative p-10 transition duration-500 group-hover:-translate-y-3 bg-[#121212] rounded-xl border border-white/5">
+
+                                    <span className="text-sm text-orange-400 tracking-widest uppercase">
+                                        0{index + 1}
+                                    </span>
+
+                                    <h3 className="text-2xl font-medium mt-6 mb-6 group-hover:text-orange-400 transition">
+                                        {service}
+                                    </h3>
+
+                                    <p className="text-gray-400 leading-relaxed text-base">
+                                        Premium creative frameworks designed to increase
+                                        brand recognition, trust, and long-term revenue growth.
+                                    </p>
+
+                                    <div className="mt-8 h-[3px] w-12 bg-orange-400 group-hover:w-full transition-all duration-500"></div>
+
                                 </div>
-                                <p>{step}</p>
                             </div>
                         ))}
 
                     </div>
                 </div>
-            </div>
+            </section>
 
-            {/* ================= FAQ SECTION ================= */}
-            <div className="max-w-4xl mx-auto px-6 py-24 space-y-10">
-                <h2 className="text-3xl font-semibold text-center">
-                    Frequently Asked Questions
-                </h2>
+            <WhyChooseBrandingSection />
+            <BrandingFAQSection />
 
-                <div className="space-y-6 text-gray-400">
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Why is branding important for businesses in Hyderabad?
-                        </h3>
-                        <p>
-                            Strong branding increases trust, improves premium perception,
-                            and differentiates your business in competitive markets.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Do you provide branding for real estate developers?
-                        </h3>
-                        <p>
-                            Yes, we specialize in real estate branding including project
-                            identity, brochures, and campaign creative systems.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            What industries do you offer branding services for?
-                        </h3>
-                        <p>
-                            We provide branding services for real estate, startups, retail,
-                            healthcare, hospitality, and corporate businesses looking to
-                            build a strong market presence.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            How long does a branding project take?
-                        </h3>
-                        <p>
-                            A complete branding project typically takes 2 to 4 weeks
-                            depending on research, strategy development, and design approvals.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Do you offer logo design separately?
-                        </h3>
-                        <p>
-                            Yes, we offer standalone logo design services as well as
-                            complete brand identity packages including brand guidelines.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Will I receive all source files after project completion?
-                        </h3>
-                        <p>
-                            Yes, after project completion you will receive all required
-                            source files, brand assets, and usage guidelines for future marketing.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {/* ================= CTA SECTION ================= */}
-            <div className="py-28 px-6 text-center">
-                <div className="max-w-3xl mx-auto">
-
-                    <h2 className="text-4xl font-semibold leading-tight">
-                        Ready to Build a Powerful Brand in Hyderabad?
-                    </h2>
-
-                    <p className="mt-6 text-gray-400">
-                        Let’s design a brand that builds authority, attracts attention,
-                        and drives sustainable business growth.
-                    </p>
-
-                    <div className="mt-10">
-                        <a
-                            href="/contact"
-                            className="inline-block px-10 py-4 rounded-full font-semibold text-black 
-              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-              hover:scale-105 active:scale-95 transition duration-300 shadow-xl"
-                        >
-                            Start Your Branding Project
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-            {/* ================= FAQ SCHEMA ================= */}
+            {/* SERVICE SCHEMA */}
             <Script
-                id="faq-schema"
+                id="branding-service-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "Why is branding important for businesses?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Branding builds trust, improves perception, and strengthens competitive positioning."
-                                }
-                            }
-                        ]
-                    })
+                        "@type": "Service",
+                        name: "Branding & Creative Services",
+                        areaServed: "Hyderabad & India",
+                        provider: {
+                            "@type": "Organization",
+                            name: "Epoque Group",
+                            url: "https://epoquegroup.in",
+                        },
+                    }),
                 }}
             />
 
-        </section>
-    )
+        </div>
+    );
 }

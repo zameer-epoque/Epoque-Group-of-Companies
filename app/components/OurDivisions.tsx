@@ -12,7 +12,7 @@ const divisions = [
         description:
             "SEO-driven digital marketing, performance advertising, and web development solutions designed to scale brands and businesses in Hyderabad and beyond.",
         image: "/tech.jpg",
-        href: "/digital",
+        href: "/digital/best-digital-marketing-agency-in-hyderabad",
         cta: "Explore Digital Marketing Services",
         alt: "Digital marketing and SEO services in Hyderabad",
     },
@@ -24,7 +24,7 @@ const divisions = [
         image: "/reality.jpg",
         href: "/realty",
         cta: "Get More Villas ",
-        alt: "Luxury villas and plots for sale in Hyderabad",
+        alt: "Luxury villas and apartments for sale in Hyderabad",
     },
     {
         id: "03",
