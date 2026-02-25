@@ -2,6 +2,7 @@
 
 import { motion, Variants } from "framer-motion"
 import PremiumCTA from "../../components/PremiumCTA"
+import FAQSection from "./FAQSection"
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 60 },
@@ -17,99 +18,97 @@ const fadeUp: Variants = {
 
 export default function DigitalClient() {
     return (
-        <main className="overflow-hidden bg-black text-white">
+        <main className="relative overflow-hidden bg-[#050505] text-white">
 
-            {/* HERO SECTION */}
-            <section
-                className="relative flex items-center justify-center px-6 py-28 overflow-hidden"
-                aria-label="Digital Marketing Agency in Hyderabad - SEO, Performance Marketing and Lead Generation"
-            >
+            {/* Background Grid */}
+            <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:80px_80px]" />
 
-                <div className="absolute inset-0 flex justify-center pointer-events-none">
-                    <div className="w-[900px] h-[900px] bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/20 to-[#7A2E63]/20 blur-[200px]" />
-                </div>
+            {/* Glow Effects */}
+            <div className="absolute -top-40 -left-40 w-[700px] h-[700px] bg-gradient-to-r from-[#C79A3B]/20 via-[#D45B5B]/20 to-[#7A2E63]/20 blur-[200px] rounded-full" />
+            <div className="absolute -bottom-40 -right-40 w-[700px] h-[700px] bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-red-500/10 blur-[200px] rounded-full" />
+
+            {/* ================= HERO ================= */}
+            <section className="relative px-6 py-36 text-center">
 
                 <motion.div
                     initial="hidden"
                     animate="show"
                     variants={fadeUp}
-                    className="relative max-w-5xl text-center"
+                    className="max-w-6xl mx-auto"
                 >
-                    <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl font-semibold leading-tight">
+
+                    <h1 className="text-5xl md:text-7xl font-semibold leading-[1.1] tracking-tight">
                         Digital Marketing Agency in{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Hyderabad
                         </span>
                     </h1>
 
-                    <p className="uppercase tracking-[0.3em] text-sm text-gray-400 mt-4">
+                    <p className="uppercase tracking-[0.4em] text-xs text-gray-500 mt-6">
                         SEO • Google Ads • Performance Marketing • Lead Generation
                     </p>
 
-                    <p className="mt-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
-                        Scalable Business Growth Through{" "}
+                    <p className="mt-10 text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                        Helping Businesses Scale with{" "}
                         <span className="text-white font-medium">
-                            Search Engine Optimization, Paid Advertising & Conversion Funnels
+                            Data-Driven SEO, Paid Advertising & Conversion Systems
                         </span>
                     </p>
 
-                    <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto">
-                        Époque Digital is a performance-driven digital marketing agency in Hyderabad
-                        delivering professional SEO services, Google Ads management, Meta advertising,
-                        and high-converting funnel systems designed to generate qualified leads,
-                        increase brand authority, and maximize return on investment.
+                    <p className="mt-10 text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        We design and execute high-performance digital marketing strategies
+                        that increase rankings, generate qualified leads, and build long-term
+                        brand authority. Our structured growth frameworks ensure measurable
+                        ROI and scalable business expansion.
                     </p>
+
                 </motion.div>
             </section>
 
-            {/* CORE SERVICES */}
-            <section className="py-4 px-6 bg-[#0E0E0E] relative overflow-hidden">
+            {/* ================= CORE SERVICES ================= */}
+            <section className="relative py-4 px-6 bg-[#0B0B0B]">
 
-                <div className="absolute inset-0 flex justify-center pointer-events-none">
-                    <div className="w-[700px] h-[700px] bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-red-500/10 blur-[180px]" />
-                </div>
-
-                <div className="relative max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-auto">
 
                     <motion.div
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
                         variants={fadeUp}
-                        className="text-center mb-16"
+                        className="text-center mb-24"
                     >
-                        <h2 className="font-heading text-4xl md:text-6xl font-semibold relative inline-block">
+                        <h2 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent inline-block">
                             Our Digital Marketing Services
-                            <span className="absolute left-0 -bottom-3 w-full h-[3px] bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500" />
                         </h2>
 
                         <p className="mt-8 text-xl text-gray-400 max-w-3xl mx-auto">
-                            Conversion-focused digital frameworks built for predictable,
-                            scalable business growth.
+                            Structured digital growth systems built for predictable,
+                            measurable, and scalable business performance.
                         </p>
                     </motion.div>
 
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 items-stretch">
+                    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
                         {[
                             {
-                                icon: "🔍",
-                                title: "SEO Services",
-                                desc: "Technical SEO audits, keyword research, on-page optimization, and authority building strategies that help businesses rank on Google and dominate organic search.",
+                                icon: "🔎",
+                                title: "Search Engine Optimization",
+                                desc: "Comprehensive technical SEO, keyword strategy, content optimization, and authority building frameworks designed to dominate competitive search results.",
                             },
                             {
-                                icon: "📈",
-                                title: "Google & Meta Ads",
-                                desc: "Performance marketing campaigns across Google Ads and Meta platforms engineered for scalable lead generation and measurable ROI.",
+                                icon: "📊",
+                                title: "Google & Meta Advertising",
+                                desc: "Performance-driven paid advertising campaigns engineered to generate consistent high-quality leads at optimized acquisition costs.",
                             },
                             {
-                                icon: "⚙️",
-                                title: "Funnel & Landing Pages",
-                                desc: "High-converting landing pages, automation workflows, and CRM integration systems that convert traffic into sales-ready leads.",
+                                icon: "🚀",
+                                title: "Conversion Funnels",
+                                desc: "High-converting landing pages, automation workflows, and CRM systems that turn traffic into revenue with predictable scalability.",
                             },
                             {
-                                icon: "🎯",
+                                icon: "🏆",
                                 title: "Brand Positioning",
-                                desc: "Strategic brand messaging, creative direction, and premium digital storytelling to establish authority and long-term market positioning.",
+                                desc: "Strategic brand messaging and creative direction to build authority, increase visibility, and elevate long-term market positioning.",
                             },
                         ].map((service, index) => (
                             <motion.div
@@ -119,58 +118,132 @@ export default function DigitalClient() {
                                 viewport={{ once: true }}
                                 transition={{
                                     duration: 0.6,
-                                    delay: index * 0.2,
+                                    delay: index * 0.15,
                                     ease: [0.16, 1, 0.3, 1] as const,
                                 }}
-                                className="group relative h-full"
+                                className="group relative"
                             >
 
-                                <div className="relative p-[1.5px] rounded-3xl
-                                    bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500
-                                    transition-all duration-500
-                                    group-hover:shadow-[0_0_40px_rgba(249,115,22,0.6)]
-                                    h-full">
+                                <div className="p-[1.5px] rounded-3xl bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-500 group-hover:shadow-[0_0_50px_rgba(199,154,59,0.4)]">
 
-                                    <div className="relative flex flex-col h-full
-                                        rounded-3xl p-8
-                                        bg-gradient-to-br from-[#121212] to-[#1c1c1c]
-                                        border border-orange-500/20
-                                        backdrop-blur-xl
-                                        transition-all duration-500
-                                        group-hover:-translate-y-3
-                                        group-hover:scale-[1.03]">
+                                    <div className="rounded-3xl p-8 bg-gradient-to-br from-[#111111] to-[#1a1a1a] border border-white/5 backdrop-blur-xl transition-all duration-500 group-hover:-translate-y-4 group-hover:scale-[1.04]">
 
-                                        <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-orange-500/10 to-transparent blur-2xl" />
-
-                                        <div className="relative z-10 flex flex-col h-full">
-
-                                            <div className="text-5xl mb-6 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
-                                                {service.icon}
-                                            </div>
-
-                                            <h3 className="font-heading text-xl font-semibold mb-4 group-hover:text-orange-400 transition">
-                                                {service.title}
-                                            </h3>
-
-                                            <div className="w-12 h-[2px] bg-gradient-to-r from-orange-400 to-yellow-500 mb-6 rounded-full group-hover:w-20 transition-all duration-500" />
-
-                                            <p className="text-gray-400 text-sm leading-relaxed mt-auto">
-                                                {service.desc}
-                                            </p>
-
+                                        <div className="text-5xl mb-6 transition-all duration-500 group-hover:scale-110">
+                                            {service.icon}
                                         </div>
 
-                                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none bg-gradient-to-r from-transparent via-white/10 to-transparent bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]" />
+                                        <h3 className="text-xl font-semibold mb-4 group-hover:text-[#C79A3B] transition">
+                                            {service.title}
+                                        </h3>
+
+                                        <div className="w-14 h-[2px] bg-gradient-to-r from-[#C79A3B] to-[#7A2E63] mb-6 rounded-full group-hover:w-24 transition-all duration-500" />
+
+                                        <p className="text-gray-400 text-sm leading-relaxed">
+                                            {service.desc}
+                                        </p>
 
                                     </div>
                                 </div>
 
                             </motion.div>
                         ))}
+
                     </div>
                 </div>
             </section>
+
+            {/* ================= SEO SERVICES ================= */}
+            {/* ================= DIGITAL MARKETING SERVICES ================= */}
+            <section className="relative py-12 px-6 bg-[#080808] overflow-hidden">
+
+                {/* Soft Background Glow */}
+                <div className="absolute inset-0 flex justify-center pointer-events-none">
+                    <div className="w-[900px] h-[900px] bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-[200px]" />
+                </div>
+
+                <div className="relative max-w-7xl mx-auto">
+
+                    {/* Heading */}
+                    <div className="text-center mb-24">
+                        <h2 className="text-4xl md:text-6xl font-semibold bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent inline-block">
+                            Digital Marketing Services in Hyderabad
+                        </h2>
+
+                        <p className="mt-8 text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                            Comprehensive digital growth solutions designed to increase visibility,
+                            generate qualified leads, and drive measurable revenue growth across
+                            search engines, social media platforms, and paid advertising channels.
+                        </p>
+                    </div>
+
+                    {/* Services Grid */}
+                    <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+                        {[
+                            {
+                                title: "Search Engine Optimization (SEO)",
+                                desc: "Technical optimization, keyword strategy, and authority-building frameworks to dominate organic search rankings.",
+                            },
+                            {
+                                title: "Google Ads Management",
+                                desc: "High-performance search, display, and remarketing campaigns focused on maximizing ROI and lowering acquisition costs.",
+                            },
+                            {
+                                title: "Social Media Marketing",
+                                desc: "Meta, Instagram, and LinkedIn campaigns engineered to increase engagement, brand awareness, and qualified leads.",
+                            },
+                            {
+                                title: "Performance Marketing",
+                                desc: "Data-driven advertising systems designed to scale revenue predictably through optimized targeting and conversion tracking.",
+                            },
+                            {
+                                title: "Landing Pages & Funnels",
+                                desc: "Conversion-optimized landing pages and automated sales funnels built to turn traffic into revenue.",
+                            },
+                            {
+                                title: "Analytics & Reporting",
+                                desc: "Advanced tracking, performance dashboards, and data insights to measure growth and optimize campaigns.",
+                            },
+                        ].map((service, index) => (
+                            <div key={index} className="group relative">
+
+                                {/* Gradient Border */}
+                                <div className="p-[1.5px] rounded-2xl bg-gradient-to-br from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(199,154,59,0.4)]">
+
+                                    {/* Card */}
+                                    <div className="rounded-2xl p-8 bg-gradient-to-br from-[#111111] to-[#1a1a1a] border border-white/5 backdrop-blur-xl transition-all duration-500 group-hover:-translate-y-4 group-hover:scale-[1.03]">
+
+                                        {/* Number */}
+                                        <span className="text-sm text-[#C79A3B] tracking-widest uppercase font-medium">
+                                            0{index + 1}
+                                        </span>
+
+                                        {/* Title */}
+                                        <h3 className="text-2xl font-semibold mt-6 mb-4 group-hover:text-[#C79A3B] transition duration-300">
+                                            {service.title}
+                                        </h3>
+
+                                        {/* Description */}
+                                        <p className="text-gray-400 leading-relaxed text-sm">
+                                            {service.desc}
+                                        </p>
+
+                                        {/* Animated Line */}
+                                        <div className="mt-8 h-[3px] w-14 bg-gradient-to-r from-[#C79A3B] to-[#7A2E63] rounded-full group-hover:w-full transition-all duration-500"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        ))}
+
+                    </div>
+                </div>
+            </section>
+            <FAQSection />
             <PremiumCTA />
+
         </main>
     )
 }
