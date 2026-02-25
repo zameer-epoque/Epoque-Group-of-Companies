@@ -136,7 +136,7 @@ export default function AboutPage() {
                         <Link href="/realty" className="hover:text-white transition">
                             Real Estate Marketing
                         </Link>
-                        <Link href="/digital" className="hover:text-white transition">
+                        <Link href="/digital/best-digital-marketing-agency-in-hyderabad" className="hover:text-white transition">
                             Digital Marketing
                         </Link>
                         <Link href="/revenue" className="hover:text-white transition">

@@ -20,7 +20,7 @@ export default function WhyChooseSection() {
                     viewport={{ once: true }}
                     className="text-center max-w-4xl mx-auto"
                 >
-                    <h2 className="text-4xl md:text-6xl font-semibold leading-tight bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-4xl font-semibold leading-tight bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                         Best Digital Marketing Agency in Hyderabad for SEO, Google Ads & Performance Marketing
                     </h2>
 
