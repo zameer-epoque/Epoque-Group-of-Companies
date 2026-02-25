@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://epoquegroup.in"),
 
   title: {
-    default: "Époque Group",
+    default:
+      "Best Digital Marketing & Real Estate Lead Generation Agency in Hyderabad | Revenue & Interior Branding Experts",
     template: "%s | Époque Group",
   },
 
