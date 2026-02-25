@@ -246,6 +246,18 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}
+        /><Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Epoque Group",
+              url: "https://epoquegroup.in",
+              logo: "https://epoquegroup.in/logo.png"
+            }),
+          }}
         />
       </body>
     </html>
