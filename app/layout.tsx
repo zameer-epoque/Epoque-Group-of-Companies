@@ -22,63 +22,64 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
   display: "swap",
 });
-import type { Metadata, Viewport } from "next";
-import Script from "next/script";
-import { Poppins, Playfair_Display } from "next/font/google";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import ClientLayout from "./components/ClientLayout";
-import "./globals.css";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-poppins",
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-playfair",
-  display: "swap",
-});
-
-/* =========================
-   SEO METADATA
-========================= */
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://epoquegroup.in"),
 
   title: {
     default:
-      "Luxury Real Estate & Digital Marketing Agency in Hyderabad | Époque Group",
+      "Best Digital Marketing & Real Estate Lead Generation Agency in Hyderabad | Revenue & Interior Branding Experts",
     template: "%s | Époque Group",
   },
 
   description:
-    "Époque Group is a premium luxury real estate, interior design, and real estate lead generation agency in Hyderabad delivering high-ROI property investment solutions and elite brand growth strategies.",
+    "Époque Group delivers luxury real estate, premium interiors, and digital property solutions with strategic excellence.",
 
   keywords: [
-    "Luxury real estate Hyderabad",
-    "Premium villas Hyderabad",
-    "Luxury apartments Jubilee Hills",
-    "Ultra luxury homes Hyderabad",
-    "Gated community villas Telangana",
-    "Luxury property investment India",
+    // Luxury Real Estate - Hyderabad Focus
+    "Luxury real estate in Hyderabad",
+    "Premium villas in Hyderabad",
+    "Luxury apartments in Jubilee Hills",
+    "High-end residential projects Hyderabad",
+    "Ultra luxury homes in Hyderabad",
+    "Gated community villas Hyderabad",
+    "Luxury property investment Hyderabad",
+    "Best luxury real estate company Hyderabad",
+    "Premium residential developers Telangana",
+    "Luxury flats near Hitech City",
+
+    // Investment Intent Keywords
+    "Luxury property investment in India",
     "High ROI real estate Hyderabad",
-    "NRI property investment Hyderabad",
-    "Luxury interior design Hyderabad",
+    "Best areas to invest in Hyderabad real estate",
+    "Premium property for NRI investment",
+    "Luxury homes for sale in Hyderabad",
+    "Pre-launch luxury projects Hyderabad",
+    "Exclusive luxury residences India",
+
+    // Interior Design + Premium Segment
+    "Luxury interior design company Hyderabad",
     "Premium home interiors Hyderabad",
-    "Villa interior designers Hyderabad",
-    "Turnkey interior solutions Telangana",
-    "Real estate lead generation agency",
-    "Digital marketing for real estate Hyderabad",
-    "Property marketing company Hyderabad",
+    "High-end villa interior designers",
+    "Luxury apartment interior design India",
+    "Modern luxury home interiors",
+    "Turnkey interior solutions Hyderabad",
+    "Premium residential interior experts",
+
+    // Brand Authority Keywords
+    "Luxury lifestyle property developers",
+    "Elite real estate developers India",
+    "Boutique luxury real estate firm",
+    "Exclusive real estate consultancy Hyderabad",
+    "Luxury property management services",
+
+    // Combination Keywords (Low Competition High Conversion)
+    "Luxury real estate and interior solutions",
+    "Premium villa design and construction Hyderabad",
     "Luxury property advisory Hyderabad",
-    "Boutique real estate consultancy India"
+    "Custom luxury home development India"
   ],
+
 
   verification: {
     google: "URwvOHIEiyvwiJrVDoHIS0UQfmqLfkd0TJMX_C1k_oA",
@@ -93,10 +94,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title:
-      "Luxury Real Estate & Interior Experts in Hyderabad | Époque Group",
+    title: "Époque Group | Luxury Real Estate & Interiors",
     description:
-      "Discover ultra luxury homes, premium interiors, and high-performance real estate marketing solutions.",
+      "Luxury real estate and premium interiors crafted with timeless elegance.",
     url: "https://epoquegroup.in",
     siteName: "Époque Group",
     images: [
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luxury Real Estate & Interiors in Hyderabad",
+        alt: "Époque Group Luxury Real Estate",
       },
     ],
     locale: "en_US",
@@ -113,9 +113,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Époque Group | Luxury Real Estate Hyderabad",
-    description:
-      "Premium properties, luxury interiors & high-conversion real estate marketing.",
+    title: "Époque Group | Luxury Real Estate",
+    description: "Premium real estate and interior excellence.",
     images: ["/og-image.jpg"],
   },
 
@@ -123,19 +122,6 @@ export const metadata: Metadata = {
     canonical: "https://epoquegroup.in",
   },
 };
-
-/* =========================
-   VIEWPORT
-========================= */
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
-/* =========================
-   ROOT LAYOUT
-========================= */
 
 export default function RootLayout({
   children,
@@ -149,7 +135,8 @@ export default function RootLayout({
     name: "Époque Group",
     image: "https://epoquegroup.in/icon.png",
     url: "https://epoquegroup.in",
-    telephone: "+919133633327",
+    telephone: "+919133633327"
+    ,
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -173,6 +160,7 @@ export default function RootLayout({
           "Wednesday",
           "Thursday",
           "Friday",
+
         ],
         opens: "09:00",
         closes: "17:00",
@@ -184,35 +172,16 @@ export default function RootLayout({
       "https://www.linkedin.com/company/epoquegroupofcompany/",
       "https://x.com/EpoqueGroup",
       "https://www.youtube.com/@epoquegroupofcompanies",
+
     ],
   };
 
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://epoquegroup.in/#organization",
     name: "Époque Group",
     url: "https://epoquegroup.in",
     logo: "https://epoquegroup.in/icon.png",
-  };
-
-  const realEstateSchema = {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    "@id": "https://epoquegroup.in/#realestate",
-    name: "Époque Group",
-    url: "https://epoquegroup.in",
-    areaServed: {
-      "@type": "City",
-      name: "Hyderabad",
-    },
-    serviceType: [
-      "Luxury Real Estate Consulting",
-      "Property Investment Advisory",
-      "Premium Interior Design",
-      "Real Estate Lead Generation",
-      "Digital Marketing for Real Estate",
-    ],
   };
 
   return (
@@ -232,24 +201,22 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </ClientLayout>
-
-        {/* Facebook Pixel */}
-        <Script id="facebook-pixel" strategy="lazyOnload">
+        {/* Meta Pixel */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
           {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}
-            (window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1434477401388550');
-            fbq('track', 'PageView');
-          `}
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1434477401388550');
+    fbq('track', 'PageView');
+  `}
         </Script>
-
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-JJLRVZTZKB"
@@ -264,7 +231,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Schemas */}
+        {/* Local Business Schema */}
         <Script
           id="local-business-schema"
           type="application/ld+json"
@@ -273,20 +240,14 @@ export default function RootLayout({
             __html: JSON.stringify(localBusinessSchema),
           }}
         />
+
+        {/* Organization Schema */}
         <Script
           id="organization-schema"
           type="application/ld+json"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
-          }}
-        />
-        <Script
-          id="real-estate-schema"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(realEstateSchema),
           }}
         />
       </body>
