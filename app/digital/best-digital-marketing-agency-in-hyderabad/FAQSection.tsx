@@ -54,7 +54,7 @@ export default function FAQSection() {
     return (
         <>
             {/* FAQ SECTION */}
-            <section className="relative py-24 px-6 bg-[#101114] text-white border-t border-[#C79A3B]/20">
+            <section className="relative py-4 px-6 bg-[#101114] text-white border-t border-[#C79A3B]/20">
 
                 <div className="max-w-5xl mx-auto">
 
@@ -171,7 +171,7 @@ export default function FAQSection() {
                         generate qualified leads, and maximize long-term ROI.
                     </p>
 
-                   
+
 
                 </div>
             </section>

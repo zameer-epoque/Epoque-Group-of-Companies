@@ -1,185 +1,158 @@
 import type { Metadata } from "next"
 import Script from "next/script"
 import Link from "next/link"
+import WhyChooseSection from "./WhyChooseSection"
+import AboutFAQSection from "./AboutFAQSection"
 
 export const metadata: Metadata = {
-    title: "About Epoque Group | Real Estate & Digital Marketing Agency in Hyderabad",
+    title:
+        "About Epoque Group | Best Digital Marketing & Real Estate Marketing Agency in Hyderabad",
     description:
-        "Learn about Epoque Group – a leading real estate and digital marketing agency in Hyderabad specializing in branding, lead generation, SEO and revenue growth systems.",
+        "Epoque Group is a leading digital marketing and real estate marketing agency in Hyderabad specializing in SEO, Google Ads, branding, performance marketing and structured revenue growth systems.",
     keywords: [
-        "Digital marketing agency Hyderabad",
-        "Real estate marketing Hyderabad",
-        "Branding agency Hyderabad",
-        "Property lead generation company",
-        "Revenue consulting Hyderabad"
+        "Best digital marketing agency in Hyderabad",
+        "Real estate marketing company Hyderabad",
+        "SEO agency Hyderabad",
+        "Google Ads company Hyderabad",
+        "Property lead generation agency",
+        "Performance marketing Hyderabad",
     ],
     alternates: {
-        canonical: "https://epoquegroup.in/about"
+        canonical: "https://epoquegroup.in/about",
     },
     openGraph: {
-        title: "About Epoque Group | Hyderabad Marketing Experts",
+        title:
+            "About Epoque Group | Hyderabad Digital & Real Estate Marketing Experts",
         description:
-            "Epoque Group is a performance-driven real estate and digital marketing agency in Hyderabad helping businesses scale revenue.",
+            "Performance-driven digital marketing and real estate branding agency helping businesses scale revenue in Hyderabad and across India.",
         url: "https://epoquegroup.in/about",
-        type: "website"
-    }
+        type: "website",
+    },
 }
 
 export default function AboutPage() {
     return (
-        <main className="bg-black text-white min-h-screen px-6 py-24">
+        <main className="relative bg-[#050505] text-white overflow-hidden">
 
-            <div className="max-w-6xl mx-auto space-y-16">
+            {/* Background Glow */}
+            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-[200px] rounded-full"></div>
+
+            <div className="relative max-w-6xl mx-auto px-6 py-32 space-y-24">
 
                 {/* HERO */}
-                <section className="space-y-6 text-center">
-                    <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+                <section className="text-center space-y-8">
+                    <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
                         About{" "}
                         <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                             Epoque Group
                         </span>
                     </h1>
 
-                    <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                        Epoque Group is a Hyderabad-based real estate and digital marketing agency
-                        specializing in branding, performance marketing, lead generation,
-                        SEO strategies and structured revenue growth systems.
+                    <p className="text-gray-400 text-xl max-w-4xl mx-auto leading-relaxed">
+                        Epoque Group is one of the best digital marketing and real estate
+                        marketing agencies in Hyderabad, specializing in Search Engine
+                        Optimization (SEO), Google Ads management, Meta advertising,
+                        high-intent lead generation, and structured revenue growth systems.
                     </p>
                 </section>
 
                 {/* COMPANY STORY */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-3xl font-semibold text-white">
+                <section className="space-y-8">
+                    <h2 className="text-3xl md:text-4xl font-semibold">
                         Our Mission & Vision
                     </h2>
 
-                    <p>
-                        Our mission is simple — to help businesses in Hyderabad and across India
-                        build powerful brand authority and scalable revenue systems.
+                    <p className="text-gray-400 text-lg leading-relaxed">
+                        Our mission is to build scalable digital growth ecosystems for
+                        businesses in Hyderabad and across India. We help brands dominate
+                        search engines, generate qualified leads, and convert traffic into
+                        measurable revenue.
                     </p>
 
-                    <p>
-                        We combine strategic thinking, data-driven marketing and high-end creative
-                        execution to create measurable business impact.
-                    </p>
-
-                    <p>
-                        From luxury real estate developers in Kokapet and Financial District
-                        to startups in Gachibowli and Hitech City, we deliver structured
-                        growth frameworks designed for long-term sustainability.
+                    <p className="text-gray-400 text-lg leading-relaxed">
+                        Our vision is to become the most trusted digital marketing agency
+                        in Hyderabad by delivering transparent, performance-driven
+                        marketing strategies backed by analytics and conversion science.
                     </p>
                 </section>
 
                 {/* EXPERTISE */}
-                <section className="space-y-6">
-                    <h2 className="text-3xl font-semibold text-white">
-                        What We Specialize In
+                <section className="space-y-10">
+                    <h2 className="text-3xl md:text-4xl font-semibold">
+                        Our Core Expertise
                     </h2>
 
-                    <ul className="text-gray-400 list-disc list-inside space-y-3">
-                        <li>Real Estate Marketing & Project Launch Campaigns</li>
-                        <li>Luxury Villa & Premium Property Branding</li>
-                        <li>High-Intent Lead Generation Systems</li>
-                        <li>Search Engine Optimization (SEO)</li>
-                        <li>Google Ads & Performance Marketing</li>
-                        <li>Business & Revenue Consulting</li>
-                    </ul>
+                    <div className="grid md:grid-cols-2 gap-10 text-gray-400 text-lg leading-relaxed">
+                        <ul className="space-y-4 list-disc list-inside">
+                            <li>Real Estate Marketing & Luxury Project Launch Campaigns</li>
+                            <li>High-Conversion Lead Generation Funnels</li>
+                            <li>Search Engine Optimization (SEO)</li>
+                            <li>Google Search & Display Advertising</li>
+                        </ul>
+
+                        <ul className="space-y-4 list-disc list-inside">
+                            <li>Meta (Facebook & Instagram) Advertising</li>
+                            <li>Performance Marketing & Revenue Optimization</li>
+                            <li>Brand Positioning & Creative Strategy</li>
+                            <li>Business & Growth Consulting</li>
+                        </ul>
+                    </div>
                 </section>
 
-                {/* WHY CHOOSE US */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-3xl font-semibold text-white">
+                {/* WHY US */}
+                <section className="space-y-8">
+                    <h2 className="text-3xl md:text-4xl font-semibold">
                         Why Businesses Choose Epoque Group
                     </h2>
 
-                    <p>
-                        We don’t believe in generic marketing. Every strategy we design
-                        is customized based on market positioning, audience behavior
-                        and conversion psychology.
+                    <p className="text-gray-400 text-lg leading-relaxed">
+                        Businesses choose us because we focus on revenue — not vanity
+                        metrics. Every campaign is designed around measurable performance,
+                        return on investment (ROI), and long-term scalability.
                     </p>
 
-                    <ul className="list-disc list-inside space-y-2">
-                        <li>✔ Hyderabad Market Expertise</li>
-                        <li>✔ Revenue-Focused Strategy</li>
-                        <li>✔ Structured Funnel Systems</li>
-                        <li>✔ Data-Driven Campaign Optimization</li>
-                        <li>✔ Transparent Reporting</li>
-                    </ul>
+                    <div className="grid md:grid-cols-2 gap-8 text-gray-400 text-lg">
+                        <ul className="space-y-3">
+                            <li>✔ Hyderabad Market Expertise</li>
+                            <li>✔ Data-Driven Marketing Frameworks</li>
+                            <li>✔ Conversion-Optimized Funnel Systems</li>
+                        </ul>
+
+                        <ul className="space-y-3">
+                            <li>✔ Advanced SEO & Paid Advertising</li>
+                            <li>✔ Transparent Reporting & Analytics</li>
+                            <li>✔ Sustainable Revenue Growth Models</li>
+                        </ul>
+                    </div>
                 </section>
 
                 {/* INTERNAL LINKS */}
-                <section className="border-t border-white/10 pt-12 space-y-4">
-                    <h3 className="text-2xl font-semibold">
+                <section className="border-t border-white/10 pt-14">
+                    <h3 className="text-2xl font-semibold mb-6">
                         Explore Our Services
                     </h3>
 
-                    <div className="flex flex-wrap gap-6 text-orange-400">
-                        <Link href="/realty">Real Estate Marketing</Link>
-                        <Link href="/digital">Digital Marketing</Link>
-                        <Link href="/revenue">Revenue Consulting</Link>
-                        <Link href="/contact">Contact Us</Link>
+                    <div className="flex flex-wrap gap-8 text-[#C79A3B] text-lg">
+                        <Link href="/realty" className="hover:text-white transition">
+                            Real Estate Marketing
+                        </Link>
+                        <Link href="/digital" className="hover:text-white transition">
+                            Digital Marketing
+                        </Link>
+                        <Link href="/revenue" className="hover:text-white transition">
+                            Revenue Consulting
+                        </Link>
+                        <Link href="/contact" className="hover:text-white transition">
+                            Contact Us
+                        </Link>
                     </div>
                 </section>
 
-                {/* FAQ */}
-                <section className="pt-16 space-y-8">
-                    <h2 className="text-3xl font-semibold text-center">
-                        Frequently Asked Questions
-                    </h2>
+                {/* WHY CHOOSE SECTION COMPONENT */}
+                <WhyChooseSection />
 
-                    <div className="space-y-6 text-gray-400">
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Where is Epoque Group located?
-                            </h3>
-                            <p>
-                                We are based in Hyderabad, Telangana, serving clients across India.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you specialize in real estate marketing?
-                            </h3>
-                            <p>
-                                Yes. We specialize in real estate branding, project launches,
-                                luxury villa marketing and property lead generation.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you work with startups and enterprises?
-                            </h3>
-                            <p>
-                                Yes. We support startups, SMEs and large enterprises
-                                with scalable digital growth systems.
-                            </p>
-                        </div>
-
-                    </div>
-                </section>
-
-                {/* CTA */}
-                <section className="text-center pt-20">
-                    <h2 className="text-3xl font-semibold">
-                        Ready to Scale Your Business?
-                    </h2>
-
-                    <p className="mt-4 text-gray-400">
-                        Let’s build a structured growth strategy tailored for your brand.
-                    </p>
-
-                    <Link
-                        href="/contact"
-                        className="inline-block mt-8 px-10 py-4 rounded-full font-semibold text-black 
-            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
-            hover:scale-105 transition duration-300 shadow-xl"
-                    >
-                        Get In Touch
-                    </Link>
-                </section>
+                {/* FAQ COMPONENT */}
+                <AboutFAQSection />
 
             </div>
 
@@ -197,39 +170,9 @@ export default function AboutPage() {
                             "@type": "PostalAddress",
                             addressLocality: "Hyderabad",
                             addressRegion: "Telangana",
-                            addressCountry: "India"
-                        }
-                    })
-                }}
-            />
-
-            {/* FAQ SCHEMA */}
-            <Script
-                id="about-faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "Where is Epoque Group located?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Epoque Group is located in Hyderabad, Telangana, India."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: "Do you specialize in real estate marketing?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Yes, we specialize in real estate branding, lead generation and project launch marketing."
-                                }
-                            }
-                        ]
-                    })
+                            addressCountry: "India",
+                        },
+                    }),
                 }}
             />
 
