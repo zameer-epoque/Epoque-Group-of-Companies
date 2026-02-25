@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Script from "next/script";
 import { ChevronDown } from "lucide-react";
-
+import Link from 'next/link'
 export default function AboutFAQSection() {
     const [active, setActive] = useState<number | null>(0);
 
@@ -125,7 +125,16 @@ export default function AboutFAQSection() {
                     </div>
                 </div>
             </section>
-
+            <div className="mt-10 flex justify-center">
+                <Link
+                    href="/contact"
+                    className="px-12 py-4 rounded-full font-semibold
+    bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
+    text-black hover:scale-105 transition duration-300 shadow-xl"
+                >
+                    Get Free Strategy Consultation
+                </Link>
+            </div>
             {/* FAQ SCHEMA FOR SEO */}
             <Script
                 id="about-faq-schema"
