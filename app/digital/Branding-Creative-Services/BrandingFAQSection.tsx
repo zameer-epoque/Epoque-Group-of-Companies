@@ -44,7 +44,7 @@ export default function BrandingFAQSection() {
     return (
         <>
             {/* FAQ Section */}
-            <section className="relative py-20 px-6 bg-[#101114] text-white border-t border-orange-400/20">
+            <section className="relative py-12 px-6 bg-[#101114] text-white border-t border-orange-400/20">
 
                 <div className="max-w-5xl mx-auto">
 
@@ -65,8 +65,8 @@ export default function BrandingFAQSection() {
                             <div
                                 key={index}
                                 className={`rounded-2xl border transition duration-300 ${active === index
-                                        ? "border-orange-400 bg-[#1b1c20]"
-                                        : "border-white/10 bg-[#16171a] hover:border-orange-400/60"
+                                    ? "border-orange-400 bg-[#1b1c20]"
+                                    : "border-white/10 bg-[#16171a] hover:border-orange-400/60"
                                     }`}
                             >
                                 <button
@@ -85,16 +85,16 @@ export default function BrandingFAQSection() {
                                     <ChevronDown
                                         size={22}
                                         className={`transition-transform duration-300 ${active === index
-                                                ? "rotate-180 text-orange-400"
-                                                : "text-gray-400"
+                                            ? "rotate-180 text-orange-400"
+                                            : "text-gray-400"
                                             }`}
                                     />
                                 </button>
 
                                 <div
                                     className={`px-8 overflow-hidden transition-all duration-500 ${active === index
-                                            ? "max-h-96 pb-7 opacity-100"
-                                            : "max-h-0 opacity-0"
+                                        ? "max-h-96 pb-7 opacity-100"
+                                        : "max-h-0 opacity-0"
                                         }`}
                                 >
                                     <p className="text-gray-400 text-lg leading-relaxed">
@@ -108,7 +108,7 @@ export default function BrandingFAQSection() {
             </section>
 
             {/* CTA Section */}
-            <section className="relative py-24 text-center bg-[#0d0d0f] border-t border-orange-400/20 text-white">
+            <section className="relative py-12 text-center bg-[#0d0d0f] border-t border-orange-400/20 text-white">
 
                 <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-orange-400/10 blur-[150px] rounded-full"></div>
 

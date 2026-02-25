@@ -44,7 +44,7 @@ export default function LeadGenerationFAQSection() {
     return (
         <>
             {/* FAQ SECTION */}
-            <section className="relative py-20 px-6 bg-[#101114] text-white border-t border-orange-400/20">
+            <section className="relative py-12 px-6 bg-[#101114] text-white border-t border-orange-400/20">
 
                 <div className="max-w-5xl mx-auto">
 

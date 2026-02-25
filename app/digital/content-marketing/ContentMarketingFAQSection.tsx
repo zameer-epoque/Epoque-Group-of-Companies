@@ -44,7 +44,7 @@ export default function ContentMarketingFAQSection() {
     return (
         <>
             {/* FAQ Section */}
-            <section className="relative py-20 px-6 bg-[#101114] text-white border-t border-orange-400/20">
+            <section className="relative py-12 px-6 bg-[#101114] text-white border-t border-orange-400/20">
 
                 <div className="max-w-5xl mx-auto">
 
@@ -109,7 +109,7 @@ export default function ContentMarketingFAQSection() {
             </section>
 
             {/* CTA */}
-            <section className="relative py-24 text-center bg-[#0d0d0f] border-t border-orange-400/20 text-white">
+            <section className="relative py-12 text-center bg-[#0d0d0f] border-t border-orange-400/20 text-white">
 
                 <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-orange-400/10 blur-[150px] rounded-full"></div>
 

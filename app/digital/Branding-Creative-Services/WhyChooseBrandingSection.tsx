@@ -5,7 +5,7 @@ import { CheckCircle, Sparkles } from "lucide-react";
 
 export default function WhyChooseBrandingSection() {
     return (
-        <section className="relative py-20 px-6 bg-[#0f0f11] text-white border-t border-orange-400/20 overflow-hidden">
+        <section className="relative py-12 px-6 bg-[#0f0f11] text-white border-t border-orange-400/20 overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-orange-400/10 blur-[180px] rounded-full"></div>

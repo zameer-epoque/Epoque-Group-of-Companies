@@ -96,7 +96,7 @@ export default function SEOServicePage() {
       </section>
 
       {/* ================= SERVICES SECTION ================= */}
-      <section className="relative py-20 px-6 bg-[#0c0c0d]">
+      <section className="relative py-12 px-6 bg-[#0c0c0d]">
 
         <div className="max-w-7xl mx-auto">
 

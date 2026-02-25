@@ -89,7 +89,7 @@ export default function BrandingCreativeServicesPage() {
             </section>
 
             {/* ================= SERVICES ================= */}
-            <section className="relative py-20 px-6 bg-gradient-to-b from-[#0c0c0d] to-[#101114]">
+            <section className="relative py-4 px-6 bg-gradient-to-b from-[#0c0c0d] to-[#101114]">
                 <div className="max-w-7xl mx-auto">
 
                     <div className="max-w-3xl mx-auto text-center mb-20">
