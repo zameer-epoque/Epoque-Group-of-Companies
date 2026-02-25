@@ -82,7 +82,7 @@ export default function SEOServicePage() {
             </Link>
 
             <Link
-              href="/case-studies"
+              href="/real-estate-digital-marketing-projects-epoque-group"
               className="px-10 py-4 rounded-full font-semibold border border-white/20
               hover:border-[#C79A3B] hover:text-[#C79A3B]
               transition duration-300"
