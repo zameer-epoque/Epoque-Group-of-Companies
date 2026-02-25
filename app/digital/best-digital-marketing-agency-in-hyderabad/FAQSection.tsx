@@ -171,16 +171,7 @@ export default function FAQSection() {
                         generate qualified leads, and maximize long-term ROI.
                     </p>
 
-                    <div className="mt-14">
-                        <Link
-                            href="/contact"
-                            className="inline-block px-14 py-5 rounded-full font-semibold
-              bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-              text-black hover:scale-105 transition duration-300 shadow-xl"
-                        >
-                            Get Free Strategy Consultation
-                        </Link>
-                    </div>
+                   
 
                 </div>
             </section>

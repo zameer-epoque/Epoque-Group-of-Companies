@@ -3,6 +3,7 @@
 import { motion, Variants } from "framer-motion"
 import PremiumCTA from "../../components/PremiumCTA"
 import FAQSection from "./FAQSection"
+import WhyChooseSection from "./WhyChooseSection"
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 60 },
@@ -66,7 +67,7 @@ export default function DigitalClient() {
             </section>
 
             {/* ================= CORE SERVICES ================= */}
-            <section className="relative py-4 px-6 bg-[#0B0B0B]">
+            {/* <section className="relative py-4 px-6 bg-[#0B0B0B]">
 
                 <div className="max-w-7xl mx-auto">
 
@@ -150,11 +151,11 @@ export default function DigitalClient() {
 
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* ================= SEO SERVICES ================= */}
             {/* ================= DIGITAL MARKETING SERVICES ================= */}
-            <section className="relative py-12 px-6 bg-[#080808] overflow-hidden">
+            <section className="relative py-2 px-6 bg-[#080808] overflow-hidden">
 
                 {/* Soft Background Glow */}
                 <div className="absolute inset-0 flex justify-center pointer-events-none">
@@ -241,7 +242,9 @@ export default function DigitalClient() {
                     </div>
                 </div>
             </section>
+            <WhyChooseSection />
             <FAQSection />
+
             <PremiumCTA />
 
         </main>
