@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Best Digital Marketing & Real Estate Lead Generation Agency in Hyderabad | Revenue & Interior Branding Experts",
+      "Best Digital Marketing & Real Estate Lead Generation Agency in Hyderabad | Interior Branding Experts ",
     template: "%s | Époque Group",
   },
 
