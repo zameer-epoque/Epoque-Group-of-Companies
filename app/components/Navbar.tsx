@@ -321,11 +321,11 @@ const navItems = [
   },
 
   {
-    label: "Company",
+    label: "Explore",
     href: "/company",
     dropdown: [
       {
-        title: "Explore",
+        title: "Career",
         items: [
           { label: "Our Clients", href: "/real-estate-digital-marketing-projects-epoque-group" },
           { label: "FAQ", href: "/faq" },
