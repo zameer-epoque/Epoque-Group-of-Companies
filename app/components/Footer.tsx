@@ -191,7 +191,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/best-digital-marketing-agency-in-hyderabad" className="hover:text-orange-400 transition">
+              <a href="/digital/best-digital-marketing-agency-in-hyderabad" className="hover:text-orange-400 transition">
                 Digital Marketing & SEO
               </a>
             </li>
