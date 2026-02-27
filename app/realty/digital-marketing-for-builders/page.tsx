@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Script from "next/script"
 import Link from "next/link"
 import RealEstateFAQ from "./RealEstateFAQ"
-import WhyChooseRealEstateBrandingSection from "../realty/real-estate-branding/WhyChooseRealEstateBrandingSection"
+import WhyChooseRealEstateBrandingSection from "../real-estate-branding/WhyChooseRealEstateBrandingSection"
 
 export default function RealEstateBrandingPage() {
     return (
