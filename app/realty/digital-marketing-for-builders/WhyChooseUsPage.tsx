@@ -9,7 +9,7 @@ export default function WhyChooseUsPage() {
         <section className="bg-black text-white">
 
             {/* ================= HERO ================= */}
-            <div className="relative py-28 px-6 text-center overflow-hidden">
+            <div className="relative py-4 px-6 text-center overflow-hidden">
                 <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
                 <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-red-500/20 blur-[150px] rounded-full"></div>
 
@@ -102,7 +102,7 @@ export default function WhyChooseUsPage() {
             </div>
 
             {/* ================= CTA ================= */}
-            <div className="py-28 px-6 text-center">
+            <div className="py-4 px-6 text-center">
                 <h2 className="text-4xl font-semibold">
                     Ready to Elevate Your Project Brand?
                 </h2>
