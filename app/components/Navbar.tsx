@@ -341,8 +341,12 @@ const navItems: NavItem[] = [
     href: "/company",
     dropdown: [
       { label: "Our Clients", href: "/real-estate-digital-marketing-projects-epoque-group" },
+      { label: "Blogs", href: "/blog-epoque-group" },
       { label: "FAQ", href: "/faq" },
       { label: "Career", href: "/Career" },
+      { label: "Blogs", href: "/blog-epoque-group" },
+
+
     ],
   },
 
