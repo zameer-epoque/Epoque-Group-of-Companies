@@ -255,8 +255,6 @@
 
 
 
-
-
 "use client"
 
 import { useEffect, useState } from "react"
@@ -265,7 +263,25 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { ChevronDown } from "lucide-react"
 
-const navItems = [
+interface SimpleDropdownItem {
+  label: string
+  href: string
+}
+
+interface GroupDropdownItem {
+  title: string
+  items: SimpleDropdownItem[]
+}
+
+type DropdownItem = SimpleDropdownItem | GroupDropdownItem
+
+interface NavItem {
+  label: string
+  href: string
+  dropdown?: DropdownItem[]
+}
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-epoque-group" },
 
@@ -278,8 +294,8 @@ const navItems = [
       { label: "Search Engine Optimization", href: "/digital/search-engine-optimization" },
       { label: "Google Ads / PPC", href: "/digital/google-ads-ppc" },
       { label: "Content Marketing", href: "/digital/content-marketing" },
-      { label: "Branding & Creative Services", href: "/digital/Branding-Creative-Services" },
-      { label: "Lead Generation Services", href: "/digital/Lead-Generation-Services" },
+      { label: "Branding & Creative Services", href: "/digital/branding-creative-services" },
+      { label: "Lead Generation Services", href: "/digital/lead-generation-services" },
     ],
   },
 
@@ -339,14 +355,14 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
-  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null)
+  const [mobileDropdown, setMobileDropdown] = useState<number | null>(null)
   const pathname = usePathname()
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : ""
   }, [open])
 
-  const isActiveParent = (item: any) => {
+  const isActiveParent = (item: NavItem) => {
     if (!item.dropdown) return pathname === item.href
     return pathname.startsWith(item.href)
   }
@@ -359,24 +375,23 @@ export default function Navbar() {
           <Image src="/logo.png" alt="Logo" width={140} height={140} priority />
         </Link>
 
-        {/* DESKTOP */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-10">
-          {navItems.map((item) => (
-            <li key={item.label} className="relative group">
-
+          {navItems.map((item, index) => (
+            <li key={index} className="relative group">
               {!item.dropdown ? (
                 <Link
                   href={item.href}
-                  className={`uppercase text-sm font-semibold transition
-                  ${pathname === item.href ? "text-[#C79A3B]" : "hover:text-[#C79A3B]"}`}
+                  className={`uppercase text-sm font-semibold transition ${pathname === item.href ? "text-[#C79A3B]" : "hover:text-[#C79A3B]"
+                    }`}
                 >
                   {item.label}
                 </Link>
               ) : (
                 <>
                   <div
-                    className={`flex items-center gap-1 cursor-pointer uppercase text-sm font-semibold
-                    ${isActiveParent(item) ? "text-[#C79A3B]" : "hover:text-[#C79A3B]"}`}
+                    className={`flex items-center gap-1 cursor-pointer uppercase text-sm font-semibold ${isActiveParent(item) ? "text-[#C79A3B]" : "hover:text-[#C79A3B]"
+                      }`}
                   >
                     {item.label}
                     <ChevronDown size={16} />
@@ -385,18 +400,16 @@ export default function Navbar() {
                   <div className="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className="w-72 bg-black border border-white/10 rounded-xl shadow-2xl py-4">
                       <ul>
-                        {item.dropdown.map((sub: any, index: number) => {
-
-                          if (sub.items) {
+                        {item.dropdown.map((sub, i) => {
+                          if ("items" in sub) {
                             return (
-                              <div key={index}>
-                                {sub.title && (
-                                  <h4 className="text-[#C79A3B] text-xs font-semibold px-6 pt-2 uppercase">
-                                    {sub.title}
-                                  </h4>
-                                )}
-                                {sub.items.map((inner: any) => (
-                                  <li key={inner.href}>
+                              <div key={i}>
+                                <h4 className="text-[#C79A3B] text-xs font-semibold px-6 pt-3 uppercase">
+                                  {sub.title}
+                                </h4>
+
+                                {sub.items.map((inner, j) => (
+                                  <li key={j}>
                                     <Link
                                       href={inner.href}
                                       className="block px-6 py-3 text-sm text-gray-300 hover:text-[#C79A3B] hover:bg-white/5"
@@ -410,7 +423,7 @@ export default function Navbar() {
                           }
 
                           return (
-                            <li key={sub.href}>
+                            <li key={i}>
                               <Link
                                 href={sub.href}
                                 className="block px-6 py-3 text-sm text-gray-300 hover:text-[#C79A3B] hover:bg-white/5"
@@ -425,12 +438,11 @@ export default function Navbar() {
                   </div>
                 </>
               )}
-
             </li>
           ))}
         </ul>
 
-        {/* MOBILE BUTTON */}
+        {/* Hamburger */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col gap-1"
@@ -441,6 +453,86 @@ export default function Navbar() {
         </button>
 
       </nav>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden bg-black border-t border-white/10 ${open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <ul className="flex flex-col px-6 py-6 space-y-4">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              {!item.dropdown ? (
+                <Link
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="block uppercase text-sm font-semibold py-2"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <>
+                  <button
+                    onClick={() =>
+                      setMobileDropdown(
+                        mobileDropdown === index ? null : index
+                      )
+                    }
+                    className="flex justify-between items-center w-full uppercase text-sm font-semibold py-2"
+                  >
+                    {item.label}
+                    <ChevronDown
+                      size={16}
+                      className={`transition ${mobileDropdown === index ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+
+                  {mobileDropdown === index && (
+                    <ul className="pl-4 mt-2 space-y-2">
+                      {item.dropdown.map((sub, i) => {
+                        if ("items" in sub) {
+                          return (
+                            <div key={i}>
+                              <p className="text-[#C79A3B] text-xs uppercase mt-2">
+                                {sub.title}
+                              </p>
+
+                              {sub.items.map((inner, j) => (
+                                <li key={j}>
+                                  <Link
+                                    href={inner.href}
+                                    onClick={() => setOpen(false)}
+                                    className="block text-sm text-gray-400 py-1"
+                                  >
+                                    {inner.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </div>
+                          )
+                        }
+
+                        return (
+                          <li key={i}>
+                            <Link
+                              href={sub.href}
+                              onClick={() => setOpen(false)}
+                              className="block text-sm text-gray-400 py-1"
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  )}
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   )
 }
