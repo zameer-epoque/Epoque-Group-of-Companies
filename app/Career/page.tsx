@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 
-const jobsData = [
+interface Job {
+    id: number;
+    title: string;
+    location: string;
+    type: string;
+    description: string;
+}
+
+const jobsData: Job[] = [
     {
         id: 1,
         title: "Performance Marketing Manager",
@@ -30,14 +38,14 @@ const jobsData = [
 ];
 
 export default function CareersPage() {
-    const [selectedJob, setSelectedJob] = useState<any>(null);
+    const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-black text-white">
 
             {/* HERO SECTION */}
-            <section className="bg-gradient-to-r from-black to-gray-900 text-white py-20 px-6 text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <section className="bg-gradient-to-r from-black via-gray-900 to-orange-500/20 py-24 px-6 text-center">
+                <h1 className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
                     Build The Future of Growth With Us
                 </h1>
                 <p className="max-w-3xl mx-auto text-lg text-gray-300">
@@ -48,67 +56,65 @@ export default function CareersPage() {
             </section>
 
             {/* ABOUT */}
-            <section className="py-16 px-6 max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold mb-6 text-center">Who We Are</h2>
-                <p className="text-gray-700 text-lg leading-relaxed text-center max-w-4xl mx-auto">
+            <section className="py-4 px-6 max-w-6xl mx-auto text-center">
+                <h2 className="text-3xl font-bold mb-6 text-orange-400">
+                    Who We Are
+                </h2>
+                <p className="text-gray-400 text-lg leading-relaxed max-w-4xl mx-auto">
                     Epoque Group is a global growth and performance marketing company
                     specializing in qualified lead systems, digital demand engineering,
                     investor acquisition funnels, and scalable business growth models.
-                    We work with ambitious brands across real estate, finance, and
-                    high-value industries.
                 </p>
             </section>
 
             {/* BENEFITS */}
-            <section className="bg-white py-16 px-6">
-                <h2 className="text-3xl font-bold text-center mb-10">
+            <section className="py-4 px-6">
+                <h2 className="text-3xl font-bold text-center mb-12 text-orange-400">
                     Why Work With Us
                 </h2>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div className="p-6 shadow-lg rounded-xl">
-                        <h3 className="font-bold text-xl mb-3">Global Opportunities</h3>
-                        <p>
-                            Work with international clients and expand your career beyond
-                            borders.
-                        </p>
-                    </div>
-
-                    <div className="p-6 shadow-lg rounded-xl">
-                        <h3 className="font-bold text-xl mb-3">Performance Rewards</h3>
-                        <p>
-                            Competitive compensation with performance-based growth bonuses.
-                        </p>
-                    </div>
-
-                    <div className="p-6 shadow-lg rounded-xl">
-                        <h3 className="font-bold text-xl mb-3">Flexible & Remote</h3>
-                        <p>
-                            Work from anywhere while building systems that scale globally.
-                        </p>
-                    </div>
+                <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+                    {["Global Opportunities", "Performance Rewards", "Flexible & Remote"].map(
+                        (title, index) => (
+                            <div
+                                key={index}
+                                className="p-8 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 hover:border-orange-400 transition duration-300 shadow-lg"
+                            >
+                                <h3 className="font-bold text-xl mb-4 text-orange-400">
+                                    {title}
+                                </h3>
+                                <p className="text-gray-400">
+                                    Work with international clients and grow your career with
+                                    performance-driven systems.
+                                </p>
+                            </div>
+                        )
+                    )}
                 </div>
             </section>
 
             {/* OPEN POSITIONS */}
-            <section className="py-16 px-6 max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-10">
+            <section className="py-4 px-6 max-w-6xl mx-auto">
+                <h2 className="text-3xl font-bold text-center mb-12 text-orange-400">
                     Current Open Positions
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-10">
                     {jobsData.map((job) => (
                         <div
                             key={job.id}
-                            className="border p-6 rounded-xl hover:shadow-xl transition cursor-pointer"
+                            className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 p-8 rounded-2xl hover:border-orange-400 hover:shadow-orange-500/10 hover:shadow-2xl transition cursor-pointer"
                             onClick={() => setSelectedJob(job)}
                         >
-                            <h3 className="text-xl font-bold">{job.title}</h3>
-                            <p className="text-gray-600">
+                            <h3 className="text-2xl font-bold mb-2 text-white">
+                                {job.title}
+                            </h3>
+                            <p className="text-gray-400">
                                 {job.location} • {job.type}
                             </p>
-                            <p className="mt-4 text-gray-700">{job.description}</p>
-                            <button className="mt-6 bg-black text-white px-6 py-2 rounded-lg">
+                            <p className="mt-4 text-gray-400">{job.description}</p>
+
+                            <button className="mt-6 bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-black font-semibold px-6 py-3 rounded-xl transition">
                                 Apply Now
                             </button>
                         </div>
@@ -118,9 +124,9 @@ export default function CareersPage() {
 
             {/* APPLICATION MODAL */}
             {selectedJob && (
-                <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
-                    <div className="bg-white p-8 rounded-xl max-w-lg w-full">
-                        <h3 className="text-2xl font-bold mb-4">
+                <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center px-4 z-50">
+                    <div className="bg-gray-900 border border-gray-800 p-8 rounded-2xl max-w-lg w-full relative shadow-2xl">
+                        <h3 className="text-2xl font-bold mb-6 text-orange-400">
                             Apply for {selectedJob.title}
                         </h3>
 
@@ -128,49 +134,49 @@ export default function CareersPage() {
                             <input
                                 type="text"
                                 placeholder="Full Name"
-                                className="w-full border p-3 rounded"
+                                className="w-full bg-gray-800 border border-gray-700 p-3 rounded-lg focus:outline-none focus:border-orange-400"
                             />
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="w-full border p-3 rounded"
+                                className="w-full bg-gray-800 border border-gray-700 p-3 rounded-lg focus:outline-none focus:border-orange-400"
                             />
                             <input
                                 type="file"
-                                className="w-full border p-3 rounded"
+                                className="w-full bg-gray-800 border border-gray-700 p-3 rounded-lg text-gray-400"
                             />
                             <textarea
                                 placeholder="Why should we hire you?"
-                                className="w-full border p-3 rounded"
-                            ></textarea>
+                                className="w-full bg-gray-800 border border-gray-700 p-3 rounded-lg focus:outline-none focus:border-orange-400"
+                            />
 
-                            <button className="w-full bg-black text-white py-3 rounded-lg">
+                            <button className="w-full bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-black font-semibold py-3 rounded-xl transition">
                                 Submit Application
                             </button>
                         </form>
 
                         <button
                             onClick={() => setSelectedJob(null)}
-                            className="mt-4 text-red-500"
+                            className="absolute top-4 right-4 text-gray-400 hover:text-orange-400 text-lg"
                         >
-                            Close
+                            ✕
                         </button>
                     </div>
                 </div>
             )}
 
             {/* FOOTER CTA */}
-            <section className="bg-black text-white py-16 text-center">
-                <h2 className="text-3xl font-bold mb-6">
+            <section className="bg-gradient-to-r from-black to-orange-500/20 py-20 text-center">
+                <h2 className="text-3xl font-bold mb-6 text-orange-400">
                     Ready to Build Scalable Growth Systems?
                 </h2>
-                <p className="mb-8 text-gray-300">
+                <p className="mb-8 text-gray-400">
                     Be part of a team shaping the future of performance marketing and
                     real estate demand engineering.
                 </p>
                 <a
                     href="/contact"
-                    className="bg-white text-black px-8 py-3 rounded-lg font-semibold"
+                    className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-black font-semibold px-10 py-4 rounded-xl transition"
                 >
                     Contact Us
                 </a>
