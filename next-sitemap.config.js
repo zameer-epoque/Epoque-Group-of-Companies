@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: "https://www.epoquegroup.in",
+    siteUrl: "https://epoquegroup.in",
     generateRobotsTxt: true,
   };
   
