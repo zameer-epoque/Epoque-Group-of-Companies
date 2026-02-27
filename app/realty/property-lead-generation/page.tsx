@@ -1,255 +1,105 @@
-import type { Metadata } from "next"
-import Script from "next/script"
-import Link from "next/link"
+import type { Metadata } from "next";
+import Script from "next/script";
+import Link from "next/link";
+import WhyChoosePropertyLeadSection from "./WhyChoosePropertyLeadSection";
+import PropertyLeadFAQSection from "./PropertyLeadFAQSection";
 
 export const metadata: Metadata = {
     title:
-        "Real Estate Lead Generation Company in Hyderabad | High-Intent Property Leads",
+        "Property Lead Generation Services in Hyderabad | Real Estate Performance Marketing",
     description:
-        "Top real estate lead generation company in Hyderabad helping builders generate high-quality property leads through Google Ads, Meta Ads and SEO-driven funnels.",
+        "High-converting property lead generation agency in Hyderabad specializing in Google Ads, Meta Ads, landing page funnels and NRI targeting for real estate developers.",
     alternates: {
         canonical:
             "https://epoquegroup.in/realty/property-lead-generation",
     },
     openGraph: {
         title:
-            "Real Estate Lead Generation in Hyderabad",
+            "Property Lead Generation Agency in Hyderabad",
         description:
-            "Generate high-intent real estate leads in Hyderabad with performance-driven marketing systems.",
+            "Structured performance marketing campaigns designed to generate qualified real estate buyer leads and increase bookings.",
         url:
             "https://epoquegroup.in/realty/property-lead-generation",
         type: "website",
     },
-}
+};
 
 export default function Page() {
     return (
-        <main className="bg-black text-white min-h-screen px-6 py-24">
-            <div className="max-w-5xl mx-auto space-y-12">
+        <main className="relative bg-black text-white min-h-screen overflow-hidden">
 
-                {/* HERO */}
-                <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                    Real Estate Lead Generation Company in{" "}
+            {/* Background Glow */}
+            <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/20 blur-[150px] rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#7A2E63]/20 blur-[150px] rounded-full"></div>
+
+            {/* ================= HERO ================= */}
+            <section className="relative max-w-5xl mx-auto px-6 py-28 text-center space-y-8">
+
+                <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                    Property Lead Generation Services in{" "}
                     <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                         Hyderabad
                     </span>
                 </h1>
 
-                <p className="text-gray-400 text-lg leading-relaxed">
-                    Generating high-quality real estate leads in Hyderabad requires
-                    precision targeting, buyer psychology mapping and structured
-                    funnel optimization. We help builders and developers in
-                    Gachibowli, Kokapet, Financial District, Narsingi, Tellapur,
-                    Kompally and Shamshabad generate verified property inquiries
-                    that convert into serious site visits and confirmed bookings.
+                <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
+                    We build structured real estate performance marketing systems
+                    designed to generate high-intent property buyer leads,
+                    increase site visits and accelerate booking cycles
+                    for developers across Hyderabad.
                 </p>
 
-                {/* AUTHORITY SECTION */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-2xl font-semibold text-white">
-                        High-Intent Lead Generation for Competitive Markets
+                <Link
+                    href="/contact"
+                    className="inline-block mt-6 px-12 py-5 rounded-full font-semibold text-black 
+                    bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
+                    hover:scale-105 transition duration-300 shadow-xl"
+                >
+                    Get Qualified Buyer Leads
+                </Link>
+
+            </section>
+
+            {/* ================= WHY CHOOSE ================= */}
+            <WhyChoosePropertyLeadSection />
+
+            {/* ================= FAQ ================= */}
+            <PropertyLeadFAQSection />
+
+            {/* ================= FINAL CTA ================= */}
+            <section className="text-center py-24 border-t border-[#C79A3B]/20">
+                <div className="max-w-3xl mx-auto px-6">
+
+                    <h2 className="text-3xl md:text-4xl font-semibold">
+                        Ready to Generate High-Quality Property Leads?
                     </h2>
 
-                    <p>
-                        Hyderabad’s real estate landscape is highly competitive.
-                        Running generic ads leads to inflated cost-per-lead (CPL)
-                        and low-quality inquiries. Our structured system focuses
-                        on buyer qualification, intent signals and location-based
-                        segmentation to attract serious prospects.
-                    </p>
-
-                    <p>
-                        Instead of volume-driven marketing, we engineer campaigns
-                        that prioritize quality, site visit potential and booking
-                        probability.
-                    </p>
-                </section>
-
-                {/* STRATEGY */}
-                <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Our Real Estate Lead Generation Framework
-                    </h2>
-
-                    <ul className="text-gray-400 list-disc list-inside space-y-3">
-                        <li>Google Search Ads for high-intent property keywords</li>
-                        <li>Meta Ads targeting villa & apartment buyers</li>
-                        <li>Landing page funnel optimization</li>
-                        <li>Luxury copywriting & value positioning</li>
-                        <li>CRM integration & lead qualification</li>
-                        <li>Retargeting campaigns for serious buyers</li>
-                        <li>Cost-per-lead optimization models</li>
-                    </ul>
-                </section>
-
-                {/* PERFORMANCE SECTION */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Optimized Cost Per Lead & Booking Growth
-                    </h2>
-
-                    <p>
-                        Many developers struggle with high ad budgets and
-                        inconsistent bookings. Our system reduces wasted spend
-                        by filtering low-intent traffic and prioritizing
-                        conversion-ready buyers.
-                    </p>
-
-                    <p>
-                        Through behavioral retargeting, segmented audience
-                        targeting and structured follow-up automation,
-                        we increase site visit ratios and accelerate
-                        booking velocity.
-                    </p>
-                </section>
-
-                {/* LOCATION TARGETING */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Prime Hyderabad Micro-Markets We Target
-                    </h2>
-
-                    <p>
-                        Gachibowli • Kokapet • Financial District • Narsingi •
-                        Tellapur • Kompally • Shamshabad • Neopolis
-                    </p>
-
-                    <p>
-                        These high-growth zones attract IT professionals,
-                        CXOs, investors and premium lifestyle buyers.
-                        Our geo-targeted campaigns ensure your project
-                        reaches the right segment.
-                    </p>
-                </section>
-
-                {/* INTERNAL LINKING */}
-                <div className="pt-12 border-t border-white/10 space-y-4">
-                    <h3 className="text-xl font-semibold text-white">
-                        Related Real Estate Services
-                    </h3>
-
-                    <div className="flex flex-wrap gap-6 text-orange-400">
-                        <Link href="/realty/project-launch-marketing">
-                            Project Launch Marketing
-                        </Link>
-                        <Link href="/realty/real-estate-sales-strategy">
-                            Real Estate Sales Strategy
-                        </Link>
-                        <Link href="/realty/luxury-villa-marketing">
-                            Luxury Villa Marketing
-                        </Link>
-                    </div>
-                </div>
-
-                {/* FAQ */}
-                <section className="pt-16 space-y-8">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Frequently Asked Questions
-                    </h2>
-
-                    <div className="space-y-6 text-gray-400">
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                How do you generate property leads in Hyderabad?
-                            </h3>
-                            <p>
-                                We use Google Search Ads, Meta Ads, SEO,
-                                landing page funnels and CRM automation
-                                to capture and qualify high-intent buyers.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                What is the average cost per lead?
-                            </h3>
-                            <p>
-                                CPL varies depending on project type,
-                                competition and location. Our focus
-                                is on improving quality and booking ratio
-                                rather than just reducing cost.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you target NRI buyers?
-                            </h3>
-                            <p>
-                                Yes. We design campaigns targeting NRI
-                                investors in UAE, USA, UK and Australia.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Which platforms work best for real estate lead generation?
-                            </h3>
-                            <p>
-                                Google Ads and Meta Ads deliver strong performance,
-                                supported by SEO content marketing and remarketing
-                                campaigns for higher conversion rates.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you provide landing page optimization?
-                            </h3>
-                            <p>
-                                Yes. We build and optimize high-converting landing
-                                pages with fast loading speed, clear CTAs and
-                                integrated lead tracking systems.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                How soon can we start receiving property inquiries?
-                            </h3>
-                            <p>
-                                Paid campaigns can start generating inquiries
-                                within a few days, while SEO-driven traffic
-                                typically builds consistent momentum over time.
-                            </p>
-                        </div>
-
-                    </div>
-                </section>
-
-                {/* CTA */}
-                <div className="pt-20 text-center">
-                    <h2 className="text-3xl font-semibold">
-                        Ready to Generate High-Intent Property Leads?
-                    </h2>
-
-                    <p className="mt-4 text-gray-400">
-                        Let’s design a structured lead system
-                        that increases site visits and bookings.
+                    <p className="mt-6 text-gray-400">
+                        Let’s build a performance-driven marketing system
+                        that attracts serious buyers and maximizes bookings.
                     </p>
 
                     <Link
                         href="/contact"
-                        className="inline-block mt-8 px-10 py-4 rounded-full font-semibold text-black 
-            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
-            hover:scale-105 transition duration-300 shadow-xl"
+                        className="inline-block mt-8 px-12 py-5 rounded-full font-semibold text-black 
+                        bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
+                        hover:scale-105 transition duration-300 shadow-xl"
                     >
-                        Get Lead Generation Proposal
+                        Schedule Strategy Call
                     </Link>
+
                 </div>
+            </section>
 
-            </div>
-
-            {/* SERVICE SCHEMA */}
+            {/* ================= SERVICE SCHEMA ================= */}
             <Script
-                id="lead-generation-schema"
+                id="property-lead-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
-                        name: "Real Estate Lead Generation Services",
+                        name: "Property Lead Generation Services",
                         areaServed: "Hyderabad",
                         provider: {
                             "@type": "Organization",
@@ -260,36 +110,6 @@ export default function Page() {
                 }}
             />
 
-            {/* FAQ SCHEMA */}
-            <Script
-                id="faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "How do you generate property leads in Hyderabad?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "We use Google Ads, Meta Ads, SEO and optimized landing pages to generate high-intent real estate leads."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: "What is the average cost per lead?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Cost per lead depends on project competition and targeting strategy. We focus on improving booking quality rather than just lowering cost."
-                                }
-                            }
-                        ]
-                    })
-                }}
-            />
-
         </main>
-    )
+    );
 }

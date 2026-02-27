@@ -1,249 +1,91 @@
-import type { Metadata } from "next"
-import Script from "next/script"
-import Link from "next/link"
+import type { Metadata } from "next";
+import Script from "next/script";
+import Link from "next/link";
+import SalesStrategyFAQ from "./SalesStrategyFAQ";
 
 export const metadata: Metadata = {
     title:
-        "Real Estate Branding Agency in Hyderabad | Premium Project Identity Experts",
+        "Real Estate Sales Strategy Services in Hyderabad | Developer Sales Consulting",
     description:
-        "Professional real estate branding agency in Hyderabad helping developers build premium project identity, positioning and marketing systems.",
+        "Strategic real estate sales consulting in Hyderabad helping developers improve booking velocity, pricing confidence and project absorption rates.",
     alternates: {
         canonical:
-            "https://epoquegroup.in/realty/real-estate-branding",
+            "https://epoquegroup.in/realty/real-estate-sales-strategy",
     },
     openGraph: {
         title:
-            "Real Estate Branding Agency in Hyderabad",
+            "Real Estate Sales Strategy Experts in Hyderabad",
         description:
-            "Luxury real estate branding services for developers in Kokapet, Gachibowli and Financial District.",
+            "Structured sales strategy frameworks designed for faster bookings and higher conversion rates.",
         url:
-            "https://epoquegroup.in/realty/real-estate-branding",
+            "https://epoquegroup.in/realty/real-estate-sales-strategy",
         type: "website",
     },
-}
+};
 
 export default function Page() {
     return (
-        <main className="bg-black text-white min-h-screen px-6 py-24">
-            <div className="max-w-5xl mx-auto space-y-12">
+        <main className="relative bg-black text-white min-h-screen overflow-hidden">
 
-                {/* HERO */}
-                <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                    Real Estate Branding Agency in{" "}
+            {/* Glow */}
+            <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/20 blur-[150px] rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#7A2E63]/20 blur-[150px] rounded-full"></div>
+
+            <section className="relative max-w-5xl mx-auto px-6 py-28 text-center space-y-8">
+
+                <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                    Real Estate Sales Strategy in{" "}
                     <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
                         Hyderabad
                     </span>
                 </h1>
 
-                <p className="text-gray-400 text-lg leading-relaxed">
-                    Strong branding differentiates real estate projects in
-                    Hyderabad’s competitive markets like Kokapet,
-                    Gachibowli, Financial District, Narsingi and Tellapur.
-                    We help developers create premium brand positioning,
-                    compelling visual identity and long-term market authority
-                    that accelerates buyer trust and booking velocity.
+                <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                    We design structured sales frameworks for developers,
+                    improving absorption rates, optimizing pricing strategy,
+                    and accelerating booking cycles in competitive markets.
                 </p>
 
-                {/* AUTHORITY SECTION */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Branding is More Than a Logo — It’s Market Positioning
-                    </h2>
+                <Link
+                    href="/contact"
+                    className="inline-block mt-6 px-12 py-5 rounded-full font-semibold text-black 
+          bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
+          hover:scale-105 transition duration-300 shadow-xl"
+                >
+                    Build Your Sales Strategy
+                </Link>
 
-                    <p>
-                        In Hyderabad’s growing real estate ecosystem, buyers
-                        compare multiple projects before making a booking decision.
-                        Projects with stronger branding command higher perceived value
-                        and experience faster absorption rates.
-                    </p>
+            </section>
 
-                    <p>
-                        Our branding strategy combines buyer psychology,
-                        competitor research, location mapping and premium
-                        communication frameworks to create long-term brand recall.
-                    </p>
-                </section>
+            {/* Authority Section */}
+            <section className="max-w-5xl mx-auto px-6 py-16 space-y-6 text-gray-400">
+                <h2 className="text-2xl font-semibold text-white">
+                    Structured Sales Acceleration Framework
+                </h2>
 
-                {/* SERVICES */}
-                <section className="space-y-6">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Our Real Estate Branding Services
-                    </h2>
+                <p>
+                    In fast-growing micro-markets like Kokapet, Financial District
+                    and Narsingi, pricing psychology, funnel management and
+                    buyer follow-up systems determine project success.
+                </p>
 
-                    <ul className="text-gray-400 list-disc list-inside space-y-3">
-                        <li>Project naming & identity architecture</li>
-                        <li>Logo design & brand guidelines</li>
-                        <li>Luxury brochure & marketing collateral strategy</li>
-                        <li>High-end visual positioning frameworks</li>
-                        <li>Marketing communication systems</li>
-                        <li>Investor & buyer trust positioning</li>
-                        <li>Premium launch brand alignment</li>
-                    </ul>
-                </section>
+                <p>
+                    We align marketing, CRM, sales team training and buyer
+                    segmentation to maximize booking conversion.
+                </p>
+            </section>
 
-                {/* MARKET SECTION */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Why Branding Matters in Hyderabad Real Estate
-                    </h2>
+          <SalesStrategyFAQ/>
+     <whychoosesales/>
 
-                    <p>
-                        Buyers in micro-markets like Kokapet and Financial District
-                        are increasingly brand-conscious. A well-positioned project
-                        signals quality, credibility and long-term appreciation potential.
-                    </p>
-
-                    <p>
-                        Strong branding reduces buyer hesitation,
-                        increases referral potential and strengthens
-                        premium pricing power.
-                    </p>
-                </section>
-
-                {/* LOCATION TARGETING */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Premium Micro-Markets We Focus On
-                    </h2>
-
-                    <p>
-                        Kokapet • Narsingi • Financial District • Gachibowli •
-                        Tellapur • Neopolis • Gandipet
-                    </p>
-
-                    <p>
-                        These fast-growing zones attract IT professionals,
-                        entrepreneurs, CXOs and global investors.
-                        Our branding systems align with these premium
-                        buyer expectations.
-                    </p>
-                </section>
-
-                {/* INTERNAL LINKS */}
-                <div className="pt-12 border-t border-white/10 space-y-4">
-                    <h3 className="text-xl font-semibold text-white">
-                        Related Real Estate Services
-                    </h3>
-
-                    <div className="flex flex-wrap gap-6 text-orange-400">
-                        <Link href="/realty/luxury-villa-marketing">
-                            Luxury Villa Marketing
-                        </Link>
-                        <Link href="/realty/project-launch-marketing">
-                            Project Launch Marketing
-                        </Link>
-                        <Link href="/realty/property-lead-generation">
-                            Property Lead Generation
-                        </Link>
-                    </div>
-                </div>
-
-                {/* FAQ */}
-                <section className="pt-16 space-y-8">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Frequently Asked Questions
-                    </h2>
-
-                    <div className="space-y-6 text-gray-400">
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Why is branding important for real estate projects?
-                            </h3>
-                            <p>
-                                Branding increases trust, improves premium perception
-                                and shortens buyer decision cycles in competitive markets.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you provide branding for villa projects?
-                            </h3>
-                            <p>
-                                Yes. We specialize in luxury villa and premium
-                                apartment branding across Hyderabad’s key micro-markets.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you handle complete project identity?
-                            </h3>
-                            <p>
-                                Yes. From naming to brochures, digital creatives
-                                and positioning frameworks, we build complete
-                                branding ecosystems.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                How long does a real estate branding project take?
-                            </h3>
-                            <p>
-                                A full branding project typically takes 2–4 weeks
-                                depending on project size, research depth and
-                                approval timelines.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you create marketing materials for project launches?
-                            </h3>
-                            <p>
-                                Yes. We design brochures, hoardings, landing pages,
-                                ad creatives and launch communication systems
-                                aligned with your positioning strategy.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Can strong branding improve booking conversions?
-                            </h3>
-                            <p>
-                                Absolutely. Strategic branding builds credibility,
-                                differentiates your project from competitors,
-                                and increases site visits and booking ratios.
-                            </p>
-                        </div>
-
-                    </div>
-                </section>
-                {/* CTA */}
-                <div className="pt-20 text-center">
-                    <h2 className="text-3xl font-semibold">
-                        Ready to Build a Premium Real Estate Brand?
-                    </h2>
-
-                    <p className="mt-4 text-gray-400">
-                        Let’s design a high-authority branding system
-                        that attracts serious buyers and investors.
-                    </p>
-
-                    <Link
-                        href="/contact"
-                        className="inline-block mt-8 px-10 py-4 rounded-full font-semibold text-black 
-            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
-            hover:scale-105 transition duration-300 shadow-xl"
-                    >
-                        Start Your Branding Strategy
-                    </Link>
-                </div>
-
-            </div>
-
-            {/* SERVICE SCHEMA */}
             <Script
-                id="branding-schema"
+                id="sales-strategy-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
-                        name: "Real Estate Branding Services",
+                        name: "Real Estate Sales Strategy Services",
                         areaServed: "Hyderabad",
                         provider: {
                             "@type": "Organization",
@@ -253,37 +95,6 @@ export default function Page() {
                     })
                 }}
             />
-
-            {/* FAQ SCHEMA */}
-            <Script
-                id="faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "Why is branding important for real estate projects?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Branding increases trust, premium perception and improves booking conversions."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: "Do you provide branding for villa projects?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Yes. We specialize in luxury villa and premium apartment branding across Hyderabad."
-                                }
-                            }
-                        ]
-                    })
-                }}
-            />
-
         </main>
-    )
+    );
 }

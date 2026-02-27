@@ -4,97 +4,96 @@ import { motion } from "framer-motion"
 import Script from "next/script"
 import Link from "next/link"
 
-export default function BrandingCreativePage() {
+export default function RealEstateBrandingPage() {
     return (
         <section className="bg-black text-white">
 
-            {/* HERO */}
+            {/* ================= HERO ================= */}
             <div className="relative overflow-hidden py-28 px-6 text-center">
                 <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
                 <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-orange-500/20 blur-[150px] rounded-full"></div>
 
                 <div className="relative max-w-4xl mx-auto">
                     <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
-                        Branding & Creative Agency in{" "}
+                        Real Estate Branding Agency in{" "}
                         <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
                             Hyderabad
                         </span>
                     </h1>
 
                     <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                        We are a strategic branding agency in Hyderabad helping real estate
-                        developers, startups and enterprises build powerful brand identities,
-                        premium visual systems and high-converting creative assets that drive
-                        authority, trust and measurable revenue growth.
+                        We help luxury villa developers, apartment builders and
+                        gated community projects build premium brand identities
+                        that increase authority, trust and faster project sales.
                     </p>
 
                     <div className="mt-10">
                         <Link
                             href="/contact"
-                            className="inline-block px-8 py-4 rounded-full font-semibold text-black 
-              bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-              hover:scale-105 transition duration-300 shadow-xl"
+                            className="inline-block px-10 py-4 rounded-full font-semibold text-black 
+                            bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
+                            hover:scale-105 transition duration-300 shadow-xl"
                         >
-                            Build Your Brand
+                            Brand Your Project
                         </Link>
                     </div>
                 </div>
             </div>
 
-            {/* AUTHORITY CONTENT */}
+            {/* ================= AUTHORITY CONTENT ================= */}
             <div className="max-w-5xl mx-auto px-6 pb-20 text-gray-400 space-y-6 leading-relaxed">
 
                 <h2 className="text-3xl font-semibold text-white">
-                    Strategic Branding That Drives Business Growth
+                    Premium Project Branding for Competitive Hyderabad Markets
                 </h2>
 
                 <p>
-                    In competitive Hyderabad markets like Gachibowli, Kokapet,
-                    Financial District and Hitech City, branding is more than
-                    design — it is positioning, perception and emotional influence.
+                    In fast-growing areas like Kokapet, Financial District,
+                    Gachibowli and Tellapur, real estate branding directly
+                    impacts buyer perception and pricing power.
                 </p>
 
                 <p>
-                    A strong brand system increases premium perception,
-                    shortens sales cycles and improves conversion performance
-                    across marketing channels.
+                    A strong project identity improves trust, supports premium
+                    pricing and shortens sales cycles across digital marketing,
+                    on-site sales teams and channel partner networks.
                 </p>
 
                 <p>
-                    Our branding frameworks combine market research,
-                    competitor mapping, buyer psychology and performance
-                    marketing alignment to create identity systems that
-                    directly impact revenue.
+                    We design complete real estate brand systems including
+                    logo architecture, brochure design, campaign creatives
+                    and digital positioning frameworks.
                 </p>
+
             </div>
 
-            {/* SERVICES GRID */}
+            {/* ================= SERVICES GRID ================= */}
             <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-3 gap-10">
 
                 {[
                     {
-                        title: "Logo & Brand Identity Design",
-                        desc: "Strategic logo systems, typography architecture, color psychology and complete brand guidelines."
+                        title: "Project Logo & Identity Systems",
+                        desc: "Luxury villa and apartment branding with structured logo architecture and brand guidelines."
                     },
                     {
-                        title: "Real Estate Branding",
-                        desc: "Luxury villa and apartment project branding for Hyderabad developers."
+                        title: "Real Estate Brochure Design",
+                        desc: "Premium print and digital brochures designed to elevate perception and support sales teams."
                     },
                     {
-                        title: "Corporate & Marketing Collaterals",
-                        desc: "Premium brochures, pitch decks and high-converting marketing assets."
+                        title: "Campaign Creative Strategy",
+                        desc: "High-converting ad creatives for Meta, Google and outdoor campaigns."
                     },
                     {
-                        title: "Creative Campaign Visuals",
-                        desc: "Performance ad creatives and social media design systems."
+                        title: "Site Hoardings & Marketing Collaterals",
+                        desc: "On-site branding materials including standees, signage and launch assets."
                     },
                     {
-                        title: "Website UI/UX Branding",
-                        desc: "Conversion-focused website experiences that strengthen authority."
+                        title: "Website UI/UX for Projects",
+                        desc: "Conversion-focused real estate websites aligned with branding strategy."
                     },
                     {
-                        title: "Rebranding & Positioning Strategy",
-                        desc: "Complete repositioning systems for scaling brands across India."
+                        title: "Rebranding for Developers",
+                        desc: "Complete developer brand repositioning for long-term authority."
                     }
                 ].map((service, index) => (
                     <motion.div
@@ -115,18 +114,18 @@ export default function BrandingCreativePage() {
 
             </div>
 
-            {/* PROCESS */}
+            {/* ================= PROCESS ================= */}
             <div className="bg-[#111111] py-24 px-6">
                 <div className="max-w-5xl mx-auto text-center">
                     <h2 className="text-4xl font-semibold mb-16">
-                        Our Proven Branding Process
+                        Our Real Estate Branding Framework
                     </h2>
 
                     <div className="grid md:grid-cols-4 gap-10 text-gray-400">
                         {[
-                            "Market Research & Brand Audit",
-                            "Positioning & Strategic Framework",
-                            "Design Execution & Asset Creation",
+                            "Market & Competitor Study",
+                            "Project Positioning Strategy",
+                            "Creative Identity Development",
                             "Launch & Marketing Alignment"
                         ].map((step, index) => (
                             <div key={index} className="space-y-4">
@@ -140,161 +139,41 @@ export default function BrandingCreativePage() {
                 </div>
             </div>
 
-            {/* INTERNAL LINKS */}
-            <div className="max-w-4xl mx-auto px-6 py-16 text-center space-y-6">
-                <h3 className="text-2xl font-semibold">Related Services</h3>
-                <div className="flex flex-wrap justify-center gap-6 text-orange-400">
-                    <Link href="/digital/social-media-marketing">
-                        Social Media Marketing
-                    </Link>
-                    <Link href="/digital/search-engine-optimization">
-                        SEO Services
-                    </Link>
-                    <Link href="/digital/google-ads-ppc">
-                        Google Ads / PPC
-                    </Link>
-                </div>
-            </div>
-
-            {/* FAQ */}
-            <div className="max-w-4xl mx-auto px-6 py-24 space-y-10">
-                <h2 className="text-3xl font-semibold text-center">
-                    Frequently Asked Questions
-                </h2>
-
-                <div className="space-y-6 text-gray-400">
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Why is branding important for Hyderabad businesses?
-                        </h3>
-                        <p>
-                            Strong branding increases perceived value,
-                            builds trust and differentiates businesses in
-                            competitive Hyderabad markets.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Do you provide branding for real estate projects?
-                        </h3>
-                        <p>
-                            Yes. We specialize in luxury villa projects,
-                            apartment launches and developer positioning strategies.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Do you offer complete brand strategy?
-                        </h3>
-                        <p>
-                            Yes. We handle research, positioning,
-                            identity creation and marketing alignment.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            How long does a branding project take?
-                        </h3>
-                        <p>
-                            A complete branding project typically takes
-                            2 to 4 weeks depending on research depth,
-                            revisions and approval cycles.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Do you provide logo design separately?
-                        </h3>
-                        <p>
-                            Yes. We offer standalone logo design services
-                            as well as complete brand identity packages
-                            including brand guidelines.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-orange-400 font-semibold">
-                            Will I receive brand guidelines and source files?
-                        </h3>
-                        <p>
-                            Yes. After completion, you receive all source files,
-                            brand assets and structured guidelines for consistent
-                            future marketing usage.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            {/* CTA */}
+            {/* ================= CTA ================= */}
             <div className="py-28 px-6 text-center">
                 <h2 className="text-4xl font-semibold">
-                    Ready to Build a Premium Brand in Hyderabad?
+                    Launch Your Real Estate Project with a Powerful Brand
                 </h2>
                 <p className="mt-6 text-gray-400">
-                    Let’s create a high-authority brand system that drives revenue growth.
+                    Let’s create a premium identity system that increases trust,
+                    improves pricing power and accelerates project sales.
                 </p>
 
                 <Link
                     href="/contact"
                     className="inline-block mt-10 px-10 py-4 rounded-full font-semibold text-black 
-          bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-          hover:scale-105 transition duration-300 shadow-xl"
+                    bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
+                    hover:scale-105 transition duration-300 shadow-xl"
                 >
-                    Start Your Branding Project
+                    Start Your Branding Consultation
                 </Link>
             </div>
 
-            {/* SERVICE SCHEMA */}
+            {/* ================= SERVICE SCHEMA ================= */}
             <Script
-                id="branding-service-schema"
+                id="real-estate-branding-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
-                        name: "Branding & Creative Services",
+                        name: "Real Estate Branding Services",
                         areaServed: "Hyderabad",
                         provider: {
                             "@type": "Organization",
                             name: "Epoque Group",
                             url: "https://epoquegroup.in"
                         }
-                    })
-                }}
-            />
-
-            {/* FAQ SCHEMA */}
-            <Script
-                id="branding-faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "Why is branding important for Hyderabad businesses?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Branding increases perceived value, builds trust and strengthens competitive positioning."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: "Do you provide branding for real estate projects?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Yes, we specialize in luxury villa and apartment project branding in Hyderabad."
-                                }
-                            }
-                        ]
                     })
                 }}
             />

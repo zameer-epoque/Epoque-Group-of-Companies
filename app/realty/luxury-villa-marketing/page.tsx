@@ -1,295 +1,106 @@
 import type { Metadata } from "next"
 import Script from "next/script"
 import Link from "next/link"
+import WhyChooseSection from "./WhyChooseSection"
+import FAQSection from "./FAQSection"
 
 export const metadata: Metadata = {
-    title:
-        "Luxury Villa Marketing in Hyderabad | High-End Real Estate Marketing Agency",
+    title: "Luxury Apartment Launch Marketing in Hyderabad | High-Impact Campaigns",
     description:
-        "Premium luxury villa marketing agency in Hyderabad targeting HNI buyers and NRI investors in Kokapet, Narsingi, Tellapur & Financial District.",
+        "Premium apartment launch marketing agency in Hyderabad specializing in booking-focused campaigns and high-ticket residential project promotions.",
     alternates: {
-        canonical:
-            "https://epoquegroup.in/realty/luxury-villa-marketing",
-    },
-    openGraph: {
-        title:
-            "Luxury Villa Marketing Agency in Hyderabad",
-        description:
-            "Specialized marketing solutions for premium villa projects targeting high-net-worth buyers and global NRI investors.",
-        url:
-            "https://epoquegroup.in/realty/luxury-villa-marketing",
-        type: "website",
+        canonical: "https://epoquegroup.in/realty/luxury-apartment-marketing",
     },
 }
 
 export default function Page() {
     return (
-        <main className="bg-black text-white min-h-screen px-6 py-24">
-            <div className="max-w-5xl mx-auto space-y-12">
+        <main className="relative bg-black text-white min-h-screen overflow-hidden">
 
-                {/* HERO */}
-                <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-                    Luxury Villa Marketing Agency in{" "}
-                    <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                        Hyderabad
-                    </span>
-                </h1>
+            {/* Background Glow */}
+            <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/20 blur-[150px] rounded-full"></div>
+            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#7A2E63]/20 blur-[150px] rounded-full"></div>
 
-                <p className="text-gray-400 text-lg leading-relaxed">
-                    We specialize in marketing ultra-luxury villa projects in
-                    Kokapet, Narsingi, Tellapur, Gandipet and Financial District.
-                    Our strategies are designed to attract high-net-worth individuals (HNIs),
-                    CXOs, entrepreneurs and global NRI investors looking for
-                    premium gated communities in Hyderabad.
-                </p>
+            <div className="relative max-w-5xl mx-auto px-6 py-32 space-y-20">
 
-                {/* AUTHORITY CONTENT */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
+                {/* ================= HERO ================= */}
+                <section className="text-center space-y-8">
 
-                    <h2 className="text-2xl font-semibold text-white">
-                        Marketing Luxury Real Estate Requires Precision
-                    </h2>
+                    <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                        Luxury Apartment Launch Marketing in{" "}
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                            Hyderabad & Across India
+                        </span>
+                    </h1>
 
-                    <p>
-                        Luxury villa buyers are not typical property buyers.
-                        They expect exclusivity, premium branding, curated experiences,
-                        and refined communication. Generic marketing campaigns fail
-                        in high-ticket segments.
-                    </p>
-
-                    <p>
-                        Our approach combines luxury brand positioning,
-                        investor psychology, data-driven paid campaigns,
-                        and international audience targeting to generate
-                        serious site visits and booking-ready leads.
-                    </p>
-
-                </section>
-
-                {/* STRATEGY SECTION */}
-                <section className="space-y-6">
-
-                    <h2 className="text-2xl font-semibold text-white">
-                        Our Premium Villa Marketing Framework
-                    </h2>
-
-                    <ul className="text-gray-400 list-disc list-inside space-y-3">
-                        <li>Luxury brand positioning & identity development</li>
-                        <li>High-converting villa landing pages</li>
-                        <li>NRI & international investor targeting</li>
-                        <li>Google Ads + Meta Ads high-budget optimization</li>
-                        <li>Video walkthrough & drone campaign strategy</li>
-                        <li>Retargeting funnels for serious buyers</li>
-                    </ul>
-
-                </section>
-
-                {/* LOCATION TARGETING */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-
-                    <h2 className="text-2xl font-semibold text-white">
-                        Targeting Prime Villa Investment Zones in Hyderabad
-                    </h2>
-
-                    <p>
-                        We actively promote luxury villas in high-growth
-                        investment corridors including Kokapet SEZ,
-                        Neopolis, Narsingi, Tellapur, Osman Nagar,
-                        Gandipet and Financial District.
-                    </p>
-
-                    <p>
-                        These zones attract global NRIs, IT professionals,
-                        founders and premium lifestyle buyers.
-                    </p>
-
-                </section>
-
-                {/* RESULTS SECTION */}
-                <section className="space-y-6 text-gray-400 leading-relaxed">
-
-                    <h2 className="text-2xl font-semibold text-white">
-                        Revenue-Focused Campaign Execution
-                    </h2>
-
-                    <p>
-                        Our campaigns are structured to reduce cost-per-lead,
-                        improve lead qualification and increase booking conversion rate.
-                        We focus on quality over quantity.
-                    </p>
-
-                    <p>
-                        Through audience segmentation, luxury copywriting,
-                        remarketing and CRM automation, we ensure that
-                        every serious prospect is nurtured until site visit
-                        and final booking.
-                    </p>
-
-                </section>
-
-                {/* INTERNAL LINKING */}
-                <div className="pt-10 border-t border-white/10 space-y-4">
-                    <h3 className="text-xl font-semibold text-white">
-                        Related Real Estate Services
-                    </h3>
-
-                    <div className="flex flex-wrap gap-6 text-orange-400">
-                        <Link href="/realty/real-estate-branding">
-                            Real Estate Branding
-                        </Link>
-
-                        <Link href="/realty/property-lead-generation">
-                            Property Lead Generation
-                        </Link>
-
-                        <Link href="/realty/project-launch-marketing">
-                            Project Launch Marketing
-                        </Link>
+                    {/* Badge */}
+                    <div className="inline-block px-8 py-4 rounded-full border border-[#C79A3B]/40 bg-white/5 text-lg text-gray-300 backdrop-blur">
+                        High-Impact Booking-Focused Campaign Experts
                     </div>
-                </div>
 
-                {/* FAQ */}
-                <section className="pt-16 space-y-8">
-                    <h2 className="text-2xl font-semibold text-white">
-                        Frequently Asked Questions
-                    </h2>
+                    <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        We design premium apartment launch campaigns targeting IT professionals,
+                        corporate leaders, startup founders and global investors.
+                        Our strategies are engineered to accelerate bookings, increase
+                        pricing power and build strong project visibility.
+                    </p>
 
-                    <div className="space-y-6 text-gray-400">
+                    {/* Feature Row */}
+                    <div className="flex flex-wrap justify-center gap-8 text-gray-300 text-sm md:text-base">
+                        <span>✓ Launch Phase Strategy</span>
+                        <span>✓ High-Budget Paid Campaigns</span>
+                        <span>✓ IT Corridor Targeting</span>
+                        <span>✓ Conversion-Focused Funnels</span>
+                    </div>
 
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                How is luxury villa marketing different?
-                            </h3>
-                            <p>
-                                Luxury marketing requires premium branding,
-                                high-budget paid campaigns, international targeting,
-                                and exclusive positioning strategies.
-                            </p>
-                        </div>
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col md:flex-row justify-center gap-6 pt-4">
 
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you target NRI investors?
-                            </h3>
-                            <p>
-                                Yes. We run dedicated campaigns in UAE, USA,
-                                UK and Australia targeting NRI villa buyers.
-                            </p>
-                        </div>
+                        <Link
+                            href="/contact"
+                            className="px-10 py-4 rounded-full font-semibold text-black 
+              bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
+              hover:scale-105 transition duration-300 shadow-xl"
+                        >
+                            Get Free Launch Strategy
+                        </Link>
 
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Which platforms work best for villa lead generation?
-                            </h3>
-                            <p>
-                                Google Ads, Meta Ads, YouTube campaigns,
-                                and high-converting landing pages perform best
-                                for luxury villa and gated community projects.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                How do you attract high-net-worth buyers?
-                            </h3>
-                            <p>
-                                We use premium creatives, strategic audience targeting,
-                                lookalike campaigns, and advanced remarketing funnels
-                                to attract serious high-value investors.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                Do you provide complete campaign management?
-                            </h3>
-                            <p>
-                                Yes. We handle ad creation, targeting, landing page optimization,
-                                CRM integration, and full funnel performance tracking.
-                            </p>
-                        </div>
-
-                        <div>
-                            <h3 className="text-orange-400 font-semibold">
-                                How quickly can villa campaigns generate leads?
-                            </h3>
-                            <p>
-                                Paid campaigns can start generating qualified leads
-                                within a few days, depending on targeting strategy
-                                and project positioning.
-                            </p>
-                        </div>
+                        <Link
+                            href="/realty/case-studies"
+                            className="px-10 py-4 rounded-full font-semibold border border-white/20
+              hover:border-[#C79A3B] hover:text-[#C79A3B]
+              transition duration-300"
+                        >
+                            View Launch Case Studies
+                        </Link>
 
                     </div>
+
                 </section>
-
-                {/* CTA */}
-                <div className="pt-20 text-center">
-                    <h2 className="text-3xl font-semibold">
-                        Ready to Market Your Luxury Villa Project?
-                    </h2>
-
-                    <p className="mt-4 text-gray-400">
-                        Let’s design a premium marketing strategy that
-                        attracts high-value buyers and serious investors.
-                    </p>
-
-                    <Link
-                        href="/contact"
-                        className="inline-block mt-8 px-10 py-4 rounded-full font-semibold text-black 
-            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
-            hover:scale-105 transition duration-300 shadow-xl"
-                    >
-                        Schedule Strategy Call
-                    </Link>
-                </div>
 
             </div>
 
-            {/* SCHEMA */}
+            {/* Why Choose Section */}
+            <WhyChooseSection />
+
+            {/* FAQ Section */}
+            <FAQSection />
+
+            {/* SERVICE SCHEMA */}
             <Script
-                id="luxury-villa-schema"
+                id="apartment-launch-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
                         "@type": "Service",
-                        name: "Luxury Villa Marketing Services",
+                        name: "Luxury Apartment Launch Marketing",
                         areaServed: "Hyderabad",
                         provider: {
                             "@type": "Organization",
                             name: "Epoque Group",
                             url: "https://epoquegroup.in"
                         }
-                    })
-                }}
-            />
-
-            <Script
-                id="faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "How is luxury villa marketing different?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Luxury villa marketing focuses on premium branding, international targeting and high-net-worth audience positioning."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                name: "Do you target NRI investors?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Yes. We run global campaigns targeting NRI villa buyers in UAE, USA, UK and Australia."
-                                }
-                            }
-                        ]
                     })
                 }}
             />
