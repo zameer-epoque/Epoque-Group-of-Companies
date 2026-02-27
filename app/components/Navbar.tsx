@@ -344,7 +344,7 @@ const navItems: NavItem[] = [
       { label: "Blogs", href: "/blog-epoque-group" },
       { label: "FAQ", href: "/faq" },
       { label: "Career", href: "/Career" },
-      { label: "Blogs", href: "/blog-epoque-group" },
+
 
 
     ],
