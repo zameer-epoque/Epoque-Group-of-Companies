@@ -76,7 +76,7 @@ export default function Page() {
             </section>
 
           <SalesStrategyFAQ/>
-     <whychoosesales/>
+  
 
             <Script
                 id="sales-strategy-schema"
