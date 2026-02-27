@@ -4,7 +4,6 @@ import Link from "next/link";
 import WhyChooseRealEstateBrandingSection from "./WhyChooseRealEstateBrandingSection";
 import RealEstateBrandingFAQSection from "./RealEstateBrandingFAQSection";
 
-
 export const metadata: Metadata = {
     title:
         "Real Estate Branding Agency in Hyderabad | Luxury Property Branding Experts",
@@ -33,58 +32,92 @@ export default function Page() {
             <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/20 blur-[150px] rounded-full"></div>
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#7A2E63]/20 blur-[150px] rounded-full"></div>
 
-            {/* ================= HERO ================= */}
-            <section className="relative max-w-5xl mx-auto px-6 py-28 text-center space-y-8">
+            <div className="relative max-w-5xl mx-auto px-6 py-32 space-y-20">
 
-                <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-                    Real Estate Branding Agency in{" "}
-                    <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                        Hyderabad
-                    </span>
-                </h1>
+                {/* ================= HERO ================= */}
+                <section className="text-center space-y-8">
 
-                <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                    We build premium branding systems for real estate developers,
-                    luxury villa projects and high-end apartment launches —
-                    strengthening positioning, increasing trust and accelerating sales velocity.
-                </p>
+                    <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                        Real Estate Branding Agency in{" "}
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                            Hyderabad & Premium Growth Markets
+                        </span>
+                    </h1>
 
-                <Link
-                    href="/contact"
-                    className="inline-block mt-6 px-12 py-5 rounded-full font-semibold text-black 
-                    bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
-                    hover:scale-105 transition duration-300 shadow-xl"
-                >
-                    Build Your Real Estate Brand
-                </Link>
+                    {/* Badge */}
+                    <div className="inline-block px-8 py-4 rounded-full border border-[#C79A3B]/40 bg-white/5 text-lg text-gray-300 backdrop-blur">
+                        Luxury Developer Branding & Positioning Experts
+                    </div>
 
-            </section>
+                    <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        We build structured real estate branding systems for developers,
+                        luxury villa projects and premium apartment launches —
+                        strengthening authority, increasing buyer trust and
+                        accelerating booking velocity in competitive Hyderabad markets.
+                    </p>
 
-            {/* ================= AUTHORITY SECTION ================= */}
+                    {/* Feature Row */}
+                    <div className="flex flex-wrap justify-center gap-8 text-gray-300 text-sm md:text-base">
+                        <span>✓ Project Identity & Logo Architecture</span>
+                        <span>✓ Luxury Positioning Strategy</span>
+                        <span>✓ Brochure & Campaign Creative Systems</span>
+                        <span>✓ Website & Funnel Branding Alignment</span>
+                    </div>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col md:flex-row justify-center gap-6 pt-4">
+
+                        <Link
+                            href="/contact"
+                            className="px-10 py-4 rounded-full font-semibold text-black 
+                            bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
+                            hover:scale-105 transition duration-300 shadow-xl"
+                        >
+                            Build Your Real Estate Brand
+                        </Link>
+
+                        <Link
+                            href="/realty/case-studies"
+                            className="px-10 py-4 rounded-full font-semibold border border-white/20
+                            hover:border-[#C79A3B] hover:text-[#C79A3B]
+                            transition duration-300"
+                        >
+                            View Branding Case Studies
+                        </Link>
+
+                    </div>
+
+                </section>
 
 
-            {/* ================= WHY CHOOSE ================= */}
+
+            </div>
+
+            {/* WHY CHOOSE */}
             <WhyChooseRealEstateBrandingSection />
 
-            {/* ================= FAQ ================= */}
+            {/* FAQ */}
             <RealEstateBrandingFAQSection />
 
-            {/* ================= FINAL CTA ================= */}
-            <section className="text-center py-4 border-t border-[#C79A3B]/20">
-                <div className="max-w-3xl mx-auto px-6">
+            {/* FINAL CTA */}
+            <section className="relative text-center py-28 border-t border-[#C79A3B]/20 bg-[#0d0d0f] overflow-hidden">
+
+                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#C79A3B]/10 blur-[150px] rounded-full"></div>
+
+                <div className="relative max-w-3xl mx-auto px-6">
 
                     <h2 className="text-3xl md:text-4xl font-semibold">
                         Ready to Elevate Your Real Estate Brand?
                     </h2>
 
                     <p className="mt-6 text-gray-400">
-                        Let’s design a premium branding system that
-                        increases authority, trust and booking conversions.
+                        Let’s design a premium branding system that increases
+                        authority, buyer trust and long-term developer positioning.
                     </p>
 
                     <Link
                         href="/contact"
-                        className="inline-block mt-8 px-12 py-5 rounded-full font-semibold text-black 
+                        className="inline-block mt-10 px-12 py-5 rounded-full font-semibold text-black 
                         bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
                         hover:scale-105 transition duration-300 shadow-xl"
                     >
@@ -94,7 +127,7 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* ================= SERVICE SCHEMA ================= */}
+            {/* SERVICE SCHEMA */}
             <Script
                 id="real-estate-branding-schema"
                 type="application/ld+json"

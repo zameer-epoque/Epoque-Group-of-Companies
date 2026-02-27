@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import Script from "next/script"
 import Link from "next/link"
+import RealEstateFAQ from "./RealEstateFAQ"
+import WhyChooseRealEstateBrandingSection from "../real-estate-branding/WhyChooseRealEstateBrandingSection"
 
 export default function RealEstateBrandingPage() {
     return (
@@ -158,7 +160,8 @@ export default function RealEstateBrandingPage() {
                     Start Your Branding Consultation
                 </Link>
             </div>
-
+            <WhyChooseRealEstateBrandingSection />
+<RealEstateFAQ />
             {/* ================= SERVICE SCHEMA ================= */}
             <Script
                 id="real-estate-branding-schema"

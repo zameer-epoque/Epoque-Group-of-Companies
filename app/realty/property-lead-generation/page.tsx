@@ -32,42 +32,76 @@ export default function Page() {
             <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/20 blur-[150px] rounded-full"></div>
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#7A2E63]/20 blur-[150px] rounded-full"></div>
 
-            {/* ================= HERO ================= */}
-            <section className="relative max-w-5xl mx-auto px-6 py-28 text-center space-y-8">
+            <div className="relative max-w-5xl mx-auto px-6 py-32 space-y-20">
 
-                <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
-                    Property Lead Generation Services in{" "}
-                    <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-                        Hyderabad
-                    </span>
-                </h1>
+                {/* ================= HERO ================= */}
+                <section className="text-center space-y-8">
 
-                <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                    We build structured real estate performance marketing systems
-                    designed to generate high-intent property buyer leads,
-                    increase site visits and accelerate booking cycles
-                    for developers across Hyderabad.
-                </p>
+                    <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+                        Property Lead Generation Services in{" "}
+                        <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
+                            Hyderabad & High-Growth Markets
+                        </span>
+                    </h1>
 
-                <Link
-                    href="/contact"
-                    className="inline-block mt-6 px-12 py-5 rounded-full font-semibold text-black 
-                    bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
-                    hover:scale-105 transition duration-300 shadow-xl"
-                >
-                    Get Qualified Buyer Leads
-                </Link>
+                    {/* Badge */}
+                    <div className="inline-block px-8 py-4 rounded-full border border-[#C79A3B]/40 bg-white/5 text-lg text-gray-300 backdrop-blur">
+                        Real Estate Performance Marketing Experts
+                    </div>
 
-            </section>
+                    <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                        We build structured real estate performance marketing systems
+                        using Google Ads, Meta Ads, landing page funnels and CRM
+                        integration to generate high-intent buyer leads and
+                        accelerate project bookings.
+                    </p>
 
-            {/* ================= WHY CHOOSE ================= */}
+                    {/* Feature Highlights */}
+                    <div className="flex flex-wrap justify-center gap-8 text-gray-300 text-sm md:text-base">
+                        <span>✓ Google & Meta Ads Management</span>
+                        <span>✓ Landing Page Funnel Optimization</span>
+                        <span>✓ NRI & HNI Targeting</span>
+                        <span>✓ Qualified Buyer Lead Generation</span>
+                    </div>
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col md:flex-row justify-center gap-6 pt-4">
+
+                        <Link
+                            href="/contact"
+                            className="px-10 py-4 rounded-full font-semibold text-black 
+              bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
+              hover:scale-105 transition duration-300 shadow-xl"
+                        >
+                            Get Qualified Buyer Leads
+                        </Link>
+
+                        <Link
+                            href="/realty/case-studies"
+                            className="px-10 py-4 rounded-full font-semibold border border-white/20
+              hover:border-[#C79A3B] hover:text-[#C79A3B]
+              transition duration-300"
+                        >
+                            View Lead Generation Case Studies
+                        </Link>
+
+                    </div>
+
+                </section>
+
+                {/* ================= AUTHORITY SECTION ================= */}
+
+
+            </div>
+
+            {/* WHY CHOOSE */}
             <WhyChoosePropertyLeadSection />
 
-            {/* ================= FAQ ================= */}
+            {/* FAQ */}
             <PropertyLeadFAQSection />
 
-            {/* ================= FINAL CTA ================= */}
-            <section className="text-center py-24 border-t border-[#C79A3B]/20">
+            {/* FINAL CTA */}
+            <section className="text-center py-28 border-t border-[#C79A3B]/20 bg-[#0d0d0f]">
                 <div className="max-w-3xl mx-auto px-6">
 
                     <h2 className="text-3xl md:text-4xl font-semibold">
@@ -76,12 +110,12 @@ export default function Page() {
 
                     <p className="mt-6 text-gray-400">
                         Let’s build a performance-driven marketing system
-                        that attracts serious buyers and maximizes bookings.
+                        that attracts serious buyers and maximizes project bookings.
                     </p>
 
                     <Link
                         href="/contact"
-                        className="inline-block mt-8 px-12 py-5 rounded-full font-semibold text-black 
+                        className="inline-block mt-10 px-12 py-5 rounded-full font-semibold text-black 
                         bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] 
                         hover:scale-105 transition duration-300 shadow-xl"
                     >
@@ -91,7 +125,7 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* ================= SERVICE SCHEMA ================= */}
+            {/* SERVICE SCHEMA */}
             <Script
                 id="property-lead-schema"
                 type="application/ld+json"
