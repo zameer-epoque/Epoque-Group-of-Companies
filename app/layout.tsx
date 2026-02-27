@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Époque Group delivers luxury real estate, premium interiors, and digital property solutions with strategic excellence.",
+    "Époque Group is a Hyderabad-based agency specializing in real estate marketing, luxury interiors, branding, and high-converting digital lead generation solutions.",
 
   keywords: [
     // Luxury Real Estate - Hyderabad Focus

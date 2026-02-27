@@ -340,15 +340,13 @@ const navItems: NavItem[] = [
     label: "Explore",
     href: "/company",
     dropdown: [
-      {
-        title: "Career",
-        items: [
-          { label: "Our Clients", href: "/real-estate-digital-marketing-projects-epoque-group" },
-          { label: "FAQ", href: "/faq" },
-        ],
-      },
+      { label: "Our Clients", href: "/real-estate-digital-marketing-projects-epoque-group" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Career", href: "/Career" },
     ],
   },
+
+
 
   { label: "Contact", href: "/contact" },
 ]
