@@ -17,14 +17,16 @@ export const metadata: Metadata = {
         "Epoque Group case studies"
     ],
     alternates: {
-        canonical: "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group"
+        canonical:
+            "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group"
     },
     openGraph: {
         title:
             "Real Estate Marketing Case Studies | Epoque Group Hyderabad",
         description:
             "See how Epoque Group scales real estate brands through SEO, Google Ads and performance marketing strategies.",
-        url: "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group",
+        url:
+            "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group",
         siteName: "Epoque Group",
         type: "website"
     },
@@ -49,7 +51,8 @@ const clients = [
         image:
             "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Executed full-scale digital launch strategy including villa marketing funnels, Meta Ads campaigns and qualified buyer acquisition."
+            "Executed full-scale digital launch strategy including villa marketing funnels, Meta Ads campaigns and qualified buyer acquisition.",
+        link: "https://etereo-1.vercel.app/"
     },
     {
         name: "Orange County Homes",
@@ -77,7 +80,6 @@ const clients = [
 export default function ClientsPage() {
     return (
         <main className="bg-black text-white min-h-screen">
-
             <div className="max-w-7xl mx-auto px-6 py-24">
 
                 {/* H1 */}
@@ -88,7 +90,7 @@ export default function ClientsPage() {
                     </span>
                 </h1>
 
-                {/* SEO Intro */}
+                {/* Intro */}
                 <p className="text-gray-400 max-w-3xl mx-auto text-center mb-20 leading-relaxed">
                     Epoque Group is a performance-driven real estate marketing agency in Hyderabad,
                     helping builders and developers scale projects using SEO, Google Ads,
@@ -98,57 +100,81 @@ export default function ClientsPage() {
                 {/* CLIENT GRID */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
 
-                    {clients.map((client, index) => (
-                        <div key={index} className="relative group">
+                    {clients.map((client, index) => {
 
-                            {/* Gradient Hover Glow */}
-                            <div className="absolute -inset-1 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+                        const Wrapper: any = client.link ? "a" : "div"
 
-                            {/* Card Wrapper */}
-                            <div className="relative p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 transition duration-300 group-hover:scale-[1.03]">
+                        return (
+                            <div key={index} className="relative group">
 
-                                <div className="rounded-3xl bg-[#111111] overflow-hidden border border-white/5 h-full transition duration-300 group-hover:border-orange-400/30">
+                                <Wrapper
+                                    {...(client.link && {
+                                        href: client.link,
+                                        target: "_blank",
+                                        rel: "noopener noreferrer"
+                                    })}
+                                    className="block"
+                                >
 
-                                    {/* IMAGE */}
-                                    <div className="relative h-60 w-full overflow-hidden">
-                                        <Image
-                                            src={client.image}
-                                            alt={`${client.name} real estate marketing campaign in Hyderabad by Epoque Group`}
-                                            fill
-                                            sizes="(max-width:768px) 100vw, 33vw"
-                                            priority={index === 0}
-                                            className="object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-110"
-                                        />
+                                    {/* Gradient Glow */}
+                                    <div className="absolute -inset-1 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-70 transition duration-500"></div>
+
+                                    {/* Card */}
+                                    <div className="relative p-[1.5px] rounded-3xl bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 transition duration-300 group-hover:scale-[1.03]">
+
+                                        <div className="rounded-3xl bg-[#111111] overflow-hidden border border-white/5 h-full transition duration-300 group-hover:border-orange-400/30">
+
+                                            {/* IMAGE */}
+                                            <div className="relative h-60 w-full overflow-hidden">
+                                                <Image
+                                                    src={client.image}
+                                                    alt={`${client.name} real estate marketing campaign in Hyderabad by Epoque Group`}
+                                                    fill
+                                                    sizes="(max-width:768px) 100vw, 33vw"
+                                                    priority={index === 0}
+                                                    className="object-cover transition duration-500 group-hover:scale-110 group-hover:brightness-110"
+                                                />
+                                            </div>
+
+                                            {/* CONTENT */}
+                                            <div className="p-8 space-y-4">
+
+                                                <h2 className="text-2xl font-semibold text-orange-400 group-hover:text-yellow-400 transition">
+                                                    {client.name}
+                                                </h2>
+
+                                                <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition">
+                                                    {client.description}
+                                                </p>
+
+                                                {/* View Project Button */}
+                                                {client.link && (
+                                                    <span className="inline-block mt-3 text-sm text-yellow-400">
+                                                        View Live Project →
+                                                    </span>
+                                                )}
+
+                                            </div>
+
+                                        </div>
                                     </div>
 
-                                    {/* CONTENT */}
-                                    <div className="p-8 space-y-4">
+                                </Wrapper>
 
-                                        <h2 className="text-2xl font-semibold text-orange-400 transition duration-300 group-hover:text-yellow-400">
-                                            {client.name}
-                                        </h2>
-
-                                        <p className="text-gray-400 text-sm leading-relaxed transition duration-300 group-hover:text-gray-300">
-                                            {client.description}
-                                        </p>
-
-                                    </div>
-
-                                </div>
                             </div>
-
-                        </div>
-                    ))}
+                        )
+                    })}
 
                 </div>
-                {/* PREMIUM GRADIENT DIVIDER */}
+
+                {/* Divider */}
                 <div className="relative my-12">
                     <div className="h-[2px] w-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 rounded-full"></div>
                     <div className="absolute inset-0 h-[6px] bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 blur-md opacity-40"></div>
                 </div>
-                {/* CONTACT CTA SECTION */}
-                <div className="mt-12 text-center">
 
+                {/* CTA */}
+                <div className="mt-12 text-center">
                     <h2 className="text-4xl font-semibold mb-6">
                         Want Similar Results for Your Project?
                     </h2>
@@ -162,14 +188,12 @@ export default function ClientsPage() {
                     <Link
                         href="/contact"
                         className="inline-block px-10 py-4 rounded-full font-semibold text-black 
-            bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-            hover:scale-105 transition duration-300 shadow-xl"
+                        bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
+                        hover:scale-105 transition duration-300 shadow-xl"
                     >
                         Book Strategy Consultation
                     </Link>
-
                 </div>
-
             </div>
 
             {/* STRUCTURED DATA */}
@@ -185,12 +209,12 @@ export default function ClientsPage() {
                             "@type": "ListItem",
                             position: index + 1,
                             name: client.name,
-                            description: client.description
+                            description: client.description,
+                            url: client.link || undefined
                         }))
                     })
                 }}
             />
-
         </main>
     )
 }
