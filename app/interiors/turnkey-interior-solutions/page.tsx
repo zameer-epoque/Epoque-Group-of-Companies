@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import TurnkeyInteriorClient from "../TurnkeyInteriorClient"
+import TurnkeyInteriorClient from "./TurnkeyInteriorClient"
 
 export const metadata: Metadata = {
     title:
