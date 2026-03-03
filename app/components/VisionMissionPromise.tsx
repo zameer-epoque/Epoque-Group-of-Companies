@@ -49,10 +49,7 @@ export default function VisionMissionPromise() {
 
                     {/* SEO Optimized Intro */}
                     <p className="mt-12 text-xl md:text-2xl leading-relaxed text-gray-400">
-                        The guiding philosophy behind Époque Group’s real estate
-                        developments, digital marketing strategies, luxury interior
-                        design execution, and revenue growth consulting services
-                        across Hyderabad and beyond.
+                        The guiding philosophy behind Époque Group’s high-performance lead generation frameworks, engineered to capture qualified, sales-ready enquiries through data-driven marketing systems and conversion-focused strategies.
                     </p>
                 </motion.div>
 
@@ -63,24 +60,24 @@ export default function VisionMissionPromise() {
                         {
                             icon: "🚀",
                             title: "Our Vision",
-                            subtitle: "Redefining Real Estate & Business Growth",
-                            desc: "To become Hyderabad’s most trusted platform for luxury villas, gated community , performance-driven digital marketing, and scalable revenue architecture — shaping modern enterprises and high-value property ecosystems.",
+                            subtitle: "Redefining Lead Generation Excellence",
+                            desc: "To become Hyderabad’s most trusted lead generation partner, delivering consistent high-intent, qualified enquiries that transform marketing investments into measurable sales growth and scalable revenue systems.",
                             color: "#facc15",
                         },
                         {
                             icon: "⭐",
                             title: "Our Mission",
-                            subtitle: "Strategic Excellence Across Industries",
-                            desc: "We deliver structured real estate solutions, SEO-powered digital marketing systems, premium interior design projects, and data-backed growth frameworks that empower businesses and investors to scale with clarity and confidence.",
+                            subtitle: "Structured Qualified Buyer Acquisition",
+                            desc: "We design performance-driven digital marketing systems focused on generating qualified leads, optimizing conversion funnels, and building predictable sales pipelines for real estate and growth-focused enterprises.",
                             color: "#eab308",
                         },
                         {
                             icon: "🤝",
                             title: "Our Promise",
-                            subtitle: "Long-Term Value & Sustainable Impact",
-                            desc: "From villas and HMDA approved plots in Hyderabad to brand growth and revenue optimization, we commit to transparency, innovation, and measurable results that strengthen every partnership we build.",
+                            subtitle: "High-Intent Leads. Measurable Results.",
+                            desc: "We commit to delivering verified, qualified enquiries through data-backed campaigns, transparent reporting, and conversion-focused strategies that directly accelerate revenue growth.",
                             color: "#eab308",
-                        },
+                        }
                     ].map((item, index) => (
                         <motion.div
                             key={item.title}
