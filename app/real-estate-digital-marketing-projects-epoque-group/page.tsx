@@ -72,7 +72,7 @@ const clients = [
     },
     {
         name: "Marco Express",
-        image: "/marco-express-sales-acceleration-outsourced-growth.PNG",
+        image: "/marco-express-sales-acceleration-outsourced-growth.png",
         description:
             "End-to-end sales acceleration and outsourced revenue support designed to drive consistent growth, pipeline expansion and faster deal closures."
     },
