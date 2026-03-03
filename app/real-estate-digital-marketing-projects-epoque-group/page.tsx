@@ -1,63 +1,33 @@
+"use client"
+
 import type { Metadata } from "next"
 import Script from "next/script"
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
-export const metadata: Metadata = {
-    title:
-        "Real Estate Marketing Case Studies in Hyderabad | Epoque Group Clients",
-    description:
-        "Explore real estate marketing case studies by Epoque Group in Hyderabad including Vasavi Group, Orange County Homes, GRSV Infra and more. SEO, Google Ads and high-conversion lead generation campaigns.",
-    keywords: [
-        "Real estate marketing Hyderabad",
-        "Vasavi Group marketing",
-        "Orange County Homes marketing",
-        "Real estate lead generation Hyderabad",
-        "Builders digital marketing Hyderabad",
-        "Epoque Group case studies"
-    ],
-    alternates: {
-        canonical:
-            "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group"
-    },
-    openGraph: {
-        title:
-            "Real Estate Marketing Case Studies | Epoque Group Hyderabad",
-        description:
-            "See how Epoque Group scales real estate brands through SEO, Google Ads and performance marketing strategies.",
-        url:
-            "https://epoquegroup.in/real-estate-digital-marketing-projects-epoque-group",
-        siteName: "Epoque Group",
-        type: "website"
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Real Estate Marketing Clients | Epoque Group",
-        description:
-            "Hyderabad real estate marketing case studies and project growth results."
-    }
-}
+
 
 const clients = [
     {
         name: "Vasavi Group",
         image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Delivered structured real estate branding, Google Ads and SEO campaigns generating high-intent property leads across Hyderabad micro-markets."
+            "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad. Implemented structured Google Ads, Meta Ads and landing page funnels to deliver high-intent, sales-ready leads."
     },
     {
         name: "Etereo Realty Goa",
         image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Executed full-scale digital launch strategy including villa marketing funnels, Meta Ads campaigns and qualified buyer acquisition.",
+            "Built a strategic villa lead generation funnel designed to capture premium buyer enquiries. Delivered highly qualified leads through targeted Meta Ads campaigns and optimized conversion-driven landing systems.",
         link: "https://etereo-1.vercel.app/"
     },
     {
         name: "Orange County Homes",
         image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Built conversion-optimized landing pages and performance marketing systems reducing cost-per-lead significantly."
-    },
+            "Designed a performance-focused qualified lead generation system reducing cost-per-lead while increasing high-intent buyer enquiries through optimized ad campaigns and conversion-focused landing pages."
+    }
     {
         name: "GRSV Infra",
         image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.png",
@@ -84,37 +54,72 @@ const clients = [
     }
 ]
 
+const containerVariants = {
+    hidden: {},
+    show: {
+        transition: {
+            staggerChildren: 0.15
+        }
+    }
+}
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 60 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "easeOut" }
+    }
+}
+
 export default function ClientsPage() {
     return (
-        <main className="bg-black text-white min-h-screen overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 py-24">
+        <main className="relative bg-black text-white min-h-screen overflow-hidden">
+
+            {/* Animated Background Blobs */}
+            <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-orange-500 rounded-full blur-[150px] opacity-20 animate-pulse"></div>
+            <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-yellow-500 rounded-full blur-[150px] opacity-20 animate-pulse"></div>
+
+            <div className="relative max-w-7xl mx-auto px-6 py-28">
 
                 {/* HEADER */}
-                <div className="text-center mb-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-center mb-24"
+                >
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                        Real Estate Marketing Case Studies in{" "}
-                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+                        Real Estate Marketing in{" "}
+                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent animate-gradient-x">
                             Hyderabad
                         </span>
                     </h1>
 
-                    <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed text-lg">
-                        Epoque Group is a performance-driven real estate marketing agency in Hyderabad,
-                        helping builders and developers scale projects using SEO, Google Ads,
-                        Meta Ads and structured lead generation strategies.
+                    <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                        Performance-driven digital strategies helping developers scale
+                        projects through structured branding and high-conversion campaigns.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* CLIENT GRID */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
-
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-16"
+                >
                     {clients.map((client, index) => {
-
                         const Wrapper: any = client.link ? "a" : "div"
 
                         return (
-                            <div key={index} className="relative group">
-
+                            <motion.div
+                                key={index}
+                                variants={cardVariants}
+                                whileHover={{ rotateX: 5, rotateY: -5, scale: 1.05 }}
+                                className="perspective-1000"
+                            >
                                 <Wrapper
                                     {...(client.link && {
                                         href: client.link,
@@ -123,85 +128,69 @@ export default function ClientsPage() {
                                     })}
                                     className="block"
                                 >
-
-                                    {/* Glow Background */}
-                                    <div className="absolute -inset-1 bg-gradient-to-br from-orange-400 via-yellow-500 to-red-500 rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition duration-500"></div>
-
-                                    {/* Card */}
-                                    <div className="relative rounded-3xl bg-gradient-to-b from-[#141414] to-[#0d0d0d] border border-white/10 overflow-hidden transition-all duration-500 group-hover:scale-[1.03] group-hover:border-orange-400/40 group-hover:shadow-[0_0_40px_rgba(255,140,0,0.25)]">
+                                    <div className="relative rounded-3xl bg-gradient-to-b from-[#141414] to-[#0c0c0c] border border-white/10 overflow-hidden shadow-xl transition duration-500 hover:shadow-orange-500/20">
 
                                         {/* IMAGE */}
-                                        <div className="relative w-full aspect-[4/3] overflow-hidden">
-
+                                        <div className="relative aspect-[4/3] overflow-hidden">
                                             <Image
                                                 src={client.image}
-                                                alt={`${client.name} real estate marketing campaign in Hyderabad by Epoque Group`}
+                                                alt={client.name}
                                                 fill
                                                 quality={100}
-                                                sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
-                                                priority={index === 0}
-                                                className="object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:brightness-110"
+                                                className="object-cover transition duration-700 hover:scale-110"
                                             />
-
-                                            {/* Overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition duration-500"></div>
-
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                                         </div>
 
                                         {/* CONTENT */}
-                                        <div className="p-8 space-y-5">
-
-                                            <h2 className="text-2xl font-semibold text-orange-400 group-hover:text-yellow-400 transition">
+                                        <div className="p-8">
+                                            <h2 className="text-2xl font-semibold text-orange-400 mb-4">
                                                 {client.name}
                                             </h2>
 
-                                            <p className="text-gray-400 leading-relaxed text-sm group-hover:text-gray-300 transition">
+                                            <p className="text-gray-400 text-sm leading-relaxed">
                                                 {client.description}
                                             </p>
 
                                             {client.link && (
-                                                <span className="inline-block pt-2 text-sm font-medium text-yellow-400">
+                                                <div className="mt-5 text-yellow-400 text-sm">
                                                     View Live Project →
-                                                </span>
+                                                </div>
                                             )}
-
                                         </div>
-                                    </div>
 
+                                    </div>
                                 </Wrapper>
-                            </div>
+                            </motion.div>
                         )
                     })}
-
-                </div>
-
-                {/* Divider */}
-                <div className="relative my-20">
-                    <div className="h-[2px] w-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 rounded-full"></div>
-                    <div className="absolute inset-0 h-[6px] bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 blur-md opacity-40"></div>
-                </div>
+                </motion.div>
 
                 {/* CTA */}
-                <div className="text-center">
-                    <h2 className="text-4xl md:text-5xl font-semibold mb-6">
-                        Want Similar Results for Your Project?
+                <motion.div
+                    initial={{ opacity: 0, y: 60 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="text-center mt-28"
+                >
+                    <h2 className="text-4xl font-semibold mb-6">
+                        Ready to Scale Your Project?
                     </h2>
 
-                    <p className="text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Partner with Epoque Group and scale your real estate project
-                        through structured branding, SEO, Google Ads and
-                        high-conversion lead generation systems.
+                    <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+                        Let’s build structured digital systems that drive qualified leads,
+                        lower CPL and accelerate revenue growth.
                     </p>
 
                     <Link
                         href="/contact"
                         className="inline-block px-12 py-4 rounded-full font-semibold text-black 
-                        bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
-                        hover:scale-105 transition duration-300 shadow-2xl"
+            bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 
+            hover:scale-110 transition duration-300 shadow-2xl animate-pulse"
                     >
                         Book Strategy Consultation
                     </Link>
-                </div>
+                </motion.div>
 
             </div>
 
@@ -217,9 +206,7 @@ export default function ClientsPage() {
                         itemListElement: clients.map((client, index) => ({
                             "@type": "ListItem",
                             position: index + 1,
-                            name: client.name,
-                            description: client.description,
-                            url: client.link || undefined
+                            name: client.name
                         }))
                     })
                 }}
