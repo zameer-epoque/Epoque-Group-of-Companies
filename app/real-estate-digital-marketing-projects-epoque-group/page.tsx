@@ -27,7 +27,7 @@ const clients = [
         image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
             "Designed a performance-focused qualified lead generation system reducing cost-per-lead while increasing high-intent buyer enquiries through optimized ad campaigns and conversion-focused landing pages."
-    }
+    },
     {
         name: "GRSV Infra",
         image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.png",
