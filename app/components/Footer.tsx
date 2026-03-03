@@ -45,9 +45,7 @@ export default function Footer() {
           />
 
           <p className="text-white/80 text-sm md:text-base leading-relaxed">
-            Epoque Group is a Hyderabad-based enterprise specializing in
-            luxury villas, premium interior design,
-            digital marketing services, and structured revenue consulting.
+          Epoque Group is a Hyderabad-based performance marketing enterprise specializing in structured lead generation and delivering high-quality, qualified buyer enquiries.
           </p>
 
           {/* ===== SOCIAL MEDIA ===== */}
