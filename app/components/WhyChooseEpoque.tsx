@@ -11,24 +11,24 @@ import {
 const items = [
     {
         icon: Palette,
-        title: "Design-Led Thinking",
-        desc: "From luxury villas and gated community developments to digital platforms and interior spaces, every solution begins with design intelligence—where aesthetics, functionality, and human experience align to create lasting value.",
+        title: "Conversion-Led Strategy",
+        desc: "Every campaign begins with structured lead generation architecture—designed to attract high-intent audiences, capture qualified enquiries, and transform traffic into sales-ready prospects."
     },
     {
         icon: Target,
-        title: "Strategic Expertise",
-        desc: "We combine real estate market insight, SEO-driven digital marketing strategy, and revenue optimization frameworks to accelerate business growth across Hyderabad and emerging markets.",
+        title: "Precision Targeting",
+        desc: "We leverage data-driven advertising, audience segmentation, and performance analytics to generate highly qualified leads that strengthen booking pipelines and reduce cost-per-acquisition."
     },
     {
         icon: Layers,
-        title: "End-to-End Solutions",
-        desc: "From villas and plots in Hyderabad to performance marketing campaigns and interior execution, we manage every layer of development with clarity, precision, and measurable outcomes.",
+        title: "End-to-End Lead Systems",
+        desc: "From targeted ad campaigns and SEO funnels to conversion-optimized landing pages and CRM workflows, we build complete lead generation ecosystems that deliver measurable results."
     },
     {
         icon: Handshake,
-        title: "Trusted Partnerships",
-        desc: "We build long-term partnerships with property investors, business leaders, and growing brands—delivering transparent real estate solutions and scalable growth systems.",
-    },
+        title: "Sales-Ready Partnerships",
+        desc: "We partner with developers and growth-focused businesses to deliver verified, high-intent qualified enquiries that convert into consistent revenue growth."
+    }
 ]
 
 export default function WhyChooseEpoque() {
@@ -80,9 +80,7 @@ export default function WhyChooseEpoque() {
                     </h2>
 
                     <p className="mt-10 text-xl md:text-2xl text-gray-400 leading-relaxed">
-                        A multidisciplinary platform delivering luxury real estate,
-                        performance-driven digital marketing, premium interior design,
-                        and strategic revenue growth solutions across Hyderabad.
+                        A performance-driven growth platform specializing in structured lead generation and qualified buyer acquisition, delivering high-intent enquiries that convert into measurable revenue across Hyderabad.
                     </p>
                 </motion.div>
 
@@ -141,7 +139,7 @@ export default function WhyChooseEpoque() {
                                                 </div>
                                             </div>
 
-                                            <h3 className="font-heading text-[36px] font-semibold mb-4 tracking-wide text-white flex justify-center">
+                                            <h3 className="font-heading text-[28px] font-semibold mb-4 tracking-wide text-white flex justify-center">
                                                 {item.title}
                                             </h3>
 
