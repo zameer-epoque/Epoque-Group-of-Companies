@@ -8,10 +8,11 @@ import type { Variants } from "framer-motion"
 
 const clients = [
     {
-        name: "Vasavi Group",
+        name: "Vasavi Group Crown",
         image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad."
+            "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad.",
+            link: "https://vasavi-group.vercel.app/"
     },
     {
         name: "Etereo Realty Goa",
