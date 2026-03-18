@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Amenities from "../Project1/Amenities";
 import AmenitiesServices from "../Project1/AmenitiesServices";
 import ContactSection from "../Project1/ContactSection";
@@ -13,12 +12,10 @@ import PricingSection from "../Project1/PricingSection";
 import Specifications from "../Project1/Specifications";
 import UnitShowcase from "../Project1/UnitShowcase";
 
-
-export default function App(): JSX.Element {
+export default function App() {
   return (
     <div className="font-sans text-gray-800">
 
-      {/* Navbar */}
       <Navbar />
       <Hero />
 
