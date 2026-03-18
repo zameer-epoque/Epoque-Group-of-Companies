@@ -8,9 +8,9 @@ type NavItem = {
     id: string;
 };
 
-export default function Navbar(): JSX.Element {
-    const [scrolled, setScrolled] = useState<boolean>(false);
-    const [open, setOpen] = useState<boolean>(false);
+export default function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,23 +40,18 @@ export default function Navbar(): JSX.Element {
             >
                 <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
-                    {/* Logo Section */}
                     <div className="flex items-center gap-3">
                         <img src="/logo.jpeg" alt="Etereo Logo" className="h-20 w-auto" />
                         <div className="leading-tight">
                             <h1 className="text-lg font-semibold tracking-wide text-black">
                                 ETEREO 1
                             </h1>
-                            <p
-                                className={`text-xs ${scrolled ? "text-gray-600" : "text-gray-300"
-                                    }`}
-                            >
+                            <p className={`text-xs ${scrolled ? "text-gray-600" : "text-gray-300"}`}>
                                 Ultra Luxury Residences
                             </p>
                         </div>
                     </div>
 
-                    {/* Desktop Menu */}
                     <ul
                         className={`hidden md:flex items-center gap-10 font-medium ${scrolled ? "text-gray-800" : "text-black"
                             }`}
@@ -74,7 +69,6 @@ export default function Navbar(): JSX.Element {
                         ))}
                     </ul>
 
-                    {/* Desktop CTA */}
                     <a
                         href="tel:+91 91336 33327"
                         className="hidden md:inline-block bg-yellow-500 text-black px-6 py-2 rounded-full text-sm font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-md"
@@ -82,26 +76,19 @@ export default function Navbar(): JSX.Element {
                         Schedule Visit
                     </a>
 
-                    {/* Mobile Toggle */}
                     <div className="md:hidden">
                         <button onClick={() => setOpen(!open)}>
                             {open ? (
-                                <X
-                                    size={28}
-                                    className={scrolled ? "text-black" : "text-white"}
-                                />
+                                <X size={28} className={scrolled ? "text-black" : "text-white"} />
                             ) : (
-                                <Menu
-                                    size={28}
-                                    className={scrolled ? "text-black" : "text-white"}
-                                />
+                                <Menu size={28} className={scrolled ? "text-black" : "text-white"} />
                             )}
                         </button>
                     </div>
+
                 </div>
             </nav>
 
-            {/* Mobile Menu */}
             <div
                 className={`fixed inset-0 bg-black text-white flex flex-col items-center justify-center gap-10 text-xl transition-transform duration-500 ${open ? "translate-x-0" : "translate-x-full"
                     } md:hidden`}
