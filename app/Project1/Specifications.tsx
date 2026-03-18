@@ -6,7 +6,7 @@ type Spec = {
     bg: string;
 };
 
-export default function Specifications(): JSX.Element {
+export default function Specifications() {
     const specs: Spec[] = [
         {
             title: "Flooring",
@@ -83,7 +83,6 @@ export default function Specifications(): JSX.Element {
         <section className="py-24 bg-[#f5f5f5]" id="specifications">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* Heading */}
                 <div className="flex items-center gap-6 mb-16">
                     <h2 className="text-3xl md:text-4xl italic font-medium">
                         Specifications
@@ -91,7 +90,6 @@ export default function Specifications(): JSX.Element {
                     <div className="flex-1 h-[2px] bg-yellow-600"></div>
                 </div>
 
-                {/* Grid */}
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
                     {specs.map((spec, index) => (
@@ -115,7 +113,6 @@ export default function Specifications(): JSX.Element {
 
                 </div>
 
-                {/* Bottom Note */}
                 <p className="mt-12 text-sm text-gray-600 text-center">
                     *Additional furniture package available at extra cost
                 </p>

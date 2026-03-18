@@ -24,35 +24,28 @@ export default function AmenitiesServices() {
         <section className="py-20 bg-[#f5f5f5]">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* ================= Amenities ================= */}
                 <h2 className="text-3xl font-semibold mb-10 italic">
                     Amenities
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-y-6 gap-x-10 mb-20">
-
                     {amenities.map((item, index) => (
                         <div key={index} className="flex items-start gap-4 group">
 
-                            {/* Icon Circle */}
                             <div className="w-10 h-10 flex items-center justify-center border border-yellow-600 rounded-full text-yellow-600 font-bold text-sm">
                                 ✓
                             </div>
 
-                            {/* Text */}
                             <p className="text-gray-700 group-hover:text-black transition">
                                 {item}
                             </p>
 
                         </div>
                     ))}
-
                 </div>
 
-                {/* ================= Services ================= */}
                 <div className="grid md:grid-cols-2 gap-12 items-center">
 
-                    {/* Left Side */}
                     <div>
                         <h2 className="text-3xl font-semibold italic mb-6">
                             Services
@@ -75,7 +68,6 @@ export default function AmenitiesServices() {
                         </div>
                     </div>
 
-                    {/* Right Side Image */}
                     <div>
                         <img
                             src="/amenities/lifestyle9.jpg"

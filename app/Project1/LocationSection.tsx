@@ -1,11 +1,10 @@
 "use client";
 
-export default function LocationSection(): JSX.Element {
+export default function LocationSection() {
     return (
         <section id="location" className="py-24 bg-[#f3efe7]">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* ===== Top Heading ===== */}
                 <div className="text-center mb-16">
                     <p className="uppercase tracking-widest text-yellow-700 text-sm mb-3">
                         Prime Connectivity
@@ -20,17 +19,14 @@ export default function LocationSection(): JSX.Element {
                     </p>
                 </div>
 
-                {/* ===== Two Column Layout ===== */}
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
 
-                    {/* ================= LEFT SIDE ================= */}
                     <div className="lg:border-r-4 border-yellow-700 lg:pr-12">
 
                         <h3 className="text-3xl italic font-medium mb-10">
                             Location Map
                         </h3>
 
-                        {/* Transportation */}
                         <div className="mb-10">
                             <h4 className="text-yellow-700 font-semibold mb-4">
                                 Transportation
@@ -43,7 +39,6 @@ export default function LocationSection(): JSX.Element {
                             </ul>
                         </div>
 
-                        {/* Restaurants */}
                         <div className="mb-10">
                             <h4 className="text-yellow-700 font-semibold mb-4">
                                 Restaurants & Cafés
@@ -64,7 +59,6 @@ export default function LocationSection(): JSX.Element {
                             </ul>
                         </div>
 
-                        {/* Church */}
                         <div>
                             <h4 className="text-yellow-700 font-semibold mb-4">
                                 Church
@@ -80,7 +74,6 @@ export default function LocationSection(): JSX.Element {
 
                     </div>
 
-                    {/* ================= RIGHT SIDE ================= */}
                     <div className="h-[450px] lg:h-full rounded-lg overflow-hidden shadow-lg">
                         <img
                             src="/map.jpg"

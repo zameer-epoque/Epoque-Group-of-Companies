@@ -9,7 +9,7 @@ type PricingItem = {
     highlight?: boolean;
 };
 
-export default function PricingSection(): JSX.Element {
+export default function PricingSection() {
     const pricingData: PricingItem[] = [
         {
             title: "2 BHK Simplex",
@@ -50,7 +50,6 @@ export default function PricingSection(): JSX.Element {
         <section id="pricing" className="py-12 bg-[#f5f2ec]">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* Heading */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-light tracking-wide mb-4">
                         Inventory & Pricing
@@ -62,14 +61,12 @@ export default function PricingSection(): JSX.Element {
                     </p>
                 </div>
 
-                {/* Pricing Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
 
                     {pricingData.map((item, index) => (
                         <div
                             key={index}
-                            className={`relative bg-white p-10 rounded-sm transition duration-500
-              ${item.highlight
+                            className={`relative bg-white p-10 rounded-sm transition duration-500 ${item.highlight
                                     ? "shadow-2xl border-t-4 border-yellow-600 scale-105"
                                     : "shadow-md hover:shadow-xl"
                                 }`}

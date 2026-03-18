@@ -50,7 +50,6 @@ export default function Amenities() {
         <section id="amenities" className="py-24 bg-gray-50">
             <div className="max-w-7xl mx-auto px-6 text-center">
 
-                {/* Section Title */}
                 <p className="uppercase tracking-widest text-yellow-600 text-sm mb-3">
                     Lifestyle Amenities
                 </p>
@@ -64,7 +63,6 @@ export default function Amenities() {
                     wellness and recreation in the heart of North Goa.
                 </p>
 
-                {/* Grid */}
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
 
                     {amenities.map((item, index) => (
@@ -72,7 +70,6 @@ export default function Amenities() {
                             key={index}
                             className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-500 group border-2 border-yellow-400"
                         >
-                            {/* Image */}
                             <div className="overflow-hidden">
                                 <img
                                     src={item.image}
@@ -81,7 +78,6 @@ export default function Amenities() {
                                 />
                             </div>
 
-                            {/* Content */}
                             <div className="p-6 text-left">
                                 <h3 className="text-xl font-semibold mb-3 text-yellow-600">
                                     {item.title}

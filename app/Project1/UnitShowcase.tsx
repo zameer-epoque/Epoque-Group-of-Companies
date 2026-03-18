@@ -6,7 +6,7 @@ type Unit = {
     desc: string;
 };
 
-export default function UnitShowcase(): JSX.Element {
+export default function UnitShowcase() {
     const twoBHK: Unit[] = [
         {
             title: "2 BHK – Living Room",
@@ -48,7 +48,8 @@ export default function UnitShowcase(): JSX.Element {
         },
     ];
 
-    const renderSection = (data: Unit[], heading: string): JSX.Element => (
+    // ✅ removed JSX.Element here
+    const renderSection = (data: Unit[], heading: string) => (
         <div className="mb-24">
             <h2 className="text-3xl md:text-4xl font-light mb-4 text-center">
                 {heading}
@@ -61,7 +62,6 @@ export default function UnitShowcase(): JSX.Element {
                         key={index}
                         className="group overflow-hidden rounded-sm shadow-md hover:shadow-xl transition duration-500 bg-white"
                     >
-                        {/* Image */}
                         <div className="overflow-hidden">
                             <img
                                 src={item.image}
@@ -70,7 +70,6 @@ export default function UnitShowcase(): JSX.Element {
                             />
                         </div>
 
-                        {/* Content */}
                         <div className="p-8">
                             <h3 className="text-xl font-medium mb-3">
                                 {item.title}
@@ -89,7 +88,6 @@ export default function UnitShowcase(): JSX.Element {
         <section className="py-28 bg-[#f5f2ec]" id="residences">
             <div className="max-w-7xl mx-auto px-6">
 
-                {/* Section Heading */}
                 <div className="text-center mb-20">
                     <h2 className="text-4xl md:text-5xl font-light">
                         Residence Interiors
