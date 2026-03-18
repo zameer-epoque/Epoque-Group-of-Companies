@@ -285,6 +285,8 @@ const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-epoque-group" },
 
+
+
   {
     label: "Digital",
     href: "/digital",

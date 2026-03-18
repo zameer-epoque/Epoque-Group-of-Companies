@@ -19,8 +19,7 @@ const clients = [
         image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
             "Built a strategic villa lead generation funnel delivering highly qualified premium buyer enquiries.",
-        link: "https://etereo-1.vercel.app/"
-    },
+            link: "/ETEREO1" },
     {
         name: "Orange County Homes",
         image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
