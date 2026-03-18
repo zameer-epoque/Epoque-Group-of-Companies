@@ -2,12 +2,9 @@
 
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
     return (
         <footer className="bg-[#f4f4f4] text-gray-800">
-
-            {/* Top RERA Line */}
-
 
             {/* Contact Info */}
             <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-center gap-8">
@@ -35,10 +32,10 @@ export default function Footer(): JSX.Element {
 
             </div>
 
-            {/* Gold Divider */}
+            {/* Divider */}
             <div className="h-[2px] bg-yellow-600"></div>
 
-            {/* Address Section */}
+            {/* Address */}
             <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-center gap-4 text-center">
 
                 <div className="w-10 h-10 flex items-center justify-center border border-yellow-600 rounded-full text-yellow-600">
