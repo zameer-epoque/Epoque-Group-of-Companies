@@ -1,8 +1,6 @@
 "use client";
 
-import React from "react";
-
-const Hero: React.FC = () => {
+export default function Hero() {
     return (
         <div>
             <section className="relative h-screen flex items-center justify-center text-white">
@@ -67,6 +65,4 @@ const Hero: React.FC = () => {
             </section>
         </div>
     );
-};
-
-export default Hero;
+}
