@@ -12,14 +12,15 @@ const clients = [
         image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
             "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad.",
-            link: "https://vasavi-group.vercel.app/"
+        link: "/Vasavi"
     },
     {
         name: "Etereo Realty Goa",
         image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
         description:
             "Built a strategic villa lead generation funnel delivering highly qualified premium buyer enquiries.",
-            link: "/ETEREO1" },
+        link: "/ETEREO1"
+    },
     {
         name: "Orange County Homes",
         image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
@@ -49,7 +50,7 @@ const clients = [
         image: "/om-sree-builders-qualified-lead-generation.jpg",
         description:
             "Structured, criteria-based qualified lead generation delivering high-intent prospects.",
-            link: "https://om-sree.vercel.app/"
+        link: "https://om-sree.vercel.app/"
     }
 ]
 
