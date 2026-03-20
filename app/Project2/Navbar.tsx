@@ -4,27 +4,21 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-export default function Navbar(): JSX.Element {
+export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [scrolled, setScrolled] = useState<boolean>(false);
 
     useEffect(() => {
-        const handleScroll = (): void => {
+        const handleScroll = () => {
             setScrolled(window.scrollY > 20);
         };
 
         window.addEventListener("scroll", handleScroll);
-
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Prevent background scroll when mobile menu open
     useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "auto";
-        }
+        document.body.style.overflow = isOpen ? "hidden" : "auto";
     }, [isOpen]);
 
     return (
@@ -34,7 +28,6 @@ export default function Navbar(): JSX.Element {
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center px-6">
 
-                {/* LOGO */}
                 <Image
                     src="/Crown East Logo.jpg"
                     alt="Crown East"
@@ -43,7 +36,6 @@ export default function Navbar(): JSX.Element {
                     className="h-10 md:h-14 object-contain w-auto"
                 />
 
-                {/* DESKTOP MENU */}
                 <div className="hidden md:flex items-center space-x-10 text-gray-800 font-medium">
                     <a href="#about" className="hover:text-yellow-600 transition">About</a>
                     <a href="#amenities" className="hover:text-yellow-600 transition">Amenities</a>
@@ -51,7 +43,6 @@ export default function Navbar(): JSX.Element {
                     <a href="#contact" className="hover:text-yellow-600 transition">Contact</a>
                 </div>
 
-                {/* DESKTOP BUTTON */}
                 <div className="hidden md:block">
                     <a
                         href="#contact"
@@ -61,64 +52,30 @@ export default function Navbar(): JSX.Element {
                     </a>
                 </div>
 
-                {/* MOBILE MENU BUTTON */}
                 <div className="md:hidden">
                     <button onClick={() => setIsOpen(true)}>
                         <Menu size={28} />
                     </button>
                 </div>
-
             </div>
 
-            {/* MOBILE MENU */}
             <div
                 className={`fixed top-0 right-0 w-full h-screen bg-white transform transition-transform duration-300 md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"
                     }`}
             >
-
-                {/* CLOSE BUTTON */}
                 <div className="flex justify-end p-6">
                     <button onClick={() => setIsOpen(false)}>
                         <X size={30} />
                     </button>
                 </div>
 
-                {/* MOBILE LINKS */}
                 <div className="flex flex-col items-center justify-center h-[80%] space-y-8 text-xl font-medium text-gray-800">
 
-                    <a
-                        href="#about"
-                        onClick={() => setIsOpen(false)}
-                        className="hover:text-yellow-600 transition"
-                    >
-                        About
-                    </a>
+                    <a href="#about" onClick={() => setIsOpen(false)}>About</a>
+                    <a href="#amenities" onClick={() => setIsOpen(false)}>Amenities</a>
+                    <a href="#gallery" onClick={() => setIsOpen(false)}>Gallery</a>
+                    <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
 
-                    <a
-                        href="#amenities"
-                        onClick={() => setIsOpen(false)}
-                        className="hover:text-yellow-600 transition"
-                    >
-                        Amenities
-                    </a>
-
-                    <a
-                        href="#gallery"
-                        onClick={() => setIsOpen(false)}
-                        className="hover:text-yellow-600 transition"
-                    >
-                        Gallery
-                    </a>
-
-                    <a
-                        href="#contact"
-                        onClick={() => setIsOpen(false)}
-                        className="hover:text-yellow-600 transition"
-                    >
-                        Contact
-                    </a>
-
-                    {/* CTA */}
                     <a
                         href="#contact"
                         onClick={() => setIsOpen(false)}

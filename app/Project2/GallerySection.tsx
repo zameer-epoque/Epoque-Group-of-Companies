@@ -19,10 +19,9 @@ const images: string[] = [
     "/Elevations/v12.jpg",
 ];
 
-export default function GallerySection(): JSX.Element {
+export default function GallerySection() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-    // Prevent body scroll when modal open
     useEffect(() => {
         if (selectedImage) {
             document.body.style.overflow = "hidden";
@@ -35,12 +34,10 @@ export default function GallerySection(): JSX.Element {
         <section className="bg-black py-4 px-4 md:px-16" id="gallery">
             <div className="max-w-7xl mx-auto">
 
-                {/* TITLE */}
                 <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-16 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent tracking-widest">
                     GALLERY
                 </h2>
 
-                {/* GRID */}
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
 
                     {images.map((img: string, index: number) => (
@@ -57,7 +54,6 @@ export default function GallerySection(): JSX.Element {
                                 className="w-full h-40 md:h-72 object-cover transform group-hover:scale-110 transition duration-500"
                             />
 
-                            {/* Overlay */}
                             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
                                 <span className="text-yellow-400 text-sm md:text-lg font-semibold tracking-wider">
                                     VIEW
@@ -69,11 +65,9 @@ export default function GallerySection(): JSX.Element {
                 </div>
             </div>
 
-            {/* MODAL */}
             {selectedImage && (
                 <div className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4">
 
-                    {/* CLOSE BUTTON */}
                     <button
                         className="absolute top-6 right-6 text-white"
                         onClick={() => setSelectedImage(null)}

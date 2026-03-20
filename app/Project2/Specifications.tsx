@@ -95,16 +95,14 @@ const specifications: Specification[] = [
     },
 ];
 
-export default function Specifications(): JSX.Element {
+export default function Specifications() {
     return (
         <section className="bg-black py-4 px-6 md:px-16">
             <div className="max-w-7xl mx-auto">
-                {/* TITLE */}
                 <h2 className="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent tracking-widest">
                     SPECIFICATIONS
                 </h2>
 
-                {/* GRID */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {specifications.map((spec: Specification, index: number) => {
                         const Icon = spec.icon;
@@ -114,17 +112,14 @@ export default function Specifications(): JSX.Element {
                                 key={index}
                                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-yellow-400 transition duration-300 hover:scale-105"
                             >
-                                {/* ICON */}
                                 <div className="text-yellow-400 text-3xl mb-4">
                                     <Icon />
                                 </div>
 
-                                {/* TITLE */}
                                 <h3 className="text-white font-semibold text-lg mb-3">
                                     {spec.title}
                                 </h3>
 
-                                {/* LIST */}
                                 <ul className="text-gray-300 text-sm space-y-2">
                                     {spec.items.map((item: string, i: number) => (
                                         <li key={i} className="flex gap-2">

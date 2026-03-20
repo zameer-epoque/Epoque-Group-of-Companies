@@ -1,6 +1,6 @@
 import AboutSection from "../Project2/AboutSection";
 import AmenitiesSection from "../Project2/AmenitiesSection";
-import Footer from "../Project2/Footer";
+
 import GallerySection from "../Project2/GallerySection";
 import HeroSection from "../Project2/HeroSection";
 import Navbar from "../Project2/Navbar";

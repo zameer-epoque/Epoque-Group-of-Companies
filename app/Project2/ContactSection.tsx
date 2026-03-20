@@ -9,7 +9,7 @@ type FormDataType = {
     message: string;
 };
 
-export default function ContactForm(): JSX.Element {
+export default function ContactForm() {
     const [form, setForm] = useState<FormDataType>({
         name: "",
         phone: "",
@@ -19,7 +19,7 @@ export default function ContactForm(): JSX.Element {
 
     const handleSubmit = async (
         e: React.FormEvent<HTMLFormElement>
-    ): Promise<void> => {
+    ) => {
         e.preventDefault();
 
         const data: FormDataType = {
@@ -30,7 +30,6 @@ export default function ContactForm(): JSX.Element {
         };
 
         try {
-            // SEND DATA TO GOOGLE SHEET
             await fetch(
                 "https://script.google.com/macros/s/AKfycbyzqLPzO1lLmsclL4KcJ-hJd8ZyYg_QoOFZLeTugOch8XckXvCvvsOg8AHACVX6pca4/exec",
                 {
@@ -45,14 +44,13 @@ export default function ContactForm(): JSX.Element {
             console.log(error);
         }
 
-        // WHATSAPP MESSAGE
-        const text: string = `New Enquiry:
+        const text = `New Enquiry:
 Name: ${form.name}
 Phone: ${form.phone}
 Apartment: ${form.type}
 Message: ${form.message}`;
 
-        const whatsappURL: string =
+        const whatsappURL =
             "https://wa.me/919133633327?text=" + encodeURIComponent(text);
 
         window.open(whatsappURL, "_blank");
