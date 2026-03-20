@@ -9,7 +9,7 @@ type FormDataType = {
     message: string;
 };
 
-export default function ContactForm() {
+export default function ContactSection() {
     const [form, setForm] = useState<FormDataType>({
         name: "",
         phone: "",
@@ -17,19 +17,28 @@ export default function ContactForm() {
         message: "",
     });
 
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setForm({ ...form, [e.target.name]: e.target.value });
+    };
+
     const handleSubmit = async (
         e: React.FormEvent<HTMLFormElement>
     ) => {
         e.preventDefault();
 
-        const data: FormDataType = {
-            name: form.name,
-            phone: form.phone,
-            type: form.type,
-            message: form.message,
-        };
+        if (!form.name || !form.phone) {
+            alert("Please fill Name & Phone");
+            return;
+        }
+
+        setLoading(true);
 
         try {
+            // ✅ Send data to Google Sheets
             await fetch(
                 "https://script.google.com/macros/s/AKfycbyzqLPzO1lLmsclL4KcJ-hJd8ZyYg_QoOFZLeTugOch8XckXvCvvsOg8AHACVX6pca4/exec",
                 {
@@ -37,63 +46,97 @@ export default function ContactForm() {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify(data),
+                    body: JSON.stringify(form),
                 }
             );
-        } catch (error: unknown) {
-            console.log(error);
+
+            // ✅ WhatsApp Message
+            const text = `*New Enquiry*%0A%0A
+*Name:* ${form.name}%0A
+*Phone:* ${form.phone}%0A
+*Apartment:* ${form.type}%0A
+*Message:* ${form.message}`;
+
+            const whatsappURL = `https://wa.me/919133633327?text=${text}`;
+
+            window.open(whatsappURL, "_blank");
+
+            alert("✅ Enquiry sent successfully!");
+
+            // ✅ Reset form
+            setForm({
+                name: "",
+                phone: "",
+                type: "",
+                message: "",
+            });
+
+        } catch (error) {
+            console.error(error);
+            alert("⚠️ Something went wrong!");
+        } finally {
+            setLoading(false);
         }
-
-        const text = `New Enquiry:
-Name: ${form.name}
-Phone: ${form.phone}
-Apartment: ${form.type}
-Message: ${form.message}`;
-
-        const whatsappURL =
-            "https://wa.me/919133633327?text=" + encodeURIComponent(text);
-
-        window.open(whatsappURL, "_blank");
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="Name"
-                value={form.name}
-                onChange={(e) =>
-                    setForm({ ...form, name: e.target.value })
-                }
-            />
+        <section className="bg-black text-white py-16 px-6">
+            <div className="max-w-4xl mx-auto">
 
-            <input
-                type="text"
-                placeholder="Phone"
-                value={form.phone}
-                onChange={(e) =>
-                    setForm({ ...form, phone: e.target.value })
-                }
-            />
+                {/* Heading */}
+                <h2 className="text-3xl font-bold mb-6 text-center">
+                    Contact Us
+                </h2>
 
-            <input
-                type="text"
-                placeholder="Apartment Type"
-                value={form.type}
-                onChange={(e) =>
-                    setForm({ ...form, type: e.target.value })
-                }
-            />
+                {/* Form */}
+                <form onSubmit={handleSubmit} className="grid gap-4">
 
-            <textarea
-                placeholder="Message"
-                value={form.message}
-                onChange={(e) =>
-                    setForm({ ...form, message: e.target.value })
-                }
-            />
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={form.name}
+                        onChange={handleChange}
+                        className="p-3 border border-gray-600 rounded bg-transparent"
+                    />
 
-            <button type="submit">Submit</button>
-        </form>
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        value={form.phone}
+                        onChange={handleChange}
+                        className="p-3 border border-gray-600 rounded bg-transparent"
+                    />
+
+                    <input
+                        type="text"
+                        name="type"
+                        placeholder="Apartment Type"
+                        value={form.type}
+                        onChange={handleChange}
+                        className="p-3 border border-gray-600 rounded bg-transparent"
+                    />
+
+                    <textarea
+                        name="message"
+                        placeholder="Your Message"
+                        value={form.message}
+                        onChange={handleChange}
+                        rows={4}
+                        className="p-3 border border-gray-600 rounded bg-transparent"
+                    />
+
+                    <button
+                        type="submit"
+                        disabled={loading}
+                        className="bg-white text-black py-3 rounded font-semibold hover:bg-gray-200 transition"
+                    >
+                        {loading ? "Sending..." : "Send Enquiry"}
+                    </button>
+
+                </form>
+            </div>
+        </section>
     );
 }

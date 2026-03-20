@@ -1,5 +1,7 @@
+
 import AboutSection from "../Project2/AboutSection";
 import AmenitiesSection from "../Project2/AmenitiesSection";
+import ContactSection from "../Project2/ContactSection";
 import GallerySection from "../Project2/GallerySection";
 import HeroSection from "../Project2/HeroSection";
 import Navbar from "../Project2/Navbar";
@@ -16,7 +18,7 @@ export default function Page() {
             <ProjectOverview />
             <GallerySection />
             <Specifications />
-            {/* <ContactSection /> */}
+            <ContactSection />
             {/* <Footer /> */}
         </>
     );
