@@ -25,7 +25,7 @@ export default function ContactSection() {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (
+    const handleSubmit = (
         e: React.FormEvent<HTMLFormElement>
     ) => {
         e.preventDefault();
@@ -38,30 +38,20 @@ export default function ContactSection() {
         setLoading(true);
 
         try {
-            // ✅ Send data to Google Sheets
-            await fetch(
-                "https://script.google.com/macros/s/AKfycbyzqLPzO1lLmsclL4KcJ-hJd8ZyYg_QoOFZLeTugOch8XckXvCvvsOg8AHACVX6pca4/exec",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(form),
-                }
-            );
-
             // ✅ WhatsApp Message
-            const text = `*New Enquiry*%0A%0A
-*Name:* ${form.name}%0A
-*Phone:* ${form.phone}%0A
-*Apartment:* ${form.type}%0A
-*Message:* ${form.message}`;
+            const text = `New Enquiry:
+Name: ${form.name}
+Phone: ${form.phone}
+Apartment: ${form.type}
+Message: ${form.message}`;
 
-            const whatsappURL = `https://wa.me/919133633327?text=${text}`;
+            const whatsappURL =
+                "https://wa.me/919133633327?text=" +
+                encodeURIComponent(text);
 
             window.open(whatsappURL, "_blank");
 
-            alert("✅ Enquiry sent successfully!");
+            alert("✅ Redirecting to WhatsApp...");
 
             // ✅ Reset form
             setForm({
@@ -83,12 +73,10 @@ export default function ContactSection() {
         <section className="bg-black text-white py-16 px-6">
             <div className="max-w-4xl mx-auto">
 
-                {/* Heading */}
                 <h2 className="text-3xl font-bold mb-6 text-center">
                     Contact Us
                 </h2>
 
-                {/* Form */}
                 <form onSubmit={handleSubmit} className="grid gap-4">
 
                     <input
@@ -132,7 +120,7 @@ export default function ContactSection() {
                         disabled={loading}
                         className="bg-white text-black py-3 rounded font-semibold hover:bg-gray-200 transition"
                     >
-                        {loading ? "Sending..." : "Send Enquiry"}
+                        {loading ? "Opening WhatsApp..." : "Send via WhatsApp"}
                     </button>
 
                 </form>
