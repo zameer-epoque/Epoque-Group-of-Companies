@@ -1,36 +1,37 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import WhyChooseSEOSection from "../search-engine-optimization/WhyChooseSection";
-import FAQSection from "./FAQSection";
 
+import FAQSection from "./FAQSection";
+import WhyChooseSection from "./WhyChooseSection";
 
 export const metadata: Metadata = {
   title:
-    "Search Engine Optimization Services in Hyderabad | Best SEO Agency",
+    "Social Media Marketing Services in Hyderabad | Best SMM Agency",
   description:
-    "Leading SEO agency in Hyderabad offering technical SEO, local SEO, keyword ranking, content optimization, and link building services to grow organic traffic and generate qualified leads.",
+    "Top social media marketing agency in Hyderabad offering Instagram marketing, Facebook Ads, content creation, and lead generation services.",
   keywords: [
-    "SEO services Hyderabad",
-    "Search Engine Optimization Hyderabad",
-    "Technical SEO agency Hyderabad",
-    "Local SEO company Hyderabad",
-    "Best SEO agency India",
+    "Social Media Marketing Hyderabad",
+    "Instagram Marketing Hyderabad",
+    "Facebook Ads Agency Hyderabad",
+    "SMM services India",
   ],
   alternates: {
-    canonical: "https://epoquegroup.in/digital-marketing/seo-services",
+    canonical:
+      "https://epoquegroup.in/digital/social-media-marketing-hyderabad-india",
   },
   openGraph: {
     title:
-      "Best SEO Agency in Hyderabad | Search Engine Optimization Experts",
+      "Best Social Media Marketing Agency in Hyderabad | SMM Experts",
     description:
-      "Increase rankings, traffic & leads with expert SEO services in Hyderabad.",
-    url: "https://epoquegroup.in/digital-marketing/seo-services",
+      "Grow your brand with expert social media marketing services in Hyderabad.",
+    url:
+      "https://epoquegroup.in/digital/social-media-marketing-hyderabad-india",
     type: "website",
   },
 };
 
-export default function SEOServicePage() {
+export default function SocialMediaPage() {
   return (
     <div className="relative bg-black text-white overflow-hidden">
 
@@ -38,133 +39,90 @@ export default function SEOServicePage() {
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-[#C79A3B]/20 blur-[150px] rounded-full"></div>
       <div className="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-[#7A2E63]/20 blur-[150px] rounded-full"></div>
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section className="relative py-32 text-center px-6">
-
-        <div className="relative max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto">
 
           <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-            Best Search Engine Optimization Agency in{" "}
+            Best Social Media Marketing Agency in{" "}
             <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
               Hyderabad & Across India
             </span>
           </h1>
 
-          <div className="inline-block px-6 py-4 mt-6 rounded-full border border-orange-400 bg-white/5 text-[18px] text-gray-300 tracking-wide mb-8">
-            Hyderabad’s Performance-Driven SEO Experts
-          </div>
-
-          <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Epoque Group is a leading SEO agency in Hyderabad specializing in
-            technical SEO, on-page optimization, keyword research, content
-            marketing, and high-authority link building strategies. We help
-            startups, real estate brands, eCommerce businesses, and enterprises
-            improve Google rankings, increase organic traffic, and generate
-            sustainable inbound leads.
+          <p className="mt-6 text-lg text-gray-400 max-w-3xl mx-auto">
+            Epoque Group is a leading social media marketing agency in Hyderabad
+            specializing in Instagram marketing, Facebook Ads, content creation,
+            and lead generation strategies.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-            <span>✔ Technical SEO Optimization</span>
-            <span>✔ Local SEO Hyderabad</span>
-            <span>✔ Keyword Ranking Strategy</span>
-            <span>✔ High-Authority Link Building</span>
+            <span>✔ Instagram Marketing</span>
+            <span>✔ Facebook Ads</span>
+            <span>✔ Content Strategy</span>
+            <span>✔ Lead Generation</span>
           </div>
 
-          <div className="mt-14 flex flex-col md:flex-row justify-center gap-6">
-
+          <div className="mt-10 flex gap-6 justify-center">
             <Link
               href="/contact"
-              className="px-10 py-4 rounded-full font-semibold
-              bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63]
-              text-black hover:scale-105 transition duration-300 shadow-xl"
+              className="px-8 py-3 rounded-full bg-gradient-to-r from-[#C79A3B] to-[#7A2E63] text-black font-semibold"
             >
-              Get Free SEO Audit
+              Get Free Audit
             </Link>
 
             <Link
               href="/real-estate-digital-marketing-projects-epoque-group"
-              className="px-10 py-4 rounded-full font-semibold border border-white/20
-              hover:border-[#C79A3B] hover:text-[#C79A3B]
-              transition duration-300"
+              className="px-8 py-3 rounded-full border border-white/20"
             >
-              View SEO Case Studies
+              View Case Studies
             </Link>
-
           </div>
 
         </div>
       </section>
 
-      {/* ================= SERVICES SECTION ================= */}
-      <section className="relative py-12 px-6 bg-[#0c0c0d]">
+      {/* SERVICES */}
+      <section className="py-16 px-6 bg-[#0c0c0d]">
+        <div className="max-w-7xl mx-auto text-center">
 
-        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-semibold mb-10">
+            Social Media Marketing Services in Hyderabad
+          </h2>
 
-          <div className="max-w-3xl mx-auto text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
-              Search Engine Optimization Services in Hyderabad
-            </h2>
-
-            <p className="mt-8 text-gray-400 text-lg leading-relaxed">
-              Our SEO services are designed to improve website visibility,
-              strengthen domain authority, and increase qualified organic
-              traffic. We implement structured SEO frameworks that combine
-              technical excellence with content-driven growth strategies.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-16">
-
+          <div className="grid md:grid-cols-3 gap-10">
             {[
-              "Technical SEO & Website Optimization",
-              "On-Page SEO & Keyword Strategy",
-              "Local SEO for Hyderabad Businesses",
-              "Content Marketing & SEO Blogging",
-              "Backlink Building & Authority Growth",
-              "SEO Analytics & Performance Reporting",
-            ].map((service, index) => (
-              <div key={index} className="group relative">
-
-                <div className="absolute inset-0 rounded-xl bg-[#151516] opacity-0 group-hover:opacity-100 transition duration-500 border border-amber-600"></div>
-
-                <div className="relative p-10 transition duration-500 group-hover:-translate-y-3">
-
-                  <span className="text-sm text-orange-400 tracking-widest uppercase">
-                    0{index + 1}
-                  </span>
-
-                  <h3 className="text-2xl font-medium mt-6 mb-6 group-hover:text-orange-400 transition">
-                    {service}
-                  </h3>
-
-                  <p className="text-gray-400 leading-relaxed text-base">
-                    Structured SEO strategies aligned with Google’s algorithm
-                    updates to ensure sustainable ranking improvements and
-                    long-term organic traffic growth.
-                  </p>
-
-                  <div className="mt-8 h-[3px] w-12 bg-orange-400 group-hover:w-full transition-all duration-500"></div>
-
-                </div>
+              "Instagram Marketing",
+              "Facebook Ads",
+              "Content Creation",
+              "Lead Generation",
+              "Influencer Marketing",
+              "Analytics & Reporting",
+            ].map((item, i) => (
+              <div key={i} className="p-6 border border-white/10 rounded-lg">
+                <h3 className="text-xl font-semibold mb-3">{item}</h3>
+                <p className="text-gray-400">
+                  Performance-driven strategies to grow your business using social media.
+                </p>
               </div>
             ))}
-
           </div>
+
         </div>
       </section>
 
-      <WhyChooseSEOSection />
+      <WhyChooseSection />
       <FAQSection />
 
-      {/* SERVICE SCHEMA */}
+      {/* SCHEMA */}
       <Script
-        id="seo-service-schema"
+        id="schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Search Engine Optimization Services",
+            name: "Social Media Marketing Services",
             areaServed: "Hyderabad & India",
             provider: {
               "@type": "Organization",
