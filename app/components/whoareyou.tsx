@@ -91,9 +91,9 @@ export default function WhoWeAre() {
                                                 />
                                             </div>
 
-                                            <h3 className="font-heading text-2xl sm:text-3xl font-semibold mb-4">
+                                            <h2 className="font-heading text-2xl sm:text-3xl font-semibold mb-4">
                                                 {item.title}
-                                            </h3>
+                                            </h2>
 
                                             <p className="text-base sm:text-lg leading-relaxed text-gray-400">
                                                 {item.desc}
