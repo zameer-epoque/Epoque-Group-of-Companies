@@ -447,15 +447,38 @@ export default function Navbar() {
         </ul>
 
         {/* Hamburger */}
-        <button
+        {/* <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex flex-col gap-1"
         >
           <span className="w-6 h-[2px] bg-white" />
           <span className="w-6 h-[2px] bg-white" />
           <span className="w-6 h-[2px] bg-white" />
-        </button>
+        </button> */}
+{/* Hamburger */}
+<button
+  onClick={() => setOpen(!open)}
+  aria-label="Toggle Menu"
+  className="md:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg hover:bg-white/10 transition duration-300"
+>
+  <span
+    className={`block w-6 h-[2px] bg-white transition duration-300 ${
+      open ? "rotate-45 translate-y-[7px]" : ""
+    }`}
+  ></span>
 
+  <span
+    className={`block w-6 h-[2px] bg-white transition duration-300 ${
+      open ? "opacity-0" : ""
+    }`}
+  ></span>
+
+  <span
+    className={`block w-6 h-[2px] bg-white transition duration-300 ${
+      open ? "-rotate-45 -translate-y-[7px]" : ""
+    }`}
+  ></span>
+</button>
       </nav>
 
       {/* Mobile Menu */}
