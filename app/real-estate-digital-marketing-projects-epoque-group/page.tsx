@@ -50,7 +50,7 @@ const clients = [
         image: "/om-sree-builders-qualified-lead-generation.jpg",
         description:
             "Structured, criteria-based qualified lead generation delivering high-intent prospects.",
-        link: "https://om-sree.vercel.app/"
+        link: "/OmSree"
     }
 ]
 

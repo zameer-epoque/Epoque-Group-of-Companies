@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ClientLayout from "./components/ClientLayout";
 import "./globals.css";
+import WhatsappButton from "./components/WhatsappButton";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -201,6 +202,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </ClientLayout>
+        <WhatsappButton />
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
