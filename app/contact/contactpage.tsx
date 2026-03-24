@@ -73,9 +73,7 @@ export default function ContactPage() {
                     </h1>
 
                     <p className="mt-6 text-lg text-gray-400 leading-relaxed">
-                        Connect with our Hyderabad office for luxury villas,
-                        HMDA plots, premium interiors, digital marketing,
-                        and strategic revenue consulting.
+                     Contact Époque Group – Luxury Villas in Hyderabad, Gated Community Apartments in Hyderabad, Premium Interior Design, Digital Marketing Agency, Lead Generation, Performance Marketing, Lead Augmentation, and Strategic Revenue Consulting Services in Hyderabad.
                     </p>
                 </motion.div>
 
@@ -108,7 +106,7 @@ export default function ContactPage() {
                                                 rel="noopener noreferrer"
                                                 className="block w-full text-gray-400 hover:text-white transition-colors duration-300"
                                             >
-                                                902, Office No C3, Sattva Magnus Commercial Building,
+                                                902, Office No C4, Sattva Magnus Commercial Building,
                                                 Shaikpet, Jubilee Hills, Hyderabad, Telangana, India, 500008
                                             </a>
                                         </p>
@@ -246,9 +244,9 @@ export default function ContactPage() {
                                             required
                                             className="w-full px-5 py-4 rounded-xl border border-white/20 bg-black text-white focus:outline-none focus:border-orange-400 transition"
                                         >
-                                            <option value="">Select a Service</option>
-                                            <option value="Real Estate">Real Estate – Villas & Plots</option>
-                                            <option value="Interior Design">Luxury Interior Design</option>
+                                          <option value="">Select a Service</option>
+                                            <option value="Real Estate">Real Estate – Premium & Luxury Residences</option>
+                                            <option value="Interior Design">Elite Interior Design</option>
                                             <option value="Digital Marketing">Digital Marketing & SEO</option>
                                             <option value="Revenue Consulting">Business & Revenue Consulting</option>
                                         </select>
