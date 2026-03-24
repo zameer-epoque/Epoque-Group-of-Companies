@@ -2,12 +2,12 @@ import Link from "next/link"
 
 export default function PremiumCTA() {
     return (
-        <section className="py-8 bg-gradient-to-r from-yellow-200 via-amber-300 to-orange-200">
+        <section className="py-6 bg-gradient-to-r from-yellow-200 via-amber-300 to-orange-200">
 
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
 
                 {/* Text */}
-                <h3 className="text-black text-lg md:text-2xl font-bold tracking-wide text-center md:text-left">
+                <h3 className="text-black text-lg md:text-[20px] font-bold tracking-wide text-center md:text-left">
                    Discover Premium Luxury Residences, Digital Marketing, and Interior Design Services in Hyderabad.
                 </h3>
 
