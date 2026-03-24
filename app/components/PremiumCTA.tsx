@@ -8,7 +8,7 @@ export default function PremiumCTA() {
 
                 {/* Text */}
                 <h3 className="text-black text-lg md:text-2xl font-bold tracking-wide text-center md:text-left">
-                    Looking for Villas,  Digital Marketing or Interior Design in Hyderabad?
+                    Looking for Villas, premium apartments, and gated community   Digital Marketing or Interior Design in Hyderabad?
                 </h3>
 
                 {/* Button */}
