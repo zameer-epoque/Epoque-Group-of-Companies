@@ -45,7 +45,7 @@ export default function Footer() {
           />
 
           <p className="text-white/80 text-sm md:text-base leading-relaxed">
-          Epoque Group is a Hyderabad-based performance marketing enterprise specializing in structured lead generation and delivering high-quality, qualified buyer enquiries.
+         Époque Group is a Hyderabad-based Lead Augmentation enterprise specializing in performance-driven marketing, structured lead conversion systems, and the delivery of high intent, qualified enquiries.
           </p>
 
           {/* ===== SOCIAL MEDIA ===== */}
