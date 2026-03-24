@@ -73,7 +73,7 @@ export default function ContactPage() {
                     </h1>
 
                     <p className="mt-6 text-lg text-gray-400 leading-relaxed">
-                     Contact Époque Group – Luxury Villas in Hyderabad, Gated Community Apartments in Hyderabad, Premium Interior Design, Digital Marketing Agency, Lead Generation, Performance Marketing, Lead Augmentation, and Strategic Revenue Consulting Services in Hyderabad.
+                     Contact Époque Group – Luxury Villas in Hyderabad, Gated Community Apartments in Hyderabad, Premium Interior Design, Digital Marketing Agency, Lead Generation, Performance Marketing, Lead Augmentation, and Strategic Revenue Consulting Services.
                     </p>
                 </motion.div>
 

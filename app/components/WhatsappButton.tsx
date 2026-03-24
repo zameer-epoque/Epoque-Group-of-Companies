@@ -41,13 +41,13 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsappButton() {
   return (
-    <a
-      href="https://wa.me/919133633327?text=Hello%20Epoque%20Group%20of%20Companies,%20I%20would%20like%20to%20enquire%20about%20your%20professional%20services.%20Kindly%20assist%20me%20with%20more%20details."
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Contact Epoch Group of Companies via WhatsApp for digital marketing and web services"
-      className="fixed bottom-5 right-5 z-[9999] flex items-center gap-3"
-    >
+   <a
+  href="https://wa.me/919133633327?text=Hello%20%C3%89poque%20Group,%20I%20would%20like%20to%20enquire%20about%20your%20services,%20including%20luxury%20residences,%20premium%20interior%20design,%20digital%20marketing,%20lead%20generation,%20and%20strategic%20revenue%20consulting.%20Kindly%20share%20more%20details%20regarding%20your%20service%20offerings,%20process,%20and%20the%20next%20steps%20to%20proceed."
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Contact Époque Group via WhatsApp for services enquiry"
+  className="fixed bottom-5 right-5 z-[9999] flex items-center gap-3"
+>
 
       {/* Text Bubble */}
       <span className=" text-white px-4 py-2 rounded-full shadow-md text-sm font-medium whitespace-nowrap">
