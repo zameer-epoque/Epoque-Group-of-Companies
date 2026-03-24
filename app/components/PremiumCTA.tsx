@@ -7,8 +7,8 @@ export default function PremiumCTA() {
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
 
                 {/* Text */}
-                <h3 className="text-black text-lg md:text-2xl font-bold tracking-wide text-center md:text-left">
-                    Looking for Villas, premium apartments, and gated community   Digital Marketing or Interior Design in Hyderabad?
+                <h3 className="text-black text-lg md:text-1xl font-bold tracking-wide text-center md:text-left">
+                   Discover Premium Luxury Residences, Digital Marketing, and Interior Design Services in Hyderabad.
                 </h3>
 
                 {/* Button */}
