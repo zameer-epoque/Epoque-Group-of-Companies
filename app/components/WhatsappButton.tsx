@@ -42,7 +42,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsappButton() {
   return (
     <a
-      href="https://wa.me/919133633327?text=Hello%20Epoch%20Group%20of%20Companies,%20I%20would%20like%20to%20enquire%20about%20your%20professional%20services.%20Kindly%20assist%20me%20with%20more%20details."
+      href="https://wa.me/919133633327?text=Hello%20Epoque%20Group%20of%20Companies,%20I%20would%20like%20to%20enquire%20about%20your%20professional%20services.%20Kindly%20assist%20me%20with%20more%20details."
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact Epoch Group of Companies via WhatsApp for digital marketing and web services"
