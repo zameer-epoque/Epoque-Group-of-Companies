@@ -51,7 +51,7 @@ export default function Hero() {
           <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
             Business Growth Solutions
           </span>{" "}
-          in Hyderabad
+         
         </motion.h1>
 
         {/* Supporting Paragraph */}
