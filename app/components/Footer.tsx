@@ -245,8 +245,17 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="relative border-t border-white/10 py-6">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm text-white/80">
-          © 2026 Epoque Group of Companies | Real Estate, Interiors & Digital Marketing in Hyderabad
-        </div>
+  © 2026{" "}
+  <a 
+    href="https://epoquegroup.in/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    Epoque Group of Companies
+  </a>{" "}
+  | Real Estate, Interiors & Digital Marketing in Hyderabad
+</div>
       </div>
 
     </footer>
