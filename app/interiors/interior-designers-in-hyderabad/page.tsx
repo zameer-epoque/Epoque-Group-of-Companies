@@ -75,7 +75,7 @@ export default function InteriorDesignersHyderabad() {
             <FAQSection />
             {/* FAQ SECTION */}
 
-            <Script
+            {/* <Script
                 id="faq-schema"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -134,7 +134,7 @@ export default function InteriorDesignersHyderabad() {
                         ]
                     })
                 }}
-            />
+            /> */}
 
         </main>
     )
