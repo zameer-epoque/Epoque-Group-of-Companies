@@ -204,7 +204,7 @@ export default function RootLayout({
         </ClientLayout>
         <WhatsappButton />
         {/* Meta Pixel */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
+       <Script id="facebook-pixel" strategy="lazyOnload">
           {`
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -220,11 +220,11 @@ export default function RootLayout({
   `}
         </Script>
         {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-JJLRVZTZKB"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
+       <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-JJLRVZTZKB"
+  strategy="lazyOnload"
+/>
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
