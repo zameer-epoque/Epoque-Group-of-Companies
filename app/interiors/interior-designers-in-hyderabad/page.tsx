@@ -43,7 +43,7 @@ export default function InteriorDesignersHyderabad() {
               href="/contact"
               className="px-12 py-5 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold shadow-lg hover:scale-105 transition"
             >
-              Book Free Consultation
+              Book Free Consultation 
             </Link>
           </div>
 
@@ -71,7 +71,7 @@ export default function InteriorDesignersHyderabad() {
 
             <p className="text-gray-400">
               We focus on modern design, space planning, and premium materials to
-              create interiors that are both stylish and functional.
+              create interiors that are both stylish and functionalty.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-4 text-sm">
