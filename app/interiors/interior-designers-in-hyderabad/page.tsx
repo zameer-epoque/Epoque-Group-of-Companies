@@ -51,7 +51,7 @@ export default function InteriorDesignersHyderabad() {
       </section>
 
       {/* ABOUT */}
-      <section className="relative py-28 px-6 bg-[#0B0F19] overflow-hidden">
+      <section className="relative py-4 px-6 bg-[#0B0F19] overflow-hidden">
 
         <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-orange-500/20 blur-[120px] rounded-full"></div>
 
@@ -108,7 +108,7 @@ export default function InteriorDesignersHyderabad() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-28 px-6 bg-[#111827]">
+      <section className="py-4 px-6 bg-[#111827]">
         <div className="max-w-7xl mx-auto">
 
           <h2 className="text-4xl font-bold text-center mb-16">

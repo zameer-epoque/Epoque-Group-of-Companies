@@ -48,7 +48,7 @@ export default function FAQSection() {
   return (
     <>
       {/* FAQ SECTION */}
-      <section className="py-24 px-6 bg-[#0B0F19] text-white border-t border-[#D4AF37]/20">
+      <section className="py-12 px-6 bg-[#0B0F19] text-white border-t border-[#D4AF37]/20">
         <div className="max-w-5xl mx-auto">
 
           {/* Heading */}

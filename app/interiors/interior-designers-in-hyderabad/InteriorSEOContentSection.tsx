@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function InteriorLongSEOSection() {
   return (
-    <section className="py-28 px-6 bg-[#0B0F19] text-white">
+    <section className="py-12 px-6 bg-[#0B0F19] text-white">
       <div className="max-w-5xl mx-auto space-y-14">
 
         {/* TITLE */}

@@ -5,7 +5,7 @@ import { CheckCircle, Home } from "lucide-react";
 
 export default function WhyChooseSection() {
   return (
-    <section className="relative py-20 px-6 bg-[#0F172A] text-white border-t border-[#D4AF37]/20 overflow-hidden">
+    <section className="relative py-12 px-6 bg-[#0F172A] text-white border-t border-[#D4AF37]/20 overflow-hidden">
 
       {/* Glow */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#D4AF37]/10 blur-[180px] rounded-full"></div>
