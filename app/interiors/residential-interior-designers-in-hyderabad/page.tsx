@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import FAQSection from "./FAQSection";
 import WhyChooseSection from "./WhyChooseSection";
+import ResidentialInteriorSEOSection from "./ResidentialInteriorSEOSection";
 
 export const metadata: Metadata = {
     title:
@@ -25,61 +26,106 @@ export const metadata: Metadata = {
 
 export default function ResidentialInteriorPage() {
     return (
-        <main className="relative bg-[#0B0F19] text-white overflow-hidden">
+       <main className="relative bg-[#0B0F19] text-white overflow-hidden">
 
-            {/* Gold Glow */}
-            <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[150px] rounded-full"></div>
-            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[150px] rounded-full"></div>
+  {/* Gold Glow */}
+  <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[150px] rounded-full"></div>
+  <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[150px] rounded-full"></div>
 
-            {/* HERO */}
-            <section className="relative py-32 px-6 text-center">
-                <div className="max-w-5xl mx-auto space-y-8">
+  {/* HERO */}
+  <section className="relative py-32 px-6 text-center">
+    <div className="max-w-5xl mx-auto space-y-10">
 
-                    <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
-                        Residential Interior Designers in{" "}
-                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Hyderabad
-                        </span>
-                    </h1>
+      {/* TITLE */}
+      <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
+        Residential Interior Designers in{" "}
+        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+          Hyderabad
+        </span>
+      </h1>
 
-                    <div className="inline-block px-8 py-4 rounded-full 
-            border border-[#D4AF37]/40 bg-[#111827] 
-            text-[17px] text-gray-300 tracking-wide">
-                        Luxury Home & Villa Interior Specialists
-                    </div>
+      {/* TAG */}
+      <div className="inline-block px-8 py-4 rounded-full 
+      border border-[#D4AF37]/40 bg-[#111827] 
+      text-[17px] text-gray-300 tracking-wide">
+        Luxury Home • Villa • Apartment Interiors
+      </div>
 
-                    <p className="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
-                        Epoque Group delivers premium residential interior design
-                        services for villas, independent houses and apartments across
-                        Hyderabad’s most sought-after neighborhoods.
-                    </p>
+      {/* MAIN DESCRIPTION */}
+      <p className="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+        Epoque Group is a leading residential interior designer in Hyderabad,
+        delivering premium interior solutions for villas, apartments, and
+        independent homes. We create elegant, modern, and functional living
+        spaces designed to enhance your lifestyle and comfort.
+      </p>
 
-                    <p className="max-w-3xl mx-auto text-gray-400 leading-relaxed">
-                        We design elegant, functional and timeless interiors tailored
-                        to your lifestyle. From bespoke concept development to turnkey
-                        execution, every residential project is crafted with precision
-                        and luxury detailing.
-                    </p>
+      {/* EXTRA DESCRIPTION */}
+      <p className="max-w-3xl mx-auto text-gray-400 leading-relaxed">
+        From concept design and space planning to turnkey execution, our expert
+        designers ensure every detail is crafted with precision, luxury, and
+        high-quality materials to create timeless interiors.
+      </p>
 
-                    <div className="pt-8">
-                        <Link
-                            href="/contact"
-                            className="px-14 py-5 rounded-full font-semibold text-black
-                            bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
-              hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]
-              transition-all duration-300 shadow-xl"
-                        >
-                            Get Residential Interior Consultation
-                        </Link>
-                    </div>
+      {/* SERVICES HIGHLIGHT */}
+      <div className="flex flex-wrap justify-center gap-4 pt-4 text-sm text-gray-300">
+        <span className="px-4 py-2 border border-white/10 rounded-full">
+          Villa Interiors
+        </span>
+        <span className="px-4 py-2 border border-white/10 rounded-full">
+          Apartment Interiors
+        </span>
+        <span className="px-4 py-2 border border-white/10 rounded-full">
+          Modular Kitchens
+        </span>
+        <span className="px-4 py-2 border border-white/10 rounded-full">
+          Bedroom Designs
+        </span>
+        <span className="px-4 py-2 border border-white/10 rounded-full">
+          Turnkey Solutions
+        </span>
+      </div>
 
-                </div>
-            </section>
+      {/* STATS / TRUST */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 text-center">
+        <div>
+          <h3 className="text-2xl font-semibold text-yellow-400">100+</h3>
+          <p className="text-gray-400 text-sm">Projects Completed</p>
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold text-yellow-400">10+</h3>
+          <p className="text-gray-400 text-sm">Years Experience</p>
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold text-yellow-400">50+</h3>
+          <p className="text-gray-400 text-sm">Design Concepts</p>
+        </div>
+        <div>
+          <h3 className="text-2xl font-semibold text-yellow-400">100%</h3>
+          <p className="text-gray-400 text-sm">Client Satisfaction</p>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="pt-10">
+        <Link
+          href="/contact"
+          className="px-14 py-5 rounded-full font-semibold text-black
+          bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
+          hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]
+          transition-all duration-300 shadow-xl"
+        >
+          Get Residential Interior Consultation
+        </Link>
+      </div>
+
+    </div>
+  </section>
+
 
             {/* SERVICES SECTION */}
 
             {/* WHY CHOOSE SECTION */}
-
+<ResidentialInteriorSEOSection/>
             <WhyChooseSection />
             <FAQSection />
             {/* FAQ SCHEMA */}
