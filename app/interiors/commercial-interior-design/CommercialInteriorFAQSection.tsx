@@ -49,7 +49,7 @@ export default function CommercialInteriorFAQSection() {
   return (
     <>
       {/* FAQ SECTION */}
-      <section className="py-24 px-6 bg-[#0B0F19] text-white border-t border-white/10">
+      <section className="py-12 px-6 bg-[#0B0F19] text-white border-t border-white/10">
         <div className="max-w-5xl mx-auto">
 
           {/* HEADER */}

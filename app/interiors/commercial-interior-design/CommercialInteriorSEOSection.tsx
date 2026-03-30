@@ -1,6 +1,6 @@
 export default function CommercialInteriorSEOSection() {
   return (
-    <section className="py-24 px-6 bg-[#111827]">
+    <section className="py-12 px-6 bg-[#111827]">
       <div className="max-w-6xl mx-auto space-y-10">
 
         {/* MAIN TITLE */}

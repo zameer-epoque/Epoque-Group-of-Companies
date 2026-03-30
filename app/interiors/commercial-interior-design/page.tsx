@@ -45,7 +45,7 @@ export default function CommercialInteriorDesignPage() {
       </section>
 
       {/* ABOUT */}
-      <section className="py-20 px-6 max-w-6xl mx-auto space-y-6">
+      <section className="py-12 px-6 max-w-6xl mx-auto space-y-6">
         <h2 className="text-3xl font-semibold">
           Best Commercial Interior Designers in Hyderabad
         </h2>
@@ -69,7 +69,7 @@ export default function CommercialInteriorDesignPage() {
       <CommercialInteriorFAQSection />
 
       {/* CTA */}
-      <section className="py-20 text-center bg-[#111827]">
+      <section className="py-12 text-center bg-[#111827]">
         <h2 className="text-3xl md:text-4xl font-semibold">
           Transform Your Commercial Space Today
         </h2>

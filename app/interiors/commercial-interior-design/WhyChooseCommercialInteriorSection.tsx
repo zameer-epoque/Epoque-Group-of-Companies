@@ -27,7 +27,7 @@ export default function WhyChooseCommercialInteriorSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#111827] text-white">
+    <section className="py-12 px-6 bg-[#111827] text-white">
       <div className="max-w-6xl mx-auto">
 
         {/* HEADER */}
