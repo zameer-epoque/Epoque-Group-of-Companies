@@ -1,22 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
-import dynamic from "next/dynamic";
 
 import CommercialInteriorFAQSection from "./CommercialInteriorFAQSection";
 import WhyChooseCommercialInteriorSection from "./WhyChooseCommercialInteriorSection";
-
-// ✅ LAZY LOAD SEO SECTION (MAIN FIX)
-const CommercialInteriorSEOSection = dynamic(
-  () => import("./CommercialInteriorSEOSection"),
-  {
-    loading: () => (
-      <p className="text-center text-gray-400 py-10">
-        Loading content...
-      </p>
-    ),
-  }
-);
+import CommercialInteriorSEOSection from "./CommercialInteriorSEOSection";
 
 export const metadata: Metadata = {
   title:
@@ -64,16 +52,42 @@ export default function CommercialInteriorDesignPage() {
 
         <p className="text-gray-300">
           We create modern, functional, and high-performance commercial spaces
-          designed to improve productivity and brand identity.
+          designed to improve productivity, efficiency, and brand identity.
+        </p>
+
+        <p className="text-gray-400">
+          Our commercial interior design services include office interiors,
+          corporate workspaces, retail environments, and turnkey solutions
+          tailored to your business requirements.
         </p>
       </section>
-
-      {/* ✅ SEO SECTION (LAZY LOADED) */}
-      <CommercialInteriorSEOSection />
-
-      {/* OTHER SECTIONS */}
+<CommercialInteriorSEOSection/>
+      {/* WHY CHOOSE */}
       <WhyChooseCommercialInteriorSection />
+
+      {/* FAQ */}
       <CommercialInteriorFAQSection />
+
+      {/* CTA */}
+      <section className="py-20 text-center bg-[#111827]">
+        <h2 className="text-3xl md:text-4xl font-semibold">
+          Transform Your Commercial Space Today
+        </h2>
+
+        <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+          Get expert commercial interior design solutions in Hyderabad for
+          offices, retail spaces, and corporate environments.
+        </p>
+
+        <div className="mt-8">
+          <Link
+            href="/contact"
+            className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold hover:scale-105 transition"
+          >
+            Get Free Consultation
+          </Link>
+        </div>
+      </section>
 
       {/* SCHEMA */}
       <Script
