@@ -2,140 +2,168 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
 import FAQSection from "./FAQSection"
-
 import WhyChooseSection from "./WhyChooseSection"
 
 export const metadata: Metadata = {
-    title:
-        "Best Interior Designers in Hyderabad | Luxury Home & Office Interiors",
-    description:
-        "Top interior designers in Hyderabad offering luxury villa interiors, modular kitchens, office interiors and turnkey solutions in Kokapet, Gachibowli, Jubilee Hills & Financial District.",
-    alternates: {
-        canonical:
-            "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
-    },
-    openGraph: {
-        title: "Best Interior Designers in Hyderabad",
-        description:
-            "Luxury residential and commercial interior designers in Hyderabad.",
-        url: "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
-        type: "website",
-    },
+  title:
+    "Best Interior Designers in Hyderabad | Luxury Home & Office Interiors",
+  description:
+    "Top interior designers in Hyderabad offering luxury villa interiors, modular kitchens, office interiors and turnkey solutions.",
+  alternates: {
+    canonical:
+      "https://epoquegroup.in/interiors/interior-designers-in-hyderabad",
+  },
 }
 
 export default function InteriorDesignersHyderabad() {
-    return (
-        <main className="bg-[#0a0a0a] text-white">
+  return (
+    <main className="bg-[#0a0a0a] text-white">
 
-            {/* HERO SECTION */}
-            <section className="relative py-32 px-6 text-center overflow-hidden">
+      {/* HERO */}
+      <section className="py-32 px-6 text-center">
+        <div className="max-w-4xl mx-auto">
 
-                <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-orange-500/20 blur-[150px] rounded-full"></div>
-                <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-red-500/20 blur-[150px] rounded-full"></div>
+          <h1 className="text-5xl md:text-6xl font-bold">
+            Interior Designers in Hyderabad
+          </h1>
 
-                <div className="relative max-w-4xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                        Interior Designers in{" "}
-                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Hyderabad
-                        </span>
-                    </h1>
+          <p className="mt-6 text-gray-300">
+            Epoque Group is one of the best interior designers in Hyderabad
+            offering premium residential and commercial interior design services.
+          </p>
 
-                    <p className="max-w-3xl mx-auto text-lg mt-8 text-gray-300 leading-relaxed">
-                        We are a premium interior design company in Hyderabad delivering
-                        luxury residential interiors, villa interiors and commercial
-                        interior solutions across Kokapet, Gachibowli, Jubilee Hills,
-                        Financial District and Banjara Hills.
-                    </p>
+          <p className="mt-4 text-gray-400">
+            We design luxury home interiors, modular kitchens, villa interiors,
+            and office spaces with modern aesthetics and functional planning.
+          </p>
 
-                    {/* ✅ Added SEO Content */}
-                    <p className="max-w-3xl mx-auto text-gray-300 mt-6 leading-relaxed">
-                        As one of the leading interior designers in Hyderabad, we specialize
-                        in creating bespoke interiors that combine functionality, aesthetics
-                        and long-lasting quality. Our team handles everything from design
-                        planning to final installation with precision and professionalism.
-                    </p>
+          <div className="mt-10">
+            <Link
+              href="/contact"
+              className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold"
+            >
+              Book Free Consultation
+            </Link>
+          </div>
 
-                    <div className="mt-12">
-                        <Link
-                            href="/contact"
-                            className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold hover:scale-105 transition duration-300 shadow-xl"
-                        >
-                            Book Free Consultation
-                        </Link>
-                    </div>
-                </div>
-            </section>
+        </div>
+      </section>
 
-            {/* SERVICES SECTION */}
+      {/* ABOUT */}
+      <section className="py-24 px-6 max-w-6xl mx-auto space-y-6">
+        <h2 className="text-3xl font-semibold">
+          Top Interior Designers in Hyderabad
+        </h2>
 
+        <p className="text-gray-300">
+          Epoque Group is a leading interior design company in Hyderabad known
+          for delivering luxury residential and commercial interiors. We provide
+          customized solutions for apartments, villas, offices and retail spaces.
+        </p>
 
-            {/* NEW SEO SECTION (ADDED WITHOUT CHANGING STRUCTURE) */}
-            <WhyChooseSection />
-            <FAQSection />
-            {/* FAQ SECTION */}
+        <p className="text-gray-400">
+          Our team focuses on space planning, modern design trends, and premium
+          materials to create interiors that are both stylish and functional.
+        </p>
+      </section>
 
-            {/* <Script
-                id="faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        "mainEntity": [
-                            {
-                                "@type": "Question",
-                                "name": "How much does interior design cost in Hyderabad?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Interior design costs in Hyderabad typically range from ₹1,200 to ₹2,500 per sq.ft depending on materials and customization."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Do you provide turnkey interior solutions?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Yes, we provide complete turnkey interior execution including design planning, 3D visualization and installation."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "How long does a home interior project take?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "A 2BHK project takes 30–45 days, while villas may require 60–90 days depending on scope."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Which areas in Hyderabad do you serve?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "We serve Kokapet, Gachibowli, Jubilee Hills, Financial District and Banjara Hills."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Do you provide warranty on interior work?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Yes, we provide warranty coverage on modular installations and workmanship."
-                                }
-                            },
-                            {
-                                "@type": "Question",
-                                "name": "Can you customize interiors as per Vastu?",
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": "Yes, we design interiors aligned with Vastu principles while maintaining modern aesthetics."
-                                }
-                            }
-                        ]
-                    })
-                }}
-            /> */}
+      {/* SERVICES */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-10">
+            Our Interior Design Services
+          </h2>
 
-        </main>
-    )
+          <div className="grid md:grid-cols-3 gap-8">
+
+            <div>
+              <h3 className="text-xl font-semibold">Home Interiors</h3>
+              <p className="text-gray-400">
+                Complete home interior design solutions including living rooms,
+                bedrooms and modular kitchens.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Villa Interiors</h3>
+              <p className="text-gray-400">
+                Luxury villa interiors with premium materials and customized designs.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Office Interiors</h3>
+              <p className="text-gray-400">
+                Professional office interiors designed for productivity and branding.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          Our Interior Design Process
+        </h2>
+
+        <p className="text-gray-400">
+          We follow a structured process including consultation, concept design,
+          execution and final delivery to ensure high-quality results.
+        </p>
+      </section>
+
+      {/* COST */}
+      <section className="py-24 px-6 bg-[#111827] text-center">
+        <h2 className="text-3xl font-semibold">
+          Interior Design Cost in Hyderabad
+        </h2>
+
+        <p className="text-gray-400 mt-4 max-w-3xl mx-auto">
+          Interior design costs in Hyderabad range from ₹1200 to ₹3000 per sq.ft
+          depending on materials, customization and project complexity.
+        </p>
+      </section>
+
+      {/* LOCATION SEO */}
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-semibold">
+          Interior Designers Near You in Hyderabad
+        </h2>
+
+        <p className="text-gray-400">
+          We provide interior design services across Gachibowli, Kokapet,
+          Jubilee Hills, Financial District, Banjara Hills and other prime areas.
+        </p>
+      </section>
+
+      {/* INTERNAL LINK */}
+      <div className="text-center py-10">
+        <Link href="/contact" className="text-yellow-400 underline">
+          Contact Us for Interior Design Services
+        </Link>
+      </div>
+
+      {/* EXISTING COMPONENTS */}
+      <WhyChooseSection />
+      <FAQSection />
+
+      {/* SCHEMA */}
+      <Script
+        id="schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Epoque Group",
+            areaServed: "Hyderabad",
+            url: "https://epoquegroup.in",
+          }),
+        }}
+      />
+
+    </main>
+  )
 }

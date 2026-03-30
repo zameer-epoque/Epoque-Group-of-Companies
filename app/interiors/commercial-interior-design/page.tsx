@@ -74,7 +74,29 @@ text-[17px] text-gray-300 tracking-wide">
 
         </div>
       </section>
+{/* ABOUT COMMERCIAL INTERIORS */}
+<section className="py-24 px-6">
+  <div className="max-w-6xl mx-auto space-y-6">
 
+    <h2 className="text-3xl md:text-4xl font-semibold">
+      Best Commercial Interior Designers in Hyderabad
+    </h2>
+
+    <p className="text-gray-300 leading-relaxed">
+      Epoque Group is recognized as one of the best commercial interior designers in Hyderabad,
+      delivering innovative and functional design solutions for modern businesses. We specialize
+      in creating office interiors, corporate environments, retail outlets and commercial spaces
+      that reflect your brand identity and business goals.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      Our expert team focuses on space optimization, modern aesthetics, and ergonomic design to
+      enhance productivity and employee well-being. Whether you need a complete office setup or
+      renovation, we provide end-to-end commercial interior solutions in Hyderabad.
+    </p>
+
+  </div>
+</section>
       {/* WHY CHOOSE SECTION */}
       <WhyChooseCommercialInteriorSection />
 

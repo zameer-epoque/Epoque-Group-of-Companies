@@ -5,121 +5,166 @@ import FAQSection from "./FAQSection";
 import WhyChooseSection from "./WhyChooseSection";
 
 export const metadata: Metadata = {
-    title:
-        "Luxury Interior Design in Hyderabad | Premium Villa & Home Interiors",
-    description:
-        "Epoque Group offers luxury interior design services in Hyderabad specializing in high-end villa interiors, premium apartments, bespoke home interiors and turnkey luxury execution.",
-    alternates: {
-        canonical:
-            "https://epoquegroup.in/interiors/luxury-interior-design",
-    },
-    openGraph: {
-        title:
-            "Luxury Interior Design in Hyderabad | Epoque Group",
-        description:
-            "Premium luxury villa and residential interior design services in Hyderabad.",
-        url: "https://epoquegroup.in/interiors/luxury-interior-design",
-        type: "website",
-    },
+  title:
+    "Luxury Interior Designers in Hyderabad | Villa & Premium Home Interiors",
+  description:
+    "Epoque Group offers luxury interior design services in Hyderabad for villas, apartments and premium homes with turnkey execution.",
+  alternates: {
+    canonical:
+      "https://epoquegroup.in/interiors/luxury-interior-design",
+  },
 };
 
 export default function LuxuryInteriorDesignPage() {
-    return (
-        <main className="relative bg-[#0B0F19] text-white overflow-hidden">
+  return (
+    <main className="bg-[#0B0F19] text-white">
 
-            {/* Subtle Gold Glow */}
-            <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[150px] rounded-full"></div>
-            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-[#D4AF37]/10 blur-[150px] rounded-full"></div>
+      {/* HERO */}
+      <section className="py-32 px-6 text-center">
+        <div className="max-w-4xl mx-auto space-y-6">
 
-            {/* HERO SECTION */}
-            <section className="relative py-32 px-6 text-center overflow-hidden">
-                <div className="relative max-w-4xl mx-auto space-y-8">
+          <h1 className="text-5xl md:text-6xl font-semibold">
+            Luxury Interior Design in Hyderabad
+          </h1>
 
-                    <h1 className="text-5xl md:text-6xl font-semibold leading-tight">
-                        Luxury Interior Design in{" "}
-                        <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Hyderabad
-                        </span>
-                    </h1>
+          <p className="text-gray-300">
+            Epoque Group is a leading luxury interior designer in Hyderabad
+            delivering high-end villa interiors, premium apartments and bespoke
+            residential design solutions.
+          </p>
 
-                    <div className="inline-block px-8 py-4 rounded-full 
-            border border-[#D4AF37]/40 bg-[#111827] 
-            text-[17px] text-gray-300 tracking-wide">
-                        Premium Villa & High-End Residential Interior Specialists
-                    </div>
+          <p className="text-gray-400">
+            We create elegant interiors using premium materials, modern concepts
+            and precision craftsmanship tailored for luxury living.
+          </p>
 
-                    <p className="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
-                        Epoque Group delivers ultra-premium luxury interior design services
-                        in Hyderabad for villas, penthouses and high-end residences.
-                        We create sophisticated living spaces that reflect elegance,
-                        exclusivity and timeless design.
-                    </p>
+          <div className="pt-6">
+            <Link
+              href="/contact"
+              className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold"
+            >
+              Book Luxury Consultation
+            </Link>
+          </div>
 
-                    <p className="max-w-3xl mx-auto text-gray-400 leading-relaxed">
-                        From bespoke concept development and curated material selection
-                        to turnkey execution and precision craftsmanship, our luxury
-                        interior projects are designed for discerning homeowners who
-                        expect perfection in every detail.
-                    </p>
+        </div>
+      </section>
 
-                    <div className="pt-8">
-                        <Link
-                            href="/contact"
-                            className="px-14 py-5 rounded-full font-semibold text-black
-                            bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500
-              hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.35)]
-              transition-all duration-300 shadow-xl"
-                        >
-                            Book Luxury Interior Consultation
-                        </Link>
-                    </div>
+      {/* ABOUT */}
+      <section className="py-24 px-6 max-w-6xl mx-auto space-y-6">
+        <h2 className="text-3xl font-semibold">
+          Luxury Interior Designers in Hyderabad
+        </h2>
 
-                </div>
-            </section>
+        <p className="text-gray-300">
+          Epoque Group specializes in luxury interior design for villas,
+          penthouses and premium apartments in Hyderabad. Our designs focus
+          on elegance, comfort and timeless aesthetics.
+        </p>
 
-            <WhyChooseSection />
-            <FAQSection />
+        <p className="text-gray-400">
+          We combine innovative concepts, high-end materials and expert
+          craftsmanship to deliver interiors that reflect sophistication and
+          exclusivity.
+        </p>
+      </section>
 
+      {/* SERVICES */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-10">
+            Our Luxury Interior Services
+          </h2>
 
+          <div className="grid md:grid-cols-3 gap-8">
 
-            {/* FAQ SCHEMA */}
-            <Script
-                id="luxury-interior-faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: "How much does luxury interior design cost in Hyderabad?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Luxury interior design projects typically range from ₹1,800 to ₹3,500 per sq.ft depending on materials, customization and design complexity.",
-                                },
-                            },
-                            {
-                                "@type": "Question",
-                                name: "Do you provide turnkey luxury interior execution?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Yes, we provide complete turnkey luxury interior execution including bespoke design planning, premium material sourcing and final installation.",
-                                },
-                            },
-                            {
-                                "@type": "Question",
-                                name: "How long does a luxury villa interior project take?",
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: "Luxury villa interior projects typically take 60–90 days depending on scale, customization and finishing standards.",
-                                },
-                            },
-                        ],
-                    }),
-                }}
-            />
+            <div>
+              <h3 className="text-xl font-semibold">Luxury Villa Interiors</h3>
+              <p className="text-gray-400">
+                High-end villa interiors with premium materials and custom design concepts.
+              </p>
+            </div>
 
-        </main>
-    );
+            <div>
+              <h3 className="text-xl font-semibold">Premium Apartment Interiors</h3>
+              <p className="text-gray-400">
+                Elegant interiors designed for modern luxury apartments and penthouses.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Turnkey Interior Solutions</h3>
+              <p className="text-gray-400">
+                Complete interior execution from concept to final delivery.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="py-24 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          Our Luxury Interior Design Process
+        </h2>
+
+        <p className="text-gray-400">
+          We follow a structured process including consultation, concept design,
+          material selection, execution and final delivery to ensure perfection.
+        </p>
+      </section>
+
+      {/* COST */}
+      <section className="py-24 px-6 bg-[#111827] text-center">
+        <h2 className="text-3xl font-semibold">
+          Luxury Interior Design Cost in Hyderabad
+        </h2>
+
+        <p className="text-gray-400 mt-4 max-w-3xl mx-auto">
+          Luxury interior design costs typically range from ₹1800 to ₹4000 per sq.ft
+          depending on materials, customization and design complexity.
+        </p>
+      </section>
+
+      {/* LOCATION SEO */}
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-semibold">
+          Luxury Interior Designers Near You in Hyderabad
+        </h2>
+
+        <p className="text-gray-400">
+          We provide luxury interior design services across Jubilee Hills,
+          Banjara Hills, Gachibowli, Kokapet and Financial District.
+        </p>
+      </section>
+
+      {/* CTA */}
+      <div className="text-center py-10">
+        <Link href="/contact" className="text-yellow-400 underline">
+          Contact Us for Luxury Interior Design
+        </Link>
+      </div>
+
+      {/* EXISTING COMPONENTS */}
+      <WhyChooseSection />
+      <FAQSection />
+
+      {/* SCHEMA */}
+      <Script
+        id="schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Epoque Group",
+            areaServed: "Hyderabad",
+            url: "https://epoquegroup.in",
+          }),
+        }}
+      />
+
+    </main>
+  );
 }

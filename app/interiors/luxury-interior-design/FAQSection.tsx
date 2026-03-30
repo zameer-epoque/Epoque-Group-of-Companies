@@ -5,136 +5,151 @@ import Script from "next/script";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQSection() {
-    const [active, setActive] = useState<number | null>(0);
+  const [active, setActive] = useState<number | null>(0);
 
-    const faqs = [
-        {
-            question: "How much does luxury interior design cost in Hyderabad?",
-            answer:
-                "Luxury interior design projects in Hyderabad typically range from ₹1,800 to ₹3,500 per sq.ft depending on materials, customization level, imported finishes and overall project scale.",
-        },
-        {
-            question: "Do you provide complete turnkey luxury interior execution?",
-            answer:
-                "Yes. We offer full turnkey luxury interior services including concept design, 3D visualization, premium material sourcing, custom furniture manufacturing and final installation.",
-        },
-        {
-            question: "How long does a luxury villa interior project take?",
-            answer:
-                "Luxury villa interiors generally take 60–90 days depending on customization, approvals, imported material timelines and project complexity.",
-        },
-        {
-            question: "Do you handle bespoke furniture and lighting design?",
-            answer:
-                "Yes. We design customized furniture, curated lighting concepts and premium décor elements tailored specifically for high-end villas and residences.",
-        },
-        {
-            question: "Which areas in Hyderabad do you serve for luxury interiors?",
-            answer:
-                "We serve Jubilee Hills, Banjara Hills, Kokapet, Gachibowli, Financial District and other premium residential locations across Hyderabad.",
-        },
-        {
-            question: "Can you design interiors aligned with Vastu principles?",
-            answer:
-                "Yes. We integrate Vastu-aligned planning while maintaining modern aesthetics and luxury design standards.",
-        },
-    ];
+  const faqs = [
+    {
+      question: "How much does luxury interior design cost in Hyderabad?",
+      answer:
+        "Luxury interior design cost in Hyderabad typically ranges from ₹1800 to ₹4000 per sq.ft depending on materials, customization, imported finishes and project scale. High-end villa interiors may cost higher based on premium specifications.",
+    },
+    {
+      question: "Do you provide turnkey luxury interior design services?",
+      answer:
+        "Yes, we provide complete turnkey luxury interior solutions including concept design, 3D visualization, premium material selection, custom furniture manufacturing and final execution.",
+    },
+    {
+      question: "How long does a luxury villa interior project take?",
+      answer:
+        "Luxury villa interior projects generally take 60–90 days depending on customization level, approvals, imported materials and design complexity.",
+    },
+    {
+      question: "Do you design custom furniture and lighting?",
+      answer:
+        "Yes, we create bespoke furniture designs, premium lighting concepts and luxury décor elements tailored specifically for villas and high-end homes.",
+    },
+    {
+      question: "Which areas in Hyderabad do you serve for luxury interiors?",
+      answer:
+        "We provide luxury interior design services in Jubilee Hills, Banjara Hills, Gachibowli, Kokapet, Financial District and across Hyderabad.",
+    },
+    {
+      question: "Do you follow Vastu in luxury interior design?",
+      answer:
+        "Yes, we integrate Vastu principles with modern luxury interior design to create balanced, aesthetic and functional living spaces.",
+    },
+    {
+      question: "Why choose luxury interior designers in Hyderabad?",
+      answer:
+        "Luxury interior designers ensure premium quality materials, elegant design concepts, efficient space planning and long-term durability, creating sophisticated and high-value living environments.",
+    },
+  ];
 
-    return (
-        <>
-            {/* FAQ SECTION */}
-            <section className="relative py-28 px-6 bg-[#0B0F19] text-white border-t border-[#D4AF37]/20">
+  return (
+    <>
+      {/* FAQ SECTION */}
+      <section className="py-24 px-6 bg-[#0B0F19] text-white border-t border-[#D4AF37]/20">
+        <div className="max-w-5xl mx-auto">
 
-                <div className="max-w-5xl mx-auto">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
+              Luxury Interior Design FAQs – Hyderabad
+            </h2>
 
-                    {/* Heading */}
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl md:text-5xl font-semibold  bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                            Luxury Interior Design – Frequently Asked Questions
-                        </h2>
+            <p className="mt-6 text-gray-400 text-lg max-w-3xl mx-auto">
+              Get answers about luxury interior design services, pricing,
+              timelines and turnkey execution for villas and premium homes in Hyderabad.
+            </p>
+          </div>
 
-                        <div className="w-20 h-[2px] bg-[#D4AF37] mx-auto mt-6"></div>
+          {/* FAQ ITEMS */}
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className={`rounded-xl border transition ${
+                  active === index
+                    ? "border-[#D4AF37] bg-[#111827]"
+                    : "border-white/10 bg-[#0F172A] hover:border-[#D4AF37]/50"
+                }`}
+              >
+                <button
+                  onClick={() =>
+                    setActive(active === index ? null : index)
+                  }
+                  className="w-full flex justify-between items-center px-6 py-5"
+                >
+                  <span
+                    className={`text-lg font-medium ${
+                      active === index ? "text-[#D4AF37]" : "text-white"
+                    }`}
+                  >
+                    {faq.question}
+                  </span>
 
-                        <p className="mt-6 text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                            Get clarity on our luxury interior design process,
-                            pricing structure, execution timelines and premium
-                            customization options in Hyderabad.
-                        </p>
-                    </div>
+                  <ChevronDown
+                    className={`transition-transform ${
+                      active === index
+                        ? "rotate-180 text-[#D4AF37]"
+                        : "text-gray-400"
+                    }`}
+                  />
+                </button>
 
-                    {/* FAQ ITEMS */}
-                    <div className="space-y-8">
+                {active === index && (
+                  <div className="px-6 pb-5">
+                    <p className="text-gray-400 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
 
-                        {faqs.map((faq, index) => (
-                            <div
-                                key={index}
-                                className={`rounded-2xl border transition duration-300
-                ${active === index
-                                        ? "border-[#D4AF37] bg-[#111827]"
-                                        : "border-white/10 bg-[#0F172A] hover:border-[#D4AF37]/50"
-                                    }`}
-                            >
-                                <button
-                                    onClick={() =>
-                                        setActive(active === index ? null : index)
-                                    }
-                                    className="w-full flex justify-between items-center px-8 py-7 text-left"
-                                >
-                                    <span
-                                        className={`text-lg md:text-xl font-medium ${active === index
-                                            ? "text-[#D4AF37]"
-                                            : "text-white"
-                                            }`}
-                                    >
-                                        {faq.question}
-                                    </span>
+        </div>
+      </section>
 
-                                    <ChevronDown
-                                        size={22}
-                                        className={`transition-transform duration-300 ${active === index
-                                            ? "rotate-180 text-[#D4AF37]"
-                                            : "text-gray-400"
-                                            }`}
-                                    />
-                                </button>
+      {/* FAQ SCHEMA (SEO BOOST) */}
+      <Script
+        id="luxury-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
 
-                                <div
-                                    className={`px-8 overflow-hidden transition-all duration-500 ${active === index
-                                        ? "max-h-96 pb-7 opacity-100"
-                                        : "max-h-0 opacity-0"
-                                        }`}
-                                >
-                                    <p className="text-gray-400 text-lg leading-relaxed">
-                                        {faq.answer}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
+      {/* EXTRA CTA (SEO + CONVERSION BOOST) */}
+      <section className="py-20 text-center bg-[#0F172A]">
+        <h2 className="text-3xl md:text-4xl font-semibold">
+          Looking for Luxury Interior Designers in Hyderabad?
+        </h2>
 
-                    </div>
+        <p className="mt-4 text-gray-400 max-w-xl mx-auto">
+          Contact Epoque Group for premium villa and high-end residential interior design solutions.
+        </p>
 
-                </div>
-            </section>
-
-            {/* FAQ SCHEMA */}
-            <Script
-                id="luxury-interior-faq-schema"
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: faqs.map((faq) => ({
-                            "@type": "Question",
-                            name: faq.question,
-                            acceptedAnswer: {
-                                "@type": "Answer",
-                                text: faq.answer,
-                            },
-                        })),
-                    }),
-                }}
-            />
-        </>
-    );
+        <div className="mt-8">
+          <a
+            href="/contact"
+            className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold"
+          >
+            Get Free Consultation
+          </a>
+        </div>
+      </section>
+    </>
+  );
 }

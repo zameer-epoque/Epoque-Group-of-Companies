@@ -1,110 +1,171 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import Script from "next/script";
+import CommercialInteriorFAQSection from "./CommercialInteriorFAQSection";
+import WhyChooseCommercialInteriorSection from "./WhyChooseCommercialInteriorSection";
 
-import { motion } from "framer-motion";
-import { CheckCircle, Building2 } from "lucide-react";
+export const metadata: Metadata = {
+  title:
+    "Commercial Interior Designers in Hyderabad | Office & Corporate Interiors",
+  description:
+    "Epoque Group is a leading commercial interior design company in Hyderabad specializing in office interiors, corporate spaces, and turnkey commercial solutions.",
+  alternates: {
+    canonical:
+      "https://epoquegroup.in/interiors/commercial-interior-design",
+  },
+};
 
-export default function WhyChooseCommercialInteriorSection() {
-    return (
-        <section className="relative py-4 px-6 bg-[#0B0F19] text-white border-t border-[#D4AF37]/20 overflow-hidden">
+export default function CommercialInteriorDesignPage() {
+  return (
+    <main className="bg-[#0B0F19] text-white">
 
-            {/* Subtle Gold Glow */}
-            <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#D4AF37]/10 blur-[180px] rounded-full"></div>
+      {/* HERO */}
+      <section className="py-32 px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-semibold">
+          Commercial Interior Designers in Hyderabad
+        </h1>
+        <p className="mt-6 text-gray-300 max-w-3xl mx-auto">
+          Epoque Group delivers premium commercial interior design solutions
+          for offices, corporate spaces, and retail environments.
+        </p>
+      </section>
 
-            <div className="relative max-w-6xl mx-auto">
+      {/* ABOUT */}
+      <section className="py-24 px-6 max-w-6xl mx-auto space-y-6">
+        <h2 className="text-3xl font-semibold">
+          Best Commercial Interior Designers in Hyderabad
+        </h2>
 
-                {/* Heading */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="text-center max-w-3xl mx-auto"
-                >
-                    <h2 className="text-4xl md:text-5xl font-semibold bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
-                        Why Choose Epoque Group for Commercial Interiors?
-                    </h2>
+        <p className="text-gray-300">
+          Epoque Group is one of the top commercial interior designers in Hyderabad,
+          offering modern and functional workspace solutions. We specialize in office
+          interior design, corporate interiors, and retail design services tailored
+          to your business needs.
+        </p>
 
-                    <span className="text-[16px] tracking-widest uppercase text-[#D4AF37]">
-                        Premium Commercial Interior Designers in Hyderabad
-                    </span>
+        <p className="text-gray-400">
+          Our approach focuses on space planning, brand identity, and productivity-driven
+          designs that enhance employee efficiency and customer experience.
+        </p>
+      </section>
 
-                    <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                        We design modern, high-performance commercial interiors
-                        aligned with brand identity, business workflow and
-                        long-term scalability. Our structured approach ensures
-                        professional execution and premium finishing standards.
-                    </p>
+      {/* SERVICES */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-10">
+            Our Commercial Interior Design Services
+          </h2>
 
-                    <div className="w-24 h-[2px] bg-[#D4AF37] mx-auto mt-10"></div>
-                </motion.div>
-
-                {/* Grid */}
-                <div className="mt-20 grid md:grid-cols-2 gap-12">
-
-                    {/* Left Card */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                        viewport={{ once: true }}
-                        className="group"
-                    >
-                        <div className="p-12 rounded-2xl bg-[#111827] border border-[#D4AF37]/40 transition duration-500 group-hover:-translate-y-3 shadow-xl">
-
-                            <h3 className="text-2xl font-semibold mb-8 text-[#D4AF37]">
-                                What Makes Our Commercial Interiors Different
-                            </h3>
-
-                            {[
-                                "Strategic Space Planning & Workflow Optimization",
-                                "Corporate Brand-Aligned Design Concepts",
-                                "Premium Materials & High-End Finishes",
-                                "Turnkey Commercial Execution",
-                                "Transparent Budgeting & Timely Delivery",
-                            ].map((item, index) => (
-                                <div key={index} className="flex items-start gap-4 mb-5">
-                                    <CheckCircle
-                                        className="text-[#D4AF37] mt-1"
-                                        size={20}
-                                    />
-                                    <p className="text-gray-300 text-lg">{item}</p>
-                                </div>
-                            ))}
-
-                        </div>
-                    </motion.div>
-
-                    {/* Right Card */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="group"
-                    >
-                        <div className="p-12 rounded-2xl bg-[#0F172A] border border-[#D4AF37]/40 transition duration-500 group-hover:-translate-y-3 shadow-xl">
-
-                            <div className="flex items-center gap-3 mb-6">
-                                <Building2 className="text-[#D4AF37]" size={24} />
-                                <h3 className="text-2xl font-semibold">
-                                    Business-Focused Interior Strategy
-                                </h3>
-                            </div>
-
-                            <p className="text-gray-400 text-lg leading-relaxed">
-                                We design commercial interiors that enhance productivity,
-                                employee collaboration and client experience. From IT offices
-                                in HITEC City to executive corporate spaces in Financial District,
-                                every project is engineered to reflect authority, professionalism
-                                and long-term operational efficiency.
-                            </p>
-
-                        </div>
-                    </motion.div>
-
-                </div>
-
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold">Office Interiors</h3>
+              <p className="text-gray-400">
+                Modern office designs that improve productivity and workflow.
+              </p>
             </div>
-        </section>
-    );
+
+            <div>
+              <h3 className="text-xl font-semibold">Corporate Interiors</h3>
+              <p className="text-gray-400">
+                Professional interiors that reflect your brand identity.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Retail Interiors</h3>
+              <p className="text-gray-400">
+                Attractive spaces designed to enhance customer experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-semibold text-center mb-10">
+          Our Design Process
+        </h2>
+
+        <p className="text-gray-400 text-center">
+          We follow a structured process from concept to completion ensuring
+          high-quality results.
+        </p>
+      </section>
+
+      {/* BENEFITS */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-semibold text-center mb-10">
+            Benefits of Commercial Interior Design
+          </h2>
+
+          <ul className="grid md:grid-cols-3 gap-6 text-gray-300">
+            <li>Improves productivity</li>
+            <li>Enhances brand image</li>
+            <li>Better space utilization</li>
+            <li>Increases property value</li>
+            <li>Improves customer experience</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* COST */}
+      <section className="py-24 px-6 text-center max-w-4xl mx-auto">
+        <h2 className="text-3xl font-semibold">
+          Commercial Interior Cost in Hyderabad
+        </h2>
+
+        <p className="text-gray-400 mt-4">
+          Interior design cost ranges from ₹1500 to ₹4000 per sq.ft depending on
+          materials and project complexity.
+        </p>
+      </section>
+
+      {/* LOCATION SEO */}
+      <section className="py-24 px-6 max-w-5xl mx-auto">
+        <h2 className="text-3xl font-semibold">
+          Interior Designers Near You in Hyderabad
+        </h2>
+
+        <p className="text-gray-400">
+          We serve Gachibowli, HITEC City, Madhapur, Financial District, and
+          Jubilee Hills with premium commercial interiors.
+        </p>
+      </section>
+
+      {/* INTERNAL LINK */}
+      <div className="text-center py-10">
+        <Link href="/contact" className="text-yellow-400 underline">
+          Contact Us for Consultation
+        </Link>
+      </div>
+
+      {/* EXISTING SECTIONS */}
+      <WhyChooseCommercialInteriorSection />
+      <CommercialInteriorFAQSection />
+
+      {/* SCHEMA */}
+      <Script
+        id="schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the cost of commercial interiors?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "₹1500 to ₹4000 per sq.ft depending on project scope.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+    </main>
+  );
 }
