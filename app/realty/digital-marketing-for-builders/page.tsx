@@ -301,9 +301,9 @@ export default function RealEstateBrandingPage() {
     </p>
     <p>
       Our branding work is designed to integrate seamlessly with{" "}
-      <Link href="/services/seo" className="underline text-[#C79A3B]">SEO strategies</Link>{" "}
+      <Link href="/digital/search-engine-optimization" className="underline text-[#C79A3B]">SEO strategies</Link>{" "}
       and{" "}
-      <Link href="/services/ppc" className="underline text-[#C79A3B]">PPC campaigns</Link>,
+      <Link href="/digital/google-ads-ppc" className="underline text-[#C79A3B]">PPC campaigns</Link>,
       ensuring maximum visibility, traffic, and lead generation from every marketing rupee you invest.
     </p>
   </div>
