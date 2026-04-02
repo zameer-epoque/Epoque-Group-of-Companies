@@ -127,7 +127,7 @@ export default function ClientLayout({
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false)
-        }, 6000) // ✅ increased time for flip animation
+        }, 12000) // ✅ increased time for flip animation
 
         return () => clearTimeout(timer)
     }, [])
