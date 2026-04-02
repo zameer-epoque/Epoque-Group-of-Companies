@@ -10,7 +10,17 @@ export default function Gallery() {
     "/c3.jpg",
     "/c4.jpg",
     "/c5.jpg",
-    "/c2.jpg",
+
+      "/ca1 (10).jpg",
+      "/ca1 (1).jpg",
+      "/ca1 (2).jpg",
+      "/ca1 (3).jpg",
+      "/ca1 (4).jpg",
+      "/ca1 (5).jpg",
+      "/ca1 (6).jpg",
+      "/ca1 (7).jpg",
+      "/ca1 (8).jpg",
+      "/ca1 (9).jpg"
   ];
 
   const [activeImage, setActiveImage] = useState<string | null>(null);

@@ -6,7 +6,7 @@ import Hero from "../Project4/Hero";
 import Highlights from "../Project4/Highlights";
 import Location from "../Project4/Location";
 import Navbar from "../Project4/Navbar";
-import Pricing from "../Project4/Pricing";
+
 import Testimonials from "../Project4/Testimonials";
 
 
@@ -19,7 +19,7 @@ export default function Page() {
       <Features />
       <Amenities />
       <Location />
-      <Pricing />
+
       <Gallery />
       <Testimonials />
       <CTA  />
