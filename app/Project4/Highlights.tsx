@@ -45,10 +45,9 @@ export default function Highlights() {
         {items.map((item, i) => (
           <motion.div
             key={i}
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.04 }}
-            viewport={{ once: true }}
             className="group p-[1px] rounded-2xl bg-gradient-to-br from-yellow-400/40 to-transparent"
           >
             <div className="relative bg-black/70 backdrop-blur-xl border border-white/10 
@@ -57,7 +56,6 @@ export default function Highlights() {
 
               {/* ICON */}
               <motion.div
-                initial={false}
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 className="text-3xl mb-4"
               >
@@ -83,9 +81,8 @@ export default function Highlights() {
 
       {/* CTA STRIP */}
       <motion.div
-        initial={false}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 60 }}
+        animate={{ opacity: 1, y: 0 }}
         className="mt-20 max-w-5xl mx-auto p-[1px] rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-200"
       >
         <div className="bg-black rounded-2xl p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
@@ -101,7 +98,6 @@ export default function Highlights() {
 
           <motion.a
             href="#contact"
-            initial={false}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-yellow-400 to-yellow-300 
