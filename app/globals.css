@@ -10,21 +10,20 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-} 
+}
 
- @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-} 
+}
 
- body {
+body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-} 
-
+}
 
 @keyframes fade-in-up {
   from {
@@ -71,28 +70,28 @@
   animation: fade-in-right 1s ease-out both;
 }
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* DEFAULT = DARK MODE */
- html {
-  background-color: #1C1216;
-  color: #F5F5F5;
+html {
+  background-color: #1c1216;
+  color: #f5f5f5;
 }
 
 /* LIGHT MODE */
 html:not(.dark) {
-  background-color: #FAFAFA;
-  color: #1A1A1A;
-} 
+  background-color: #fafafa;
+  color: #1a1a1a;
+}
 
 /* Smooth transition for entire site */
 * {
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
-
 
 .perspective {
   perspective: 1000px;
@@ -115,11 +114,53 @@ html:not(.dark) {
   animation: shimmer 2s linear infinite;
 }
 
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.perspective {
+  perspective: 1200px;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -50%;
+  width: 200%;
+  height: 300%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(25deg);
+  animation: shineMove 4s infinite;
+}
+
+@keyframes shineMove {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+  }
 }
