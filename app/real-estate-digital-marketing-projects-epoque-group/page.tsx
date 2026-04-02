@@ -25,7 +25,8 @@ const clients = [
         name: "Orange County Homes",
         image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
-            "Designed a performance-driven qualified lead generation system reducing CPL and improving conversions."
+            "Designed a performance-driven qualified lead generation system reducing CPL and improving conversions.",
+            link: "/Callisto5"
     },
     {
         name: "GRSV Infra",
