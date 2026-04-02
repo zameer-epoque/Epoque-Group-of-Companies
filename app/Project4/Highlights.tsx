@@ -13,8 +13,6 @@ export default function Highlights() {
     { title: "Facing", value: "Lake Facing Premium Villas", icon: "🌊" },
     { title: "Approval", value: "HMDA & RERA Approved Project", icon: "✔️" },
     { title: "Price", value: "Starts from ₹65 Lakhs*", icon: "💰" },
-
-    // NEW CONTENT 🔥
     { title: "Location", value: "Near Airport & IT Hubs", icon: "📍" },
     { title: "Security", value: "24/7 CCTV & Gated Community", icon: "🔐" },
     { title: "Amenities", value: "Clubhouse, Gym & Landscaped Gardens", icon: "🏊" },
@@ -47,7 +45,7 @@ export default function Highlights() {
         {items.map((item, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 40 }}
+            initial={false}   {/* ✅ FIX */}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.04 }}
             viewport={{ once: true }}
@@ -59,6 +57,7 @@ export default function Highlights() {
 
               {/* ICON */}
               <motion.div
+                initial={false}   {/* ✅ FIX */}
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 className="text-3xl mb-4"
               >
@@ -84,7 +83,7 @@ export default function Highlights() {
 
       {/* CTA STRIP */}
       <motion.div
-        initial={{ opacity: 0, y: 60 }}
+        initial={false}   {/* ✅ FIX */}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mt-20 max-w-5xl mx-auto p-[1px] rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-200"
@@ -102,6 +101,7 @@ export default function Highlights() {
 
           <motion.a
             href="#contact"
+            initial={false}   {/* ✅ FIX */}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-yellow-400 to-yellow-300 
