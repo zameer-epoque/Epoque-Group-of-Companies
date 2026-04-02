@@ -50,9 +50,8 @@ export default function Pricing() {
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}   {/* ✅ FIX */}
             transition={{ delay: i * 0.2 }}
-            viewport={{ once: true }}
             className="p-[1px] rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-200 group"
           >
             <div className="bg-black rounded-2xl p-8 backdrop-blur-xl border border-white/10 
@@ -83,6 +82,7 @@ export default function Pricing() {
               {/* CTA */}
               <motion.a
                 href="#contact"
+                initial={false}   {/* ✅ FIX */}
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-block mt-8 bg-gradient-to-r from-yellow-400 to-yellow-300 

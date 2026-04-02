@@ -44,9 +44,8 @@ export default function Testimonials() {
           <motion.div
             key={i}
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}   // ✅ FIX
             transition={{ delay: i * 0.1 }}
-            viewport={{ once: true }}
             className="group p-[1px] rounded-2xl bg-gradient-to-r from-yellow-400/40 to-transparent"
           >
             <div className="bg-black/70 backdrop-blur-xl border border-white/10 rounded-2xl p-6 h-full 

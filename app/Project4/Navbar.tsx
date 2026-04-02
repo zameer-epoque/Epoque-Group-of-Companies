@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image"; // ✅ FIX (important)
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -24,10 +24,10 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* 🔥 LOGO (Clickable + Glow) */}
+        {/* LOGO */}
         <Link href="/">
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
+            initial={false}   // ✅ FIX
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
             className="flex items-center cursor-pointer"
@@ -50,14 +50,13 @@ export default function Navbar() {
                 {link.name}
               </span>
 
-              {/* underline animation */}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
 
-          {/* CTA */}
           <motion.a
             href="#contact"
+            initial={false}   // ✅ FIX
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className="bg-gradient-to-r from-yellow-400 to-yellow-300 
@@ -80,7 +79,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={false}   // ✅ FIX
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden bg-gradient-to-b from-black to-gray-900 

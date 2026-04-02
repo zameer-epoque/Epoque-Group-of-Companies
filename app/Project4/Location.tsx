@@ -38,9 +38,8 @@ export default function Location() {
             <motion.div
               key={i}
               initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              animate={{ opacity: 1, x: 0 }}   // ✅ FIX
               transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="flex items-center gap-4 p-4 rounded-xl bg-black/70 backdrop-blur-lg border border-white/10 hover:border-yellow-400/60 transition"
             >
               <MapPin className="text-yellow-400" size={20} />
@@ -52,8 +51,7 @@ export default function Location() {
         {/* Map */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, x: 0 }}   // ✅ FIX
           className="rounded-2xl overflow-hidden border border-white/10"
         >
           <iframe
