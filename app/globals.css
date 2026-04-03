@@ -1,139 +1,74 @@
 @import "tailwindcss";
 
+/* ================= THEME ================= */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0b0b0f;
+  --foreground: #f5f5f5;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fade-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fade-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fade-in-up 1s ease-out both;
-}
-
-.animate-fade-in-left {
-  animation: fade-in-left 1s ease-out both;
-}
-
-.animate-fade-in-right {
-  animation: fade-in-right 1s ease-out both;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* DEFAULT = DARK MODE */
-html {
-  background-color: #1c1216;
-  color: #f5f5f5;
-}
-
-/* LIGHT MODE */
-html:not(.dark) {
-  background-color: #fafafa;
-  color: #1a1a1a;
-}
-
-/* Smooth transition for entire site */
+/* ================= SMOOTH UI ================= */
 * {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
 }
 
-.perspective {
-  perspective: 1000px;
+/* ================= 🔥 ANIMATED BACKGROUND ================= */
+.bg-animated {
+  background: linear-gradient(-45deg, #ff00cc, #3333ff, #ff6600, #00ffcc);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
 }
 
-.transform-style-3d {
-  transform-style: preserve-3d;
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ================= 💎 GLOW EFFECT ================= */
+.glow {
+  box-shadow:
+    0 0 40px rgba(255, 0, 200, 0.4),
+    0 0 80px rgba(0, 200, 255, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* ================= 🌊 SHIMMER ================= */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
-  0% {
+  from {
     background-position: -200% 0;
   }
-  100% {
+  to {
     background-position: 200% 0;
   }
 }
 
-.animate-shimmer {
-  animation: shimmer 2s linear infinite;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.perspective {
-  perspective: 1200px;
-}
-
-.rotate-y-180 {
-  transform: rotateY(180deg);
-}
-
-.backface-hidden {
-  backface-visibility: hidden;
-}
-
+/* ================= ✨ SHINE ================= */
 .shine {
   position: relative;
   overflow: hidden;
@@ -149,11 +84,11 @@ html:not(.dark) {
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.25),
     transparent
   );
   transform: rotate(25deg);
-  animation: shineMove 4s infinite;
+  animation: shineMove 5s infinite;
 }
 
 @keyframes shineMove {
@@ -163,4 +98,62 @@ html:not(.dark) {
   100% {
     transform: translateX(100%) rotate(25deg);
   }
+}
+
+/* ================= 🔥 3D CARD ================= */
+.perspective {
+  perspective: 1400px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* ================= 🌌 FLOATING PARTICLES ================= */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0.3;
+  }
+}
+
+/* ================= 🎬 FADE ANIMATIONS ================= */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease forwards;
 }
