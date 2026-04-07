@@ -5,7 +5,7 @@ import { CheckCircle, TrendingUp, Globe, BarChart3 } from "lucide-react";
 
 export default function WhyChooseSection() {
     return (
-        <section className="relative py-4 px-6 bg-[#0b0b0d] text-white overflow-hidden">
+        <section className="relative py-2 px-6 bg-[#0b0b0d] text-white overflow-hidden">
 
             {/* Background Glow */}
             <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-gradient-to-r from-[#C79A3B]/10 via-[#D45B5B]/10 to-[#7A2E63]/10 blur-[200px] rounded-full"></div>

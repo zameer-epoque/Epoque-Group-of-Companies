@@ -147,7 +147,133 @@ export default function AboutPage() {
                         </Link>
                     </div>
                 </section>
+{/* ABOUT SEO CONTENT */}
+<section className="space-y-10">
 
+  <h2 className="text-3xl md:text-4xl font-semibold">
+    Leading Digital Marketing & Revenue Growth Experts in Hyderabad
+  </h2>
+
+  <p className="text-gray-400 text-lg leading-relaxed">
+    Epoque Group is a performance-driven digital marketing agency in Hyderabad focused on helping 
+    businesses generate qualified leads, increase conversions, and scale revenue through strategic 
+    marketing systems. In today’s competitive digital landscape, simply running ads or posting content 
+    is not enough. Businesses need structured growth frameworks that combine data, creativity, and 
+    execution — and that is exactly what we deliver.
+  </p>
+
+  <p className="text-gray-400 text-lg leading-relaxed">
+    Our approach is built around measurable results. We do not focus on vanity metrics such as impressions 
+    or likes. Instead, we prioritize lead quality, conversion rates, and return on investment. This ensures 
+    that every marketing effort contributes directly to your business growth.
+  </p>
+
+  {/* SECTION */}
+  <div>
+    <h3 className="text-2xl font-semibold text-orange-400 mb-4">
+      Our Approach to Digital Growth
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-4">
+      We believe that sustainable growth comes from a combination of strategy, execution, and optimization. 
+      Our team works closely with clients to understand their business model, target audience, and revenue goals.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      Based on this understanding, we design customized marketing strategies that include SEO, paid advertising, 
+      funnel optimization, and automation systems. This ensures that your business attracts the right audience 
+      and converts them into loyal customers.
+    </p>
+  </div>
+
+  {/* SECTION */}
+  <div>
+    <h3 className="text-2xl font-semibold text-orange-400 mb-4">
+      Why We Focus on Revenue, Not Just Traffic
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-4">
+      Many digital marketing agencies focus on increasing website traffic, but traffic alone does not guarantee 
+      business success. At Epoque Group, we focus on generating high-intent traffic that converts into leads and sales.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      By aligning marketing strategies with business objectives, we ensure that every campaign contributes to 
+      measurable growth. This approach allows our clients to achieve consistent and scalable results.
+    </p>
+  </div>
+
+  {/* SECTION */}
+  <div>
+    <h3 className="text-2xl font-semibold text-orange-400 mb-4">
+      Expertise in Real Estate Marketing
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-4">
+      We are recognized as one of the leading real estate marketing agencies in Hyderabad. Our team has extensive 
+      experience in launching residential and commercial projects, generating high-quality property leads, 
+      and optimizing campaigns for maximum conversions.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      From luxury apartments to large-scale developments, we create targeted marketing campaigns that attract 
+      serious buyers and investors.
+    </p>
+  </div>
+
+  {/* SECTION */}
+  <div>
+    <h3 className="text-2xl font-semibold text-orange-400 mb-4">
+      Data-Driven Marketing Strategy
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-4">
+      Data is at the core of everything we do. We use advanced analytics tools to track campaign performance, 
+      user behavior, and conversion metrics. This allows us to continuously optimize strategies and improve results.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      By making informed decisions based on data, we help businesses reduce costs, increase efficiency, 
+      and maximize return on investment.
+    </p>
+  </div>
+
+  {/* SECTION */}
+  <div>
+    <h3 className="text-2xl font-semibold text-orange-400 mb-4">
+      Long-Term Partnership for Growth
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-4">
+      We believe in building long-term relationships with our clients. Our goal is not just to deliver 
+      short-term results but to create sustainable growth systems that continue to generate value over time.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      As your business grows, we scale our strategies to match your evolving needs. This ensures that 
+      your marketing efforts remain effective and aligned with your goals.
+    </p>
+  </div>
+
+  {/* SECTION */}
+  <div>
+    <h3 className="text-2xl font-semibold text-orange-400 mb-4">
+      Our Commitment to Excellence
+    </h3>
+
+    <p className="text-gray-400 leading-relaxed mb-4">
+      At Epoque Group, we are committed to delivering high-quality services that drive real business results. 
+      Our team stays updated with the latest industry trends, tools, and technologies to ensure that our clients 
+      always stay ahead of the competition.
+    </p>
+
+    <p className="text-gray-400 leading-relaxed">
+      Whether you are looking to improve your online visibility, generate more leads, or scale your revenue, 
+      we have the expertise and experience to help you achieve your goals.
+    </p>
+  </div>
+
+</section>
                 {/* WHY CHOOSE SECTION COMPONENT */}
                 <WhyChooseSection />
 
