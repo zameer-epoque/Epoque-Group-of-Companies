@@ -1,89 +1,132 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ApplyPage() {
   const searchParams = useSearchParams();
   const jobTitle = searchParams.get("job");
 
-  const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    experience: "",
-  });
+  const formRef = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: any) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    const message = `Hi, I am applying for ${jobTitle}%0A
-Name: ${form.name}%0A
-Phone: ${form.phone}%0A
-Email: ${form.email}%0A
-Experience: ${form.experience}`;
+    if (!formRef.current) return;
 
-    window.open(`https://wa.me/919876543210?text=${message}`);
+    try {
+      setLoading(true);
+
+      await emailjs.sendForm(
+        "service_0ngjsts",   // ✅ your service ID
+        "template_gxzy7hd", // ✅ your template ID
+        formRef.current,
+        "zVIYCzNwWz2NlMQs9" // ✅ your public key
+      );
+
+      alert("Application sent successfully ✅");
+      formRef.current.reset();
+
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send ❌");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center px-4 mt-10">
 
       <div className="w-full max-w-xl bg-white/5 backdrop-blur-xl p-8 rounded-2xl border border-white/10">
-        
+
         <h1 className="text-3xl font-bold mb-6 text-center text-orange-400">
           Apply for {jobTitle}
         </h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="space-y-4"
+        >
 
+          {/* Hidden Job Title */}
+          <input type="hidden" name="jobTitle" value={jobTitle || ""} />
+
+          {/* Name */}
           <input
             type="text"
             name="name"
             placeholder="Your Name"
             required
-            onChange={handleChange}
             className="w-full p-3 rounded-lg bg-black border border-gray-700"
           />
 
+          {/* Phone */}
           <input
             type="tel"
             name="phone"
             placeholder="Phone Number"
             required
-            onChange={handleChange}
             className="w-full p-3 rounded-lg bg-black border border-gray-700"
           />
 
+          {/* Email */}
           <input
             type="email"
             name="email"
             placeholder="Email Address"
             required
-            onChange={handleChange}
             className="w-full p-3 rounded-lg bg-black border border-gray-700"
           />
 
+          {/* Experience */}
           <input
             type="text"
             name="experience"
             placeholder="Experience (e.g. 2 years)"
-            onChange={handleChange}
             className="w-full p-3 rounded-lg bg-black border border-gray-700"
           />
 
+          {/* ✅ Resume Upload */}
+          <div>
+            <label className="text-sm text-gray-400 mb-2 block">
+              Upload Resume *
+            </label>
+            <input
+              type="file"
+              name="resume"
+              accept=".pdf,.doc,.docx"
+              required
+              className="w-full p-2 bg-black border border-gray-700 rounded-lg text-gray-400"
+            />
+          </div>
+
+          {/* Submit */}
           <button
             type="submit"
-            className="w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-semibold"
+            disabled={loading}
+            className={`w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-semibold
+              ${loading ? "opacity-60 cursor-not-allowed" : ""}`}
           >
-            Submit Application
+            {loading ? "Submitting..." : "Submit Application"}
           </button>
 
         </form>
+
+        {/* ✅ WhatsApp Option */}
+        <button
+          onClick={() => {
+            const message = `Hi, I am applying for ${jobTitle}`;
+            window.open(`https://wa.me/919876543210?text=${message}`);
+          }}
+          className="mt-4 w-full bg-yellow-400 text-black py-3 rounded-xl font-semibold hover:bg-yellow-300"
+        >
+          Apply via WhatsApp
+        </button>
+
       </div>
     </div>
   );

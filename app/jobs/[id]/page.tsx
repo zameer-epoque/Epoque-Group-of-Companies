@@ -61,7 +61,7 @@ const jobsData = [
   },
    {
     id: 3,
-    title: " Marketing Manager",
+    title: " Conversion Funnel Specialist",
     location: "Remote / Global",
     type: "Full-Time",
     salary: "₹8L - ₹15L",
@@ -73,9 +73,10 @@ const jobsData = [
       "Optimize funnels and landing pages",
       "Track KPIs and ROI",
       "A/B testing campaigns",
+   
     ],
     requirements: [
-      "2+ years experience in digital marketing",
+      "4+ years experience in digital marketing",
       "Strong analytical skills",
       "Experience with Google Ads & Meta Ads",
       "Understanding of conversion funnels",
@@ -87,6 +88,34 @@ const jobsData = [
       "Growth opportunities",
     ],
   },
+  {
+    id: 4,
+    title: " Business Development Manager",
+    location: "Remote / Global",
+    type: "Full-Time",
+    salary: "₹8L - ₹15L",
+    experience: "2-5 Years",
+    description:
+      "We are looking for a business development manager to drive growth and partnerships.",
+    responsibilities: [
+      "Identify new business opportunities",
+      "Negotiate partnerships and deals",
+      "Develop strategic plans for growth",
+      "Manage client relationships",
+    ],
+    requirements: [
+      "3+ years experience in business development",
+      "Strong negotiation skills",
+      "Experience in B2B sales",
+      "Understanding of market dynamics",
+    ],
+    benefits: [
+      "Work from home",
+      "Flexible timings",
+      "Performance bonuses",
+      "Growth opportunities",
+    ],
+  }
 ];
 
 export default function JobDetailsPage() {

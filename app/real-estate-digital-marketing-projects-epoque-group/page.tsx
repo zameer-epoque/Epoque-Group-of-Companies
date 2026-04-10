@@ -250,6 +250,15 @@ import type { Variants } from "framer-motion"
 
 // ✅ UPDATED DATA (title + location separated)
 const clients = [
+
+  {
+    title: "Radhey Constructions",
+    location: "Hyderabad",
+    image: "/client1.jpg",
+    description:
+      "Premium villas and apartments with world-class design and high investment value.",
+    link: "https://radheyconstructions.com/"
+  },
   {
     title: "Vasavi Group",
     location: "Hyderabad",
@@ -259,12 +268,19 @@ const clients = [
     link: "/Vasavi"
   },
   {
-    title: "Etereo Realty",
-    location: "Goa",
-    image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
+    title: "Om Sree Builders",
+    location: "Hyderabad",
+    image: "/om-sree-builders-qualified-lead-generation.jpg",
     description:
-      "Built a strategic villa lead generation funnel delivering highly qualified premium buyer enquiries.",
-    link: "/ETEREO1"
+      "Structured, criteria-based qualified lead generation delivering high-intent prospects.",
+    link: "/OmSree"
+  },
+   {
+    title: "P R Constructions  SunRidge Homes",
+    location: "Hyderabad",
+    image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
+    description:
+      "Delivered consistent qualified buyer enquiries through targeted digital campaigns."
   },
   {
     title: "Orange County Homes - Callisto5 Villas",
@@ -282,12 +298,16 @@ const clients = [
       "Implemented SEO and paid media campaigns strengthening booking pipeline growth."
   },
   {
-    title: "P R Constructions  SunRidge Homes",
-    location: "Hyderabad",
-    image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
+    title: "Etereo Realty",
+    location: "Goa",
+    image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
     description:
-      "Delivered consistent qualified buyer enquiries through targeted digital campaigns."
+      "Built a strategic villa lead generation funnel delivering highly qualified premium buyer enquiries.",
+    link: "/ETEREO1"
   },
+  
+  
+ 
   {
     title: "Macro Express",
     location: "Mumbai & Nagpur",
@@ -295,14 +315,7 @@ const clients = [
     description:
       "End-to-end outsourced revenue growth support and sales acceleration systems."
   },
-  {
-    title: "Om Sree Builders",
-    location: "Hyderabad",
-    image: "/om-sree-builders-qualified-lead-generation.jpg",
-    description:
-      "Structured, criteria-based qualified lead generation delivering high-intent prospects.",
-    link: "/OmSree"
-  },
+  
   {
     title: "Property Handling",
     location: "Hyderabad",
@@ -311,14 +324,7 @@ const clients = [
       "Comprehensive real estate solutions including buying, selling, and investment advisory.",
     link: "https://www.propertyhandling.com/"
   },
-  {
-    title: "Radhey Constructions",
-    location: "Hyderabad",
-    image: "/client1.jpg",
-    description:
-      "Premium villas and apartments with world-class design and high investment value.",
-    link: "https://radheyconstructions.com/"
-  }
+  
 ]
 
 // animations
