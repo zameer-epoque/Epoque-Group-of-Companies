@@ -2,6 +2,7 @@
 
 import QRCode from "react-qr-code"
 import { Globe, Phone, Mail } from "lucide-react"
+import { FaInstagram } from "react-icons/fa";
 
 export default function EpoqueCardBack() {
   return (
@@ -26,12 +27,16 @@ export default function EpoqueCardBack() {
 
          
 
-          <div className="flex flex-col items-center gap-1">
-            <div className="bg-white p-2 rounded-xl shadow-md">
-              <QRCode value="https://instagram.com/epoque.digital" size={75} />
-            </div>
-            <span className="text-[10px] text-gray-400">Instagram</span>
-          </div>
+        <div className="flex flex-col items-center gap-1">
+  <div className="bg-white p-2 rounded-xl shadow-md">
+    <QRCode value="https://instagram.com/epoque.digital" size={75} />
+  </div>
+
+  <div className="flex items-center gap-1 text-[10px] text-gray-400">
+    <FaInstagram className="text-pink-500 text-xs" />
+    <span>Instagram</span>
+  </div>
+</div>
 
         </div>
 
