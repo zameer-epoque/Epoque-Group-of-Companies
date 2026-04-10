@@ -186,10 +186,15 @@ export default function EpoqueCardFront() {
             Message
           </button>
 
-          <button className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r 
-            from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition">
-            Book Now
-          </button>
+<a
+  href="https://wa.me/919133633327?text=Hi%20Epoque%20Group%2C%20I%20am%20interested%20in%20your%20services.%20Please%20share%20more%20details."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r 
+  from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition text-center"
+>
+  Book Now
+</a>
         </div>
 
         {/* 🔥 IMAGE */}
