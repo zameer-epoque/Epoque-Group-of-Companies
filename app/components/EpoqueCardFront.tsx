@@ -129,7 +129,7 @@ export default function EpoqueCardFront() {
             </div>
 
             <div>
-              <h2 className="font-semibold text-sm">Epoque Group</h2>
+              <h2 className="font-semibold text-sm text-black">Epoque Group</h2>
               <p className="text-[10px] text-gray-500">
                 Lead Generation & Growth
               </p>
