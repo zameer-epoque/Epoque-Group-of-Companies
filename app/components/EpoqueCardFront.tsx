@@ -173,7 +173,7 @@ export default function EpoqueCardFront() {
           <button
             onClick={() => window.open("https://www.instagram.com/epoque.digital/", "_blank")}
             className="flex-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
-            text-white py-1 rounded text-[11px] hover:scale-105 transition"
+            text-white py-1 rounded text-[11px] hover:scale-105 transition hover:cursor-pointer"
           >
             Follow
           </button>
@@ -181,7 +181,7 @@ export default function EpoqueCardFront() {
           <button
             onClick={() => router.push("/contact")}
             className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r 
-            from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition"
+            from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105  hover:cursor-pointer"
           >
             Message
           </button>
@@ -191,7 +191,7 @@ export default function EpoqueCardFront() {
   target="_blank"
   rel="noopener noreferrer"
   className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r 
-  from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition text-center"
+  from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition text-center hover:cursor-pointer"
 >
   Book Now
 </a>

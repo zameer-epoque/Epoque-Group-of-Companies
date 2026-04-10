@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 
 export default function ApplyPage() {
   const searchParams = useSearchParams();
-  const jobTitle = searchParams.get("job");
+  const jobTitle = searchParams.get("job") || "Job Role";
 
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
@@ -53,7 +53,7 @@ export default function ApplyPage() {
         >
 
           {/* Hidden Job Title */}
-          <input type="hidden" name="jobTitle" value={jobTitle || ""} />
+          <input type="hidden" name="jobTitle" value={jobTitle} />
 
           {/* Name */}
           <input
@@ -90,19 +90,13 @@ export default function ApplyPage() {
             className="w-full p-3 rounded-lg bg-black border border-gray-700"
           />
 
-          {/* ✅ Resume Upload */}
-          <div>
-            <label className="text-sm text-gray-400 mb-2 block">
-              Upload Resume *
-            </label>
-            <input
-              type="file"
-              name="resume"
-              accept=".pdf,.doc,.docx"
-              required
-              className="w-full p-2 bg-black border border-gray-700 rounded-lg text-gray-400"
-            />
-          </div>
+          {/* ✅ Resume Link Instead of File */}
+          <input
+            type="text"
+            name="resume_link"
+            placeholder="Paste Resume Link (Google Drive / Dropbox)"
+            className="w-full p-3 rounded-lg bg-black border border-gray-700"
+          />
 
           {/* Submit */}
           <button
