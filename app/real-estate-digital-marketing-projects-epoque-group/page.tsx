@@ -8,7 +8,7 @@ import type { Variants } from "framer-motion"
 
 const clients = [
     {
-        name: "Vasavi Group Crown",
+        name: "Vasavi Group hyderabad",
         image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
         description:
             "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad.",
@@ -22,14 +22,14 @@ const clients = [
         link: "/ETEREO1"
     },
     {
-        name: "Orange County Homes",
+        name: "Orange County Homes, Hyderabad,Callisto5 villas hyderabad",
         image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
         description:
             "Designed a performance-driven qualified lead generation system reducing CPL and improving conversions.",
             link: "/Callisto5"
     },
     {
-        name: "GRSV Infra",
+        name: "GRSV Infra, Hyderabad",
         image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.png",
         description:
             "Implemented SEO and paid media campaigns strengthening booking pipeline growth."
@@ -41,13 +41,13 @@ const clients = [
             "Delivered a performance-driven real estate lead generation system generating consistent qualified buyer enquiries through targeted digital campaigns."
     },
     {
-        name: "Marco Express",
+        name: "Macro Express, Mumbai & Nagpur",
         image: "/marco-express-sales-acceleration-outsourced-growth.png",
         description:
             "End-to-end outsourced revenue growth support and sales acceleration systems."
     },
     {
-        name: "Om Sree Builders",
+        name: "Om Sree Builders, Hyderabad",
         image: "/om-sree-builders-qualified-lead-generation.jpg",
         description:
             "Structured, criteria-based qualified lead generation delivering high-intent prospects.",

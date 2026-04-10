@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/c1.jpg"
-          alt="Luxury Villa"
+          alt="Luxury Villas"
           className="w-full h-full object-cover"
         />
         {/* DARK OVERLAY */}
@@ -27,9 +27,9 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-6xl font-bold leading-tight"
         >
-          Luxury Triplex Villas
+          4 BHK Luxury Triplex Villas
           <span className="block mt-3 text-yellow-400">
-            Premium Living Redefined
+            Premium Living in Tukkuguda
           </span>
         </motion.h1>
 
@@ -40,8 +40,8 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto"
         >
-          Experience lake-facing villas near Airport & IT hubs with world-class amenities,
-          modern architecture, and high investment potential.
+          4 Acre luxury property located in the heart of Tukkuguda with lake-facing villas,
+          world-class amenities, and high investment value near Airport & IT hubs.
         </motion.p>
 
         {/* BUTTONS */}
@@ -67,12 +67,14 @@ export default function Hero() {
         </motion.div>
 
         {/* INFO BADGES */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
           {[
             "4 BHK Villas",
+            "4 Acre Property",
             "Lake Facing",
-            "₹65 Lakhs*",
-            "HMDA Approved",
+            "₹3.5 Cr*",
+            "RERA Approved",
+            "42 Triplex Villas + Club House",
           ].map((item, i) => (
             <div
               key={i}
@@ -82,6 +84,7 @@ export default function Hero() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

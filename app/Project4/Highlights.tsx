@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 export default function Highlights() {
   const items = [
-    { title: "Configuration", value: "Triplex Villa (G+2)", icon: "🏡" },
+    { title: "Configuration", value: "4 BHK Triplex Villas (G+2)", icon: "🏡" },
+    { title: "Project Area", value: "4 Acre Premium Development", icon: "🌳" },
+    { title: "Total Units", value: "42 Exclusive Villas", icon: "🏘️" },
+    { title: "Club House", value: "Luxury Clubhouse & Amenities", icon: "🏊" },
     { title: "Bedrooms", value: "4 Spacious Bedrooms", icon: "🛏️" },
     { title: "Bathrooms", value: "4 Premium Bathrooms", icon: "🛁" },
-    { title: "Home Theater", value: "Dedicated Entertainment Space", icon: "🎬" },
     { title: "Parking", value: "2 Covered Car Parks", icon: "🚗" },
-    { title: "Size", value: "3751 – 3767 Sq.Ft", icon: "📐" },
+    { title: "Size", value: "3750+ Sq.Ft Spacious Villas", icon: "📐" },
     { title: "Facing", value: "Lake Facing Premium Villas", icon: "🌊" },
-    { title: "Approval", value: "HMDA & RERA Approved Project", icon: "✔️" },
-    { title: "Price", value: "Starts from ₹65 Lakhs*", icon: "💰" },
-    { title: "Location", value: "Near Airport & IT Hubs", icon: "📍" },
-    { title: "Security", value: "24/7 CCTV & Gated Community", icon: "🔐" },
-    { title: "Amenities", value: "Clubhouse, Gym & Landscaped Gardens", icon: "🏊" },
-    { title: "Connectivity", value: "Easy Access to ORR & Highways", icon: "🛣️" },
-    { title: "Investment", value: "High ROI & Fast Appreciation", icon: "📈" },
-    { title: "Water Supply", value: "Borewell + Municipal Connection", icon: "🚰" },
+    { title: "Approval", value: "RERA Approved Project", icon: "✔️" },
+    { title: "Price", value: "Starts from ₹3.5 Cr*", icon: "💰" },
+    { title: "Location", value: "Tukkuguda – Near Airport", icon: "📍" },
+    { title: "Security", value: "24/7 Gated Community & CCTV", icon: "🔐" },
+    { title: "Connectivity", value: "Near ORR & IT Corridors", icon: "🛣️" },
+    { title: "Investment", value: "High ROI & Appreciation", icon: "📈" },
   ];
 
   return (
@@ -32,11 +32,11 @@ export default function Highlights() {
       {/* TITLE */}
       <div className="text-center mb-16 relative z-10">
         <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
-          Property Highlights
+          Premium Villa Highlights
         </h2>
         <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
-          Experience ultra-modern villa living with world-class amenities,
-          strategic location, and exceptional investment value.
+          Experience ultra-luxury living in Tukkuguda with lake-facing villas,
+          world-class amenities, and high investment value.
         </p>
       </div>
 
@@ -89,10 +89,10 @@ export default function Highlights() {
 
           <div>
             <h3 className="text-xl md:text-3xl font-bold">
-              Only Few Villas Left 🚨
+              Limited Villas Available 🚨
             </h3>
             <p className="text-gray-400 mt-2">
-              High-demand location with limited inventory — book now before prices increase.
+              Only 42 premium villas in a high-demand location — secure your dream home today.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export default function Highlights() {
             className="bg-gradient-to-r from-yellow-400 to-yellow-300 
             text-black px-6 py-3 rounded-full font-semibold shadow-lg"
           >
-            Schedule Site Visit
+            Book Site Visit
           </motion.a>
         </div>
       </motion.div>
