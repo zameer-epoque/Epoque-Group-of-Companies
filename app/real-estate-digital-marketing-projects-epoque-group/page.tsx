@@ -282,7 +282,7 @@ const clients = [
       "Implemented SEO and paid media campaigns strengthening booking pipeline growth."
   },
   {
-    title: "P R Constructions -Sun Ridge Homes",
+    title: "P R Constructions  SunRidge Homes",
     location: "Hyderabad",
     image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
     description:

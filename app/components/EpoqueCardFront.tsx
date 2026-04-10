@@ -100,7 +100,6 @@
 //   )
 // }
 
-
 "use client"
 
 import Image from "next/image"
@@ -108,8 +107,8 @@ import { Heart, Search, PlusSquare, User, Home } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 export default function EpoqueCardFront() {
-  const image = "/insta.jpeg" // single image
-  const router = useRouter() // ✅ ADD THIS
+  const image = "/insta.jpeg"
+  const router = useRouter()
 
   return (
     <div className="w-full h-full rounded-2xl p-[1.5px] 
@@ -121,52 +120,79 @@ export default function EpoqueCardFront() {
         <div className="px-4 pt-3 pb-2">
           <p className="text-sm text-gray-500">@epoque.digital</p>
 
-          <div className="flex items-center gap-3 mt-2">
-            <div className="p-[2px] rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
-              <div className="bg-white p-[2px] rounded-full">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white font-bold">
-                  E
+          <div className="flex items-center justify-between mt-3">
+
+            {/* LEFT */}
+            <div className="flex items-center gap-3">
+              <div className="p-[2px] rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600">
+                <div className="bg-white p-[2px] rounded-full">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                    <img src="/logo.png" alt="logo" className="object-contain w-full h-full" />
+                  </div>
                 </div>
+              </div>
+
+              <div>
+                <h2 className="font-semibold text-sm text-black">
+                  Epoque Group 
+                </h2>
+               
               </div>
             </div>
 
-            <div>
-              <h2 className="font-semibold text-sm text-black">Epoque Group Of Companies</h2>
-              <p className="text-[10px] text-gray-500">
-                Lead Generation & Growth
-              </p>
+            {/* RIGHT */}
+            <div className="flex items-center gap-5 text-gray-700">
+              <div className="flex flex-col items-center text-xs">
+                <span className="text-red-500 text-lg">❤️</span>
+                <span>Post</span>
+              </div>
+
+              <div className="flex flex-col items-center text-xs">
+                <span className="text-orange-500 text-lg">∞</span>
+                <span>Followers</span>
+              </div>
+
+              <div className="flex flex-col items-center text-xs">
+                <span className="text-red-500 text-lg">❤️</span>
+                <span>Following</span>
+              </div>
             </div>
+
           </div>
 
-          <p className="text-[11px] text-gray-600 mt-2 leading-snug">
+          <p className="text-[11px] text-gray-600 mt-2">
             We don’t run ads. We build conversion ecosystems 🚀
           </p>
+           <p className="text-[10px] text-gray-500">
+                  Lead Generation & Growth
+                </p>
+        </div>
 
-          {/* Buttons */}
-         
-{/* Buttons */}
-<div className="flex gap-2 mt-2">
-  <button
-    onClick={() =>
-      window.open(
-        "https://www.instagram.com/epoque.digital/",
-        "_blank"
-      )
-    }
-    className="flex-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white py-1 rounded text-[11px] shadow hover:scale-105 transition hover:cursor-pointer"
-  >
-    Follow
-  </button>
+        {/* 🔥 Buttons */}
+        <div className="flex gap-2 px-4 pb-3">
+          <button
+            onClick={() => window.open("https://www.instagram.com/epoque.digital/", "_blank")}
+            className="flex-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
+            text-white py-1 rounded text-[11px] hover:scale-105 transition"
+          >
+            Follow
+          </button>
 
-  <button
-    onClick={() => router.push("/contact")}
-    className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition hover:cursor-pointer"
-  >
-    Message
-  </button>
-</div>
-  </div>
-        {/* 🔥 SINGLE IMAGE SECTION */}
+          <button
+            onClick={() => router.push("/contact")}
+            className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r 
+            from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition"
+          >
+            Message
+          </button>
+
+          <button className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r 
+            from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition">
+            Book Now
+          </button>
+        </div>
+
+        {/* 🔥 IMAGE */}
         <div className="relative flex-1 mx-[2px] mb-[2px] rounded-lg overflow-hidden group">
           <Image
             src={image}
@@ -175,8 +201,8 @@ export default function EpoqueCardFront() {
             className="object-cover group-hover:scale-110 transition duration-500"
           />
 
-          {/* Hover Overlay */}
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm transition">
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 
+            flex items-center justify-center text-white text-sm transition">
             ❤️ {Math.floor(Math.random() * 200 + 50)}
           </div>
         </div>
