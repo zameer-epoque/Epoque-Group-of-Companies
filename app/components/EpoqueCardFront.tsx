@@ -105,9 +105,11 @@
 
 import Image from "next/image"
 import { Heart, Search, PlusSquare, User, Home } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function EpoqueCardFront() {
   const image = "/insta.jpeg" // single image
+  const router = useRouter() // ✅ ADD THIS
 
   return (
     <div className="w-full h-full rounded-2xl p-[1.5px] 
@@ -129,7 +131,7 @@ export default function EpoqueCardFront() {
             </div>
 
             <div>
-              <h2 className="font-semibold text-sm text-black">Epoque Group</h2>
+              <h2 className="font-semibold text-sm text-black">Epoque Group Of Companies</h2>
               <p className="text-[10px] text-gray-500">
                 Lead Generation & Growth
               </p>
@@ -141,25 +143,29 @@ export default function EpoqueCardFront() {
           </p>
 
           {/* Buttons */}
-          <div className="flex gap-2 mt-2">
-            <button
-              onClick={() =>
-                window.open(
-                  "https://www.instagram.com/epoque.digital/",
-                  "_blank"
-                )
-              }
-              className="flex-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white py-1 rounded text-[11px] shadow hover:scale-105 transition hover:cursor-pointer"
-            >
-              Follow
-            </button>
+         
+{/* Buttons */}
+<div className="flex gap-2 mt-2">
+  <button
+    onClick={() =>
+      window.open(
+        "https://www.instagram.com/epoque.digital/",
+        "_blank"
+      )
+    }
+    className="flex-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white py-1 rounded text-[11px] shadow hover:scale-105 transition hover:cursor-pointer"
+  >
+    Follow
+  </button>
 
-            <button className="flex-1 border py-1 rounded text-[11px] hover:bg-gray-100 transition">
-              Message
-            </button>
-          </div>
-        </div>
-
+  <button
+    onClick={() => router.push("/contact")}
+    className="flex-1 border py-1 rounded text-[11px] bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white hover:scale-105 transition hover:cursor-pointer"
+  >
+    Message
+  </button>
+</div>
+  </div>
         {/* 🔥 SINGLE IMAGE SECTION */}
         <div className="relative flex-1 mx-[2px] mb-[2px] rounded-lg overflow-hidden group">
           <Image

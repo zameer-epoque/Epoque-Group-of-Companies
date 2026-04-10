@@ -17,7 +17,7 @@ export default function EpoqueCardBack() {
         </div>
 
         {/* 🔥 Tagline */}
-        <p className="text-[11px] text-gray-400 leading-relaxed max-w-[240px]">
+        <p className="text-[15px] text-yellow-400 leading-relaxed max-w-[240px]">
           Performance-driven marketing & high-quality lead systems
         </p>
 
@@ -43,10 +43,12 @@ export default function EpoqueCardBack() {
           </p>
          
 
-          <div className="flex items-center justify-center gap-2">
-            <Phone size={13} />
-            <span>+91 9133 633 327</span>
-          </div>
+        <div className="flex items-center justify-center gap-2 text-yellow-400 animate-pulse font-semibold">
+  <Phone size={13} className="animate-pulse" />
+  <span className="drop-shadow-[0_0_8px_rgba(255,255,0,0.8)]">
+    +91 9133 633 327
+  </span>
+</div>
 
           <div className="flex items-center justify-center gap-2">
             <Mail size={13} />
@@ -61,7 +63,7 @@ export default function EpoqueCardBack() {
         </div>
 
         {/* 🔥 Services (Minimal Clean) */}
-        <div className="text-[10px] text-gray-500 leading-relaxed">
+        <div className="text-[20px] text-orange-400 leading-relaxed">
           Real Estate • Digital Marketing • Interiors • Consulting
         </div>
 
