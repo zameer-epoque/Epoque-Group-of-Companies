@@ -1,37 +1,6 @@
 "use client";
 
-const team = [
-  {
-    name: "Mr. Meda Ramesh Reddy",
-    role: "Managing Partner",
-    img: "/team1.png",
-  },
-  {
-    name: "Mr. Miryala Prasad",
-    role: "Partner",
-    img: "/team2.png",
-  },
-  {
-    name: "Mr. B Ramachandra Reddy",
-    role: "Partner",
-    img: "/team3.png",
-  },
-  {
-    name: "Mr. Snehith Reddy Meda",
-    role: "Partner",
-    img: "/team4.png",
-  },
-  {
-    name: "Ms. Sindhu Katireddy",
-    role: "Partner",
-    img: "/team5.png",
-  },
-  {
-    name: "Mr. Miryala Likhith Kumar",
-    role: "Partner",
-    img: "/team6.png",
-  },
-];
+
 
 export default function AboutPage() {
   return (
@@ -55,29 +24,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= TEAM ================= */}
-      <section className="py-16 px-6 md:px-12 text-center">
-        <h2 className="text-3xl md:text-4xl mb-4">Our Team</h2>
-        <p className="text-gray-400 mb-10">
-          Leveraging experience to foster growth
-        </p>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {team.map((member, i) => (
-            <div key={i} className="bg-gray-900 rounded-xl p-4">
-              <img
-                src={member.img}
-                className="rounded-lg mb-4 w-full h-[250px] object-cover"
-              />
-              <h3 className="font-semibold text-sm md:text-base">
-                {member.name}
-              </h3>
-              <p className="text-gray-400 text-xs md:text-sm">
-                {member.role}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+  
 
       {/* ================= VISION / MISSION ================= */}
       <section className="py-16 px-6 md:px-12 grid md:grid-cols-3 gap-6">

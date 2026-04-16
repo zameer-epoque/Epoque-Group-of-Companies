@@ -276,7 +276,7 @@ const clients = [
     link: "/OmSree"
   },
    {
-    title: "P R Constructions  SunRidge Homes",
+    title: "PR Constructions  SunRidge Homes",
     location: "Hyderabad",
     image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
     description:
@@ -299,7 +299,7 @@ const clients = [
       link: "/GRSV-Infra"
   },
   {
-    title: "Etereo Realty",
+    title: "Etereo Realty Etereo 1",
     location: "Goa",
     image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
     description:
