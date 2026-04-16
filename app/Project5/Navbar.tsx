@@ -23,14 +23,14 @@ export default function Header() {
         {/* LOGO CENTER */}
         <div className="text-center">
           <h1 className="text-xl font-bold tracking-widest">
-            <span className="text-yellow-400">E</span>-INFRA
+            <span className="text-yellow-400">GSRV</span>-INFRA
           </h1>
         </div>
 
         {/* RIGHT SIDE */}
         <div className="hidden md:flex items-center gap-6">
           <span className="text-sm font-medium">
-            +91 90 90 366 366
+            +91 9133 633 327
           </span>
           <button className="bg-[#b89a7a] hover:bg-[#a88766] px-5 py-2 rounded-full text-sm font-semibold transition">
             CONTACT
@@ -54,7 +54,7 @@ export default function Header() {
           <Link href="#" className="block">CONTACT</Link>
 
           <div className="pt-4 border-t border-gray-700">
-            <p className="mb-3">+91 90 90 366 366</p>
+            <p className="mb-3">+91 9133 633 327</p>
             <button className="w-full bg-[#b89a7a] py-2 rounded-full">
               CONTACT
             </button>
