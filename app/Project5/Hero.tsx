@@ -5,17 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    image: "/images/house1.jpg",
+    image: "/imagesnew/house1.jpg",
     title: "Explore\nElegance",
     subtitle: "Homes Built on Values. Backed by Vision. Trusted by Thousands.",
   },
   {
-    image: "/images/house2.jpg",
+    image: "/imagesnew/house2.jpg",
     title: "Modern\nLiving",
     subtitle: "Crafting spaces that define comfort and luxury.",
   },
   {
-    image: "/images/house3.jpg",
+    image: "/imagesnew/house3.jpg",
     title: "Premium\nSpaces",
     subtitle: "Where architecture meets lifestyle and elegance.",
   },
