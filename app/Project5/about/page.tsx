@@ -147,12 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="py-10 px-6 md:px-12 border-t border-gray-800 text-center">
-        <p>sales@e-infra.in</p>
-        <p className="text-gray-400 mt-2">
-          © 2024 E-INFRA
-        </p>
-      </footer>
+     
 
     </main>
   );
