@@ -154,9 +154,7 @@ export default function GoogleAdsPage() {
                     </div>
                 </div>
             </section>
-/* ================= SEO CONTENT SECTION ================= */
-/* Epoque Group — Google Ads & PPC Services in Hyderabad   */
-/* Word count: ~2,400 words | Drop-in React component       */
+
 
     <section className="relative py-24 px-6 bg-[#0b0b0c] font-sans">
       <div className="max-w-5xl mx-auto">

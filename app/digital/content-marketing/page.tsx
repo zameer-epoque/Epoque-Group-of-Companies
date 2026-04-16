@@ -144,9 +144,7 @@ export default function ContentMarketingPage() {
           </div>
         </div>
       </section>
-/* ================= SEO CONTENT SECTION ================= */
-/* Epoque Group — Content Marketing Services in Hyderabad  */
-/* Word count: ~2,600 words | Drop-in React component      */
+
 
 
     <section className="relative py-24 px-6 bg-[#0b0b0c] font-sans">
