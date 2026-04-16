@@ -295,7 +295,8 @@ const clients = [
     location: "Hyderabad",
     image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.png",
     description:
-      "Implemented SEO and paid media campaigns strengthening booking pipeline growth."
+      "Implemented SEO and paid media campaigns strengthening booking pipeline growth.",
+      link: "/GRSV-Infra"
   },
   {
     title: "Etereo Realty",
