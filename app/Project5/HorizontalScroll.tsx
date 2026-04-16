@@ -1,7 +1,5 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-
 const images = [
   "/imagesnew/img1.jpg",
   "/imagesnew/img2.jpg",
@@ -10,32 +8,6 @@ const images = [
 ];
 
 export default function HorizontalScroll() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-
-    const handleWheel = (e: WheelEvent) => {
-      if (!el) return;
-
-      // Only apply on desktop
-      if (window.innerWidth > 768) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
-    };
-
-    if (el) {
-      el.addEventListener("wheel", handleWheel, { passive: false });
-    }
-
-    return () => {
-      if (el) {
-        el.removeEventListener("wheel", handleWheel);
-      }
-    };
-  }, []);
-
   return (
     <section className="bg-black text-white py-16 md:py-20">
       
@@ -45,20 +17,12 @@ export default function HorizontalScroll() {
       </h2>
 
       {/* SCROLL CONTAINER */}
-      <div
-        ref={scrollRef}
-        className="flex gap-5 md:gap-10 overflow-x-auto px-4 md:px-10 scroll-smooth"
-        style={{ scrollbarWidth: "none" }}
-      >
+      <div className="flex gap-5 md:gap-10 overflow-x-auto px-4 md:px-10 snap-x snap-mandatory scroll-smooth">
+        
         {images.map((src, i) => (
           <div
             key={i}
-            className={`flex-shrink-0 transition-all duration-500 
-              ${
-                i === 1
-                  ? "w-[80vw] md:w-[50vw] scale-100"
-                  : "w-[70vw] md:w-[30vw] scale-90 opacity-70"
-              }`}
+            className="flex-shrink-0 w-[80vw] md:w-[30vw] snap-center"
           >
             <img
               src={src}
@@ -67,6 +31,7 @@ export default function HorizontalScroll() {
             />
           </div>
         ))}
+
       </div>
     </section>
   );
