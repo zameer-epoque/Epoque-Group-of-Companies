@@ -32,7 +32,7 @@ export default function ContactPage() {
 
         <div className="bg-gray-900 p-6 rounded-xl">
           <h3 className="text-lg font-semibold mb-2">Email</h3>
-          <p className="text-gray-400">sales@e-infra.in</p>
+          <p className="text-gray-400">sales@GVRS-infra.in</p>
         </div>
 
         <div className="bg-gray-900 p-6 rounded-xl">
