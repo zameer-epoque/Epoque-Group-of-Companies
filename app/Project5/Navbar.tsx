@@ -16,8 +16,8 @@ export default function Header() {
           <div className="flex items-center gap-1 cursor-pointer hover:text-gray-300">
             MENU <ChevronDown size={16} />
           </div>
-          <Link href="#" className="hover:text-gray-300">ABOUT US</Link>
-          <Link href="#" className="hover:text-gray-300">PROJECTS</Link>
+          <Link href="/Project5/about" className="hover:text-gray-300">ABOUT US</Link>
+          <Link href="/Project5/projects" className="hover:text-gray-300">PROJECTS</Link>
         </div>
 
         {/* LOGO CENTER */}
