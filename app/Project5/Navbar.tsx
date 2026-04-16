@@ -32,9 +32,12 @@ export default function Header() {
           <span className="text-sm font-medium">
             +91 9133 633 327
           </span>
-          <button className="bg-[#b89a7a] hover:bg-[#a88766] px-5 py-2 rounded-full text-sm font-semibold transition">
-            CONTACT
-          </button>
+         <Link
+  href="/Project5/contact"
+  className="bg-[#b89a7a] hover:bg-[#a88766] px-5 py-2 rounded-full text-sm font-semibold transition inline-block"
+>
+  CONTACT
+</Link>
         </div>
 
         {/* MOBILE MENU BUTTON */}
