@@ -40,7 +40,7 @@ export default function AboutPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[80vh] flex items-center justify-center text-center">
         <img
-          src="/hero.jpg"
+          src="/imagesnew/house2.jpg"
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
 
