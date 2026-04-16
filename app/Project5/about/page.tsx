@@ -69,7 +69,7 @@ export default function AboutPage() {
         </div>
 
         <img
-          src="/about-image.jpg"
+          src="/imagesnew/house1.jpg"
           className="rounded-xl w-full h-[300px] md:h-[400px] object-cover"
         />
       </section>
