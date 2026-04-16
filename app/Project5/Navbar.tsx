@@ -17,7 +17,7 @@ export default function Header() {
             MENU <ChevronDown size={16} />
           </div>
           <Link href="/Project5/about" className="hover:text-gray-300">ABOUT US</Link>
-          <Link href="/Project5/projects" className="hover:text-gray-300">PROJECTS</Link>
+          <Link href="#" className="hover:text-gray-300">PROJECTS</Link>
         </div>
 
         {/* LOGO CENTER */}
