@@ -2,6 +2,7 @@ import AboutSection from "../Project5/AboutSection";
 import AmenitiesSection from "../Project5/AmenitiesSection";
 import ApprovalsSection from "../Project5/ApprovalsSection";
 import ContactSection from "../Project5/ContactSection";
+import FloorPlanBanner from "../Project5/FloorPlanBanner";
 import FloorPlansSection from "../Project5/FloorPlansSection";
 import GallerySection from "../Project5/GallerySection";
 import HeroSection from "../Project5/HeroSection";
@@ -19,6 +20,7 @@ export default function page() {
       <FloorPlansSection />
       <GallerySection />
       <StatsSection/>
+      <FloorPlanBanner/>
       <LocationSection/>
       <ApprovalsSection/>
       <ContactSection />
