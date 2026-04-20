@@ -20,7 +20,7 @@ export default function FloorPlanBanner() {
       <div className="relative w-full max-w-7xl mx-auto rounded-xl overflow-hidden shadow-2xl border border-gray-300">
         
         <Image
-          src="/Garikapatibanner.jpg" // 👉 replace with your image path
+          src="/Garikapatibanner.png" // 👉 replace with your image path
           alt="Floor Plan"
           width={1400}
           height={800}
