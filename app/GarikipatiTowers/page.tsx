@@ -6,6 +6,7 @@ import GallerySection from "../Project5/GallerySection";
 import HeroSection from "../Project5/HeroSection";
 import LocationSection from "../Project5/LocationSection";
 import Navbar from "../Project5/Navbar";
+import StatsSection from "../Project5/StatsSection";
 
 export default function page() {
   return (
@@ -16,6 +17,7 @@ export default function page() {
       <AmenitiesSection />
       <FloorPlansSection />
       <GallerySection />
+      <StatsSection/>
       <LocationSection/>
       <ContactSection />
     </>

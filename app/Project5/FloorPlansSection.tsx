@@ -7,17 +7,17 @@ const plans = [
   {
     title: "1.5 BHK",
     size: "932 Sq.ft",
-    image: "/plan1.jpg",
+    image: "/Garikipati1.jpg",
   },
   {
     title: "2 BHK",
     size: "1208 Sq.ft",
-    image: "/plan2.jpg",
+    image: "/Garikipati2.jpg",
   },
   {
     title: "3 BHK",
     size: "1647 Sq.ft",
-    image: "/plan3.jpg",
+    image: "/Garikipati3.jpg",
   },
 ];
 
