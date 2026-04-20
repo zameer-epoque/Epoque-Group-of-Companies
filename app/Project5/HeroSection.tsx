@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="absolute inset-0"
       >
         <Image
-          src="/hero.jpg"
+          src="/garikipati-towers-real-estate-marketing-hyderabad-epoque-group.jpg"
           alt="Luxury Apartments"
           fill
           priority

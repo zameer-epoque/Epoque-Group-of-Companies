@@ -31,7 +31,7 @@ export default function AboutSection() {
           >
             <div className="overflow-hidden rounded-3xl shadow-2xl">
               <Image
-                src="/building2.jpg"
+                src="/Garikipati2.jpg"
                 alt="Garikipati Towers"
                 width={700}
                 height={500}

@@ -6,12 +6,12 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 const images = [
-  "/g1.jpg",
-  "/g2.jpg",
-  "/g3.jpg",
-  "/g4.jpg",
-  "/g5.jpg",
-  "/g6.jpg",
+  "/Garikipati1.jpg",
+  "/Garikipati2.jpg",
+  "/Garikipati3.jpg",
+  "/Garikipati4.jpg",
+  "/Garikipati5.jpg",
+  "/Garikipati6.jpg",
 ];
 
 export default function GallerySection() {
