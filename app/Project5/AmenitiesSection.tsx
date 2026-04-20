@@ -25,20 +25,24 @@ const amenities = [
 
 export default function AmenitiesSection() {
   return (
-    <section id="amenities" className="relative py-28 bg-gradient-to-b from-white to-[#eef5f4] overflow-hidden">
+    <section className="relative py-32 bg-gradient-to-br from-[#0f172a] via-[#022c22] to-[#0f766e] overflow-hidden text-white">
 
-      {/* BACKGROUND GLOW */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#0f766e]/10 blur-[140px] rounded-full" />
+      {/* BACKGROUND LIGHT BLOBS */}
+      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500/30 blur-[120px]" />
+      <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-teal-400/30 blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* TITLE */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-24">
           <h2 className="text-4xl md:text-6xl font-serif leading-tight">
-            Luxury <span className="text-[#0f766e]">Amenities</span>
+            World-Class <br />
+            <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
+              Amenities
+            </span>
           </h2>
-          <p className="text-gray-500 mt-4 text-lg">
-            Designed for comfort, crafted for lifestyle
+          <p className="text-gray-300 mt-4 text-lg">
+            Designed to elevate your everyday lifestyle
           </p>
         </div>
 
@@ -51,48 +55,46 @@ export default function AmenitiesSection() {
                 key={i}
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12 }}
-                className="group relative p-[1px] rounded-3xl bg-gradient-to-b from-white/40 to-transparent hover:from-[#0f766e]/40 transition"
+                transition={{ delay: i * 0.1 }}
+                className="group relative rounded-3xl p-[1px] bg-gradient-to-br from-[#5eead4]/30 via-[#a78bfa]/30 to-transparent hover:from-[#5eead4] hover:via-[#a78bfa] transition"
               >
-                <div className="relative backdrop-blur-xl bg-white/70 border border-white/40 rounded-3xl p-8 h-full text-center shadow-md hover:shadow-2xl transition duration-500">
+                <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 h-full text-center shadow-xl hover:shadow-[0_0_40px_rgba(94,234,212,0.3)] transition duration-500">
 
                   {/* ICON */}
-                  <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-[#0f766e]/10 group-hover:bg-[#0f766e] transition">
-                    <Icon
-                      size={30}
-                      className="text-[#0f766e] group-hover:text-white transition"
-                    />
+                  <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa] shadow-lg group-hover:scale-110 transition">
+                    <Icon size={28} className="text-white" />
                   </div>
 
                   {/* TITLE */}
-                  <h3 className="mt-6 text-lg font-medium text-gray-800 group-hover:text-[#0f766e] transition">
+                  <h3 className="mt-6 text-lg font-semibold tracking-wide">
                     {item.title}
                   </h3>
 
-                  {/* HOVER GLOW */}
-                  <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#0f766e]/10 to-transparent blur-xl" />
+                  {/* GLOW EFFECT */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#5eead4]/20 to-[#a78bfa]/20 blur-2xl rounded-3xl" />
                 </div>
               </motion.div>
             );
           })}
         </div>
 
-        {/* PREMIUM CTA STRIP */}
-        <div className="mt-28 relative rounded-3xl overflow-hidden">
+        {/* PREMIUM CTA */}
+        <div className="mt-32 relative rounded-3xl overflow-hidden">
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0f766e] to-[#14b8a6]" />
+          {/* GRADIENT BG */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#5eead4] via-[#14b8a6] to-[#a78bfa]" />
 
-          <div className="relative z-10 text-center text-white py-16 px-6">
+          <div className="relative z-10 text-center text-white py-20 px-6">
             <h3 className="text-3xl md:text-5xl font-serif mb-4">
-              Elevate Your Everyday Living
+              Live Beyond Expectations
             </h3>
 
             <p className="max-w-2xl mx-auto opacity-90 text-lg">
-              Experience thoughtfully designed spaces that bring together comfort,
-              wellness, and modern lifestyle — all within your reach.
+              Experience a lifestyle enriched with luxury, comfort, and
+              beautifully designed spaces for every moment of your life.
             </p>
 
-            <button className="mt-8 px-10 py-3 bg-white text-[#0f766e] rounded-full hover:bg-gray-100 transition font-medium shadow-lg">
+            <button className="mt-8 px-10 py-4 rounded-full bg-black/80 backdrop-blur-lg hover:bg-black transition font-medium shadow-xl">
               Schedule Visit
             </button>
           </div>
