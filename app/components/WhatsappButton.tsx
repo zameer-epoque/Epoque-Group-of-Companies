@@ -64,17 +64,64 @@
 // }
 
 
+// "use client";
+
+// import Image from "next/image";
+
+// export default function WhatsappButton() {
+//   return (
+//     <a
+//       href="https://wa.me/919133633327?text=Hello%20Epoque%20Group"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3 group"
+//     >
+//       {/* Text Bubble */}
+//       <span className="bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-5 group-hover:translate-x-0 transition-all duration-300">
+//         Chat with Epoque Group
+//       </span>
+
+//       {/* Logo Button */}
+//       <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-xl border-2 border-green-500 bg-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-green-400/60">
+        
+//         <Image
+//           src="/new logo.png"   // ✅ NO SPACES
+//           alt="Epoque Logo"
+//          width={28} height={28}              // ✅ FULL COVER FIX
+//           className="object-cover"
+//         />
+
+//         {/* Optional Glow Effect */}
+//         <div className="absolute inset-0 rounded-full ring-2 ring-green-400 opacity-0 group-hover:opacity-100 transition"></div>
+
+//       </div>
+//     </a>
+//   );
+// }
+
+
+
+
+
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function WhatsappButton() {
   return (
-    <a
+    <motion.a
       href="https://wa.me/919133633327?text=Hello%20Epoque%20Group"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3 group"
+      
+      animate={{ y: [0, -10, 0] }} // up-down bounce
+      transition={{
+        duration: 1.2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
     >
       {/* Text Bubble */}
       <span className="bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-5 group-hover:translate-x-0 transition-all duration-300">
@@ -83,18 +130,17 @@ export default function WhatsappButton() {
 
       {/* Logo Button */}
       <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-xl border-2 border-green-500 bg-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-green-400/60">
-        
         <Image
-          src="/new logo.png"   // ✅ NO SPACES
+          src="/new logo.png"
           alt="Epoque Logo"
-         width={28} height={28}              // ✅ FULL COVER FIX
+          width={28}
+          height={28}
           className="object-cover"
         />
 
-        {/* Optional Glow Effect */}
+        {/* Glow Effect */}
         <div className="absolute inset-0 rounded-full ring-2 ring-green-400 opacity-0 group-hover:opacity-100 transition"></div>
-
       </div>
-    </a>
+    </motion.a>
   );
 }
