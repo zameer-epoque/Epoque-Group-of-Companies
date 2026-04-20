@@ -78,27 +78,7 @@ export default function AmenitiesSection() {
           })}
         </div>
 
-        {/* PREMIUM CTA */}
-        <div className="mt-32 relative rounded-3xl overflow-hidden">
-
-          {/* GRADIENT BG */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#5eead4] via-[#14b8a6] to-[#a78bfa]" />
-
-          <div className="relative z-10 text-center text-white py-20 px-6">
-            <h3 className="text-3xl md:text-5xl font-serif mb-4">
-              Live Beyond Expectations
-            </h3>
-
-            <p className="max-w-2xl mx-auto opacity-90 text-lg">
-              Experience a lifestyle enriched with luxury, comfort, and
-              beautifully designed spaces for every moment of your life.
-            </p>
-
-            <button className="mt-8 px-10 py-4 rounded-full bg-black/80 backdrop-blur-lg hover:bg-black transition font-medium shadow-xl">
-              Schedule Visit
-            </button>
-          </div>
-        </div>
+      
 
       </div>
     </section>
