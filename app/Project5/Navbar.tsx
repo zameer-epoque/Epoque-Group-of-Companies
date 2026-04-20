@@ -38,7 +38,7 @@ export default function Navbar() {
 
         {/* LOGO */}
         <h1 className="text-2xl md:text-3xl font-serif tracking-wide text-[#0f766e]">
-          Garikipati
+          Garikipati Towers
         </h1>
 
         {/* DESKTOP MENU */}
