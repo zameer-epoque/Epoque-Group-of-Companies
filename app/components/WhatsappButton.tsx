@@ -100,7 +100,61 @@
 // }
 
 
+// "use client";
 
+// import Image from "next/image";
+// import { motion } from "framer-motion";
+
+// export default function WhatsappButton() {
+//   return (
+//     <div className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3 group">
+
+//       {/* 💬 Text */}
+//       <span className="bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-5 group-hover:translate-x-0 transition-all duration-300">
+//         Chat with Epoque Group
+//       </span>
+
+//       {/* 🌈 Wrapper */}
+//       <div className="relative w-16 h-16 flex items-center justify-center">
+
+//         {/* 🔄 ROTATING RING (IMPORTANT FIX HERE) */}
+//         <motion.div
+//           animate={{ rotate: 360 }}
+//           transition={{
+//             repeat: Infinity,
+//             duration: 2,
+//             ease: "linear",
+//           }}
+//           className="absolute inset-0 rounded-full"
+//           style={{
+//             background: "conic-gradient(red, yellow, lime, red)",
+//             padding: "3px",
+//           }}
+//         >
+//           <div className="w-full h-full bg-white rounded-full" />
+//         </motion.div>
+
+//         {/* 💥 Glow */}
+//         <div
+//           className="absolute inset-0 rounded-full blur-md opacity-60"
+//           style={{
+//             background: "conic-gradient(red, yellow, lime, red)",
+//           }}
+//         />
+
+//         {/* 🔘 Button */}
+//         <div className="relative w-14 h-14 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-xl">
+//           <Image
+//             src="/new logo.png"
+//             alt="logo"
+//             width={26}
+//             height={26}
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 
 "use client";
@@ -110,37 +164,61 @@ import { motion } from "framer-motion";
 
 export default function WhatsappButton() {
   return (
-    <motion.a
-      href="https://wa.me/919133633327?text=Hello%20Epoque%20Group"
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3 group"
-      
-      animate={{ y: [0, -10, 0] }} // up-down bounce
+
+      // ⚽ Bounce animation (added)
+      animate={{ y: [0, -10, 0] }}
       transition={{
         duration: 1.2,
         repeat: Infinity,
         ease: "easeInOut",
       }}
     >
-      {/* Text Bubble */}
+
+      {/* 💬 Text */}
       <span className="bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-full shadow-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 translate-x-5 group-hover:translate-x-0 transition-all duration-300">
         Chat with Epoque Group
       </span>
 
-      {/* Logo Button */}
-      <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-xl border-2 border-green-500 bg-white flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-green-400/60">
-        <Image
-          src="/new logo.png"
-          alt="Epoque Logo"
-          width={28}
-          height={28}
-          className="object-cover"
+      {/* 🌈 Wrapper */}
+      <div className="relative w-16 h-16 flex items-center justify-center">
+
+        {/* 🔄 ROTATING RING */}
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{
+            repeat: Infinity,
+            duration: 2,
+            ease: "linear",
+          }}
+          className="absolute inset-0 rounded-full"
+          style={{
+            background: "conic-gradient(red, yellow, lime, red)",
+            padding: "3px",
+          }}
+        >
+          <div className="w-full h-full bg-white rounded-full" />
+        </motion.div>
+
+        {/* 💥 Glow */}
+        <div
+          className="absolute inset-0 rounded-full blur-md opacity-60"
+          style={{
+            background: "conic-gradient(red, yellow, lime, red)",
+          }}
         />
 
-        {/* Glow Effect */}
-        <div className="absolute inset-0 rounded-full ring-2 ring-green-400 opacity-0 group-hover:opacity-100 transition"></div>
+        {/* 🔘 Button */}
+        <div className="relative w-14 h-14 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-xl">
+          <Image
+            src="/new logo.png"  
+            alt="logo"
+            width={26}
+            height={26}
+          />
+        </div>
       </div>
-    </motion.a>
+    </motion.div>
   );
 }
