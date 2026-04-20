@@ -28,59 +28,60 @@ const locationsRight = [
 
 export default function LocationSection() {
   return (
-    <section className="relative py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] text-white overflow-hidden">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] text-white overflow-hidden">
 
-      {/* GLOW EFFECTS */}
-      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500/30 blur-[120px]" />
-      <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-teal-400/30 blur-[120px]" />
+      {/* GLOW */}
+      <div className="absolute top-[-80px] left-[-80px] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-purple-500/30 blur-[120px]" />
+      <div className="absolute bottom-[-80px] right-[-80px] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-teal-400/30 blur-[120px]" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
 
         {/* TITLE */}
-        <div className="text-center mb-20">
-          <p className="text-[#5eead4] uppercase tracking-widest text-sm">
+        <div className="text-center mb-12 md:mb-20">
+          <p className="text-[#5eead4] uppercase tracking-widest text-xs md:text-sm">
             Where City
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-serif leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-6xl font-serif leading-tight">
             Access <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
               Meets
             </span>
           </h2>
 
-          <p className="text-gray-300 mt-2 text-lg">
+          <p className="text-gray-300 mt-2 text-sm sm:text-base md:text-lg">
             Suburban Peace
           </p>
         </div>
 
         {/* CARD */}
-        <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-10 shadow-2xl">
+        <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-10 shadow-xl">
 
           {/* ADDRESS */}
-          <div className="flex items-center gap-3 mb-10 text-gray-300">
-            <MapPin size={18} className="text-[#5eead4]" />
+          <div className="flex items-start gap-3 mb-6 md:mb-10 text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed">
+            <MapPin size={16} className="text-[#5eead4] mt-1 shrink-0" />
             <p>
-              Opp. Adani Aerospace Park & Telangana IT SEZ,  
-              Behind Airport Novotel Hotel & GMR AeroCity
+              Opp. Adani Aerospace Park & Telangana IT SEZ, Behind Airport Novotel Hotel & GMR AeroCity
             </p>
           </div>
 
           {/* GRID */}
-          <div className="grid md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
 
             {/* LEFT */}
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {locationsLeft.map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="flex justify-between items-center border-b border-white/10 pb-2"
+                  transition={{ delay: i * 0.04 }}
+                  className="flex justify-between items-start gap-3 border-b border-white/10 pb-2"
                 >
-                  <span className="text-gray-200">{item.name}</span>
+                  <span className="text-gray-200 text-xs sm:text-sm md:text-base leading-snug">
+                    {item.name}
+                  </span>
 
-                  <span className="px-3 py-1 text-sm rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-medium">
+                  <span className="px-2 py-1 text-[10px] sm:text-xs rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-medium whitespace-nowrap">
                     {item.time}
                   </span>
                 </motion.div>
@@ -88,18 +89,20 @@ export default function LocationSection() {
             </div>
 
             {/* RIGHT */}
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {locationsRight.map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: 30 }}
+                  initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="flex justify-between items-center border-b border-white/10 pb-2"
+                  transition={{ delay: i * 0.04 }}
+                  className="flex justify-between items-start gap-3 border-b border-white/10 pb-2"
                 >
-                  <span className="text-gray-200">{item.name}</span>
+                  <span className="text-gray-200 text-xs sm:text-sm md:text-base leading-snug">
+                    {item.name}
+                  </span>
 
-                  <span className="px-3 py-1 text-sm rounded-full bg-gradient-to-r from-[#a78bfa] to-[#5eead4] text-black font-medium">
+                  <span className="px-2 py-1 text-[10px] sm:text-xs rounded-full bg-gradient-to-r from-[#a78bfa] to-[#5eead4] text-black font-medium whitespace-nowrap">
                     {item.time}
                   </span>
                 </motion.div>

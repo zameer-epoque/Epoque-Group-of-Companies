@@ -5,34 +5,34 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section className="relative py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white">
 
-      {/* GLOW BACKGROUND */}
-      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500/30 blur-[120px]" />
-      <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-teal-400/30 blur-[120px]" />
+      {/* GLOW */}
+      <div className="absolute top-[-80px] left-[-80px] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-purple-500/30 blur-[120px]" />
+      <div className="absolute bottom-[-80px] right-[-80px] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-teal-400/30 blur-[120px]" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
 
-        {/* LEFT CONTENT */}
+        {/* LEFT */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          className="text-center md:text-left"
         >
-          <h2 className="text-4xl md:text-6xl font-serif leading-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-6xl font-serif leading-tight mb-4 md:mb-6">
             Book Your <br />
             <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
               Dream Home
             </span>
           </h2>
 
-          <p className="text-gray-300 mb-8 text-lg">
-            Connect with our team to schedule a site visit and explore premium
-            living spaces tailored for you.
+          <p className="text-gray-300 mb-6 md:mb-8 text-sm sm:text-base md:text-lg">
+            Connect with our team to schedule a site visit and explore premium living spaces.
           </p>
 
           {/* CONTACT CARDS */}
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {[
               { icon: Phone, text: "+91 98765 43210" },
               { icon: Mail, text: "sales@garikipati.com" },
@@ -42,12 +42,14 @@ export default function ContactSection() {
               return (
                 <div
                   key={i}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20"
+                  className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-lg md:rounded-xl bg-white/10 backdrop-blur-lg border border-white/20"
                 >
                   <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
-                    <Icon size={16} className="text-black" />
+                    <Icon size={14} className="md:size-18 text-black" />
                   </div>
-                  <span className="text-gray-200">{item.text}</span>
+                  <span className="text-gray-200 text-xs sm:text-sm md:text-base">
+                    {item.text}
+                  </span>
                 </div>
               );
             })}
@@ -59,19 +61,20 @@ export default function ContactSection() {
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative p-[1px] rounded-3xl bg-gradient-to-br from-[#5eead4]/40 via-[#a78bfa]/40 to-transparent"
+          className="relative p-[1px] rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#5eead4]/40 via-[#a78bfa]/40 to-transparent"
         >
-          <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-3xl space-y-6 shadow-[0_0_40px_rgba(94,234,212,0.2)]">
+          <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-5 sm:p-6 md:p-8 rounded-2xl md:rounded-3xl space-y-4 md:space-y-6">
 
-            {/* INPUT */}
+            {/* INPUTS */}
             {["Your Name", "Phone Number", "Email Address"].map((label, i) => (
               <div key={i} className="relative">
                 <input
                   type="text"
                   required
-                  className="w-full p-4 bg-transparent border border-white/30 rounded-lg outline-none peer text-white"
+                  placeholder=" "
+                  className="w-full p-3 md:p-4 bg-transparent border border-white/30 rounded-lg outline-none peer text-white text-sm md:text-base"
                 />
-                <label className="absolute left-4 top-4 text-white/60 text-sm transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:bg-[#022c22] px-2">
+                <label className="absolute left-3 md:left-4 top-3 md:top-4 text-white/60 text-xs md:text-sm transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:bg-[#022c22] px-1">
                   {label}
                 </label>
               </div>
@@ -80,16 +83,17 @@ export default function ContactSection() {
             {/* TEXTAREA */}
             <div className="relative">
               <textarea
-                rows={4}
-                className="w-full p-4 bg-transparent border border-white/30 rounded-lg outline-none peer text-white"
+                rows={3}
+                placeholder=" "
+                className="w-full p-3 md:p-4 bg-transparent border border-white/30 rounded-lg outline-none peer text-white text-sm md:text-base"
               />
-              <label className="absolute left-4 top-4 text-white/60 text-sm transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:bg-[#022c22] px-2">
+              <label className="absolute left-3 md:left-4 top-3 md:top-4 text-white/60 text-xs md:text-sm transition-all peer-focus:-top-2 peer-focus:text-xs peer-focus:bg-[#022c22] px-1">
                 Message
               </label>
             </div>
 
             {/* BUTTON */}
-            <button className="w-full py-4 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold hover:scale-105 transition shadow-[0_0_20px_rgba(94,234,212,0.5)]">
+            <button className="w-full py-3 md:py-4 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black text-sm md:text-base font-semibold active:scale-95 transition shadow-[0_0_15px_rgba(94,234,212,0.5)]">
               Submit Inquiry
             </button>
           </div>

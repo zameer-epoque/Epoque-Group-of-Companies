@@ -1,5 +1,6 @@
 import AboutSection from "../Project5/AboutSection";
 import AmenitiesSection from "../Project5/AmenitiesSection";
+import ApprovalsSection from "../Project5/ApprovalsSection";
 import ContactSection from "../Project5/ContactSection";
 import FloorPlansSection from "../Project5/FloorPlansSection";
 import GallerySection from "../Project5/GallerySection";
@@ -19,6 +20,7 @@ export default function page() {
       <GallerySection />
       <StatsSection/>
       <LocationSection/>
+      <ApprovalsSection/>
       <ContactSection />
     </>
   );
