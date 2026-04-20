@@ -23,22 +23,24 @@ const plans = [
 
 export default function FloorPlansSection() {
   return (
-    <section
-      id="plans"
-      className="relative py-28 bg-gradient-to-b from-[#f8f7f4] to-[#eef5f4] overflow-hidden"
-    >
-      {/* BACKGROUND GLOW */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#0f766e]/10 blur-[140px] rounded-full" />
+    <section className="relative py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white">
+
+      {/* GLOW BACKGROUND */}
+      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-purple-500/30 blur-[120px]" />
+      <div className="absolute bottom-[-100px] right-[-100px] w-[400px] h-[400px] bg-teal-400/30 blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* TITLE */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-serif">
-            Elegant <span className="text-[#0f766e]">Floor Plans</span>
+        <div className="text-center mb-24">
+          <h2 className="text-4xl md:text-6xl font-serif leading-tight">
+            Elegant <br />
+            <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
+              Floor Plans
+            </span>
           </h2>
-          <p className="text-gray-500 mt-4 text-lg">
-            Designed for space, comfort, and functionality
+          <p className="text-gray-300 mt-4 text-lg">
+            Designed for space, comfort & luxury living
           </p>
         </div>
 
@@ -50,57 +52,63 @@ export default function FloorPlansSection() {
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15 }}
-              className="group relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500"
+              className="group relative p-[1px] rounded-3xl bg-gradient-to-br from-[#5eead4]/40 via-[#a78bfa]/40 to-transparent"
             >
-              {/* IMAGE */}
-              <div className="relative overflow-hidden">
-                <Image
-                  src={plan.image}
-                  alt={plan.title}
-                  width={500}
-                  height={350}
-                  className="object-cover w-full h-[320px] group-hover:scale-110 transition duration-700"
-                />
+              <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-xl hover:shadow-[0_0_40px_rgba(94,234,212,0.3)] transition duration-500">
 
-                {/* DARK OVERLAY */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition" />
-              </div>
+                {/* IMAGE */}
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={plan.image}
+                    alt={plan.title}
+                    width={500}
+                    height={350}
+                    className="object-cover w-full h-[300px] group-hover:scale-110 transition duration-700"
+                  />
 
-              {/* FLOATING INFO */}
-              <div className="absolute bottom-4 left-4 right-4 backdrop-blur-xl bg-white/80 border border-white/40 rounded-xl p-4 flex justify-between items-center shadow-lg">
-
-                <div>
-                  <h3 className="font-semibold text-lg text-[#0f766e]">
-                    {plan.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{plan.size}</p>
+                  {/* OVERLAY */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 </div>
 
-                <button className="px-4 py-2 text-sm rounded-full bg-[#0f766e] text-white hover:bg-[#14b8a6] transition">
-                  View
-                </button>
+                {/* INFO */}
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-semibold bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
+                    {plan.title}
+                  </h3>
+
+                  <p className="text-gray-300 text-sm mt-1">
+                    {plan.size}
+                  </p>
+
+                  <button className="mt-4 px-6 py-2 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-medium hover:scale-105 transition shadow-lg">
+                    View Plan
+                  </button>
+                </div>
+
+                {/* HOVER GLOW */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#5eead4]/20 to-[#a78bfa]/20 blur-2xl" />
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* CTA STRIP */}
-        <div className="mt-28 relative rounded-3xl overflow-hidden">
+        <div className="mt-32 relative rounded-3xl overflow-hidden">
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0f766e] to-[#14b8a6]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#5eead4] via-[#14b8a6] to-[#a78bfa]" />
 
-          <div className="relative z-10 text-center text-white py-16 px-6">
+          <div className="relative z-10 text-center text-white py-20 px-6">
             <h3 className="text-3xl md:text-5xl font-serif mb-4">
-              Find Your Perfect Layout
+              Choose Your Perfect Home
             </h3>
 
             <p className="max-w-2xl mx-auto opacity-90 text-lg">
-              Explore thoughtfully designed floor plans tailored for modern
-              families, offering space, privacy, and elegance.
+              Explore intelligently designed layouts that offer comfort,
+              elegance, and a perfect balance of space.
             </p>
 
-            <button className="mt-8 px-10 py-3 bg-white text-[#0f766e] rounded-full hover:bg-gray-100 transition font-medium shadow-lg">
-              Download Full Plans
+            <button className="mt-8 px-10 py-4 rounded-full bg-black/80 backdrop-blur-lg hover:bg-black transition font-medium shadow-xl">
+              Download Brochure
             </button>
           </div>
         </div>
