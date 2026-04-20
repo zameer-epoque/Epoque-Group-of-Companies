@@ -70,9 +70,6 @@ export default function HeroSection() {
             Book Site Visit
           </button>
 
-          <button className="px-8 py-3 rounded-full border border-white/40 backdrop-blur-lg">
-            Download Brochure
-          </button>
         </div>
 
       </div>
