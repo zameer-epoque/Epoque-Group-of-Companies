@@ -102,25 +102,7 @@ export default function AboutSection() {
         </div>
 
         {/* CTA STRIP */}
-        <div className="mt-32 relative rounded-3xl overflow-hidden">
-
-          <div className="absolute inset-0 bg-gradient-to-r from-[#5eead4] via-[#14b8a6] to-[#a78bfa]" />
-
-          <div className="relative z-10 text-center text-white py-20 px-6">
-            <h3 className="text-3xl md:text-5xl font-serif mb-4">
-              Experience Elevated Living
-            </h3>
-
-            <p className="max-w-2xl mx-auto opacity-90 text-lg">
-              A lifestyle crafted with precision, comfort, and sophistication —
-              designed for those who expect more from their home.
-            </p>
-
-            <button className="mt-8 px-10 py-4 rounded-full bg-black/80 backdrop-blur-lg hover:bg-black transition font-medium shadow-xl">
-              Explore Project
-            </button>
-          </div>
-        </div>
+       
 
       </div>
     </section>
