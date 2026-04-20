@@ -1,4 +1,4 @@
-"use client";
+"use client";"use client";
 
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -38,16 +38,75 @@ Message: ${form.message}`;
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT SAME AS YOUR CODE */}
+        {/* LEFT CONTACT INFO */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center md:text-left"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif mb-4">
+            Get in <span className="text-[#5eead4]">Touch</span>
+          </h2>
+
+          <p className="text-gray-300 mb-6 text-sm md:text-base">
+            Contact us for site visit, pricing details and availability.
+          </p>
+
+          <div className="space-y-4">
+
+            {/* PHONE */}
+            <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-lg">
+              <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
+                <Phone size={18} className="text-black" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">Call Us</p>
+                <p className="text-sm md:text-base font-medium">
+                  +91 9133 633 327
+                </p>
+              </div>
+            </div>
+
+            {/* EMAIL */}
+            <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-lg">
+              <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
+                <Mail size={18} className="text-black" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">Email</p>
+                <p className="text-sm md:text-base font-medium">
+                  sales@epoquegroup.in
+                </p>
+              </div>
+            </div>
+
+            {/* ADDRESS */}
+            <div className="flex items-start gap-4 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-lg">
+              <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
+                <MapPin size={18} className="text-black" />
+              </div>
+              <div>
+                <p className="text-xs text-gray-400">Location</p>
+                <p className="text-sm md:text-base font-medium leading-snug">
+                  GMR Aerocity, Hyderabad, Telangana
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </motion.div>
 
         {/* FORM */}
         <motion.form
           onSubmit={handleSubmit}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
           className="relative p-[1px] rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#5eead4]/40 via-[#a78bfa]/40 to-transparent"
         >
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-5 md:p-8 rounded-2xl md:rounded-3xl space-y-4">
 
-            {/* NAME */}
             <input
               name="name"
               value={form.name}
@@ -57,7 +116,6 @@ Message: ${form.message}`;
               className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
             />
 
-            {/* PHONE */}
             <input
               name="phone"
               value={form.phone}
@@ -67,16 +125,14 @@ Message: ${form.message}`;
               className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
             />
 
-            {/* EMAIL */}
             <input
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
+              className="w-full p-3 bg-transparent border border.white/30 rounded-lg text-white"
             />
 
-            {/* MESSAGE */}
             <textarea
               name="message"
               value={form.message}
@@ -86,7 +142,6 @@ Message: ${form.message}`;
               className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
             />
 
-            {/* BUTTON */}
             <button className="w-full py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold">
               Submit Enquiry
             </button>
