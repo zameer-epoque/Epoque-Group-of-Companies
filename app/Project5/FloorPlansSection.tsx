@@ -23,7 +23,7 @@ const plans = [
 
 export default function FloorPlansSection() {
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white">
+    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white id='floorplans'>">
 
       {/* GLOW */}
       <div className="absolute top-[-80px] left-[-80px] w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-purple-500/30 blur-[120px]" />
@@ -89,26 +89,8 @@ export default function FloorPlansSection() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 md:mt-32 relative rounded-2xl md:rounded-3xl overflow-hidden">
-
-          <div className="absolute inset-0 bg-gradient-to-r from-[#5eead4] via-[#14b8a6] to-[#a78bfa]" />
-
-          <div className="relative z-10 text-center text-white py-12 md:py-20 px-4 md:px-6">
-            <h3 className="text-xl sm:text-2xl md:text-5xl font-serif mb-3 md:mb-4">
-              Choose Your Perfect Home
-            </h3>
-
-            <p className="max-w-2xl mx-auto opacity-90 text-sm sm:text-base md:text-lg">
-              Explore intelligently designed layouts for modern living.
-            </p>
-
-            <button className="mt-5 md:mt-8 px-6 py-3 md:px-10 md:py-4 rounded-full bg-black/80 backdrop-blur-lg text-sm md:text-base font-medium active:scale-95 transition shadow-xl">
-              Download Brochure
-            </button>
-          </div>
-        </div>
-
+      
+       
       </div>
     </section>
   );
