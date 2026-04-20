@@ -325,6 +325,15 @@ const clients = [
       "Comprehensive real estate solutions including buying, selling, and investment advisory.",
     link: "https://www.propertyhandling.com/"
   },
+  {
+    title: "Garikipati Towers",
+    location: "Hyderabad",
+    image: "/garikipati-towers-real-estate-marketing-hyderabad-epoque-group.jpg",
+    description:
+      "Premium real estate developer offering luxury villas and apartments with world-class design, quality construction, and high investment value.",
+    link: "/GarikipatiTowers"
+
+  }
   
 ]
 
