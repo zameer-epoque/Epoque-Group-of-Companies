@@ -88,7 +88,7 @@ Message: ${form.message}`;
 
             {/* BUTTON */}
             <button className="w-full py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold">
-              Send via WhatsApp
+              Submit Enquiry
             </button>
 
           </div>
