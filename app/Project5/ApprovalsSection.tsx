@@ -20,7 +20,7 @@ const approvals = [
     code: "011079/BP/HMDA/2903/SMD/2024",
   },
   {
-    image: "/noc.png",
+    image: "/approval4.jpg",
     title: "Airport Authority NOC",
     code: "HIAL/SOUTH/B/042023/735505",
   },
