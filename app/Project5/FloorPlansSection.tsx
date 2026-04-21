@@ -80,9 +80,7 @@ export default function FloorPlansSection() {
                     {plan.size}
                   </p>
 
-                  <button className="mt-3 md:mt-4 px-5 py-2 md:px-6 md:py-2 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black text-xs sm:text-sm md:text-base font-medium active:scale-95 transition shadow-lg">
-                    View Plan
-                  </button>
+                 
                 </div>
               </div>
             </motion.div>
