@@ -118,9 +118,17 @@ export default function GallerySection() {
               Walk through beautifully crafted spaces.
             </p>
 
-            <button className="mt-5 md:mt-8 px-6 py-3 md:px-10 md:py-4 rounded-full bg-black/80 backdrop-blur-lg text-sm md:text-base font-medium active:scale-95 transition shadow-xl">
-              Book Site Visit
-            </button>
+           <button
+  onClick={() =>
+    window.open(
+      "https://wa.me/+919133633327?text=Hi, I want to book a site visit",
+      "_blank"
+    )
+  }
+  className="mt-5 md:mt-8 px-6 py-3 md:px-10 md:py-4 rounded-full bg-black/80 backdrop-blur-lg text-sm md:text-base font-medium active:scale-95 hover:scale-105 transition shadow-xl"
+>
+  Book Site Visit
+</button>
           </div>
         </div>
 
