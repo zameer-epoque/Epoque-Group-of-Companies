@@ -53,9 +53,12 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <button className="ml-6 px-6 py-2 rounded-full bg-gradient-to-r from-[#0f766e] to-[#14b8a6] text-white font-medium shadow-md hover:scale-105 transition">
-            Book Visit
-          </button>
+         <button
+  onClick={() => window.open("https://wa.me/+919133633327", "_blank")}
+  className="ml-6 px-6 py-2 rounded-full bg-gradient-to-r from-[#0f766e] to-[#14b8a6] text-white font-medium shadow-md hover:scale-105 transition"
+>
+  Contact
+</button>
         </nav>
 
         {/* MOBILE BUTTON */}
