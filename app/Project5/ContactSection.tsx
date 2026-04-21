@@ -1,4 +1,4 @@
-"use client";"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
@@ -12,12 +12,17 @@ export default function ContactSection() {
     message: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!form.name || !form.phone) {
+      alert("Please fill required fields");
+      return;
+    }
 
     const text = `Hello, I'm interested in Garikipati Towers.
 
@@ -26,69 +31,61 @@ Phone: ${form.phone}
 Email: ${form.email}
 Message: ${form.message}`;
 
-    const whatsappUrl = `https://wa.me/919133633327?text=${encodeURIComponent(
-      text
-    )}`;
-
+    const whatsappUrl = `https://wa.me/919133633327?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, "_blank");
   };
 
   return (
-    <section className="relative py-20 md:py-32 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white id='contact'">
+    <section
+      id="contact"
+      aria-label="Contact for Luxury Apartments in Hyderabad"
+      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
 
-      <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 items-center">
-
-        {/* LEFT CONTACT INFO */}
+        {/* LEFT INFO */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center md:text-left"
         >
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif mb-4">
-            Get in <span className="text-[#5eead4]">Touch</span>
+            Contact for <span className="text-[#5eead4]">Site Visit</span>
           </h2>
 
-          <p className="text-gray-300 mb-6 text-sm md:text-base">
-            Contact us for site visit, pricing details and availability.
+          <p className="text-gray-300 mb-6 text-sm md:text-base max-w-md mx-auto md:mx-0">
+            Get pricing, floor plans, and availability details for luxury apartments in Hyderabad.
           </p>
 
           <div className="space-y-4">
 
-            {/* PHONE */}
             <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-lg">
-              <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
-                <Phone size={18} className="text-black" />
-              </div>
+              <Phone size={18} className="text-[#5eead4]" />
               <div>
                 <p className="text-xs text-gray-400">Call Us</p>
-                <p className="text-sm md:text-base font-medium">
+                <a href="tel:+919133633327" className="text-sm md:text-base font-medium hover:underline">
                   +91 9133 633 327
-                </p>
+                </a>
               </div>
             </div>
 
-            {/* EMAIL */}
             <div className="flex items-center gap-4 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-lg">
-              <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
-                <Mail size={18} className="text-black" />
-              </div>
+              <Mail size={18} className="text-[#5eead4]" />
               <div>
                 <p className="text-xs text-gray-400">Email</p>
-                <p className="text-sm md:text-base font-medium">
+                <a href="mailto:sales@epoquegroup.in" className="text-sm md:text-base font-medium hover:underline">
                   sales@epoquegroup.in
-                </p>
+                </a>
               </div>
             </div>
 
-            {/* ADDRESS */}
             <div className="flex items-start gap-4 bg-white/10 p-4 rounded-xl border border-white/20 backdrop-blur-lg">
-              <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa]">
-                <MapPin size={18} className="text-black" />
-              </div>
+              <MapPin size={18} className="text-[#5eead4]" />
               <div>
                 <p className="text-xs text-gray-400">Location</p>
-                <p className="text-sm md:text-base font-medium leading-snug">
+                <p className="text-sm md:text-base font-medium">
                   GMR Aerocity, Hyderabad, Telangana
                 </p>
               </div>
@@ -100,37 +97,42 @@ Message: ${form.message}`;
         {/* FORM */}
         <motion.form
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="relative p-[1px] rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#5eead4]/40 via-[#a78bfa]/40 to-transparent"
         >
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-5 md:p-8 rounded-2xl md:rounded-3xl space-y-4">
 
             <input
+              type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="Your Name"
               required
-              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
+              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
 
             <input
+              type="tel"
               name="phone"
               value={form.phone}
               onChange={handleChange}
               placeholder="Phone Number"
               required
-              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
+              pattern="[0-9]{10}"
+              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
 
             <input
+              type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="w-full p-3 bg-transparent border border.white/30 rounded-lg text-white"
+              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
 
             <textarea
@@ -139,10 +141,13 @@ Message: ${form.message}`;
               onChange={handleChange}
               placeholder="Message"
               rows={3}
-              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white"
+              className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
 
-            <button className="w-full py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold">
+            <button
+              type="submit"
+              className="w-full py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold hover:scale-105 transition"
+            >
               Submit Enquiry
             </button>
 
