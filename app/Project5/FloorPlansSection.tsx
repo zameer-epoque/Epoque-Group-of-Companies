@@ -11,12 +11,12 @@ const plans = [
   },
   {
     title: "3 BHK",
-    size: "1208 Sq.ft",
+    size: "1647 Sq.ft",
     image: "/Garikipati5.jpg",
   },
   {
     title: "2 BHK",
-    size: "1647 Sq.ft",
+    size: "1208 Sq.ft",
     image: "/Garikipati6.jpg",
   },
 ];
