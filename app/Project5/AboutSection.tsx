@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "130+", label: "Luxury Apartments" },
-  { value: "1.5–3 BHK", label: "Configurations Available" },
+  { value: "1.5, 2 & 3 BHK", label: "Configurations Available" },
   { value: "900–1900 Sq.ft", label: "Area Range" },
   { value: "100%", label: "Vaastu Compliant Homes" },
 ];
