@@ -104,7 +104,9 @@ Message: ${form.message}`;
           className="relative p-[1px] rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#5eead4]/40 via-[#a78bfa]/40 to-transparent"
         >
           <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-5 md:p-8 rounded-2xl md:rounded-3xl space-y-4">
-
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+              Your Name
+            </label>
             <input
               type="text"
               name="name"
@@ -114,7 +116,9 @@ Message: ${form.message}`;
               required
               className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
-
+  <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+              Your Phone Number
+            </label>
             <input
               type="tel"
               name="phone"
@@ -125,7 +129,9 @@ Message: ${form.message}`;
               pattern="[0-9]{10}"
               className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
-
+ <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+              Your Email 
+            </label>
             <input
               type="email"
               name="email"
@@ -134,7 +140,9 @@ Message: ${form.message}`;
               placeholder="Email Address"
               className="w-full p-3 bg-transparent border border-white/30 rounded-lg text-white placeholder-gray-400"
             />
-
+ <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+              Your Message
+            </label>
             <textarea
               name="message"
               value={form.message}
