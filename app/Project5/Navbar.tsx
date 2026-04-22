@@ -136,7 +136,7 @@ export default function Navbar() {
   const [show, setShow] = useState(false); // 👈 control visibility
 
   const navItems = [
-    { name: "Home", link: "#Garikipati-Towers-1.5-2-&-3-BHK-Luxury-Apartments-For-Sale-in-Hyderabad" },
+
     { name: "About", link: "#about" },
     { name: "Amenities", link: "#amenities" },
     {name: "Gallery", link: "#gallery" },
