@@ -192,7 +192,7 @@ export default function Navbar() {
               <button
                 onClick={() =>
                   window.open(
-                    "https://wa.me/919133633327?text=Hi I want details",
+                    "https://wa.me/919133633327?text=Hi Hello, I'm interested in Garikipati Towers",
                     "_blank"
                   )
                 }

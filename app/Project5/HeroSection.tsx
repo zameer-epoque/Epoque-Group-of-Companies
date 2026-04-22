@@ -200,7 +200,7 @@ export default function HeroSection() {
         {/* CTA */}
         <div className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://wa.me/919133633327?text=Hi%20I%20am%20interested%20in%20booking%20a%20site%20visit"
+         href="https://wa.me/919133633327?text=Hi%20I%20am%20interested%20in%20booking%20a%20site%20visit%20for%20Garikipati%20Towers."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Book a site visit via WhatsApp"

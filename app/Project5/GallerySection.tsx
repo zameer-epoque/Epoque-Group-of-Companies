@@ -324,7 +324,7 @@ export default function GallerySection() {
           <button
             onClick={() =>
               window.open(
-                "https://wa.me/919133633327?text=Hi I want to book a site visit",
+                "https://wa.me/919133633327?text=Hi I want to book a site visit for Garikipati Towers",
                 "_blank"
               )
             }

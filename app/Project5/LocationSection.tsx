@@ -124,7 +124,7 @@ export default function LocationSection() {
           <button
             onClick={() =>
               window.open(
-                "https://wa.me/919133633327?text=Hi, I want location details",
+                "https://wa.me/919133633327?text=Hi, I want location details about Garikipati Towers",
                 "_blank"
               )
             }
