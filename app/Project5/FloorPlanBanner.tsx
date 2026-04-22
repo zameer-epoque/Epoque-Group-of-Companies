@@ -40,11 +40,7 @@ export default function FloorPlanBanner() {
         <div className="absolute inset-0 bg-black/10"></div>
 
         {/* OPTIONAL CTA */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
-          <button className="px-5 py-2 sm:px-6 sm:py-3 bg-[#0f766e] text-white text-sm sm:text-base rounded-full shadow-lg hover:scale-105 transition">
-            Download Floor Plan
-          </button>
-        </div>
+        
 
       </div>
     </section>

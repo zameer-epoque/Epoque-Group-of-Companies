@@ -88,9 +88,7 @@ export default function FloorPlansSection() {
                   </p>
 
                   {/* CTA */}
-                  <button className="mt-3 px-4 py-2 text-xs sm:text-sm bg-[#0f766e] rounded-full hover:scale-105 transition">
-                    View Plan
-                  </button>
+                 
                 </div>
               </div>
             </motion.div>
