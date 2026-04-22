@@ -1,4 +1,4 @@
-"use client"
+
 
 import { motion, Variants } from "framer-motion"
 import PremiumCTA from "../../components/PremiumCTA"
@@ -249,13 +249,13 @@ export default function DigitalClient() {
   <div className="max-w-5xl mx-auto space-y-10">
 
     {/* H1 */}
-    <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
+    <h2 className="text-4xl md:text-6xl font-semibold leading-tight">
       Digital Marketing Agency in{" "}
       <span className="bg-gradient-to-r from-[#C79A3B] via-[#D45B5B] to-[#7A2E63] bg-clip-text text-transparent">
         Hyderabad
       </span>{" "}
       – Performance-Driven Growth for Ambitious Businesses
-    </h1>
+    </h2>
 
     {/* Intro */}
     <p className="text-gray-400 leading-relaxed text-lg">

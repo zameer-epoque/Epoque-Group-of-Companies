@@ -115,9 +115,9 @@ export default function SocialMediaPage() {
   <div className="max-w-5xl mx-auto space-y-10 text-gray-300 leading-relaxed">
 
     {/* H1 */}
-    <h1 className="text-3xl md:text-4xl font-semibold text-white">
+    <h2 className="text-3xl md:text-4xl font-semibold text-white">
       Social Media Marketing Agency in Hyderabad – Complete Growth Solutions for Ambitious Brands
-    </h1>
+    </h2>
 
     <p>
       In today's digital-first world, social media marketing has become one of the most powerful

@@ -157,9 +157,9 @@ export default function SEOServicePage() {
   <div className="max-w-5xl mx-auto space-y-10 text-gray-300 leading-relaxed">
 
     {/* H1 */}
-    <h1 className="text-3xl md:text-4xl font-semibold text-white">
+    <h2 className="text-3xl md:text-4xl font-semibold text-white">
       Professional SEO Services in Hyderabad – Drive Organic Growth, Dominate Google Rankings
-    </h1>
+    </h2>
 
     <p>
       Search Engine Optimization (SEO) is the single most powerful long-term digital marketing

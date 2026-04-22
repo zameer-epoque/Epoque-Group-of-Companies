@@ -148,9 +148,9 @@ export default function BrandingCreativeServicesPage() {
 
     <section className="max-w-6xl mx-auto px-6 py-20 text-gray-400 space-y-8">
 
-      <h1 className="text-4xl font-bold text-white">
+      <h2 className="text-4xl font-bold text-white">
         Branding & Creative Services to Build a Powerful, Memorable Business Identity 🎨
-      </h1>
+      </h2>
 
       <p>
         In a crowded marketplace, your brand is your most valuable business asset. It is the first
