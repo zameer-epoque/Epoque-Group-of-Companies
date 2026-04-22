@@ -133,7 +133,6 @@
 // }
 
 
-
 "use client";
 
 import Image from "next/image";
@@ -141,32 +140,51 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { X, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 
+// ✅ SEO optimized images
 const images = [
-  "/Garikipati1.jpg",
-  "/Garikipati2.jpg",
-  "/Garikipati3.jpg",
-  "/Garikipati4.jpg",
-  "/Garikipati5.jpg",
-  "/Garikipati6.jpg",
+  {
+    src: "/luxury-apartment-exterior-hyderabad.jpg",
+    alt: "Luxury apartment exterior view in Hyderabad",
+  },
+  {
+    src: "/modern-living-room-hyderabad.jpg",
+    alt: "Modern living room interior design in Hyderabad apartment",
+  },
+  {
+    src: "/premium-kitchen-design-hyderabad.jpg",
+    alt: "Premium modular kitchen design in Hyderabad apartment",
+  },
+  {
+    src: "/bedroom-interior-hyderabad.jpg",
+    alt: "Luxury bedroom interior in Hyderabad flat",
+  },
+  {
+    src: "/apartment-amenities-hyderabad.jpg",
+    alt: "Apartment amenities and clubhouse in Hyderabad",
+  },
+  {
+    src: "/balcony-view-hyderabad.jpg",
+    alt: "Balcony view from luxury apartment in Hyderabad",
+  },
 ];
 
 export default function GallerySection() {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   const selectedImage =
     selectedIndex !== null ? images[selectedIndex] : null;
 
   // ✅ ESC + arrow keys
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
+    const handleKey = (e) => {
       if (selectedIndex === null) return;
 
       if (e.key === "Escape") setSelectedIndex(null);
       if (e.key === "ArrowRight")
-        setSelectedIndex((prev) => (prev! + 1) % images.length);
+        setSelectedIndex((prev) => (prev + 1) % images.length);
       if (e.key === "ArrowLeft")
         setSelectedIndex(
-          (prev) => (prev! - 1 + images.length) % images.length
+          (prev) => (prev - 1 + images.length) % images.length
         );
     };
 
@@ -176,29 +194,36 @@ export default function GallerySection() {
 
   // ✅ prevent background scroll
   useEffect(() => {
-    document.body.style.overflow = selectedIndex !== null ? "hidden" : "auto";
+    document.body.style.overflow =
+      selectedIndex !== null ? "hidden" : "auto";
   }, [selectedIndex]);
 
   const next = () =>
-    setSelectedIndex((prev) => (prev! + 1) % images.length);
+    setSelectedIndex((prev) => (prev + 1) % images.length);
 
   const prev = () =>
-    setSelectedIndex((prev) => (prev! - 1 + images.length) % images.length);
+    setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
 
   return (
-    <section className="py-20 bg-black text-white">
-      <div className="max-w-6xl mx-auto px-4">
+    <section
+      id="gallery"
+      className="relative py-20 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] text-white"
+    >
+      <div className="max-w-7xl mx-auto px-4">
 
         {/* TITLE */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold">
-            Apartment Gallery
+            Apartment Gallery in Hyderabad
           </h2>
+          <p className="text-gray-300 mt-3">
+            Explore luxury apartments, interiors & amenities
+          </p>
         </div>
 
         {/* GRID */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.map((src, i) => (
+          {images.map((img, i) => (
             <motion.div
               key={i}
               whileHover={{ scale: 1.05 }}
@@ -206,8 +231,8 @@ export default function GallerySection() {
               onClick={() => setSelectedIndex(i)}
             >
               <Image
-                src={src}
-                alt="gallery"
+                src={img.src}
+                alt={img.alt}
                 width={400}
                 height={300}
                 className="rounded-lg object-cover w-full h-[180px]"
@@ -274,8 +299,8 @@ export default function GallerySection() {
                 className="max-w-5xl w-full"
               >
                 <img
-                  src={selectedImage}
-                  alt="full"
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
                   className="max-h-[90vh] w-full object-contain rounded-xl"
                 />
               </motion.div>
@@ -292,7 +317,7 @@ export default function GallerySection() {
                 "_blank"
               )
             }
-            className="px-6 py-3 rounded-full bg-green-400 text-black font-semibold hover:scale-105 transition"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold hover:scale-105 transition"
           >
             Book Site Visit
           </button>
