@@ -9,16 +9,17 @@ const plans = [
     size: "932 Sq.ft",
     image: "/Garikipati4.jpg",
   },
+   {
+    title: "2 BHK Apartment",
+    size: "1208 Sq.ft",
+    image: "/Garikipati6.jpg",
+  },
   {
     title: "3 BHK Apartment",
     size: "1647 Sq.ft",
     image: "/Garikipati5.jpg",
   },
-  {
-    title: "2 BHK Apartment",
-    size: "1208 Sq.ft",
-    image: "/Garikipati6.jpg",
-  },
+ 
 ];
 
 export default function FloorPlansSection() {

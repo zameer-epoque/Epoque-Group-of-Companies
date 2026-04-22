@@ -59,7 +59,7 @@ export default function HeroSection() {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl">
 
         {/* SEO HEADING */}
-        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-7xl font-serif leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-7xl font-serif leading-tight mt-3">
           Luxury Apartments in GMR Aerocity <br />
           <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
             Inspired by Nature & Premium Living

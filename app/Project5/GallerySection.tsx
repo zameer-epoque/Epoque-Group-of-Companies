@@ -222,7 +222,7 @@ export default function GallerySection() {
           <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif leading-tight">
             Apartment Gallery in Hyderabad <br />
             <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
-              Experience Luxury Living
+              Experience Luxury Living In Garikipati Towers
             </span>
           </h2>
 
