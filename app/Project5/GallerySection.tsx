@@ -142,27 +142,27 @@ import { X, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 // ✅ SEO optimized images
 const images = [
   {
-    src: "/luxury-apartment-exterior-hyderabad.jpg",
+    src: "/Garikipati1.jpg",
     alt: "Luxury apartment exterior view in Hyderabad",
   },
   {
-    src: "/modern-living-room-hyderabad.jpg",
+    src: "/Garikipati2.jpg",
     alt: "Modern living room interior design in Hyderabad apartment",
   },
   {
-    src: "/premium-kitchen-design-hyderabad.jpg",
+    src: "/Garikipati3.jpg",
     alt: "Premium modular kitchen design in Hyderabad apartment",
   },
   {
-    src: "/bedroom-interior-hyderabad.jpg",
+    src: "/Garikipati4.jpg",
     alt: "Luxury bedroom interior in Hyderabad flat",
   },
   {
-    src: "/apartment-amenities-hyderabad.jpg",
+    src: "/Garikipati5.jpg",
     alt: "Apartment amenities and clubhouse in Hyderabad",
   },
   {
-    src: "/balcony-view-hyderabad.jpg",
+    src: "/Garikipati6.jpg",
     alt: "Balcony view from luxury apartment in Hyderabad",
   },
 ];
