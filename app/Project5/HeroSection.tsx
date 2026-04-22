@@ -164,7 +164,7 @@ export default function HeroSection() {
         bg-[#5eead4]/10 blur-[80px] md:blur-[120px]" />
 
       {/* CONTENT */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto mt-18 sm:mt-24 md:mt-32">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto mt-18 sm:mt-22 md:mt-30">
 
         {/* HEADING */}
         <h1 className="
