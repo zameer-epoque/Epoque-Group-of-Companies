@@ -205,7 +205,7 @@ export default function HeroSection() {
             aria-label="Book a site visit via WhatsApp"
             className="
               px-6 sm:px-8 md:px-10 
-              py-3 md:py-4 
+              py-3 md:py-3 
               text-sm sm:text-base md:text-lg
               rounded-full 
               bg-gradient-to-r from-[#5eead4] to-[#14b8a6] 
