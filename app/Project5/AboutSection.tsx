@@ -14,7 +14,8 @@ export default function AboutSection() {
   return (
     <section
       aria-label="About Luxury Apartments Project"
-      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white id='about'"
+      id="about"
+      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white "
     >
       {/* GLOW EFFECTS */}
       <div className="absolute top-[-80px] left-[-80px] w-[250px] sm:w-[300px] md:w-[400px] h-[250px] sm:h-[300px] md:h-[400px] bg-purple-500/20 blur-[100px]" />

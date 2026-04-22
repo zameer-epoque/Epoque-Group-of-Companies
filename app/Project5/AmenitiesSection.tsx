@@ -27,7 +27,8 @@ export default function AmenitiesSection() {
   return (
     <section
       aria-label="Apartment Amenities Section"
-      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#0f172a] via-[#022c22] to-[#0f766e] overflow-hidden text-white id='amenities'"
+      id="amenities"
+      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#0f172a] via-[#022c22] to-[#0f766e] overflow-hidden text-white "
     >
       {/* BACKGROUND BLOBS (OPTIMIZED) */}
       <div className="absolute top-[-60px] left-[-60px] w-[220px] sm:w-[300px] md:w-[380px] h-[220px] sm:h-[300px] md:h-[380px] bg-purple-500/20 blur-[100px]" />
