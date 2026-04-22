@@ -212,14 +212,7 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4">
 
         {/* TITLE */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold">
-            Apartment Gallery in Hyderabad
-          </h2>
-          <p className="text-gray-300 mt-3">
-            Explore luxury apartments, interiors & amenities
-          </p>
-        </div>
+       <div className="text-center mb-12 md:mb-20"> <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif leading-tight"> Apartment Gallery in Hyderabad <br /> <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text"> Experience Luxury Living </span> </h2> <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto"> Explore real images of our premium apartments, interiors, amenities, and lifestyle spaces. </p> </div>
 
         {/* GRID */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
