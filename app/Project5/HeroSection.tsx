@@ -56,10 +56,10 @@ export default function HeroSection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#5eead4]/10 blur-[120px]" />
 
       {/* CONTENT */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mt-4 sm:mt-6 md:mt-10">
 
         {/* SEO HEADING */}
-        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-7xl font-serif leading-tight mt-3">
+        <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-7xl font-serif leading-tight ">
           Luxury Apartments in GMR Aerocity <br />
           <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
             Inspired by Nature & Premium Living
