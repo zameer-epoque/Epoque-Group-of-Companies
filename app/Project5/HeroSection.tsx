@@ -73,14 +73,17 @@ export default function HeroSection() {
         </p>
 
         {/* CTA */}
-        <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            aria-label="Book a site visit"
-            className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold hover:scale-105 transition"
-          >
-            Book Site Visit
-          </button>
-        </div>
+       <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+  <a
+    href="https://wa.me/919133633327?text=Hi%20I%20am%20interested%20in%20booking%20a%20site%20visit"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Book a site visit"
+    className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold hover:scale-105 transition text-center"
+  >
+    Book Site Visit
+  </a>
+</div>
       </div>
     </section>
   );
