@@ -132,7 +132,6 @@
 //   );
 // }
 
-
 "use client";
 
 import Image from "next/image";
@@ -169,22 +168,25 @@ const images = [
 ];
 
 export default function GallerySection() {
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  // ✅ FIX 1: add type
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const selectedImage =
     selectedIndex !== null ? images[selectedIndex] : null;
 
   // ✅ ESC + arrow keys
   useEffect(() => {
-    const handleKey = (e) => {
+    const handleKey = (e: KeyboardEvent) => { // ✅ FIX 2
       if (selectedIndex === null) return;
 
       if (e.key === "Escape") setSelectedIndex(null);
       if (e.key === "ArrowRight")
-        setSelectedIndex((prev) => (prev + 1) % images.length);
+        setSelectedIndex((prev) =>
+          prev !== null ? (prev + 1) % images.length : 0
+        );
       if (e.key === "ArrowLeft")
-        setSelectedIndex(
-          (prev) => (prev - 1 + images.length) % images.length
+        setSelectedIndex((prev) =>
+          prev !== null ? (prev - 1 + images.length) % images.length : 0
         );
     };
 
@@ -199,10 +201,14 @@ export default function GallerySection() {
   }, [selectedIndex]);
 
   const next = () =>
-    setSelectedIndex((prev) => (prev + 1) % images.length);
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev + 1) % images.length : 0
+    );
 
   const prev = () =>
-    setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
+    setSelectedIndex((prev) =>
+      prev !== null ? (prev - 1 + images.length) % images.length : 0
+    );
 
   return (
     <section
@@ -212,7 +218,19 @@ export default function GallerySection() {
       <div className="max-w-7xl mx-auto px-4">
 
         {/* TITLE */}
-       <div className="text-center mb-12 md:mb-20"> <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif leading-tight"> Apartment Gallery in Hyderabad <br /> <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text"> Experience Luxury Living </span> </h2> <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto"> Explore real images of our premium apartments, interiors, amenities, and lifestyle spaces. </p> </div>
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif leading-tight">
+            Apartment Gallery in Hyderabad <br />
+            <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
+              Experience Luxury Living
+            </span>
+          </h2>
+
+          <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+            Explore real images of our premium apartments, interiors, amenities,
+            and lifestyle spaces.
+          </p>
+        </div>
 
         {/* GRID */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -264,7 +282,7 @@ export default function GallerySection() {
 
               {/* PREV */}
               <button
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent) => {
                   e.stopPropagation();
                   prev();
                 }}
@@ -275,7 +293,7 @@ export default function GallerySection() {
 
               {/* NEXT */}
               <button
-                onClick={(e) => {
+                onClick={(e: React.MouseEvent) => {
                   e.stopPropagation();
                   next();
                 }}
@@ -286,7 +304,7 @@ export default function GallerySection() {
 
               {/* IMAGE */}
               <motion.div
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e: React.MouseEvent) => e.stopPropagation()}
                 initial={{ scale: 0.9 }}
                 animate={{ scale: 1 }}
                 className="max-w-5xl w-full"
