@@ -130,6 +130,7 @@ export default function HeroSection() {
   return (
     <section
       aria-label="Luxury Apartments Hero Section Hyderabad"
+      id="hero"
       className="relative min-h-[85vh] md:min-h-[95vh] w-full flex items-center justify-center overflow-hidden text-white"
     >
       {/* BACKGROUND SLIDER */}

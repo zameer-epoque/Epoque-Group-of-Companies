@@ -136,7 +136,7 @@ export default function Navbar() {
   const [show, setShow] = useState(false); // 👈 control visibility
 
   const navItems = [
-
+    { name: "Home", link: "#hero" },
     { name: "About", link: "#about" },
     { name: "Amenities", link: "#amenities" },
     {name: "Gallery", link: "#gallery" },
