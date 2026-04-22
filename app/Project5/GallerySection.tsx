@@ -134,13 +134,12 @@
 
 
 
-
 "use client";
 
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { X, Eye } from "lucide-react";
+import { X, Eye, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   "/Garikipati1.jpg",
@@ -152,72 +151,74 @@ const images = [
 ];
 
 export default function GallerySection() {
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  // ✅ ESC key close
+  const selectedImage =
+    selectedIndex !== null ? images[selectedIndex] : null;
+
+  // ✅ ESC + arrow keys
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setSelected(null);
-      }
+    const handleKey = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+
+      if (e.key === "Escape") setSelectedIndex(null);
+      if (e.key === "ArrowRight")
+        setSelectedIndex((prev) => (prev! + 1) % images.length);
+      if (e.key === "ArrowLeft")
+        setSelectedIndex(
+          (prev) => (prev! - 1 + images.length) % images.length
+        );
     };
 
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
-  }, []);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [selectedIndex]);
+
+  // ✅ prevent background scroll
+  useEffect(() => {
+    document.body.style.overflow = selectedIndex !== null ? "hidden" : "auto";
+  }, [selectedIndex]);
+
+  const next = () =>
+    setSelectedIndex((prev) => (prev! + 1) % images.length);
+
+  const prev = () =>
+    setSelectedIndex((prev) => (prev! - 1 + images.length) % images.length);
 
   return (
-    <section
-      id="gallery"
-      aria-label="Luxury Apartment Gallery Hyderabad"
-      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-[#020617] via-[#022c22] to-[#0f766e] overflow-hidden text-white"
-    >
-      {/* BACKGROUND GLOW */}
-      <div className="absolute top-[-60px] left-[-60px] w-[220px] md:w-[350px] h-[220px] md:h-[350px] bg-purple-500/20 blur-[90px]" />
-      <div className="absolute bottom-[-60px] right-[-60px] w-[220px] md:w-[350px] h-[220px] md:h-[350px] bg-teal-400/20 blur-[90px]" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+    <section className="py-20 bg-black text-white">
+      <div className="max-w-6xl mx-auto px-4">
 
         {/* TITLE */}
-        <div className="text-center mb-12 md:mb-20">
-          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-serif leading-tight">
-            Apartment Gallery in Hyderabad <br />
-            <span className="bg-gradient-to-r from-[#5eead4] to-[#a78bfa] text-transparent bg-clip-text">
-              Experience Luxury Living
-            </span>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-5xl font-bold">
+            Apartment Gallery
           </h2>
-
-          <p className="text-gray-300 mt-3 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
-            Explore real images of our premium apartments, interiors, amenities,
-            and lifestyle spaces.
-          </p>
         </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((src, i) => (
             <motion.div
               key={i}
-              whileHover={{ scale: 1.03 }}
-              className="relative overflow-hidden rounded-xl md:rounded-2xl cursor-pointer group"
-              onClick={() => setSelected(src)}
+              whileHover={{ scale: 1.05 }}
+              className="relative cursor-pointer group"
+              onClick={() => setSelectedIndex(i)}
             >
               <Image
                 src={src}
-                alt={`Luxury apartment gallery image ${i + 1} in Hyderabad`}
-                width={500}
-                height={400}
-                sizes="(max-width:768px) 50vw, (max-width:1200px) 33vw, 300px"
-                quality={80}
-                className="w-full h-[140px] sm:h-[180px] md:h-[220px] object-cover group-hover:scale-105 transition duration-500"
+                alt="gallery"
+                width={400}
+                height={300}
+                className="rounded-lg object-cover w-full h-[180px]"
               />
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-black/50 opacity-70 group-hover:opacity-90 transition" />
+              {/* overlay */}
+              <div className="absolute inset-0 bg-black/50 opacity-70 group-hover:opacity-90 transition pointer-events-none" />
 
-              {/* ICON */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                <div className="p-2 rounded-full bg-gradient-to-br from-[#5eead4] to-[#a78bfa] shadow-lg">
+              {/* eye icon */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition pointer-events-none">
+                <div className="bg-white p-2 rounded-full">
                   <Eye className="text-black" size={18} />
                 </div>
               </div>
@@ -227,38 +228,55 @@ export default function GallerySection() {
 
         {/* MODAL */}
         <AnimatePresence>
-          {selected && (
+          {selectedImage && (
             <motion.div
+              className="fixed inset-0 bg-black/95 flex items-center justify-center z-50 p-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 px-4"
-              onClick={() => setSelected(null)} // ✅ click outside close
+              onClick={() => setSelectedIndex(null)}
             >
-              {/* CLOSE BUTTON */}
+              {/* CLOSE */}
               <button
-                onClick={() => setSelected(null)}
-                className="absolute top-4 right-4 text-white bg-black/50 p-2 rounded-full hover:bg-black"
+                className="absolute top-5 right-5 text-white bg-black/60 p-3 rounded-full hover:bg-black"
+                onClick={() => setSelectedIndex(null)}
               >
                 <X size={28} />
               </button>
 
-              {/* IMAGE BOX */}
-              <motion.div
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.95 }}
-                className="max-w-5xl w-full"
-                onClick={(e) => e.stopPropagation()} // ✅ prevent close when clicking image
+              {/* PREV */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prev();
+                }}
+                className="absolute left-4 md:left-10 text-white bg-black/50 p-3 rounded-full hover:bg-black"
               >
-                <Image
-                  src={selected}
-                  alt="Full size apartment gallery image"
-                  width={1200}
-                  height={800}
-                  sizes="100vw"
-                  quality={90}
-                  className="rounded-xl md:rounded-2xl object-cover w-full"
+                <ChevronLeft size={30} />
+              </button>
+
+              {/* NEXT */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  next();
+                }}
+                className="absolute right-4 md:right-10 text-white bg-black/50 p-3 rounded-full hover:bg-black"
+              >
+                <ChevronRight size={30} />
+              </button>
+
+              {/* IMAGE */}
+              <motion.div
+                onClick={(e) => e.stopPropagation()}
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                className="max-w-5xl w-full"
+              >
+                <img
+                  src={selectedImage}
+                  alt="full"
+                  className="max-h-[90vh] w-full object-contain rounded-xl"
                 />
               </motion.div>
             </motion.div>
@@ -266,15 +284,15 @@ export default function GallerySection() {
         </AnimatePresence>
 
         {/* CTA */}
-        <div className="mt-16 md:mt-24 text-center">
+        <div className="text-center mt-12">
           <button
             onClick={() =>
               window.open(
-                "https://wa.me/919133633327?text=Hi, I want to book a site visit",
+                "https://wa.me/919133633327?text=Hi I want to book a site visit",
                 "_blank"
               )
             }
-            className="px-6 py-3 md:px-10 md:py-4 rounded-full bg-gradient-to-r from-[#5eead4] to-[#14b8a6] text-black font-semibold hover:scale-105 transition shadow-lg"
+            className="px-6 py-3 rounded-full bg-green-400 text-black font-semibold hover:scale-105 transition"
           >
             Book Site Visit
           </button>
