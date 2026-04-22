@@ -87,9 +87,9 @@ export default function Page() {
       <div className="max-w-5xl mx-auto space-y-8">
 
         {/* H1 */}
-        <h1 className="text-4xl md:text-5xl font-semibold text-white">
+        <h2 className="text-4xl md:text-5xl font-semibold text-white">
           Luxury Villa Marketing in Hyderabad – High-End Real Estate Promotion Strategies
-        </h1>
+        </h2>
 
         <p>
           Luxury villa marketing requires a completely different approach compared to standard real estate sales. High-end buyers are not just looking for a property—they are investing in a lifestyle, exclusivity, and long-term value. Therefore, marketing luxury villas demands premium branding, targeted campaigns, and a personalized sales strategy.

@@ -183,9 +183,9 @@ export default function SalesFunnelClient() {
 
     <section className="max-w-6xl mx-auto px-6 py-4 text-gray-400 space-y-8">
 
-      <h1 className="text-4xl font-bold text-white">
+      <h2 className="text-4xl font-bold text-white">
         Sales Funnel Building Services for High-Converting Business Growth
-      </h1>
+      </h2>
 
       <p>
         In today's competitive digital landscape, businesses cannot rely solely on traffic to generate revenue.

@@ -101,9 +101,9 @@ export default function Page() {
       <div className="max-w-5xl mx-auto space-y-8">
 
         {/* H1 */}
-        <h1 className="text-4xl md:text-5xl font-semibold text-white">
+        <h2 className="text-4xl md:text-5xl font-semibold text-white">
           Property Lead Generation in Hyderabad – High-Quality Real Estate Leads
-        </h1>
+        </h2>
 
         <p>
           Property lead generation is the backbone of successful real estate sales. Without a consistent flow of high-quality leads, even the best real estate projects struggle to achieve sales targets. In today's digital-first world, developers and real estate companies must adopt advanced lead generation strategies to attract potential buyers and convert them into customers.

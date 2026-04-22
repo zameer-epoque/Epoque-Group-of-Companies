@@ -82,9 +82,9 @@ export default function CROClient() {
 
     <section className="max-w-6xl mx-auto px-6 py-4 text-gray-400 space-y-8">
 
-      <h1 className="text-4xl font-bold text-white">
+      <h2 className="text-4xl font-bold text-white">
         Conversion Rate Optimization (CRO) Services to Maximize Your Revenue 🚀
-      </h1>
+      </h2>
 
       <p>
         In today's digital landscape, driving traffic to your website is only half the battle.

@@ -107,9 +107,9 @@ export default function Page() {
 
   {/* H1 INTRO */}
   <div>
-    <h1 className="text-3xl md:text-4xl font-semibold mb-6">
+    <h2 className="text-3xl md:text-4xl font-semibold mb-6">
       Real Estate Branding Services in Hyderabad – Build a Powerful Property Brand That Attracts Premium Buyers
-    </h1>
+    </h2>
 
     <p className="mb-4">
       In today's highly competitive real estate market, branding is no longer optional — it is essential. Buyers are no longer just purchasing property; they are investing in lifestyle, aspiration, trust, and long-term value. A beautifully located project with a weak brand identity will consistently underperform against a well-branded competitor, regardless of price or specification.

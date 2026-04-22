@@ -1,4 +1,4 @@
-"use client"
+
 
 import { motion } from "framer-motion"
 import Script from "next/script"
@@ -72,9 +72,9 @@ export default function MarketingAutomationClient() {
 
     <section className="max-w-6xl mx-auto px-6 py-8 text-gray-400 space-y-8">
 
-      <h1 className="text-4xl font-bold text-white">
+      <h2 className="text-4xl font-bold text-white">
         Marketing Automation Services to Scale Your Business on Autopilot 🚀
-      </h1>
+      </h2>
 
       <p>
         In today's fast-paced digital world, manually managing every aspect of your marketing is

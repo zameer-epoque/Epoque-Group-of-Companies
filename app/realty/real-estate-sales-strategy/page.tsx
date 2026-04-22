@@ -122,9 +122,9 @@ export default function Page() {
   <div className="max-w-5xl mx-auto space-y-8">
 
     {/* H1 */}
-    <h1 className="text-4xl md:text-5xl font-semibold text-white">
+    <h2 className="text-4xl md:text-5xl font-semibold text-white">
       Real Estate Sales Strategy in Hyderabad – Complete Guide to Boost Property Sales
-    </h1>
+    </h2>
 
     <p>
       A strong real estate sales strategy is essential for developers, builders, and real estate companies to generate leads, close deals faster, and maximize revenue. In today’s competitive market, traditional sales methods are no longer enough. Modern real estate sales require a combination of digital marketing, branding, customer psychology, and data-driven decision-making.
