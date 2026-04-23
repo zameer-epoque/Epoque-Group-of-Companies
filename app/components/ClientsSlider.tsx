@@ -80,7 +80,7 @@ const loopClients = [...clients, ...clients]
 
 export default function ClientsSlider() {
   return (
-    <section className="bg-black py-24 overflow-hidden relative">
+    <section className="bg-black py-8 overflow-hidden relative">
 
       {/* TITLE */}
       <div className="text-center mb-16">
