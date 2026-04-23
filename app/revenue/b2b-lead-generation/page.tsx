@@ -1,3 +1,6 @@
+
+"use client";
+
 import type { Metadata } from "next"
 import B2BLeadClient from "../B2BLeadClient"
 
