@@ -1,5 +1,6 @@
 
 
+import ClientsSlider from "./components/ClientsSlider";
 import Hero from "./components/Hero";
 import HeroSlider from "./components/HeroSlider";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <WhoWeAre />
       <VisionMissionPromise />
       <OurDivisions />
+      <ClientsSlider/>
       <WhyChooseEpoque />
 <PremiumCTA/>
 
