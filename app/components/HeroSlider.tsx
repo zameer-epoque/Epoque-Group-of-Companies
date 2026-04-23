@@ -108,9 +108,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -151,6 +148,7 @@ export default function PremiumHero() {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 6000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -161,10 +159,10 @@ export default function PremiumHero() {
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, scale: 1.15 }}
+          initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.1 }}
-          transition={{ duration: 1.2 }}
+          exit={{ opacity: 0, scale: 1.05 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
           className="absolute inset-0"
         >
           <Image
@@ -172,16 +170,13 @@ export default function PremiumHero() {
             alt={slides[index].title}
             fill
             priority
-            className="object-cover brightness-90"
+            className="object-cover brightness-95"
           />
         </motion.div>
       </AnimatePresence>
 
-      {/* FIXED Overlay (no black block) */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent z-10" />
-
-      {/* Soft Glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,255,255,0.08),transparent_60%)] z-10" />
+      {/* Smooth Overlay (FIXED - no black block) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent z-10" />
 
       {/* Bottom Fade */}
       <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black/80 to-transparent z-10" />
@@ -196,12 +191,12 @@ export default function PremiumHero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -40 }}
-              transition={{ duration: 0.9 }}
-              className="max-w-2xl backdrop-blur-md bg-black/20 p-6 rounded-2xl"
+              transition={{ duration: 0.8 }}
+              className="max-w-2xl"
             >
 
-              {/* SEO H1 */}
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+              {/* Title */}
+              <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-[0_5px_25px_rgba(0,0,0,0.9)]">
                 {slides[index].title}
               </h1>
 
@@ -209,12 +204,30 @@ export default function PremiumHero() {
               <div className="w-16 h-[3px] bg-white mt-5 mb-5 rounded-full" />
 
               {/* Description */}
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-200 text-lg leading-relaxed drop-shadow-md">
                 {slides[index].description}
               </p>
 
-              {/* CTA */}
-             
+              {/* Buttons */}
+              <div className="flex gap-4 mt-8 flex-wrap">
+
+                <motion.button
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-black px-7 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition"
+                >
+                  Get Free Consultation
+                </motion.button>
+
+                <motion.button
+                  whileHover={{ scale: 1.08 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="border border-white/40 px-7 py-3 rounded-full text-white hover:bg-white/10 transition"
+                >
+                  View Projects
+                </motion.button>
+
+              </div>
 
             </motion.div>
           </AnimatePresence>
