@@ -116,25 +116,25 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
-    image: "/realstate1.png",
+    image: "/Herobanner1.png",
     title: "Dominate Digital Growth",
     description:
       "Scale your real estate business with high-converting marketing strategies and performance-driven campaigns.",
   },
   {
-    image: "/Garikipati3.jpg",
+    image: "/Herobanner2.jpg",
     title: "Real Estate Marketing Experts",
     description:
       "We generate premium property leads that convert into site visits and sales.",
   },
   {
-    image: "/realstate2.jpg",
+    image: "/Herobanner4.png",
     title: "Performance That Drives Revenue",
     description:
       "Our strategies focus on ROI, lead quality, and measurable business growth.",
   },
   {
-    image: "/realstate5.png",
+    image: "/Herobanner3.jpg",
     title: "Build Powerful Brands",
     description:
       "We craft strong brand identities that position you as a market leader.",
@@ -219,13 +219,7 @@ export default function PremiumHero() {
                   Get Free Consultation
                 </motion.button>
 
-                <motion.button
-                  whileHover={{ scale: 1.08 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-white/40 px-7 py-3 rounded-full text-white hover:bg-white/10 transition"
-                >
-                  View Projects
-                </motion.button>
+                
 
               </div>
 
