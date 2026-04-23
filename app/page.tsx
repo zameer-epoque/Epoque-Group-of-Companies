@@ -1,6 +1,7 @@
 
 
 import Hero from "./components/Hero";
+import HeroSlider from "./components/HeroSlider";
 
 import OurDivisions from "./components/OurDivisions";
 import PremiumCTA from "./components/PremiumCTA";
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <>
 
-
+<HeroSlider/>
       <Hero />
       <WhoWeAre />
       <VisionMissionPromise />
