@@ -214,25 +214,7 @@ export default function PremiumHero() {
               </p>
 
               {/* CTA */}
-              <div className="flex gap-4 mt-8 flex-wrap">
-
-                <motion.button
-                  whileHover={{ scale: 1.07 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-black px-7 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition"
-                >
-                  Get Free Consultation
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.07 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border border-white/30 px-7 py-3 rounded-full text-white backdrop-blur hover:bg-white/10 transition"
-                >
-                  View Projects
-                </motion.button>
-
-              </div>
+             
 
             </motion.div>
           </AnimatePresence>
