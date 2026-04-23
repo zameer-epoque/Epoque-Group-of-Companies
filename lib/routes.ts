@@ -1,0 +1,36 @@
+export const routes = [
+  "/",
+  "/about-epoque-group",
+  "/contact",
+  "/faq",
+  "/privacy-policy",
+  "/terms-of-service",
+
+  "/digital/best-digital-marketing-agency-in-hyderabad",
+  "/digital/search-engine-optimization",
+  "/digital/google-ads-ppc",
+  "/digital/content-marketing",
+  "/digital/social-media-marketing-hyderabad-india",
+
+  "/realty",
+  "/realty/project-launch-marketing",
+  "/realty/digital-marketing-for-builders",
+  "/realty/property-lead-generation",
+  "/realty/luxury-villa-marketing",
+  "/realty/real-estate-branding",
+  "/realty/real-estate-sales-strategy",
+
+  "/interiors",
+  "/interiors/interior-designers-in-hyderabad",
+  "/interiors/residential-interior-designers-in-hyderabad",
+  "/interiors/commercial-interior-design",
+  "/interiors/luxury-interior-design",
+  "/interiors/turnkey-interior-solutions",
+
+  "/revenue",
+  "/revenue/b2b-lead-generation",
+  "/revenue/conversion-rate-optimization",
+  "/revenue/marketing-automation",
+  "/revenue/revenue-growth-consulting",
+  "/revenue/sales-funnel-building",
+];
