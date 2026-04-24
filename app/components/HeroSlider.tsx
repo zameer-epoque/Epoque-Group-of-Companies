@@ -109,7 +109,7 @@
 // }
 
 "use client";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -210,14 +210,15 @@ export default function PremiumHero() {
 
               {/* Buttons */}
               <div className="flex gap-4 mt-8 flex-wrap">
-
-                <motion.button
-                  whileHover={{ scale: 1.08 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-white text-black px-7 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition"
-                >
-                  Get Free Consultation
-                </motion.button>
+<Link href="/contact" passHref>
+  <motion.a
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    className="bg-white text-black px-7 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition inline-block"
+  >
+    Get Free Consultation
+  </motion.a>
+</Link>
 
                 
 
