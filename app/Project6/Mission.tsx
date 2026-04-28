@@ -92,7 +92,7 @@ export default function Mission() {
           className="mt-14"
         >
           <a
-            href="#form"
+            href="#contact"
             className="inline-block bg-white text-[#2F4A8A] px-8 py-3 rounded-xl font-semibold hover:scale-105 transition"
           >
             Get Free Consultation

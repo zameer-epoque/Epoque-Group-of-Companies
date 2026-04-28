@@ -42,14 +42,7 @@ export default function Process() {
       <div className="max-w-6xl mx-auto text-center relative z-10 text-white">
 
         {/* TITLE */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-4"
-        >
-          How We Work
-        </motion.h2>
+        
 
         <p className="text-white/80 mb-14">
           Simple, transparent, and hassle-free process to manage your property.

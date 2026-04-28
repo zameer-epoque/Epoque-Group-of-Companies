@@ -68,7 +68,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919133633327"
               target="_blank"
               className="bg-[#3BA64B] px-6 py-3 rounded-xl font-semibold shadow-lg"
             >
@@ -86,7 +86,7 @@ export default function Hero() {
         >
           <div className="rounded-2xl overflow-hidden shadow-2xl">
             <img
-              src="/hero-property.jpg"
+              src="/about-property13.jpg"
               alt="Property"
               className="w-full h-full object-cover"
             />
