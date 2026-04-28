@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FAQ() {
   const faqs = [
@@ -29,40 +30,72 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-16 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-4xl mx-auto">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
+        {/* 🔥 TITLE */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 text-[#2F4A8A]">
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-4">
-          {faqs.map((item, i) => (
-            <div key={i} className="bg-white rounded-xl shadow">
-              
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full text-left p-5 flex justify-between items-center"
+        <p className="text-center text-gray-500 mb-12">
+          Everything you need to know about our property services
+        </p>
+
+        {/* FAQ LIST */}
+        <div className="space-y-5">
+          {faqs.map((item, i) => {
+            const isOpen = openIndex === i;
+
+            return (
+              <motion.div
+                key={i}
+                className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition"
               >
-                <span className="font-medium">{item.q}</span>
-                <span>{openIndex === i ? "-" : "+"}</span>
-              </button>
+                {/* QUESTION */}
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  className="w-full flex justify-between items-center p-5 text-left"
+                >
+                  <span className="font-medium text-gray-800">
+                    {item.q}
+                  </span>
 
-              {openIndex === i && (
-                <div className="px-5 pb-5 text-gray-600 text-sm">
-                  {item.a}
-                </div>
-              )}
+                  {/* ICON */}
+                  <motion.span
+                    animate={{ rotate: isOpen ? 180 : 0 }}
+                    className="text-[#3BA64B] text-xl"
+                  >
+                    ▼
+                  </motion.span>
+                </button>
 
-            </div>
-          ))}
+                {/* ANSWER */}
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden px-5"
+                    >
+                      <p className="pb-5 text-gray-600 text-sm leading-relaxed">
+                        {item.a}
+                      </p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* 🔥 CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-14">
           <a
             href="#form"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold"
+            className="bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
           >
             Still Have Questions? Get Free Consultation
           </a>

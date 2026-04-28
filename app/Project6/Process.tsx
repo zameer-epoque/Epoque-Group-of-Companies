@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Process() {
   const steps = [
     {
@@ -23,50 +27,78 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-16 px-6 bg-white">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="relative py-20 px-6 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
 
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      {/* 🔥 BACKGROUND GLOW */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-[#2F4A8A]/20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#3BA64B]/20 blur-3xl rounded-full"></div>
+
+      <div className="max-w-6xl mx-auto text-center relative z-10">
+
+        {/* TITLE */}
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold mb-4 text-[#2F4A8A]"
+        >
           How We Work
-        </h2>
+        </motion.h2>
 
-        <p className="text-gray-600 mb-12">
+        <p className="text-gray-600 mb-14">
           Simple, transparent, and hassle-free process to manage your property.
         </p>
 
-        <div className="grid md:grid-cols-4 gap-8">
-          {steps.map((step, i) => (
-            <div key={i} className="relative">
+        {/* 🔵 TIMELINE */}
+        <div className="relative">
 
-              {/* 🔵 STEP NUMBER */}
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
-                {i + 1}
-              </div>
+          {/* LINE */}
+          <div className="hidden md:block absolute top-10 left-0 right-0 h-1 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]"></div>
 
-              {/* ICON */}
-              <div className="text-3xl mb-3">{step.icon}</div>
+          <div className="grid md:grid-cols-4 gap-10">
+            {steps.map((step, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.2 }}
+                whileHover={{ scale: 1.05 }}
+                className="relative text-center"
+              >
+                {/* 🔢 STEP NUMBER */}
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B] text-white flex items-center justify-center font-bold shadow-lg">
+                  {i + 1}
+                </div>
 
-              <h3 className="font-semibold text-lg mb-2">
-                {step.title}
-              </h3>
+                {/* ICON */}
+                <div className="text-3xl mb-3">{step.icon}</div>
 
-              <p className="text-gray-500 text-sm">
-                {step.desc}
-              </p>
+                <h3 className="font-semibold text-lg mb-2 text-[#2F4A8A]">
+                  {step.title}
+                </h3>
 
-            </div>
-          ))}
+                <p className="text-gray-500 text-sm">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* 🔥 CTA */}
-        <div className="mt-12">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-14"
+        >
           <a
             href="#form"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold"
+            className="inline-block bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
           >
             Start Managing Your Property
           </a>
-        </div>
+        </motion.div>
 
       </div>
     </section>

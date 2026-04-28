@@ -1,75 +1,114 @@
-export default function Services() {
-  const services = [
+"use client";
+
+import { motion } from "framer-motion";
+
+export default function Properties() {
+  const properties = [
     {
-      title: "Tenant Management",
-      desc: "We find verified tenants, handle agreements, and manage all communication.",
-      icon: "🏠",
+      title: "2BHK Apartment",
+      location: "Hyderabad",
+      image: "/properties/p1.jpg",
+      status: "Managed",
     },
     {
-      title: "Rent Collection",
-      desc: "Timely rent collection with monthly updates directly to you.",
-      icon: "💰",
+      title: "Independent House",
+      location: "Vijayawada",
+      image: "/properties/p2.jpg",
+      status: "Rented",
     },
     {
-      title: "Property Maintenance",
-      desc: "Regular inspections and maintenance to keep your property in top condition.",
-      icon: "🛠️",
+      title: "Residential Plot",
+      location: "Vizag",
+      image: "/properties/p3.jpg",
+      status: "Monitored",
     },
     {
-      title: "Legal Assistance",
-      desc: "Support with agreements, disputes, and documentation.",
-      icon: "⚖️",
+      title: "Luxury Villa",
+      location: "Gachibowli",
+      image: "/properties/p4.jpg",
+      status: "Managed",
     },
     {
-      title: "Plot Monitoring",
-      desc: "We regularly check and secure your plots or vacant land.",
-      icon: "📍",
+      title: "Commercial Space",
+      location: "Kukatpally",
+      image: "/properties/p5.jpg",
+      status: "Leased",
     },
     {
-      title: "Property Selling",
-      desc: "End-to-end support to sell your property at the best price.",
-      icon: "📈",
+      title: "Farm Land",
+      location: "Amaravati",
+      image: "/properties/p6.jpg",
+      status: "Secured",
     },
   ];
 
   return (
-    <section id="services" className="py-16 px-6 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-20 px-6 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Our Services
+      {/* 🔥 BACKGROUND GLOW */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-[#2F4A8A]/20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#3BA64B]/20 blur-3xl rounded-full"></div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+
+        {/* TITLE */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[#2F4A8A]">
+          Properties We Manage
         </h2>
 
-        <p className="text-center text-gray-600 mb-10">
-          Complete property management solutions designed for stress-free ownership.
+        <p className="text-center text-gray-600 mb-12">
+          Trusted by property owners across multiple cities in India.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service, i) => (
-            <div
+        {/* GRID */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {properties.map((item, i) => (
+            <motion.div
               key={i}
-              className="bg-white p-6 rounded-xl shadow hover:shadow-xl transition"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              whileHover={{ scale: 1.04 }}
+              className="group relative rounded-2xl overflow-hidden shadow-lg"
             >
-              <div className="text-3xl mb-3">{service.icon}</div>
+              {/* IMAGE */}
+              <div className="overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                />
+              </div>
 
-              <h3 className="text-lg font-semibold mb-2">
-                {service.title}
-              </h3>
+              {/* OVERLAY */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
 
-              <p className="text-gray-600 text-sm">
-                {service.desc}
-              </p>
-            </div>
+              {/* CONTENT */}
+              <div className="p-5 bg-white">
+                <h3 className="font-semibold text-lg text-[#2F4A8A]">
+                  {item.title}
+                </h3>
+
+                <p className="text-gray-500 text-sm">
+                  {item.location}
+                </p>
+
+                {/* STATUS BADGE */}
+                <span className="inline-block mt-3 text-xs bg-[#3BA64B]/10 text-[#3BA64B] px-3 py-1 rounded-full font-medium">
+                  {item.status}
+                </span>
+              </div>
+            </motion.div>
           ))}
         </div>
 
         {/* 🔥 CTA */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="#form"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold"
+            className="inline-block bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
           >
-            Get Free Consultation
+            Manage Your Property Now
           </a>
         </div>
 

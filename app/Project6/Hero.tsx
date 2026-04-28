@@ -1,82 +1,101 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-white py-16 px-6">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="relative bg-white overflow-hidden py-20 px-6">
+
+      {/* 🔵 BACKGROUND GRADIENT GLOW */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-[#2F4A8A]/20 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#3BA64B]/20 blur-3xl rounded-full"></div>
+
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
 
         {/* 📝 LEFT CONTENT */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            Manage Your Property in India <br />
-            <span className="text-blue-600">From Anywhere</span>
+            Manage Your Property <br />
+            <span className="text-[#2F4A8A]">
+              From Anywhere
+            </span>
           </h1>
 
           <p className="text-gray-600 mb-6">
-            We take care of tenants, rent collection, maintenance & legal —
-            so you can enjoy stress-free income.
+            We handle tenants, rent collection, maintenance & legal —
+            so you enjoy stress-free income.
           </p>
 
-          {/* ✅ BENEFITS */}
-          <div className="space-y-2 mb-6 text-gray-700">
-            <p>✔ Tenant Management</p>
-            <p>✔ Monthly Rent Collection</p>
-            <p>✔ Property Maintenance</p>
-            <p>✔ Legal Support</p>
+          {/* ✅ FEATURES */}
+          <div className="space-y-2 mb-6">
+            {[
+              "Tenant Management",
+              "Rent Collection",
+              "Maintenance",
+              "Legal Support",
+            ].map((item, i) => (
+              <motion.p
+                key={i}
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2 text-gray-700"
+              >
+                <span className="text-[#3BA64B]">✔</span> {item}
+              </motion.p>
+            ))}
           </div>
 
           {/* 🔥 CTA BUTTONS */}
           <div className="flex gap-4">
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold"
+              className="bg-[#2F4A8A] text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition"
             >
               Get Free Consultation
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               href="https://wa.me/919999999999"
               target="_blank"
-              className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold"
+              className="bg-[#3BA64B] text-white px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition"
             >
               WhatsApp
-            </a>
+            </motion.a>
           </div>
-        </div>
+        </motion.div>
 
-        {/* 🟡 RIGHT FORM */}
-        <div className="bg-white p-6 rounded-xl shadow-xl">
-          <h2 className="text-xl font-semibold mb-4">
-            Get Callback in 10 Minutes
-          </h2>
-
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full border p-3 rounded-lg"
+        {/* 🟡 RIGHT IMAGE CARD */}
+        <motion.div
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          <div className="rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition duration-500">
+            <img
+              src="/hero-property.jpg"
+              alt="Property"
+              className="w-full h-full object-cover"
             />
+          </div>
 
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="w-full border p-3 rounded-lg"
-            />
-
-            <input
-              type="text"
-              placeholder="Property Location"
-              className="w-full border p-3 rounded-lg"
-            />
-
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg"
-            >
-              Get Callback
-            </button>
-          </form>
-        </div>
+          {/* 🟢 FLOATING BADGE */}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 3 }}
+            className="absolute -bottom-6 left-6 bg-white p-4 rounded-xl shadow-lg"
+          >
+            <p className="text-sm text-gray-500">Trusted Clients</p>
+            <h4 className="font-bold text-[#2F4A8A]">500+</h4>
+          </motion.div>
+        </motion.div>
 
       </div>
     </section>
