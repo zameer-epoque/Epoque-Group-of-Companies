@@ -4,35 +4,34 @@ import Image from "next/image";
 
 export default function Properties() {
   const properties = [
-    {  location: "Hyderabad", image: "/about-property1.jpg" },
+    { location: "Hyderabad", image: "/about-property1.jpg" },
     { location: "Vijayawada", image: "/about-property2.jpg" },
-    {  location: "Vijayawada", image: "/about-property3.jpg" },
-    {  location: "Vijayawada", image: "/about-property4.jpg" },
-    {  location: "Hyderabad", image: "/about-property5.jpg" },
+    { location: "Vijayawada", image: "/about-property3.jpg" },
+    { location: "Vijayawada", image: "/about-property4.jpg" },
+    { location: "Hyderabad", image: "/about-property5.jpg" },
     { location: "Hyderabad", image: "/about-property6.jpg" },
 
     { location: "Hyderabad", image: "/about-property7.jpg" },
-    {  location: "Hyderabad", image: "/about-property8.jpg" },
-    {  location: "Hyderabad", image: "/about-property9.jpg" },
-    {  location: "Hyderabad", image: "/about-property10.jpg" },
+    { location: "Hyderabad", image: "/about-property8.jpg" },
+    { location: "Hyderabad", image: "/about-property9.jpg" },
+    { location: "Hyderabad", image: "/about-property10.jpg" },
     { location: "Sainkapuri", image: "/about-property11.jpg" },
-    {  location: "Vishakhapatnam", image: "/about-property14.jpg" },
+    { location: "Vishakhapatnam", image: "/about-property14.jpg" },
 
-    {  location: "Hyderabad", image: "/about-property15.jpg" },
+    { location: "Hyderabad", image: "/about-property15.jpg" },
     { location: "Hyderabad", image: "/about-property16.jpg" },
-    {  location: "Hyderabad", image: "/about-property17.jpg" },
-    {  location: "Hyderabad", image: "/about-property18.jpg" },
-   
+    { location: "Hyderabad", image: "/about-property17.jpg" },
+    { location: "Hyderabad", image: "/about-property18.jpg" },
   ];
 
   return (
     <section className="relative py-10 px-6 overflow-hidden" id="properties">
       
-      {/* 🌈 BACKGROUND */}
+      {/* BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]" />
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* GLOW EFFECT */}
+      {/* GLOW */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 blur-3xl rounded-full" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 blur-3xl rounded-full" />
 
@@ -55,26 +54,27 @@ export default function Properties() {
               className="group rounded-2xl overflow-hidden bg-white/10 border border-white/20 backdrop-blur-lg shadow-lg hover:scale-105 transition duration-300"
             >
               
-              {/* IMAGE SECTION */}
+              {/* IMAGE */}
               <div className="relative h-56 w-full overflow-hidden">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={`Property in ${item.location}`} // ✅ FIXED
                   fill
-                  className="object-contain group-hover:scale-105 transition duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-110 transition duration-500"
                 />
 
                 {/* OVERLAY */}
                 <div className="absolute inset-0 bg-black/40" />
 
-                {/* TEXT ON IMAGE */}
+                {/* LOCATION */}
                 <div className="absolute bottom-3 left-3">
-                 
-                  <p className="text-white/80 text-sm">
+                  <p className="text-white text-sm font-medium">
                     {item.location}
                   </p>
                 </div>
               </div>
+
             </div>
           ))}
         </div>
@@ -88,6 +88,7 @@ export default function Properties() {
             Manage Your Property Now
           </a>
         </div>
+
       </div>
     </section>
   );
