@@ -33,7 +33,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-20 px-6 overflow-hidden">
+    <section id="services" className="relative py-4 px-6 overflow-hidden">
 
       {/* 🔥 GRADIENT BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]"></div>

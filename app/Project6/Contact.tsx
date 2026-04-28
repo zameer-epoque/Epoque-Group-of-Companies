@@ -17,7 +17,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden text-white">
+    <section className="relative py-4 px-6 overflow-hidden text-white">
 
       {/* 🔥 GRADIENT BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]"></div>
