@@ -54,16 +54,16 @@ export default function Properties() {
               className="group rounded-2xl overflow-hidden bg-white/10 border border-white/20 backdrop-blur-lg shadow-lg hover:scale-105 transition duration-300"
             >
               
-              {/* IMAGE ONLY */}
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
+              {/* IMAGE FULL SHOW */}
+              <div className="relative w-full h-64 bg-black/20 flex items-center justify-center">
                 <Image
                   src={item.image}
                   alt="Property Image"
                   fill
                   quality={100}
                   priority={i < 4}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-110 transition duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-contain group-hover:scale-105 transition duration-500"
                 />
               </div>
 
