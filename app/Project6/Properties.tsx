@@ -56,13 +56,23 @@ export default function Properties() {
               
               {/* IMAGE */}
               <div className="relative h-56 w-full overflow-hidden">
-                <Image
+                {/* <Image
                   src={item.image}
                   alt={`Property in ${item.location}`} // ✅ FIXED
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-110 transition duration-500"
-                />
+                /> */}
+
+                <Image
+  src={item.image}
+  alt={`Property in ${item.location}`}
+  fill
+  quality={100} // 🔥 HIGH QUALITY
+  priority={i < 3} // 🔥 first images load sharp
+  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+  className="object-cover group-hover:scale-110 transition duration-500"
+/>
 
                 {/* OVERLAY */}
                 <div className="absolute inset-0 bg-black/40" />
