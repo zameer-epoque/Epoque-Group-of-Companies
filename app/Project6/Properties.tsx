@@ -158,9 +158,7 @@ export default function Properties() {
                 </p>
 
                 {/* STATUS */}
-                <span className="inline-block mt-3 text-xs bg-white/20 text-white px-3 py-1 rounded-full">
-                  {item.status}
-                </span>
+                
               </div>
             </div>
           ))}
