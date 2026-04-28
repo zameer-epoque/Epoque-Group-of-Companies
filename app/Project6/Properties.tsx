@@ -1,28 +1,40 @@
-"use client";
-
-import { motion } from "framer-motion";
-
-export default function Process() {
-  const steps = [
+export default function Properties() {
+  const properties = [
     {
-      title: "Consultation",
-      desc: "We understand your property details and requirements.",
-      icon: "📞",
+      title: "2BHK Apartment",
+      location: "Hyderabad",
+      image: "/properties/p1.jpg",
+      status: "Managed",
     },
     {
-      title: "Inspection",
-      desc: "Our team visits and evaluates your property condition.",
-      icon: "🏠",
+      title: "Independent House",
+      location: "Vijayawada",
+      image: "/properties/p2.jpg",
+      status: "Rented",
     },
     {
-      title: "Execution",
-      desc: "We handle tenants, agreements, and management tasks.",
-      icon: "⚙️",
+      title: "Residential Plot",
+      location: "Vizag",
+      image: "/properties/p3.jpg",
+      status: "Monitored",
     },
     {
-      title: "Monitoring",
-      desc: "Regular updates, rent collection, and maintenance.",
-      icon: "📊",
+      title: "Luxury Villa",
+      location: "Gachibowli",
+      image: "/properties/p4.jpg",
+      status: "Managed",
+    },
+    {
+      title: "Commercial Space",
+      location: "Kukatpally",
+      image: "/properties/p5.jpg",
+      status: "Leased",
+    },
+    {
+      title: "Farm Land",
+      location: "Amaravati",
+      image: "/properties/p6.jpg",
+      status: "Secured",
     },
   ];
 
@@ -39,72 +51,61 @@ export default function Process() {
       <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 blur-3xl rounded-full"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 blur-3xl rounded-full"></div>
 
-      <div className="max-w-6xl mx-auto text-center relative z-10 text-white">
+      <div className="max-w-6xl mx-auto relative z-10 text-white">
 
         {/* TITLE */}
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-4"
-        >
-          How We Work
-        </motion.h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+          Properties We Manage
+        </h2>
 
-        <p className="text-white/80 mb-14">
-          Simple, transparent, and hassle-free process to manage your property.
+        <p className="text-center text-white/80 mb-12">
+          Trusted by property owners across multiple cities in India.
         </p>
 
-        {/* TIMELINE */}
-        <div className="relative">
+        {/* GRID */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {properties.map((item, i) => (
+            <div
+              key={i}
+              className="group rounded-2xl overflow-hidden backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg hover:scale-105 transition"
+            >
+              {/* IMAGE */}
+              <div className="overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                />
+              </div>
 
-          {/* LINE */}
-          <div className="hidden md:block absolute top-10 left-0 right-0 h-1 bg-white/30"></div>
-
-          <div className="grid md:grid-cols-4 gap-10">
-            {steps.map((step, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.2 }}
-                whileHover={{ scale: 1.05 }}
-                className="relative text-center"
-              >
-                {/* STEP NUMBER */}
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white text-[#2F4A8A] flex items-center justify-center font-bold shadow-lg">
-                  {i + 1}
-                </div>
-
-                {/* ICON */}
-                <div className="text-3xl mb-3">{step.icon}</div>
-
-                <h3 className="font-semibold text-lg mb-2">
-                  {step.title}
+              {/* CONTENT */}
+              <div className="p-5">
+                <h3 className="font-semibold text-lg">
+                  {item.title}
                 </h3>
 
-                <p className="text-white/80 text-sm">
-                  {step.desc}
+                <p className="text-white/70 text-sm">
+                  {item.location}
                 </p>
-              </motion.div>
-            ))}
-          </div>
+
+                {/* STATUS */}
+                <span className="inline-block mt-3 text-xs bg-white/20 text-white px-3 py-1 rounded-full">
+                  {item.status}
+                </span>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-14"
-        >
+        <div className="text-center mt-16">
           <a
             href="#form"
             className="inline-block bg-white text-[#2F4A8A] px-8 py-3 rounded-xl font-semibold hover:scale-105 transition"
           >
-            Start Managing Your Property
+            Manage Your Property Now
           </a>
-        </motion.div>
+        </div>
 
       </div>
     </section>
