@@ -203,14 +203,14 @@ Message: ${formData.message}`;
 
           <div className="mt-8 flex gap-4">
             <a
-              href="tel:+9191336333279"
+              href="tel:+919133633327"
               className="bg-white text-[#2F4A8A] px-6 py-3 rounded-xl font-semibold"
             >
               Call Now
             </a>
 
             <a
-              href="https://wa.me/9191336333279"
+           href="https://wa.me/919133633327"
               target="_blank"
               className="bg-[#3BA64B] px-6 py-3 rounded-xl font-semibold"
             >
