@@ -159,7 +159,7 @@ Phone: ${formData.phone}
 Location: ${formData.location}
 Message: ${formData.message}`;
 
-    const whatsappURL = `https://wa.me/9191336333279?text=${encodeURIComponent(
+    const whatsappURL = `https://wa.me/919133633327?text=${encodeURIComponent(
       text
     )}`;
 
@@ -196,7 +196,7 @@ Message: ${formData.message}`;
           </p>
 
           <div className="space-y-4 text-white/80">
-            <p>📞 +91 91336333279</p>
+            <p>📞 +91 9133633327</p>
             <p>📧 sales@epoquegroup.in</p>
             <p>📍 Hyderabad, India</p>
           </div>
