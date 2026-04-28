@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,9 +45,16 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
           {/* 🔵 LOGO */}
-          <h1 className="text-xl font-bold text-white tracking-wide">
-            PropertyHandling
-          </h1>
+         <h1 className="flex items-center">
+  <Image
+    src="/Property-1-1.png"
+    alt="Property Logo"
+    width={150}
+    height={50}
+    priority
+    className="object-contain"
+  />
+</h1>
 
           {/* 🟣 DESKTOP MENU */}
           <div className="hidden md:flex items-center gap-8">
