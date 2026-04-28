@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 px-4 md:px-6">
+    <section className="relative overflow-hidden py-24 md:py-28 px-4 md:px-6">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]" />
