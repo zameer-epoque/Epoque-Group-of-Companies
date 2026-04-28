@@ -4,24 +4,24 @@ import Image from "next/image";
 
 export default function Properties() {
   const properties = [
-    { location: "Hyderabad", image: "/about-property1.jpg" },
-    { location: "Vijayawada", image: "/about-property2.jpg" },
-    { location: "Vijayawada", image: "/about-property3.jpg" },
-    { location: "Vijayawada", image: "/about-property4.jpg" },
-    { location: "Hyderabad", image: "/about-property5.jpg" },
-    { location: "Hyderabad", image: "/about-property6.jpg" },
+    { image: "/about-property1.jpg" },
+    { image: "/about-property2.jpg" },
+    { image: "/about-property3.jpg" },
+    { image: "/about-property4.jpg" },
+    { image: "/about-property5.jpg" },
+    { image: "/about-property6.jpg" },
 
-    { location: "Hyderabad", image: "/about-property7.jpg" },
-    { location: "Hyderabad", image: "/about-property8.jpg" },
-    { location: "Hyderabad", image: "/about-property9.jpg" },
-    { location: "Hyderabad", image: "/about-property10.jpg" },
-    { location: "Sainkapuri", image: "/about-property11.jpg" },
-    { location: "Vishakhapatnam", image: "/about-property14.jpg" },
+    { image: "/about-property7.jpg" },
+    { image: "/about-property8.jpg" },
+    { image: "/about-property9.jpg" },
+    { image: "/about-property10.jpg" },
+    { image: "/about-property11.jpg" },
+    { image: "/about-property14.jpg" },
 
-    { location: "Hyderabad", image: "/about-property15.jpg" },
-    { location: "Hyderabad", image: "/about-property16.jpg" },
-    { location: "Hyderabad", image: "/about-property17.jpg" },
-    { location: "Hyderabad", image: "/about-property18.jpg" },
+    { image: "/about-property15.jpg" },
+    { image: "/about-property16.jpg" },
+    { image: "/about-property17.jpg" },
+    { image: "/about-property18.jpg" },
   ];
 
   return (
@@ -54,35 +54,17 @@ export default function Properties() {
               className="group rounded-2xl overflow-hidden bg-white/10 border border-white/20 backdrop-blur-lg shadow-lg hover:scale-105 transition duration-300"
             >
               
-              {/* IMAGE */}
-              <div className="relative h-56 w-full overflow-hidden">
-                {/* <Image
-                  src={item.image}
-                  alt={`Property in ${item.location}`} // ✅ FIXED
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover group-hover:scale-110 transition duration-500"
-                /> */}
-
+              {/* IMAGE ONLY */}
+              <div className="relative w-full aspect-[4/3] overflow-hidden">
                 <Image
-  src={item.image}
-  alt={`Property in ${item.location}`}
-  fill
-  quality={100} // 🔥 HIGH QUALITY
-  priority={i < 3} // 🔥 first images load sharp
-  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  className="object-cover group-hover:scale-110 transition duration-500"
-/>
-
-                {/* OVERLAY */}
-                <div className="absolute inset-0 bg-black/40" />
-
-                {/* LOCATION */}
-                <div className="absolute bottom-3 left-3">
-                  <p className="text-white text-sm font-medium">
-                    {item.location}
-                  </p>
-                </div>
+                  src={item.image}
+                  alt="Property Image"
+                  fill
+                  quality={100}
+                  priority={i < 4}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-110 transition duration-500"
+                />
               </div>
 
             </div>
