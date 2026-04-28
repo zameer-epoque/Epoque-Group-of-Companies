@@ -30,15 +30,22 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-4xl mx-auto">
+    <section className="relative py-20 px-6 overflow-hidden">
 
-        {/* 🔥 TITLE */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 text-[#2F4A8A]">
+      {/* 🔥 GRADIENT BACKGROUND */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]"></div>
+
+      {/* 🔥 DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      <div className="relative max-w-4xl mx-auto text-white">
+
+        {/* TITLE */}
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
           Frequently Asked Questions
         </h2>
 
-        <p className="text-center text-gray-500 mb-12">
+        <p className="text-center text-white/80 mb-12">
           Everything you need to know about our property services
         </p>
 
@@ -50,21 +57,21 @@ export default function FAQ() {
             return (
               <motion.div
                 key={i}
-                className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition"
+                className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-md"
               >
                 {/* QUESTION */}
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   className="w-full flex justify-between items-center p-5 text-left"
                 >
-                  <span className="font-medium text-gray-800">
+                  <span className="font-medium text-white">
                     {item.q}
                   </span>
 
                   {/* ICON */}
                   <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
-                    className="text-[#3BA64B] text-xl"
+                    className="text-white text-xl"
                   >
                     ▼
                   </motion.span>
@@ -80,7 +87,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden px-5"
                     >
-                      <p className="pb-5 text-gray-600 text-sm leading-relaxed">
+                      <p className="pb-5 text-white/80 text-sm leading-relaxed">
                         {item.a}
                       </p>
                     </motion.div>
@@ -91,11 +98,11 @@ export default function FAQ() {
           })}
         </div>
 
-        {/* 🔥 CTA */}
+        {/* CTA */}
         <div className="text-center mt-14">
           <a
             href="#form"
-            className="bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B] text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:scale-105 transition"
+            className="inline-block bg-white text-[#2F4A8A] px-8 py-3 rounded-xl font-semibold hover:scale-105 transition"
           >
             Still Have Questions? Get Free Consultation
           </a>
