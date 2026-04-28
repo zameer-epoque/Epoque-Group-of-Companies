@@ -3,37 +3,37 @@ export default function Properties() {
     {
       title: "2BHK Apartment",
       location: "Hyderabad",
-      image: "/properties/p1.jpg",
+      image: "/about-property1.jpg",
       status: "Managed",
     },
     {
       title: "Independent House",
       location: "Vijayawada",
-      image: "/properties/p2.jpg",
+     image: "/about-property2.jpg",
       status: "Rented",
     },
     {
       title: "Residential Plot",
       location: "Vizag",
-      image: "/properties/p3.jpg",
+      image: "/about-property3.jpg",
       status: "Monitored",
     },
     {
       title: "Luxury Villa",
       location: "Gachibowli",
-      image: "/properties/p4.jpg",
+      image: "/about-property4.jpg",
       status: "Managed",
     },
     {
       title: "Commercial Space",
       location: "Kukatpally",
-      image: "/properties/p5.jpg",
+      image: "/about-property5.jpg",
       status: "Leased",
     },
     {
       title: "Farm Land",
       location: "Amaravati",
-      image: "/properties/p6.jpg",
+      image: "/about-property6.jpg",
       status: "Secured",
     },
   ];
