@@ -4,25 +4,25 @@ import Image from "next/image";
 
 export default function Properties() {
   const properties = [
-    { title: "2BHK Apartment", location: "Hyderabad", image: "/about-property1.jpg" },
-    { title: "Independent House", location: "Vijayawada", image: "/about-property2.jpg" },
-    { title: "Residential Plot", location: "Vijayawada", image: "/about-property3.jpg" },
-    { title: "Luxury Villa", location: "Vijayawada", image: "/about-property4.jpg" },
-    { title: "Commercial Space", location: "Hyderabad", image: "/about-property5.jpg" },
-    { title: "Farm Land", location: "Hyderabad", image: "/about-property6.jpg" },
+    {  location: "Hyderabad", image: "/about-property1.jpg" },
+    { location: "Vijayawada", image: "/about-property2.jpg" },
+    {  location: "Vijayawada", image: "/about-property3.jpg" },
+    {  location: "Vijayawada", image: "/about-property4.jpg" },
+    {  location: "Hyderabad", image: "/about-property5.jpg" },
+    { location: "Hyderabad", image: "/about-property6.jpg" },
 
-    { title: "2BHK Apartment", location: "Hyderabad", image: "/about-property7.jpg" },
-    { title: "Independent House", location: "Hyderabad", image: "/about-property8.jpg" },
-    { title: "Residential Plot", location: "Vizag", image: "/about-property9.jpg" },
-    { title: "Luxury Villa", location: "Gachibowli", image: "/about-property10.jpg" },
-    { title: "Commercial Space", location: "Kukatpally", image: "/about-property11.jpg" },
-    { title: "Farm Land", location: "Vishakhapatnam", image: "/about-property14.jpg" },
+    { location: "Hyderabad", image: "/about-property7.jpg" },
+    {  location: "Hyderabad", image: "/about-property8.jpg" },
+    {  location: "Hyderabad", image: "/about-property9.jpg" },
+    {  location: "Hyderabad", image: "/about-property10.jpg" },
+    { location: "Sainkapuri", image: "/about-property11.jpg" },
+    {  location: "Vishakhapatnam", image: "/about-property14.jpg" },
 
-    { title: "2BHK Apartment", location: "Hyderabad", image: "/about-property15.jpg" },
-    { title: "Independent House", location: "Hyderabad", image: "/about-property16.jpg" },
-    { title: "Residential Plot", location: "Hyderabad", image: "/about-property17.jpg" },
-    { title: "Luxury Villa", location: "Hyderabad", image: "/about-property18.jpg" },
-    { title: "Commercial Space", location: "Hyderabad", image: "/about-property19.jpg" },
+    {  location: "Hyderabad", image: "/about-property15.jpg" },
+    { location: "Hyderabad", image: "/about-property16.jpg" },
+    {  location: "Hyderabad", image: "/about-property17.jpg" },
+    {  location: "Hyderabad", image: "/about-property18.jpg" },
+   
   ];
 
   return (
@@ -69,9 +69,7 @@ export default function Properties() {
 
                 {/* TEXT ON IMAGE */}
                 <div className="absolute bottom-3 left-3">
-                  <h3 className="text-white font-semibold text-lg">
-                    {item.title}
-                  </h3>
+                 
                   <p className="text-white/80 text-sm">
                     {item.location}
                   </p>
