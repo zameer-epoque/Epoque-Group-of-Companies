@@ -67,7 +67,7 @@ export default function Navbar() {
 
             {/* WhatsApp */}
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919133633327"
               className="bg-white text-[#3BA64B] px-5 py-2 rounded-lg font-semibold hover:scale-105 transition"
             >
               WhatsApp
@@ -75,7 +75,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <a
-              href="#form"
+              href="#contact"
               className="bg-black/20 border border-white px-5 py-2 rounded-lg text-white hover:bg-black/30 transition"
             >
               Get Quote

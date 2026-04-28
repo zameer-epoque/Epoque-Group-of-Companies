@@ -143,7 +143,7 @@ export default function Properties() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-56 object-cover group-hover:scale-110 transition duration-500"
+                  className="w-100 h-56 object-cover group-hover:scale-110 transition duration-500"
                 />
               </div>
 
@@ -169,7 +169,7 @@ export default function Properties() {
         {/* CTA */}
         <div className="text-center mt-16">
           <a
-            href="#form"
+            href="#contact"
             className="inline-block bg-white text-[#2F4A8A] px-8 py-3 rounded-xl font-semibold hover:scale-105 transition"
           >
             Manage Your Property Now

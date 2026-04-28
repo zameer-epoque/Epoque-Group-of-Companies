@@ -15,8 +15,9 @@ export default function Page() {
     <main>
       <Navbar />
      <Hero/>
+           <AboutUs />
       <Services />
-      <AboutUs />
+
       <Mission />
       <Properties />
       <ReferralProcess/>
