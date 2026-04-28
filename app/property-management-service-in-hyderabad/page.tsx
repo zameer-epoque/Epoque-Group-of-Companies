@@ -7,6 +7,7 @@ import Navbar from "../Project6/Navbar";
 import Process from "../Project6/Process";
 import Properties from "../Project6/Properties";
 import Services from "../Project6/Services";
+import ReferralProcess from "../Project6/ReferralProcess";
 
 
 export default function Page() {
@@ -18,6 +19,7 @@ export default function Page() {
       <AboutUs />
       <Mission />
       <Properties />
+      <ReferralProcess/>
       <Process />
       <FAQ />
       <Contact />
