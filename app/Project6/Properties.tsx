@@ -143,7 +143,7 @@ export default function Properties() {
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-100 h-56 object-cover group-hover:scale-110 transition duration-500"
+                  className="w-200 h-56 object-cover group-hover:scale-110 transition duration-500"
                 />
               </div>
 
