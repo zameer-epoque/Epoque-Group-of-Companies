@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <section className="relative py-20 px-6 overflow-hidden">
+    <section className="relative py-20 px-6 overflow-hidden" id="about">
 
       {/* 🔥 GRADIENT BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]"></div>

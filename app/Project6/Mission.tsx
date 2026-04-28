@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Mission() {
   return (
-    <section className="relative py-20 px-6 overflow-hidden">
+    <section className="relative py-20 px-6 overflow-hidden" id="mission">
 
       {/* 🔥 GRADIENT BACKGROUND */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#2F4A8A] to-[#3BA64B]"></div>

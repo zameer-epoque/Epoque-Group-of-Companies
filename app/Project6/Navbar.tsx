@@ -16,7 +16,7 @@ export default function Navbar() {
   }, []);
 
   const menu = [
-    { name: "Home", link: "#home" },
+
     { name: "About", link: "#about" },
     { name: "Services", link: "#services" },
     { name: "Mission", link: "#mission" },
