@@ -16,9 +16,14 @@ export default function Navbar() {
   }, []);
 
   const menu = [
+    { name: "Home", link: "#home" },
+    { name: "About", link: "#about" },
     { name: "Services", link: "#services" },
-    { name: "Process", link: "#how" },
-    { name: "Reviews", link: "#testimonials" },
+    { name: "Mission", link: "#mission" },
+    { name: "Properties", link: "#properties" },
+
+    { name: "FAQ", link: "#faq" },
+
   ];
 
   return (
