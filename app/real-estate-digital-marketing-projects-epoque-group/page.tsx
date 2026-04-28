@@ -276,7 +276,7 @@ const clients = [
     link: "/OmSree"
   },
    {
-    title: "PR Constructions  SunRidge Homes",
+    title: "PR Constructions  Sunridge Homes",
     location: "Hyderabad",
     image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
     description:
@@ -323,7 +323,7 @@ const clients = [
     image: "/client2.jpg",
     description:
       "Comprehensive real estate solutions including buying, selling, and investment advisory.",
-    link: "https://www.propertyhandling.com/"
+    link: "/property-management-service-in-hyderabad"
   },
   {
     title: "Garikipati Towers",
