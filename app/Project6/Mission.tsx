@@ -84,22 +84,8 @@ export default function Mission() {
 
         </div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-14"
-        >
-          <a
-            href="#contact"
-            className="inline-block bg-white text-[#2F4A8A] px-8 py-3 rounded-xl font-semibold hover:scale-105 transition"
-          >
-            Get Free Consultation
-          </a>
-        </motion.div>
-
       </div>
+      
     </section>
   );
 }

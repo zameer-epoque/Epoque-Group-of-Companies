@@ -64,7 +64,7 @@ export default function AboutUs() {
             href="#contact"
             className="inline-block bg-white text-[#2F4A8A] px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
           >
-            Get Free Consultation
+            Get More Info
           </a>
         </div>
 

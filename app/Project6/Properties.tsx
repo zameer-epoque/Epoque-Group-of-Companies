@@ -4,105 +4,105 @@ export default function Properties() {
       title: "2BHK Apartment",
       location: "Hyderabad",
       image: "/about-property1.jpg",
-      status: "Managed",
+    
     },
     {
       title: "Independent House",
       location: "Vijayawada",
      image: "/about-property2.jpg",
-      status: "Rented",
+ 
     },
     {
       title: "Residential Plot",
       location: "Vizag",
       image: "/about-property3.jpg",
-      status: "Monitored",
+
     },
     {
       title: "Luxury Villa",
       location: "Gachibowli",
       image: "/about-property4.jpg",
-      status: "Managed",
+
     },
     {
       title: "Commercial Space",
       location: "Kukatpally",
       image: "/about-property5.jpg",
-      status: "Leased",
+
     },
     {
       title: "Farm Land",
       location: "Amaravati",
       image: "/about-property6.jpg",
-      status: "Secured",
+
     },
 
      {
       title: "2BHK Apartment",
       location: "Hyderabad",
       image: "/about-property7.jpg",
-      status: "Managed",
+
     },
     {
       title: "Independent House",
       location: "Vijayawada",
      image: "/about-property8.jpg",
-      status: "Rented",
+
     },
     {
       title: "Residential Plot",
       location: "Vizag",
       image: "/about-property9.jpg",
-      status: "Monitored",
+    
     },
     {
       title: "Luxury Villa",
       location: "Gachibowli",
       image: "/about-property10.jpg",
-      status: "Managed",
+
     },
     {
       title: "Commercial Space",
       location: "Kukatpally",
       image: "/about-property11.jpg",
-      status: "Leased",
+
     },
     {
       title: "Farm Land",
       location: "Amaravati",
       image: "/about-property12.jpg",
-      status: "Secured",
+
     },
 
      {
       title: "2BHK Apartment",
       location: "Hyderabad",
       image: "/about-property13.jpg",
-      status: "Managed",
+
     },
     {
       title: "Independent House",
       location: "Vijayawada",
      image: "/about-property15.jpg",
-      status: "Rented",
+
     },
     {
       title: "Residential Plot",
       location: "Vizag",
       image: "/about-property16.jpg",
-      status: "Monitored",
+
     },
     {
       title: "Luxury Villa",
       location: "Gachibowli",
       image: "/about-property7.jpg",
-      status: "Managed",
+
     },
     {
       title: "Commercial Space",
       location: "Kukatpally",
       image: "/about-property18.jpg",
-      status: "Leased",
+
     },
     
   ];
