@@ -95,7 +95,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/919100455529"
+            href="https://wa.me/919133633327"
             target="_blank"
             className="px-8 py-4 rounded-xl border border-white/30 backdrop-blur-md hover:bg-white/10 transition"
           >
