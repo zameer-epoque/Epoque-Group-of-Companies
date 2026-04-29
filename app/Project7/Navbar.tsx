@@ -95,9 +95,13 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
             {/* Logo */}
-            <h1 className="text-xl font-bold text-white">
-              APR Hillside
-            </h1>
+           <h1 className="flex items-center">
+  <img
+    src="/apr-logo.jpg"
+    alt="APR Hillside Logo"
+    className="h-10 w-auto object-contain"
+  />
+</h1>
 
             {/* Desktop Menu */}
             <nav className="hidden md:flex items-center gap-8 text-gray-300">
