@@ -334,9 +334,9 @@ const clients = [
     link: "/Garikipati-Towers-1.5-2-3-BHK-Luxury-Apartments-For-Sale-in-Hyderabad"
 
   },{
-    title: "Salarpuria Sattva Group",
+    title: "Apr-Praveens-Hillside-Luxury-Villas",
     location: "Hyderabad",
-    image: "/salarpuria-sattva-group-real-estate-marketing-hyderabad-epoque-group.jpg", 
+    image: "/APR-Hills-real-estate-marketing-hyderabad-epoque-group.jpg", 
     description:
       "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad.",
     link: "/Apr-Praveens-Hillside-4BHK-Luxury-Villas-For-Sale-in-Bachupally-Hyderabad"
