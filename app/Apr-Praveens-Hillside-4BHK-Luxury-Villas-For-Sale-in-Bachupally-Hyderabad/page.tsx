@@ -31,22 +31,7 @@ export default function Page() {
       {/* Contact */}
       <Contact />
 
-      {/* 🔥 Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 w-full flex md:hidden z-50">
-        <a
-          href="tel:+919100455529"
-          className="w-1/2 bg-green-500 text-center py-4 font-semibold"
-        >
-          Call Now
-        </a>
-        <a
-          href="https://wa.me/919100455529"
-          target="_blank"
-          className="w-1/2 bg-[#25D366] text-center py-4 font-semibold"
-        >
-          WhatsApp
-        </a>
-      </div>
+     
 
     </main>
   );
