@@ -333,6 +333,13 @@ const clients = [
       "Premium real estate developer offering luxury villas and apartments with world-class design, quality construction, and high investment value.",
     link: "/Garikipati-Towers-1.5-2-3-BHK-Luxury-Apartments-For-Sale-in-Hyderabad"
 
+  },{
+    title: "Salarpuria Sattva Group",
+    location: "Hyderabad",
+    image: "/salarpuria-sattva-group-real-estate-marketing-hyderabad-epoque-group.jpg", 
+    description:
+      "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad.",
+    link: "/Apr-Praveens-Hillside-4BHK-Luxury-Villas-For-Sale-in-Bachupally-Hyderabad"
   }
   
 ]
