@@ -40,7 +40,7 @@ export default function Location() {
             className="relative rounded-3xl overflow-hidden border border-white/10 group"
           >
             <img
-              src="/location-map.png"
+              src="/aprhills3.jpg"
               alt="Location Map"
               className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
             />
