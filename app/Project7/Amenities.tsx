@@ -76,7 +76,7 @@ export default function Amenities() {
           className="mt-20 rounded-3xl overflow-hidden relative"
         >
           <img
-            src="/pool.jpg"
+            src="/aprhills4.jpg"
             className="w-full h-[350px] object-cover"
             alt="Amenities"
           />
