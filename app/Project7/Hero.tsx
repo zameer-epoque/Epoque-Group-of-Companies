@@ -95,12 +95,28 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://wa.me/919133633327"
-            target="_blank"
-            className="px-8 py-4 rounded-xl border border-white/30 backdrop-blur-md hover:bg-white/10 transition"
-          >
-            WhatsApp Now
-          </a>
+  href="https://wa.me/919133633327"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden rounded-xl bg-gradient-to-r from-[#25D366] to-[#1ebe5d] text-white font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(37,211,102,0.6)]"
+>
+  {/* Glow Effect */}
+  <span className="absolute inset-0 bg-gradient-to-r from-[#25D366] to-[#1ebe5d] opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></span>
+
+  {/* Button Content */}
+  <span className="relative z-10 flex items-center gap-2">
+    {/* WhatsApp Icon */}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      className="w-5 h-5 fill-white"
+    >
+      <path d="M16 .4C7.3.4.3 7.4.3 16c0 2.8.7 5.5 2.1 7.9L.2 31.8l8.2-2.1c2.3 1.3 4.9 2 7.6 2 8.7 0 15.7-7 15.7-15.7S24.7.4 16 .4zm0 28.7c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-4.9 1.3 1.3-4.8-.3-.5c-1.3-2.1-2-4.6-2-7.1 0-7.2 5.9-13.1 13.1-13.1S29.1 8.8 29.1 16 23.2 29.1 16 29.1zm7.3-9.8c-.4-.2-2.5-1.2-2.9-1.4-.4-.2-.6-.2-.9.2-.2.4-1 1.4-1.2 1.6-.2.2-.4.2-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.5-2.2-2.9-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7 0-.2-.9-2.2-1.2-3-.3-.7-.6-.6-.9-.6h-.8c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 3s1.2 3.5 1.4 3.7c.2.2 2.4 3.7 5.9 5.2.8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 2.5-1 2.8-1.9.4-.9.4-1.7.3-1.9-.1-.2-.3-.3-.7-.5z"/>
+    </svg>
+
+    WhatsApp Now
+  </span>
+</a>
         </motion.div>
 
       </div>

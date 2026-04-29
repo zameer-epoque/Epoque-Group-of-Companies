@@ -43,7 +43,7 @@ export default function Pricing() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Villa Pricing
+            Villa Pricing & Details
           </h2>
           <p className="text-gray-400 mt-4 text-lg">
             Choose your perfect luxury home
@@ -110,7 +110,7 @@ export default function Pricing() {
         </div>
 
         {/* Bottom Info */}
-        <div className="text-center mt-16 text-gray-400 text-sm">
+        <div className="text-center mt-16 text-gray-400 text-md ">
           Possession by July 2026 • HMDA & RERA Approved
         </div>
 
