@@ -44,7 +44,7 @@ export default function Location() {
               width="100%"
               height="100%"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="rounded-3xl"
@@ -59,6 +59,7 @@ export default function Location() {
             <a
               href="https://maps.app.goo.gl/E1R1sz9GRekLg4dT6"
               target="_blank"
+              rel="noopener noreferrer"
               className="absolute top-6 right-6 bg-white text-black px-4 py-2 rounded-lg text-sm font-semibold hover:scale-105 transition"
             >
               View Map
