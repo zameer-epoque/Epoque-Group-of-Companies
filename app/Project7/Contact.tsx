@@ -171,22 +171,25 @@
 //   );
 // }
 
-
 "use client";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const [form, setForm] = useState({
+  const [form, setForm] = useState<{
+    name: string;
+    phone: string;
+    email: string;
+  }>({
     name: "",
     phone: "",
     email: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.name || !form.phone) {
@@ -207,6 +210,7 @@ Please share price, floor plans & site visit details.`;
     const whatsappUrl = `https://wa.me/919133633327?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank");
+
     setLoading(false);
   };
 
@@ -216,7 +220,7 @@ Please share price, floor plans & site visit details.`;
       aria-labelledby="contact-heading"
       className="relative py-24 px-6 bg-[#020617] overflow-hidden"
     >
-      {/* 🔥 Background Glow */}
+      {/* Background Glow */}
       <div className="absolute w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
       <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
 
@@ -296,7 +300,7 @@ Please share price, floor plans & site visit details.`;
                 placeholder="Enter your full name"
                 required
                 value={form.name}
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setForm({ ...form, name: e.target.value })
                 }
                 className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none"
@@ -312,7 +316,7 @@ Please share price, floor plans & site visit details.`;
                 placeholder="Enter your phone number"
                 required
                 value={form.phone}
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setForm({ ...form, phone: e.target.value })
                 }
                 className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none"
@@ -327,7 +331,7 @@ Please share price, floor plans & site visit details.`;
                 name="email"
                 placeholder="Enter your email (optional)"
                 value={form.email}
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setForm({ ...form, email: e.target.value })
                 }
                 className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none"
