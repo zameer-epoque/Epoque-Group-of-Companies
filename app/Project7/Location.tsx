@@ -32,21 +32,23 @@ export default function Location() {
         {/* Layout */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT - MAP */}
+          {/* LEFT - GOOGLE MAP */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-3xl overflow-hidden border border-white/10 group"
+            className="relative rounded-3xl overflow-hidden border border-white/10 group h-[400px]"
           >
-            <img
-              src="/aprhills3.jpg"
-              alt="Location Map"
-              className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.3374100899537!2d78.3716542749384!3d17.53911528337423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8d2c7b5147b5%3A0xe675b36d78bd3bff!2sAPR%20Praveen%E2%80%99s%20Hillside%20%E2%80%93%20Luxury%20Villas%20in%20Bachupally!5e0!3m2!1sen!2sin!4v1777544685389!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-3xl"
             />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
             {/* Floating Badge */}
             <div className="absolute bottom-6 left-6 bg-white/10 backdrop-blur-md px-5 py-2 rounded-xl text-sm border border-white/20">
@@ -74,7 +76,6 @@ export default function Location() {
               Nearby Essentials
             </h3>
 
-            {/* Sections */}
             <div className="space-y-6">
 
               <div>
@@ -113,7 +114,6 @@ export default function Location() {
 
             </div>
 
-            {/* CTA */}
             <a
               href="#contact"
               className="mt-10 inline-block w-full text-center bg-gradient-to-r from-green-500 to-blue-500 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition shadow-lg"

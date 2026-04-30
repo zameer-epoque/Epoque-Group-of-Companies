@@ -44,7 +44,7 @@ export default function Hero() {
           Experience Luxury Living
           <br />
           <span className="text-green-400">
-            4BHK Triplex Villas
+            4BHK Triplex Villas For Sale In Bachupally Hyderabad
           </span>
         </motion.h1>
 

@@ -334,7 +334,7 @@ const clients = [
     link: "/Garikipati-Towers-1.5-2-3-BHK-Luxury-Apartments-For-Sale-in-Hyderabad"
 
   },{
-    title: "Apr-Praveens-Hillside-Luxury-Villas",
+    title: "Apr Praveens Hillside Luxury Villas",
     location: "Hyderabad",
     image: "/APR-Hills-real-estate-marketing-hyderabad-epoque-group.jpg", 
     description:
