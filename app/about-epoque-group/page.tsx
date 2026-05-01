@@ -18,14 +18,14 @@ export const metadata: Metadata = {
         "Performance marketing Hyderabad",
     ],
     alternates: {
-        canonical: "https://epoquegroup.in/about",
+        canonical: "https://epoquegroup.in/about-epoque-group",
     },
     openGraph: {
         title:
             "About Epoque Group | Hyderabad Digital & Real Estate Marketing Experts",
         description:
             "Performance-driven digital marketing and real estate branding agency helping businesses scale revenue in Hyderabad and across India.",
-        url: "https://epoquegroup.in/about",
+        url: "https://epoquegroup.in/about-epoque-group",
         type: "website",
     },
 }
