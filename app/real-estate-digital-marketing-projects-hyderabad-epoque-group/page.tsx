@@ -363,7 +363,6 @@ const clients = [
     link: "/Apr-Praveens-Hillside-4BHK-Luxury-Villas-For-Sale-in-Bachupally-Hyderabad"
   }
 ]
-
 export default function ClientsPage() {
   return (
     <main className="relative bg-black text-white min-h-screen overflow-hidden">
@@ -375,23 +374,32 @@ export default function ClientsPage() {
       <div className="relative max-w-7xl mx-auto px-6 py-28">
 
         {/* HEADER */}
-        <div className="text-center mb-24">
+        <header className="text-center mb-24">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Real Estate Marketing in{" "}
+            Real Estate Marketing Projects in{" "}
             <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 bg-clip-text text-transparent">
               Hyderabad
             </span>
           </h1>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Performance-driven strategies helping developers scale projects.
+          {/* ✅ SEO BOOSTED PARAGRAPH */}
+          <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
+            Explore our <strong>real estate marketing projects in Hyderabad</strong> where we help 
+            builders and developers generate <strong>high-quality property leads</strong> using 
+            <strong> SEO, Google Ads, and social media marketing</strong>. From 
+            <strong> luxury villas in Tukkuguda</strong> to 
+            <strong> premium apartments in Yapral</strong>, our strategies focus on 
+            <strong> ROI, lead generation, and conversion optimization</strong>.
           </p>
-        </div>
+        </header>
 
         {/* GRID */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
+        <section
+          aria-label="Real Estate Marketing Projects Portfolio Hyderabad"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-16"
+        >
           {clients.map((client, index) => (
-            <motion.div
+            <motion.article
               key={index}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -404,6 +412,7 @@ export default function ClientsPage() {
                   href={client.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`${client.title} real estate project in ${client.location}`}
                 >
                   <Card client={client} />
                 </Link>
@@ -412,26 +421,40 @@ export default function ClientsPage() {
                   <Card client={client} />
                 </div>
               )}
-            </motion.div>
+            </motion.article>
           ))}
-        </div>
+        </section>
 
-        {/* CTA */}
-        <div className="text-center mt-32">
-          <h2 className="text-4xl font-semibold mb-6">
-            Ready to Scale Your Project?
-          </h2>
+   
+       {/* ✅ BETTER CTA (conversion focused) */}
+<div className="text-center mt-32 max-w-3xl mx-auto">
+  <h2 className="text-4xl font-semibold mb-6">
+    Ready to Generate High-Quality Property Leads?
+  </h2>
 
-          <Link
-            href="/contact"
-            className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold"
-          >
-            Book Consultation
-          </Link>
-        </div>
+  {/* ✅ SEO + Conversion Paragraph */}
+  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+    Partner with <strong>Epoque Group</strong>, a leading 
+    <strong> real estate marketing agency in Hyderabad</strong>, to scale your projects with 
+    <strong> SEO, Google Ads, and performance marketing</strong>. 
+    We help builders and developers generate 
+    <strong> qualified property leads</strong>, increase site visits, and boost conversions 
+    for <strong> villas, apartments, and gated communities</strong>.
+  </p><p className="text-sm text-gray-500 mt-4">
+  Trusted by leading real estate developers across Hyderabad.
+</p>
+
+  <Link
+    href="/contact"
+    aria-label="Get free real estate marketing strategy in Hyderabad"
+    className="px-10 py-4 rounded-full bg-gradient-to-r from-orange-400 via-yellow-500 to-red-500 text-black font-semibold"
+  >
+    Get Free Marketing Strategy
+  </Link>
+</div>
       </div>
 
-      {/* SEO */}
+      {/* ✅ IMPROVED SEO SCHEMA */}
       <Script
         id="schema"
         type="application/ld+json"
@@ -439,10 +462,12 @@ export default function ClientsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ItemList",
+            name: "Real Estate Marketing Projects in Hyderabad",
             itemListElement: clients.map((c, i) => ({
               "@type": "ListItem",
               position: i + 1,
-              name: c.title
+              name: c.title,
+              description: c.description
             }))
           })
         }}
@@ -451,7 +476,7 @@ export default function ClientsPage() {
   )
 }
 
-// CARD COMPONENT (clean + reusable)
+// CARD COMPONENT
 function Card({ client }: { client: any }) {
   return (
     <div className="rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden shadow-2xl transition group-hover:border-orange-400/40 group-hover:shadow-orange-500/20">
@@ -459,7 +484,7 @@ function Card({ client }: { client: any }) {
       <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={client.image}
-          alt={client.title}
+          alt={`${client.title} real estate project in ${client.location} by Epoque Group`}
           fill
           className="object-cover transition duration-700 group-hover:scale-110"
         />
