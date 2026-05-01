@@ -299,7 +299,7 @@ const clients = [
     image: "/om-sree-builders-qualified-lead-generation.jpg",
     description:
       "Structured, criteria-based qualified lead generation delivering high-intent prospects.",
-    link: "/OmSree"
+    link: "/om-sree-delight-2bhk-3bhk-luxury-apartments-for-sale-in-yapral-hyderabad"
   },
   {
     title: "PR Constructions  Sunridge Homes",
