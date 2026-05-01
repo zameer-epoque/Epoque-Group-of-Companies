@@ -5,73 +5,91 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 
 const clients = [
- 
   {
     title: "Radhey Constructions",
     location: "Hyderabad",
     image: "/client1.jpg",
+    description:
+      "Premium villas and apartments with world-class design and high investment value.",
     link: "https://radheyconstructions.com/"
   },
   {
     title: "Vasavi Group",
     location: "Hyderabad",
     image: "/vasavi-group-real-estate-marketing-hyderabad-epoque-group.jpg",
+    description:
+      "Executed high-performance lead generation campaigns focused on attracting qualified property buyers across Hyderabad.",
     link: "/Vasavi"
   },
   {
     title: "Om Sree Builders",
     location: "Hyderabad",
     image: "/om-sree-builders-qualified-lead-generation.jpg",
-    
-    link: "/OmSree"
+    description:
+      "Structured, criteria-based qualified lead generation delivering high-intent prospects.",
+    link: "/om-sree-delight-2bhk-3bhk-luxury-apartments-for-sale-in-yapral-hyderabad"
   },
-   {
-    title: "PR Constructions  SunRidge Homes",
+  {
+    title: "PR Constructions  Sunridge Homes",
     location: "Hyderabad",
     image: "/pr-constructions-property-marketing-hyderabad-epoque-group.jpg",
+    description:
+      "Delivered consistent qualified buyer enquiries through targeted digital campaigns."
   },
   {
     title: "Orange County Homes - Callisto5 Villas",
     location: "Hyderabad",
     image: "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
- 
-    link: "/callisto5"
+    description:
+      "Designed a performance-driven qualified lead generation system reducing CPL and improving conversions.",
+    link: "/callisto5-4bhk-triplex-villas-for-sale-in-tukkuguda-hyderabad"
   },
   {
     title: "GRSV Infra",
     location: "Hyderabad",
     image: "/grsv-infra-real-estate-lead-generation-hyderabad-epoque-group.png",
+    description:
+      "Implemented SEO and paid media campaigns strengthening booking pipeline growth."
   },
   {
     title: "Etereo Realty Etereo 1",
     location: "Goa",
     image: "/etereo-realty-villa-marketing-hyderabad-epoque-group.jpg",
+    description:
+      "Built a strategic villa lead generation funnel delivering highly qualified premium buyer enquiries.",
     link: "/ETEREO1"
   },
-  
-  
- 
   {
     title: "Macro Express",
     location: "Mumbai & Nagpur",
     image: "/marco-express-sales-acceleration-outsourced-growth.png",
+    description:
+      "End-to-end outsourced revenue growth support and sales acceleration systems."
   },
-  
   {
     title: "Property Handling",
     location: "Hyderabad",
     image: "/client2.jpg",
-    link: "https://www.propertyhandling.com/"
+    description:
+      "Comprehensive real estate solutions including buying, selling, and investment advisory.",
+    link: "/property-management-service-in-hyderabad"
   },
   {
     title: "Garikipati Towers",
     location: "Hyderabad",
     image: "/garikipati-towers-real-estate-marketing-hyderabad-epoque-group.jpg",
-    
+    description:
+      "Premium real estate developer offering luxury villas and apartments.",
     link: "/Garikipati-Towers-1.5-2-3-BHK-Luxury-Apartments-For-Sale-in-Hyderabad"
-
+  },
+  {
+    title: "Apr Praveens Hillside Luxury Villas",
+    location: "Hyderabad",
+    image: "/APR-Hills-real-estate-marketing-hyderabad-epoque-group.jpg",
+    description:
+      "Executed high-performance lead generation campaigns across Hyderabad.",
+    link: "/Apr-Praveens-Hillside-4BHK-Luxury-Villas-For-Sale-in-Bachupally-Hyderabad"
   }
-  
 ]
 
 
