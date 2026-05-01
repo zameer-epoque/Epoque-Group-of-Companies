@@ -135,7 +135,7 @@ export default function ClientsPage() {
         <meta name="twitter:image" content="https://epoquegroup.in/og-image.jpg" />
       </Head>
 
-      <main className="relative bg-black text-white min-h-screen overflow-hidden">
+      <main className="relative bg-black text-white min-h-screen overflow-hidden py-28">
 
         {/* HEADER */}
         <header className="text-center mb-24 max-w-3xl mx-auto">
@@ -155,15 +155,34 @@ export default function ClientsPage() {
         </header>
 
         {/* GRID */}
-        <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 px-6 max-w-7xl mx-auto">
-          {clients.map((client, index) => (
-            <motion.article key={index} whileHover={{ scale: 1.05 }}>
-              <Link href={client.link || "#"}>
-                <Card client={client} />
-              </Link>
-            </motion.article>
-          ))}
-        </section>
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 px-4 md:px-6 max-w-7xl mx-auto">
+  {clients.map((client, index) => {
+    const isExternal = client.link?.startsWith("http");
+
+    return (
+      <motion.article
+        key={index}
+        whileHover={{ scale: 1.03 }}
+        className="group"
+      >
+        {client.link ? (
+          <Link
+            href={client.link}
+            target={isExternal ? "_blank" : "_self"}
+            rel={isExternal ? "noopener noreferrer" : undefined}
+            aria-label={`${client.title} project details`}
+          >
+            <Card client={client} />
+          </Link>
+        ) : (
+          <div>
+            <Card client={client} />
+          </div>
+        )}
+      </motion.article>
+    );
+  })}
+</section>
 
         {/* CTA */}
         <div className="text-center mt-32 max-w-3xl mx-auto px-6">
@@ -217,19 +236,30 @@ export default function ClientsPage() {
 /* ================= CARD ================= */
 function Card({ client }: { client: any }) {
   return (
-    <div className="rounded-3xl bg-white/5 border border-white/10 overflow-hidden shadow-xl">
+    <div className="rounded-3xl bg-white/5 border border-white/10 overflow-hidden shadow-xl transition duration-300 group-hover:border-orange-400/40">
 
-      <div className="relative aspect-[4/3]">
+      {/* IMAGE */}
+      <div className="relative aspect-[4/3] overflow-hidden">
         <Image
           src={client.image}
-          alt={`${client.title} real estate project in ${client.location}`}
+          alt={`${client.title} real estate project in ${client.location} by Epoque Group`}
           fill
-          className="object-cover"
+          className="object-cover transition duration-700 group-hover:scale-110"
         />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+          {client.link && (
+            <span className="px-5 py-2 bg-white text-black text-sm font-semibold rounded-full">
+              View Project
+            </span>
+          )}
+        </div>
       </div>
 
+      {/* CONTENT */}
       <div className="p-6">
-        <h3 className="text-xl font-semibold text-yellow-500">
+        <h3 className="text-xl font-semibold text-yellow-500 group-hover:text-yellow-400 transition">
           {client.title}
         </h3>
 
@@ -237,9 +267,18 @@ function Card({ client }: { client: any }) {
           {client.location}
         </p>
 
-        <p className="text-gray-400 text-sm mt-3">
+        <p className="text-gray-400 text-sm mt-3 leading-relaxed">
           {client.description}
         </p>
+
+        {/* MOBILE BUTTON (IMPORTANT) */}
+        {client.link && (
+          <div className="mt-4 sm:hidden">
+            <span className="text-yellow-400 text-sm font-medium">
+              View Project →
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
