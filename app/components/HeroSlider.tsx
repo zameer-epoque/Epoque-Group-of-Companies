@@ -248,6 +248,135 @@
 
 
 
+// "use client";
+
+// import Link from "next/link";
+// import { useEffect, useState, useMemo } from "react";
+// import Image from "next/image";
+// import { motion, AnimatePresence } from "framer-motion";
+
+// export default function PremiumHero() {
+//  const slides = useMemo(
+//   () => [
+//     {
+//       image: "/Herobanner1.png",
+//       title: "Real Estate Digital Marketing in Hyderabad",
+//       description:
+//         "Boost your real estate business in Hyderabad with SEO, Google Ads, and high-converting digital marketing strategies designed for builders and developers.",
+//     },
+//     {
+//       image: "/Herobanner2.jpg",
+//       title: "High-Quality Property Lead Generation",
+//       description:
+//         "Generate verified leads for villas, apartments, and gated communities in Hyderabad with performance marketing that converts into site visits and sales.",
+//     },
+//     {
+//       image: "/Herobanner4.png",
+//       title: "ROI-Driven Real Estate Campaigns",
+//       description:
+//         "Maximize ROI with data-driven real estate marketing campaigns focused on lead quality, conversion rates, and measurable business growth in Hyderabad.",
+//     },
+//     {
+//       image: "/Herobanner3.jpg",
+//       title: "Real Estate Branding & Project Marketing",
+//       description:
+//         "Build strong real estate brands in Hyderabad with strategic branding, landing pages, and social media marketing for villas and apartment projects.",
+//     },
+//   ],
+//   []
+// );
+
+//   const [index, setIndex] = useState(0);
+
+//   useEffect(() => {
+//     const id = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % slides.length);
+//     }, 5000); // slightly faster + smoother
+
+//     return () => clearInterval(id);
+//   }, [slides.length]);
+
+//   return (
+//     <section className="relative h-[95vh] w-full overflow-hidden bg-black">
+//       {/* Background */}
+//       <AnimatePresence mode="wait">
+//         <motion.div
+//           key={index}
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={{ opacity: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="absolute inset-0"
+//         >
+//           <Image
+//             src={slides[index].image}
+//             alt={slides[index].title}
+//             fill
+//             priority
+//             sizes="100vw"
+//             className="object-cover"
+//           />
+//         </motion.div>
+//       </AnimatePresence>
+
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent z-10" />
+//       <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black/80 to-transparent z-10" />
+
+//       {/* Content */}
+//       <div className="relative z-20 h-full flex items-center">
+//         <div className="max-w-7xl mx-auto px-6 w-full">
+//           <AnimatePresence mode="wait">
+//             <motion.div
+//               key={index + "text"}
+//               initial={{ opacity: 0, y: 40 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               exit={{ opacity: 0, y: -30 }}
+//               transition={{ duration: 0.6 }}
+//               className="max-w-2xl"
+//             >
+//               <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+//                 {slides[index].title}
+//               </h1>
+
+//               <div className="w-16 h-[3px] bg-white mt-5 mb-5 rounded-full" />
+
+//               <p className="text-gray-200 text-lg leading-relaxed">
+//                 {slides[index].description}
+//               </p>
+
+//               <div className="flex gap-4 mt-8 flex-wrap">
+//                 <Link href="/contact">
+//                   <motion.span
+//                     whileHover={{ scale: 1.06 }}
+//                     whileTap={{ scale: 0.95 }}
+//                     className="bg-white text-black px-7 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition cursor-pointer inline-block"
+//                   >
+//                     Get Free Consultation
+//                   </motion.span>
+//                 </Link>
+//               </div>
+//             </motion.div>
+//           </AnimatePresence>
+//         </div>
+//       </div>
+
+//       {/* Indicators */}
+//       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2">
+//         {slides.map((_, i) => (
+//           <div
+//             key={i}
+//             className={`h-2 rounded-full transition-all duration-300 ${
+//               i === index ? "w-8 bg-white" : "w-2 bg-white/40"
+//             }`}
+//           />
+//         ))}
+//       </div>
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import Link from "next/link";
@@ -260,27 +389,36 @@ export default function PremiumHero() {
     () => [
       {
         image: "/Herobanner1.png",
-        title: "Dominate Digital Growth",
+        title: "Real Estate Digital Marketing in Hyderabad",
         description:
-          "Scale your real estate business with high-converting marketing strategies and performance-driven campaigns.",
+          "Boost your real estate business in Hyderabad with SEO, Google Ads, and high-converting digital marketing strategies designed for builders and developers.",
+        cta: "Start Your Project Growth",
+        link: "/contact",
       },
       {
         image: "/Herobanner2.jpg",
-        title: "Real Estate Marketing Experts",
+        title: "High-Quality Property Lead Generation",
         description:
-          "We generate premium property leads that convert into site visits and sales.",
+          "Generate verified leads for villas, apartments, and gated communities in Hyderabad with performance marketing that converts into site visits and sales.",
+        cta: "Get Quality Leads Now",
+        link: "/contact",
       },
       {
         image: "/Herobanner4.png",
-        title: "Performance That Drives Revenue",
+        title: "ROI-Driven Real Estate Campaigns",
         description:
-          "Our strategies focus on ROI, lead quality, and measurable business growth.",
+          "Maximize ROI with data-driven real estate marketing campaigns focused on lead quality, conversion rates, and measurable business growth in Hyderabad.",
+        cta: "View Our Marketing Strategy",
+        link: "/contact",
       },
       {
         image: "/Herobanner3.jpg",
-        title: "Build Powerful Brands",
+        title: "Real Estate Branding & Project Marketing",
         description:
-          "We craft strong brand identities that position you as a market leader.",
+          "Build strong real estate brands in Hyderabad with strategic branding, landing pages, and social media marketing for villas and apartment projects.",
+        cta: "Explore Our Projects",
+        link: "/real-estate-digital-marketing-projects-hyderabad-epoque-group",
+       
       },
     ],
     []
@@ -291,13 +429,20 @@ export default function PremiumHero() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000); // slightly faster + smoother
-
+    }, 5000);
     return () => clearInterval(id);
   }, [slides.length]);
 
   return (
-    <section className="relative h-[95vh] w-full overflow-hidden bg-black">
+    <section
+      className="relative h-[95vh] w-full overflow-hidden bg-black"
+      aria-label="Real estate digital marketing services in Hyderabad"
+    >
+      {/* Hidden SEO Content */}
+      <h1 className="sr-only">
+        Real Estate Digital Marketing Agency in Hyderabad – Epoque Group
+      </h1>
+
       {/* Background */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -310,7 +455,7 @@ export default function PremiumHero() {
         >
           <Image
             src={slides[index].image}
-            alt={slides[index].title}
+            alt={`${slides[index].title} - Real Estate Marketing Hyderabad`}
             fill
             priority
             sizes="100vw"
@@ -335,9 +480,9 @@ export default function PremiumHero() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl"
             >
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+              <h2 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
                 {slides[index].title}
-              </h1>
+              </h2>
 
               <div className="w-16 h-[3px] bg-white mt-5 mb-5 rounded-full" />
 
@@ -345,14 +490,18 @@ export default function PremiumHero() {
                 {slides[index].description}
               </p>
 
+              {/* ✅ Dynamic CTA */}
               <div className="flex gap-4 mt-8 flex-wrap">
-                <Link href="/contact">
+                <Link
+                  href={slides[index].link}
+                  aria-label={slides[index].cta}
+                >
                   <motion.span
                     whileHover={{ scale: 1.06 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-white text-black px-7 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition cursor-pointer inline-block"
                   >
-                    Get Free Consultation
+                    {slides[index].cta}
                   </motion.span>
                 </Link>
               </div>
@@ -375,3 +524,4 @@ export default function PremiumHero() {
     </section>
   );
 }
+

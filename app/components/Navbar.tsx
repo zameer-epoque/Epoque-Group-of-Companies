@@ -337,7 +337,7 @@ const navItems: NavItem[] = [
       { label: "B2B Lead Generation", href: "/revenue/b2b-lead-generation" },
     ],
   },
-{ label: "Our Clients", href: "/real-estate-digital-marketing-projects-epoque-group" },
+{ label: "Our Clients", href: "/real-estate-digital-marketing-projects-hyderabad-epoque-group" },
   {
     label: "Explore",
     href: "/company",
