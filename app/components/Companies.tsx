@@ -30,11 +30,10 @@ export default function Companies() {
             sm:text-[28px]
             md:text-[34px]
 
-            uppercase
             tracking-[1px]
           "
         >
-           Our Clients
+          Our Clients
         </h2>
 
         {/* GRID */}
@@ -43,11 +42,11 @@ export default function Companies() {
             w-full
 
             grid
-            grid-cols-1
+            grid-cols-2
             sm:grid-cols-2
             lg:grid-cols-4
 
-            gap-[18px]
+            gap-[12px]
             sm:gap-[22px]
             md:gap-[28px]
           "
@@ -60,12 +59,13 @@ export default function Companies() {
                 group
 
                 w-full
-                h-[120px]
 
+                h-[90px]
                 sm:h-[135px]
                 md:h-[145px]
 
-                rounded-[22px]
+                rounded-[18px]
+                sm:rounded-[22px]
 
                 border
                 border-white/[0.08]
@@ -78,7 +78,8 @@ export default function Companies() {
                 items-center
                 justify-center
 
-                px-[24px]
+                px-[10px]
+                sm:px-[24px]
 
                 transition-all
                 duration-500
@@ -112,8 +113,11 @@ export default function Companies() {
                 className="
                   absolute
 
-                  w-[140px]
-                  h-[70px]
+                  w-[80px]
+                  h-[40px]
+
+                  sm:w-[140px]
+                  sm:h-[70px]
 
                   bg-[#C89B3C]/10
                   blur-3xl
@@ -145,7 +149,8 @@ export default function Companies() {
                   className="
                     object-contain
 
-                    p-[20px]
+                    p-[12px]
+                    sm:p-[20px]
 
                     transition-all
                     duration-500
