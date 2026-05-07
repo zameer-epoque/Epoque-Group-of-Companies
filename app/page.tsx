@@ -1,6 +1,7 @@
 
 
 import ClientsSlider from "./components/ClientsSlider";
+import Companies from "./components/Companies";
 import Hero from "./components/Hero";
 import HeroSlider from "./components/HeroSlider";
 
@@ -19,6 +20,7 @@ export default function Home() {
 
 <HeroSlider/>
       <Hero />
+<Companies/>
       <WhoWeAre />
       <VisionMissionPromise />
       <OurDivisions />
