@@ -101,7 +101,7 @@ export default function ClientsSlider() {
       {/* TITLE */}
       <div className="text-center mb-10 md:mb-14 px-4">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
-          Our <span className="text-orange-400">Clients</span>
+          Our <span className="text-orange-400">Clients Projects</span>
         </h2>
         <p className="text-gray-400 mt-3 text-sm md:text-base">
           Trusted by top real estate brands
