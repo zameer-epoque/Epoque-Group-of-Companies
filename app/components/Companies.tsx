@@ -4,12 +4,14 @@ import Image from "next/image";
 
 export default function Companies() {
   const logos: string[] = [
-    "/companies/clientslogo1.jpg",
-    "/companies/clientslogo2.jpg",
-    "/companies/clientslogo3.jpg",
-    "/companies/clientslogo4.jpg",
-    "/companies/clientslogo5.jpg",
-    "/companies/clientslogo6.jpg",
+    "/newlogoclient1.png",
+    "/newlogoclient2.png",
+"/newlogoclient3.png",
+"/newlogoclient4.png",
+ "/newlogoclient5.png",
+"/newlogoclient6.png",
+"/newlogoclient7.png",
+"/newlogoclient8.png",
   ];
 
   return (
@@ -37,7 +39,7 @@ export default function Companies() {
             uppercase
           "
         >
-          OUR CLIENTS
+          OUR CLIENTS 
         </h2>
 
         {/* GRID */}
@@ -55,15 +57,18 @@ export default function Companies() {
           "
         >
           {logos.map((logo, index) => (
-          <div
+        <div
   key={index}
   className="
     relative
     group
 
+    w-full
+    max-w-[260px]
+
     h-[90px]
     sm:h-[100px]
-    md:h-[110px]
+    md:h-[120px]
 
     rounded-[18px]
 
@@ -85,7 +90,7 @@ export default function Companies() {
     hover:border-white/20
     hover:bg-[#171717]
 
-    px-[20px]
+    px-[10px]
   "
 >
               {/* LIGHT EFFECT */}
