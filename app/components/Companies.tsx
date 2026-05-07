@@ -24,7 +24,7 @@ export default function Companies() {
           className="
             text-[#F0F0F0]
             text-center
-            font-montserrat
+           
             font-black
 
             text-[20px]
@@ -39,7 +39,7 @@ export default function Companies() {
             uppercase
           "
         >
-          OUR CLIENTS 
+          Our Clients
         </h2>
 
         {/* GRID */}
