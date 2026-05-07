@@ -12,6 +12,9 @@ export default function Companies() {
     "/newlogoclient6.png",
     "/newlogoclient7.png",
     "/newlogoclient8.png",
+    "/newlogoclient8.jpg",
+    "/newlogoclient9.jpg",
+     "/newlogoclient10.png",
   ];
 
   return (
