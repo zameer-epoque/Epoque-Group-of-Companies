@@ -6,40 +6,35 @@ export default function Companies() {
   const logos: string[] = [
     "/newlogoclient1.png",
     "/newlogoclient2.png",
-"/newlogoclient3.png",
-"/newlogoclient4.png",
- "/newlogoclient5.png",
-"/newlogoclient6.png",
-"/newlogoclient7.png",
-"/newlogoclient8.png",
+    "/newlogoclient3.png",
+    "/newlogoclient4.png",
+    "/newlogoclient5.png",
+    "/newlogoclient6.png",
+    "/newlogoclient7.png",
+    "/newlogoclient8.png",
   ];
 
   return (
-    <section className="w-full bg-black flex justify-center py-[40px] sm:py-[64px] px-[16px]">
+    <section className="w-full bg-black flex justify-center py-[50px] sm:py-[70px] px-[16px]">
       {/* CONTAINER */}
-      <div className="w-full max-w-[1440px] flex flex-col items-center gap-[32px]">
+      <div className="w-full max-w-[1400px] flex flex-col items-center gap-[40px]">
         
         {/* TITLE */}
         <h2
           className="
-            text-[#F0F0F0]
+            text-[#F5F5F5]
             text-center
-           
             font-black
 
-            text-[20px]
-            leading-[28px]
-
-            sm:text-[24px]
-            sm:leading-[32px]
-
-            md:text-[28px]
-            md:leading-[36px]
+            text-[22px]
+            sm:text-[28px]
+            md:text-[34px]
 
             uppercase
+            tracking-[1px]
           "
         >
-          Our Clients
+           Our Clients
         </h2>
 
         {/* GRID */}
@@ -48,52 +43,52 @@ export default function Companies() {
             w-full
 
             grid
-            grid-cols-2
-            sm:grid-cols-3
+            grid-cols-1
+            sm:grid-cols-2
             lg:grid-cols-4
 
-            gap-[16px]
-            sm:gap-[24px]
+            gap-[18px]
+            sm:gap-[22px]
+            md:gap-[28px]
           "
         >
           {logos.map((logo, index) => (
-        <div
-  key={index}
-  className="
-    relative
-    group
+            <div
+              key={index}
+              className="
+                relative
+                group
 
-    w-full
-    max-w-[260px]
+                w-full
+                h-[120px]
 
-    h-[90px]
-    sm:h-[100px]
-    md:h-[120px]
+                sm:h-[135px]
+                md:h-[145px]
 
-    rounded-[18px]
+                rounded-[22px]
 
-    border
-    border-white/10
+                border
+                border-white/[0.08]
 
-    bg-[#111111]
+                bg-[#0E0E0E]
 
-    overflow-hidden
+                overflow-hidden
 
-    flex
-    items-center
-    justify-center
+                flex
+                items-center
+                justify-center
 
-    transition-all
-    duration-500
+                px-[24px]
 
-    hover:-translate-y-1
-    hover:border-white/20
-    hover:bg-[#171717]
+                transition-all
+                duration-500
 
-    px-[10px]
-  "
->
-              {/* LIGHT EFFECT */}
+                hover:border-[#C89B3C]/40
+                hover:bg-[#151515]
+                hover:-translate-y-[3px]
+              "
+            >
+              {/* BACKGROUND LIGHT */}
               <div
                 className="
                   absolute
@@ -106,21 +101,21 @@ export default function Companies() {
                   duration-500
 
                   bg-gradient-to-br
-                  from-white/[0.08]
+                  from-[#C89B3C]/[0.08]
                   via-transparent
                   to-white/[0.03]
                 "
               />
 
-              {/* GLOW */}
+              {/* INNER GLOW */}
               <div
                 className="
                   absolute
 
-                  w-[120px]
-                  h-[60px]
+                  w-[140px]
+                  h-[70px]
 
-                  bg-white/10
+                  bg-[#C89B3C]/10
                   blur-3xl
 
                   opacity-0
@@ -131,34 +126,34 @@ export default function Companies() {
                 "
               />
 
-              {/* IMAGE */}
-            <Image
-  src={logo}
-  alt={`client-logo-${index}`}
-  width={220}
-  height={80}
-  className="
-    w-auto
+              {/* LOGO */}
+              <div
+                className="
+                  relative
+                  w-full
+                  h-full
 
-    h-[42px]
-    sm:h-[50px]
-    md:h-[58px]
+                  flex
+                  items-center
+                  justify-center
+                "
+              >
+                <Image
+                  src={logo}
+                  alt={`client-logo-${index}`}
+                  fill
+                  className="
+                    object-contain
 
-    object-contain
+                    p-[20px]
 
-    opacity-95
-    brightness-110
+                    transition-all
+                    duration-500
 
-    transition-all
-    duration-500
-
-    group-hover:scale-105
-    group-hover:brightness-125
-
-    relative
-    z-10
-  "
-/>
+                    group-hover:scale-[1.04]
+                  "
+                />
+              </div>
             </div>
           ))}
         </div>
