@@ -96,34 +96,44 @@ const loopClients = [...clients, ...clients]
 
 export default function ClientsSlider() {
   return (
-    <section className="bg-black py-12 md:py-16 overflow-hidden">
+    <section className="relative overflow-hidden bg-[#050505] py-14 md:py-20">
+
+      {/* PREMIUM BACKGROUND */}
+      <div className="pointer-events-none absolute inset-0 flex justify-center">
+        <div className="h-[900px] w-[900px] rounded-full bg-orange-500/10 blur-[180px]" />
+      </div>
 
       {/* TITLE */}
-      <div className="text-center mb-10 md:mb-14 px-4">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
-          Our <span className="text-orange-400">Clients Projects</span>
+      <div className="relative z-20 mb-12 px-4 text-center md:mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-white">
+          Our{" "}
+          <span className="bg-gradient-to-r from-orange-400 via-yellow-500 to-amber-500 bg-clip-text text-transparent">
+            Clients Projects
+          </span>
         </h2>
-        <p className="text-gray-400 mt-3 text-sm md:text-base">
+
+        <p className="mt-4 text-sm text-gray-400 md:text-base">
           Trusted by top real estate brands
         </p>
       </div>
 
-      {/* GRADIENT EDGES */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-32 bg-gradient-to-r from-black to-transparent z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-32 bg-gradient-to-l from-black to-transparent z-10" />
+      {/* SIDE FADE */}
+      <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-[#050505] to-transparent md:w-32" />
+      <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-[#050505] to-transparent md:w-32" />
 
       {/* SLIDER */}
-      <div className="relative w-full overflow-hidden">
+      <div className="relative z-20 overflow-hidden">
 
         <motion.div
-          className="flex gap-4 md:gap-8"
+          className="flex gap-6"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
-            duration: 25, // faster = smoother on mobile
+            duration: 28,
             ease: "linear",
             repeat: Infinity
           }}
         >
+
           {loopClients.map((client, i) => {
             const Wrapper = client.link ? Link : "div"
 
@@ -132,47 +142,116 @@ export default function ClientsSlider() {
                 key={i}
                 href={client.link || "#"}
                 className="
-                  min-w-[240px]
-                  sm:min-w-[260px]
-                  md:min-w-[300px]
-                  lg:min-w-[320px]
+                  flex
+                  min-w-[270px]
+                  sm:min-w-[290px]
+                  md:min-w-[330px]
+                  lg:min-w-[350px]
                 "
               >
-                <div className="group relative rounded-xl md:rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md shadow-lg transition duration-300 hover:scale-[1.03]">
 
-                  {/* IMAGE */}
-                  <div className="relative h-[160px] sm:h-[180px] md:h-[220px] w-full">
-                    <Image
-                      src={client.image}
-                      alt={client.title}
-                      fill
-                      sizes="(max-width:768px) 100vw, 300px"
-                      className="object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  </div>
+                {/* CARD */}
+                <div className="group relative flex w-full">
 
-                  {/* CONTENT */}
-                  <div className="p-4 md:p-5">
-                    <h3 className="text-sm md:text-lg font-semibold text-orange-400">
-                      {client.title}
-                    </h3>
+                  {/* BORDER */}
+                  <div className="relative flex w-full flex-col rounded-[30px] bg-gradient-to-br from-orange-400 via-orange-500 to-yellow-500 p-[1px] shadow-[0_10px_35px_rgba(251,146,60,0.12)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_55px_rgba(251,146,60,0.32)]">
 
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                      <p className="text-xs md:text-sm text-gray-400 uppercase tracking-wide">
-                        {client.location}
-                      </p>
+                    {/* INNER */}
+                    <div className="relative flex min-h-[540px] flex-col overflow-hidden rounded-[30px] border border-orange-500/10 bg-gradient-to-br from-[#111111] via-[#181818] to-[#0B0B0B] backdrop-blur-xl">
+
+                      {/* HOVER GLOW */}
+                      <div className="absolute inset-0 opacity-0 transition duration-700 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_left,rgba(251,146,60,0.18),transparent_55%)]" />
+
+                      {/* TOP SHINE */}
+                      <div className="absolute left-0 top-0 h-[1px] w-full bg-gradient-to-r from-transparent via-orange-300/60 to-transparent" />
+
+                      {/* IMAGE */}
+                      <div className="relative h-[230px] w-full flex-shrink-0 overflow-hidden">
+
+                        <Image
+                          src={client.image}
+                          alt={client.title}
+                          fill
+                          sizes="(max-width:768px) 100vw, 350px"
+                          className="object-cover transition duration-700 ease-out group-hover:scale-110"
+                        />
+
+                        {/* OVERLAY */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+
+                      </div>
+
+                      {/* CONTENT */}
+                      <div className="relative z-10 flex flex-1 flex-col px-6 py-6">
+
+                        {/* TOP */}
+                        <div>
+
+                          {/* TITLE */}
+                         <h3 className="
+  min-h-[72px]
+  text-[22px]
+  md:text-[24px]
+  font-semibold
+  leading-[1.45]
+  tracking-[-0.02em]
+  text-white
+  transition-all
+  duration-300
+  group-hover:text-orange-300
+">
+  {client.title}
+</h3>
+
+
+                          {/* LOCATION */}
+                        <div className="mt-4 flex items-center gap-2">
+
+  <span className="h-2.5 w-2.5 rounded-full bg-orange-400 shadow-[0_0_14px_rgba(251,146,60,0.8)]"></span>
+
+  <p className="
+    text-[11px]
+    md:text-xs
+    uppercase
+    tracking-[3px]
+    font-medium
+    text-orange-300
+  ">
+    {client.location}
+  </p>
+
+</div>
+
+                          {/* LINE */}
+                          <div className="mt-5 h-[2px] w-14 rounded-full bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 transition-all duration-500 group-hover:w-24" />
+
+                        </div>
+
+                        {/* DESCRIPTION */}
+                        <div className="flex flex-1 items-start pt-6">
+
+                          <p className="text-sm leading-[1.9] text-gray-400 md:text-[15px]">
+                            {client.description}
+                          </p>
+
+                        </div>
+
+                      </div>
+
                     </div>
+
                   </div>
 
                 </div>
+
               </Wrapper>
             )
           })}
+
         </motion.div>
 
       </div>
+
     </section>
   )
 }
