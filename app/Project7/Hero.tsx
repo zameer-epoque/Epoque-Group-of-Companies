@@ -284,6 +284,42 @@ export default function Hero() {
       >
         🎬 Private Home Theatre
       </motion.div>
+
+      {/* STATS */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5 }}
+  className="mt-10 flex flex-wrap justify-center gap-5"
+>
+  {[
+    "₹3.69 Cr Onwards",
+    "Ready To Move In October 2026",
+    "90+ Villas Left",
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="
+        px-6
+        py-4
+        rounded-2xl
+        bg-white/90
+        backdrop-blur-xl
+        border
+        border-[#e2e8f0]
+        text-[#0f172a]
+        font-semibold
+        shadow-[0_15px_40px_rgba(15,23,42,0.06)]
+        hover:scale-105
+        hover:border-[#1674c1]/30
+        transition-all
+        duration-300
+      "
+    >
+      {item}
+    </div>
+  ))}
+</motion.div>
     </section>
   );
 }
