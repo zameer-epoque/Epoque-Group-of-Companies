@@ -28,8 +28,8 @@ export default function Hero() {
           alt="Luxury Villa"
         />
 
-        {/* LIGHT OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-[#f8fbff]/85 to-[#f8fbff]"></div>
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-[#f8fbff]/85 to-[#f8fbff]" />
 
         {/* PREMIUM LIGHT GRADIENT */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(22,116,193,0.10),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(237,16,36,0.06),transparent_30%)]" />
@@ -133,8 +133,8 @@ export default function Hero() {
         >
           {[
             "₹3.69 Cr Onwards",
-            "15+ Acres",
-            "176 Villas",
+            "Ready To Move In October 2026",
+            "90+ Villas Left",
           ].map((item, i) => (
             <div
               key={i}
@@ -236,7 +236,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* FLOATING CARDS */}
+      {/* FLOATING CARD LEFT */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -261,6 +261,7 @@ export default function Hero() {
         🌿 45% Open Spaces
       </motion.div>
 
+      {/* FLOATING CARD RIGHT */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -284,42 +285,6 @@ export default function Hero() {
       >
         🎬 Private Home Theatre
       </motion.div>
-
-      {/* STATS */}
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.5 }}
-  className="mt-10 flex flex-wrap justify-center gap-5"
->
-  {[
-    "₹3.69 Cr Onwards",
-    "Ready To Move In October 2026",
-    "90+ Villas Left",
-  ].map((item, i) => (
-    <div
-      key={i}
-      className="
-        px-6
-        py-4
-        rounded-2xl
-        bg-white/90
-        backdrop-blur-xl
-        border
-        border-[#e2e8f0]
-        text-[#0f172a]
-        font-semibold
-        shadow-[0_15px_40px_rgba(15,23,42,0.06)]
-        hover:scale-105
-        hover:border-[#1674c1]/30
-        transition-all
-        duration-300
-      "
-    >
-      {item}
-    </div>
-  ))}
-</motion.div>
     </section>
   );
 }
