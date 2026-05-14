@@ -271,7 +271,7 @@ export default function Location() {
                 </h4>
 
                 <ul className="space-y-3 text-[#475569]">
-                  <li>• Mam’s Hospital – 2 km</li>
+                  <li>•Mamata Academy of Medical Sciences Hospital – 2 km</li>
                   <li>• SLG Hospital – 3 km</li>
                   <li>• Usha Mullapudi – 6 km</li>
                 </ul>
