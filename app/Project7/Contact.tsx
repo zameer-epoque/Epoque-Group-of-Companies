@@ -1,176 +1,3 @@
-// "use client";
-
-// import { useState } from "react";
-// import { motion } from "framer-motion";
-
-// export default function Contact() {
-//   const [loading, setLoading] = useState(false);
-
-//   const [form, setForm] = useState({
-//     name: "",
-//     phone: "",
-//     email: "",
-//   });
-
-//   const handleSubmit = (e: any) => {
-//     e.preventDefault();
-
-//     if (!form.name || !form.phone) {
-//       alert("Please fill required fields");
-//       return;
-//     }
-
-//     setLoading(true);
-
-//     // ✅ WhatsApp Message
-//     const message = `Hello, I am interested in APR Hillside Villas.
-
-// Name: ${form.name}
-// Phone: ${form.phone}
-// Email: ${form.email || "N/A"}
-
-// Please share more details.`;
-
-//     const whatsappUrl = `https://wa.me/919133633327?text=${encodeURIComponent(message)}`;
-
-//     // Open WhatsApp
-//     window.open(whatsappUrl, "_blank");
-
-//     setLoading(false);
-//   };
-
-//   return (
-//     <section
-//       id="contact"
-//       className="relative py-24 px-6 bg-[#020617] overflow-hidden"
-//     >
-//       {/* 🔥 Background Glow */}
-//       <div className="absolute w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
-//       <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
-
-//       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-
-//         {/* LEFT CONTENT */}
-//         <motion.div
-//           initial={{ opacity: 0, x: -50 }}
-//           whileInView={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.6 }}
-//         >
-//           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-//             Own Your Dream Villa
-//           </h2>
-
-//           <p className="text-gray-400 mt-6 text-lg">
-//             Experience luxury living at APR Hillside, Bachupally.
-//             Limited villas available – schedule your visit today.
-//           </p>
-
-//           <div className="mt-8 space-y-4">
-//             {[
-//               "₹3.69 Cr Onwards",
-//               "4BHK Triplex Villas",
-//               "Possession by July 2026",
-//             ].map((item, i) => (
-//               <div key={i} className="flex items-center gap-3 text-gray-300">
-//                 <span className="text-green-400">✔</span>
-//                 {item}
-//               </div>
-//             ))}
-//           </div>
-
-//           {/* Buttons */}
-//           <div className="mt-8 flex flex-wrap gap-4">
-//             <a
-//               href="tel:+919133633327"
-//               className="bg-gradient-to-r from-green-500 to-blue-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition shadow-lg"
-//             >
-//               Call Now
-//             </a>
-
-//             <a
-//               href="https://wa.me/919133633327"
-//               target="_blank"
-//               className="px-6 py-3 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/10 transition"
-//             >
-//               WhatsApp
-//             </a>
-//           </div>
-//         </motion.div>
-
-//         {/* FORM */}
-//         <motion.div
-//           initial={{ opacity: 0, x: 50 }}
-//           whileInView={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.6 }}
-//           className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-xl"
-//         >
-//           <h3 className="text-2xl font-semibold mb-6 text-center">
-//             Get Price Sheet & Floor Plans
-//           </h3>
-
-//           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-
-//             <input
-//               type="text"
-//               placeholder="Your Name"
-//               required
-//               value={form.name}
-//               onChange={(e) =>
-//                 setForm({ ...form, name: e.target.value })
-//               }
-//               className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none transition"
-//             />
-
-//             <input
-//               type="tel"
-//               placeholder="Phone Number"
-//               required
-//               value={form.phone}
-//               onChange={(e) =>
-//                 setForm({ ...form, phone: e.target.value })
-//               }
-//               className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none transition"
-//             />
-
-//             <input
-//               type="email"
-//               placeholder="Email Address"
-//               value={form.email}
-//               onChange={(e) =>
-//                 setForm({ ...form, email: e.target.value })
-//               }
-//               className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none transition"
-//             />
-
-//             <button
-//               type="submit"
-//               className="mt-2 bg-gradient-to-r from-green-500 to-blue-500 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition shadow-lg"
-//             >
-//               {loading ? "Redirecting..." : "Get Instant Callback"}
-//             </button>
-//           </form>
-
-//           {/* Trust */}
-//           <p className="text-xs text-gray-400 mt-4 text-center">
-//             🔒 Your details are safe. No spam calls.
-//           </p>
-
-//           {/* Extra WhatsApp CTA */}
-//           <a
-//             href="https://wa.me/919133633327"
-//             target="_blank"
-//             className="block text-center mt-4 border border-white/20 py-3 rounded-xl hover:bg-white/10 transition"
-//           >
-//             Or Chat Directly on WhatsApp
-//           </a>
-
-//         </motion.div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
@@ -179,17 +6,15 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const [loading, setLoading] = useState<boolean>(false);
 
-  const [form, setForm] = useState<{
-    name: string;
-    phone: string;
-    email: string;
-  }>({
+  const [form, setForm] = useState({
     name: "",
     phone: "",
     email: "",
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
 
     if (!form.name || !form.phone) {
@@ -207,7 +32,9 @@ Email: ${form.email || "N/A"}
 
 Please share price, floor plans & site visit details.`;
 
-    const whatsappUrl = `https://wa.me/919133633327?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919133633327?text=${encodeURIComponent(
+      message
+    )}`;
 
     window.open(whatsappUrl, "_blank");
 
@@ -217,61 +44,207 @@ Please share price, floor plans & site visit details.`;
   return (
     <section
       id="contact"
-      aria-labelledby="contact-heading"
-      className="relative py-24 px-6 bg-[#020617] overflow-hidden"
+      className="
+        relative
+        overflow-hidden
+        py-28
+        px-6
+        bg-[#f8fbff]
+      "
     >
-      {/* Background Glow */}
-      <div className="absolute w-[500px] h-[500px] bg-green-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
-      <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
+      {/* PREMIUM LIGHT BACKGROUND */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(22,116,193,0.08),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(237,16,36,0.05),transparent_30%)]" />
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+      {/* GRID */}
+      <div
+        className="
+          absolute
+          inset-0
+          opacity-[0.04]
+          bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)]
+          bg-[size:80px_80px]
+        "
+      />
+
+      <div
+        className="
+          max-w-7xl
+          mx-auto
+          grid
+          lg:grid-cols-2
+          gap-16
+          items-center
+          relative
+          z-10
+        "
+      >
 
         {/* LEFT CONTENT */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.7 }}
         >
-          <h2
-            id="contact-heading"
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent"
+          {/* TAG */}
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-2
+              px-5
+              py-2
+              rounded-full
+              border
+              border-[#dbeafe]
+              bg-white/80
+              backdrop-blur-xl
+              text-[#1674c1]
+              text-sm
+              shadow-[0_10px_30px_rgba(0,0,0,0.06)]
+            "
           >
-            Book Your Villa Visit in Bachupally, Hyderabad
+            ✨ Luxury Villas In Bachupally
+          </div>
+
+          {/* HEADING */}
+          <h2
+            className="
+              mt-7
+              text-4xl
+              md:text-6xl
+              font-black
+              leading-tight
+              tracking-tight
+            "
+          >
+            <span className="text-[#0f172a]">
+              Book Your
+            </span>
+
+            <br />
+
+            <span className="bg-gradient-to-r from-[#1674c1] to-[#ed1024] bg-clip-text text-transparent">
+              Dream Villa Visit
+            </span>
           </h2>
 
-          <p className="text-gray-400 mt-6 text-lg">
-            Enquire about APR Praveen’s Hillside luxury villas in Bachupally.
-            Get price details, floor plans, and schedule a site visit today.
+          {/* TEXT */}
+          <p
+            className="
+              mt-7
+              text-lg
+              leading-relaxed
+              text-[#475569]
+              max-w-xl
+            "
+          >
+            Experience ultra luxury 4BHK Triplex Villas
+            at APR Praveen’s Hillside, Bachupally.
+            Get instant price details, floor plans &
+            exclusive site visit access.
           </p>
 
-          <div className="mt-8 space-y-4">
+          {/* FEATURES */}
+          <div className="mt-10 space-y-5">
+
             {[
               "₹3.69 Cr Onwards",
-              "4BHK Triplex Villas",
-              "Possession by July 2026",
+              "4BHK Premium Triplex Villas",
+              "Possession By July 2026",
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3 text-gray-300">
-                <span className="text-green-400">✔</span>
-                {item}
+              <div
+                key={i}
+                className="
+                  flex
+                  items-center
+                  gap-4
+                  text-[#0f172a]
+                "
+              >
+                <div
+                  className="
+                    w-10
+                    h-10
+                    rounded-xl
+                    flex
+                    items-center
+                    justify-center
+                    text-white
+                    bg-gradient-to-br
+                    from-[#1674c1]
+                    to-[#ed1024]
+                    shadow-[0_10px_25px_rgba(0,0,0,0.12)]
+                  "
+                >
+                  ✓
+                </div>
+
+                <span className="text-lg font-medium">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
 
-          {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4">
+          {/* BUTTONS */}
+          <div className="mt-10 flex flex-wrap gap-5">
+
+            {/* CALL BUTTON */}
             <a
               href="tel:+919133633327"
-              aria-label="Call APR Hillside Villas sales team"
-              className="bg-gradient-to-r from-green-500 to-blue-500 px-6 py-3 rounded-xl font-semibold hover:scale-105 transition shadow-lg"
+              className="
+                group
+                relative
+                overflow-hidden
+                inline-flex
+                items-center
+                justify-center
+                px-8
+                py-4
+                rounded-2xl
+                font-semibold
+                text-white
+                bg-gradient-to-r
+                from-[#1674c1]
+                to-[#ed1024]
+                shadow-[0_15px_40px_rgba(22,116,193,0.20)]
+                transition-all
+                duration-300
+                hover:scale-105
+              "
             >
-              Call Now
+              <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></span>
+
+              <span className="relative z-10">
+                Call Now
+              </span>
             </a>
 
+            {/* WHATSAPP BUTTON */}
             <a
               href="https://wa.me/919133633327"
               target="_blank"
-              aria-label="WhatsApp enquiry for APR Hillside Villas"
-              className="px-6 py-3 rounded-xl border border-white/20 backdrop-blur-md hover:bg-white/10 transition"
+              className="
+                group
+                relative
+                overflow-hidden
+                inline-flex
+                items-center
+                justify-center
+                px-8
+                py-4
+                rounded-2xl
+                border
+                border-[#e2e8f0]
+                bg-white
+                text-[#0f172a]
+                font-semibold
+                shadow-[0_10px_30px_rgba(0,0,0,0.05)]
+                transition-all
+                duration-300
+                hover:scale-105
+                hover:border-[#1674c1]/30
+              "
             >
               WhatsApp
             </a>
@@ -280,90 +253,219 @@ Please share price, floor plans & site visit details.`;
 
         {/* RIGHT FORM */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-xl"
+          transition={{ duration: 0.7 }}
+          className="
+            relative
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-[#e2e8f0]
+            bg-white/90
+            backdrop-blur-2xl
+            p-8
+            shadow-[0_20px_60px_rgba(15,23,42,0.08)]
+          "
         >
-          <h3 className="text-2xl font-semibold mb-6 text-center">
-            Get Price Sheet & Floor Plans
+          {/* LIGHT GLOW */}
+          <div className="absolute top-0 right-0 w-[250px] h-[250px] bg-[#1674c1]/5 blur-[100px]" />
+
+          {/* TITLE */}
+          <h3
+            className="
+              relative
+              z-10
+              text-3xl
+              font-bold
+              text-center
+              text-[#0f172a]
+            "
+          >
+            Get Price Sheet
           </h3>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <p
+            className="
+              relative
+              z-10
+              text-center
+              text-[#64748b]
+              mt-3
+              mb-8
+            "
+          >
+            Fill the form to receive floor plans,
+            pricing & exclusive offers instantly.
+          </p>
+
+          {/* FORM */}
+          <form
+            onSubmit={handleSubmit}
+            className="relative z-10 flex flex-col gap-5"
+          >
 
             {/* NAME */}
-            <div className="flex flex-col gap-2">
-              <label className="text-sm text-gray-300">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter your full name"
-                required
-                value={form.name}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setForm({ ...form, name: e.target.value })
-                }
-                className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none"
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              required
+              value={form.name}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  name: e.target.value,
+                })
+              }
+              className="
+                w-full
+                rounded-2xl
+                border
+                border-[#e2e8f0]
+                bg-white
+                px-5
+                py-4
+                text-[#0f172a]
+                placeholder:text-[#94a3b8]
+                outline-none
+                transition-all
+                focus:border-[#1674c1]
+                focus:ring-2
+                focus:ring-[#1674c1]/10
+              "
+            />
 
             {/* PHONE */}
-            <div className="flex flex-col gap-2">
-              <label className="text-sm text-gray-300">Phone Number</label>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Enter your phone number"
-                required
-                value={form.phone}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setForm({ ...form, phone: e.target.value })
-                }
-                className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none"
-              />
-            </div>
+            <input
+              type="tel"
+              placeholder="Enter Phone Number"
+              required
+              value={form.phone}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  phone: e.target.value,
+                })
+              }
+              className="
+                w-full
+                rounded-2xl
+                border
+                border-[#e2e8f0]
+                bg-white
+                px-5
+                py-4
+                text-[#0f172a]
+                placeholder:text-[#94a3b8]
+                outline-none
+                transition-all
+                focus:border-[#1674c1]
+                focus:ring-2
+                focus:ring-[#1674c1]/10
+              "
+            />
 
             {/* EMAIL */}
-            <div className="flex flex-col gap-2">
-              <label className="text-sm text-gray-300">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email (optional)"
-                value={form.email}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setForm({ ...form, email: e.target.value })
-                }
-                className="p-4 rounded-xl bg-black/30 border border-white/10 focus:border-green-400 outline-none"
-              />
-            </div>
+            <input
+              type="email"
+              placeholder="Enter Email Address"
+              value={form.email}
+              onChange={(e) =>
+                setForm({
+                  ...form,
+                  email: e.target.value,
+                })
+              }
+              className="
+                w-full
+                rounded-2xl
+                border
+                border-[#e2e8f0]
+                bg-white
+                px-5
+                py-4
+                text-[#0f172a]
+                placeholder:text-[#94a3b8]
+                outline-none
+                transition-all
+                focus:border-[#1674c1]
+                focus:ring-2
+                focus:ring-[#1674c1]/10
+              "
+            />
 
-            {/* BUTTON */}
+            {/* SUBMIT */}
             <button
               type="submit"
-              className="mt-2 bg-gradient-to-r from-green-500 to-blue-500 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition shadow-lg"
+              className="
+                group
+                relative
+                overflow-hidden
+                mt-2
+                rounded-2xl
+                py-4
+                text-lg
+                font-semibold
+                text-white
+                bg-gradient-to-r
+                from-[#1674c1]
+                to-[#ed1024]
+                shadow-[0_15px_40px_rgba(22,116,193,0.20)]
+                transition-all
+                duration-300
+                hover:scale-[1.02]
+              "
             >
-              {loading ? "Redirecting..." : "Get Instant Callback"}
-            </button>
+              <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></span>
 
+              <span className="relative z-10">
+                {loading
+                  ? "Redirecting..."
+                  : "Get Instant Callback"}
+              </span>
+            </button>
           </form>
 
-          {/* TRUST */}
-          <p className="text-xs text-gray-400 mt-4 text-center">
-            🔒 Your details are safe. No spam calls.
+          {/* TRUST TEXT */}
+          <p
+            className="
+              relative
+              z-10
+              text-center
+              text-xs
+              text-[#64748b]
+              mt-5
+            "
+          >
+            🔒 100% Secure Information • No Spam Calls
           </p>
 
           {/* EXTRA CTA */}
           <a
             href="https://wa.me/919133633327"
             target="_blank"
-            className="block text-center mt-4 border border-white/20 py-3 rounded-xl hover:bg-white/10 transition"
+            className="
+              relative
+              z-10
+              mt-5
+              flex
+              items-center
+              justify-center
+              rounded-2xl
+              border
+              border-[#e2e8f0]
+              bg-white
+              py-4
+              text-[#0f172a]
+              transition-all
+              duration-300
+              hover:border-[#1674c1]/30
+              hover:bg-[#f8fbff]
+            "
           >
-            Chat Directly on WhatsApp
+            Chat Directly On WhatsApp
           </a>
-
         </motion.div>
-
       </div>
     </section>
   );
