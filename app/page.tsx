@@ -2,6 +2,7 @@
 
 import ClientsSlider from "./components/ClientsSlider";
 import Companies from "./components/Companies";
+import FloatingLogos from "./components/FloatingLogos";
 import Hero from "./components/Hero";
 import HeroSlider from "./components/HeroSlider";
 
@@ -20,7 +21,8 @@ export default function Home() {
 
 <HeroSlider/>
       <Hero />
-<Companies/>
+{/* <Companies/> */}
+<FloatingLogos/>
       <WhoWeAre />
       <VisionMissionPromise />
       <OurDivisions />
