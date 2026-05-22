@@ -1,8 +1,10 @@
 "use client";
 
+
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Link } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const blogs = [
   {
@@ -133,9 +135,10 @@ export default function LatestBlogs() {
 
 <Link
   href="/blog-epoque-group"
-  className="mt-8 inline-flex items-center gap-2 text-[#C79A3B] font-medium transition-all duration-300 hover:gap-4"
+  className="mt-8 inline-flex items-center gap-2 text-[#C79A3B] font-semibold text-lg transition-all duration-300 hover:gap-4 hover:text-white"
 >
-  Read More
+  <span>Read More</span>
+
   <ArrowUpRight size={18} />
 </Link>
 
