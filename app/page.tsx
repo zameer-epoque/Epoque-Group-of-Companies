@@ -114,8 +114,9 @@ export default function Home() {
 
 <HeroSlider/>
       <Hero />
+      <Companies/>
       <SEOIntro />
-<Companies/>
+
 {/* <FloatingLogos/> */}
       <WhoWeAre />
       <VisionMissionPromise />
