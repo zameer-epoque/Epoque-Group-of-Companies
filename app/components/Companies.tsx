@@ -258,7 +258,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function Companies() {
   const logos = [
-    "/newlogoclient1.png",
+    "/newlogoclient1.jpg",
      "/newlogoclient2.png",
     "/newlogoclient3.png",
      "/newlogoclient4.png",
