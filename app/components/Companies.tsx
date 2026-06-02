@@ -303,7 +303,7 @@ export default function Companies() {
   }, [isPaused]);
 
   return (
-    <section className="w-full bg-[#0F1112] flex justify-center py-[40px] sm:py-[64px] overflow-hidden">
+    <section className="w-full bg-black flex justify-center py-[40px] sm:py-[64px] overflow-hidden">
       {/* CONTAINER */}
       <div className="w-full max-w-[1440px] flex flex-col items-center gap-[24px] px-[16px] sm:px-[24px] lg:px-0">
         {/* TITLE */}
