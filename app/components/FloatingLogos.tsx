@@ -157,6 +157,19 @@ const logos = [
       left: "56%",
     },
   },
+  {
+    src: "/newlogoclient11.png",
+    desktop: {
+      size: 120,
+      top: "60%",
+      left: "65%",
+    },
+    mobile: {
+      size: 80,
+      top: "70%",
+      left: "60%",
+    },
+  }
 ];
 
 export default function FloatingBrands() {
