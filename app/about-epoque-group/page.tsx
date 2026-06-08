@@ -127,26 +127,41 @@ export default function AboutPage() {
                 </section>
 
                 {/* INTERNAL LINKS */}
-                <section className="border-t border-white/10 pt-14">
-                    <h3 className="text-2xl font-semibold mb-6">
-                        Explore Our Services
-                    </h3>
+            <section className="border-t border-white/10 pt-14">
+  <h3 className="text-2xl font-semibold mb-6 text-white">
+    Explore Our Services
+  </h3>
 
-                    <div className="flex flex-wrap gap-8 text-[#C79A3B] text-lg">
-                        <Link href="/realty" className="hover:text-white transition">
-                            Real Estate Marketing
-                        </Link>
-                        <Link href="/digital/best-digital-marketing-agency-in-hyderabad" className="hover:text-white transition">
-                            Digital Marketing
-                        </Link>
-                        <Link href="/revenue" className="hover:text-white transition">
-                            Revenue Consulting
-                        </Link>
-                        <Link href="/contact" className="hover:text-white transition">
-                            Contact Us
-                        </Link>
-                    </div>
-                </section>
+  <div className="flex flex-wrap gap-4">
+    <Link
+      href="/realty"
+      className="px-6 py-3 rounded-full bg-[#C79A3B] text-black font-medium hover:bg-white transition-all duration-300"
+    >
+      Real Estate Marketing
+    </Link>
+
+    <Link
+      href="/digital/best-digital-marketing-agency-in-hyderabad"
+      className="px-6 py-3 rounded-full bg-[#C79A3B] text-black font-medium hover:bg-white transition-all duration-300"
+    >
+      Digital Marketing
+    </Link>
+
+    <Link
+      href="/revenue"
+      className="px-6 py-3 rounded-full bg-[#C79A3B] text-black font-medium hover:bg-white transition-all duration-300"
+    >
+      Revenue Consulting
+    </Link>
+
+    <Link
+      href="/contact"
+      className="px-6 py-3 rounded-full border border-[#C79A3B] text-[#C79A3B] font-medium hover:bg-[#C79A3B] hover:text-black transition-all duration-300"
+    >
+      Contact Us
+    </Link>
+  </div>
+</section>
 {/* ABOUT SEO CONTENT */}
 <section className="space-y-10">
 
