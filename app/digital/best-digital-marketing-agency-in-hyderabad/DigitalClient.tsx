@@ -4,6 +4,8 @@ import { motion, Variants } from "framer-motion"
 import PremiumCTA from "../../components/PremiumCTA"
 import FAQSection from "./FAQSection"
 import WhyChooseSection from "./WhyChooseSection"
+import Link from "next/link"
+
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 60 },
@@ -565,15 +567,21 @@ export default function DigitalClient() {
 
       <div>
         <h3 className="text-xl font-semibold text-[#C79A3B] mb-2">Real Estate</h3>
-        <p className="text-gray-400 leading-relaxed">
-          Hyderabad's booming real estate market demands sophisticated digital
-          marketing strategies that generate genuine buyer and investor enquiries
-          across projects in Kokapet, Tellapur, Gachibowli, Financial District,
-          Narsingi, Manikonda, and beyond. We are one of Hyderabad's most
-          experienced real estate digital marketing agencies, with a track record
-          of generating thousands of qualified property leads for developers,
-          builders, and brokers across all project segments.
-        </p>
+       <p className="text-gray-400 leading-relaxed">
+  Hyderabad's booming real estate market demands sophisticated digital
+  marketing strategies that generate genuine buyer and investor enquiries
+  across projects in Kokapet, Tellapur, Gachibowli, Financial District,
+  Narsingi, Manikonda, and beyond. We are one of Hyderabad's most
+  experienced real estate digital marketing agencies, with a track record
+  of generating thousands of qualified{" "}
+  <Link
+    href="/realty/real-estate-sales-strategy"
+    className="text-[#C79A3B] hover:text-white underline underline-offset-4 transition"
+  >
+    property leads
+  </Link>{" "}
+  for developers, builders, and brokers across all project segments.
+</p>
       </div>
 
       <div>
