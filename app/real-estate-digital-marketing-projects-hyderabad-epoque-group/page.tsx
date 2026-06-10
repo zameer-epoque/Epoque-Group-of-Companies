@@ -100,6 +100,15 @@ const clients = [
       "Executed high-performance lead generation campaigns across Hyderabad.",
     link: "/Apr-Praveens-Hillside-4BHK-Luxury-Villas-For-Sale-in-Bachupally-Hyderabad",
   },
+  {
+    title: "urbanyards-shangrila-tukkuguda-hyderabad",
+    location: "Tukkuguda-Hyderabad",
+    image:
+      "/Urbanads/image1.png",
+    description:
+      "Executed high-performance lead generation campaigns across Hyderabad.",
+    link: "/urbanyards-shangrila-tukkuguda-hyderabad",
+  }
 ];
 
 /* ================= PAGE ================= */
