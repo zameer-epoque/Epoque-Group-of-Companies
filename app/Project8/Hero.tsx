@@ -28,7 +28,7 @@ export default function Hero() {
             <h1 className="mt-8 text-5xl md:text-7xl font-black leading-[0.95] text-[#003D7A]">
               Everything
               <span className="block bg-gradient-to-r from-[#EF3B2D] to-[#ff6b5e] bg-clip-text text-transparent">
-                Within.
+                Within
               </span>
             </h1>
 
