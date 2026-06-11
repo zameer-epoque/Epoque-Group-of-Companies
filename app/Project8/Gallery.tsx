@@ -31,7 +31,7 @@ image: "/Urbanads/newimage6.jpg",
 
 export default function Gallery() {
   return (
-    <section className="py-32 bg-slate-50">
+    <section className="py-32 bg-slate-50" id="gallery">
 
       <div className="max-w-7xl mx-auto px-6">
 

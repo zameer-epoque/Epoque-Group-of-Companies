@@ -49,7 +49,7 @@ const lifestyle = [
 
 export default function LifestyleSection() {
   return (
-    <section className="py-32 bg-gradient-to-b from-white to-slate-50">
+    <section id="location" className="py-32 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}

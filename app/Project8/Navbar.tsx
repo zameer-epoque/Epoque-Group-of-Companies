@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
-  const handleScroll = (id) => {
+  const handleScroll = (id: string): void => {
     setOpen(false);
 
     const section = document.getElementById(id);
@@ -41,45 +41,41 @@ export default function Navbar() {
 
               <button
                 onClick={() => handleScroll("highlights")}
-                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition cursor-pointer"
               >
                 Highlights
               </button>
 
               <button
                 onClick={() => handleScroll("location")}
-                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition cursor-pointer"
               >
                 Location
               </button>
 
               <button
                 onClick={() => handleScroll("amenities")}
-                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition cursor-pointer"
               >
                 Amenities
               </button>
 
-              <button
-                onClick={() => handleScroll("floorplans")}
-                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
-              >
-                Floor Plans
-              </button>
+           
 
               <button
                 onClick={() => handleScroll("gallery")}
-                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition cursor-pointer"
               >
                 Gallery
               </button>
 
               <button
                 onClick={() => handleScroll("contact")}
-                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition cursor-pointer"
               >
                 Contact
               </button>
+
             </nav>
 
             {/* Desktop CTA */}
@@ -92,7 +88,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Toggle */}
             <button
               onClick={() => setOpen(!open)}
               className="lg:hidden text-[#003D7A]"
@@ -105,53 +101,47 @@ export default function Navbar() {
           {/* Mobile Menu */}
           {open && (
             <div className="lg:hidden border-t border-slate-200 bg-white">
-              <div className="flex flex-col p-6">
+              <div className="flex flex-col p-6 gap-1">
 
                 <button
                   onClick={() => handleScroll("highlights")}
-                  className="py-3 text-left text-slate-800 font-semibold"
+                  className="text-left py-3 font-semibold text-slate-800 hover:text-[#0057A8] cursor-pointer"
                 >
                   Highlights
                 </button>
 
                 <button
                   onClick={() => handleScroll("location")}
-                  className="py-3 text-left text-slate-800 font-semibold"
+                  className="text-left py-3 font-semibold text-slate-800 hover:text-[#0057A8] cursor-pointer"
                 >
                   Location
                 </button>
 
                 <button
                   onClick={() => handleScroll("amenities")}
-                  className="py-3 text-left text-slate-800 font-semibold"
+                  className="text-left py-3 font-semibold text-slate-800 hover:text-[#0057A8] cursor-pointer"
                 >
                   Amenities
                 </button>
 
-                <button
-                  onClick={() => handleScroll("floorplans")}
-                  className="py-3 text-left text-slate-800 font-semibold"
-                >
-                  Floor Plans
-                </button>
-
+              
                 <button
                   onClick={() => handleScroll("gallery")}
-                  className="py-3 text-left text-slate-800 font-semibold"
+                  className="text-left py-3 font-semibold text-slate-800 hover:text-[#0057A8] cursor-pointer"
                 >
                   Gallery
                 </button>
 
                 <button
                   onClick={() => handleScroll("contact")}
-                  className="py-3 text-left text-slate-800 font-semibold"
+                  className="text-left py-3 font-semibold text-slate-800 hover:text-[#0057A8] cursor-pointer"
                 >
                   Contact
                 </button>
 
                 <button
                   onClick={() => handleScroll("contact")}
-                  className="mt-4 rounded-xl bg-[#EF3B2D] py-3 text-white font-bold"
+                  className="mt-4 rounded-xl bg-[#EF3B2D] py-3 text-white font-bold cursor-pointer"
                 >
                   Get Pricing
                 </button>
@@ -159,6 +149,7 @@ export default function Navbar() {
               </div>
             </div>
           )}
+
         </div>
       </div>
     </header>
