@@ -89,7 +89,7 @@ export default function LocationAdvantages() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="py-28 bg-slate-50">
+    <section className="py-28 bg-slate-50" id="#highlights">
 
       <div className="max-w-7xl mx-auto px-6">
 

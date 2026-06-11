@@ -1,145 +1,167 @@
+
 "use client";
 
-import { Menu, Phone, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const handleScroll = (id) => {
+    setOpen(false);
+
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 pt-4">
+        <div className="rounded-2xl border border-white/20 bg-white/95 backdrop-blur-xl shadow-xl">
 
-      <div className="mx-auto max-w-7xl px-6 pt-5">
-
-        <div className="rounded-2xl border border-white/20 bg-white/90 backdrop-blur-xl shadow-lg">
-
-          <div className="flex items-center justify-between px-6 py-4">
+          <div className="flex items-center justify-between px-5 py-4">
 
             {/* Logo */}
-
-            <a href="/" className="flex items-center gap-3">
-
+            <a href="/" className="flex items-center">
               <img
                 src="/Urbanads/logo.png"
                 alt="Urbanyards Shangrila"
-                className="h-12 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
-
-              <div>
-                
-              </div>
-
             </a>
 
             {/* Desktop Menu */}
-
             <nav className="hidden lg:flex items-center gap-8">
 
-              <a
-                href="#highlights"
-                className="font-medium text-slate-700 hover:text-[#0057A8]"
+              <button
+                onClick={() => handleScroll("highlights")}
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
               >
                 Highlights
-              </a>
-
-              <a
-                href="#location"
-                className="font-medium text-slate-700 hover:text-[#0057A8]"
-              >
-                Location
-              </a>
-
-              <a
-                href="#amenities"
-                className="font-medium text-slate-700 hover:text-[#0057A8]"
-              >
-                Amenities
-              </a>
-
-              <a
-                href="#floorplans"
-                className="font-medium text-slate-700 hover:text-[#0057A8]"
-              >
-                Floor Plans
-              </a>
-
-              <a
-                href="#gallery"
-                className="font-medium text-slate-700 hover:text-[#0057A8]"
-              >
-                Gallery
-              </a>
-
-              <a
-                href="#contact"
-                className="font-medium text-slate-700 hover:text-[#0057A8]"
-              >
-                Contact
-              </a>
-
-            </nav>
-
-            {/* CTA */}
-
-            <div className="hidden lg:flex items-center gap-3">
-
-              <a
-                href="tel:+919999999999"
-                className="flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-3 text-[#003D7A] font-semibold hover:bg-slate-50"
-              >
-                <Phone size={18} />
-                Call Now
-              </a>
-
-              <button className="rounded-xl bg-[#EF3B2D] px-6 py-3 text-white font-bold hover:opacity-90">
-                Get Pricing
               </button>
 
+              <button
+                onClick={() => handleScroll("location")}
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+              >
+                Location
+              </button>
+
+              <button
+                onClick={() => handleScroll("amenities")}
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+              >
+                Amenities
+              </button>
+
+              <button
+                onClick={() => handleScroll("floorplans")}
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+              >
+                Floor Plans
+              </button>
+
+              <button
+                onClick={() => handleScroll("gallery")}
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+              >
+                Gallery
+              </button>
+
+              <button
+                onClick={() => handleScroll("contact")}
+                className="font-medium text-slate-700 hover:text-[#0057A8] transition"
+              >
+                Contact
+              </button>
+            </nav>
+
+            {/* Desktop CTA */}
+            <div className="hidden lg:block">
+              <button
+                onClick={() => handleScroll("contact")}
+                className="rounded-xl bg-[#EF3B2D] px-6 py-3 text-white font-bold hover:opacity-90 transition"
+              >
+                Get Pricing
+              </button>
             </div>
 
-            {/* Mobile */}
-
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setOpen(!open)}
-              className="lg:hidden"
+              className="lg:hidden text-[#003D7A]"
             >
-              <Menu size={28} />
+              {open ? <X size={28} /> : <Menu size={28} />}
             </button>
 
           </div>
 
           {/* Mobile Menu */}
-
           {open && (
-            <div className="border-t lg:hidden">
+            <div className="lg:hidden border-t border-slate-200 bg-white">
+              <div className="flex flex-col p-6">
 
-              <div className="flex flex-col p-6 gap-5">
+                <button
+                  onClick={() => handleScroll("highlights")}
+                  className="py-3 text-left text-slate-800 font-semibold"
+                >
+                  Highlights
+                </button>
 
-                <a href="#highlights">Highlights</a>
+                <button
+                  onClick={() => handleScroll("location")}
+                  className="py-3 text-left text-slate-800 font-semibold"
+                >
+                  Location
+                </button>
 
-                <a href="#location">Location</a>
+                <button
+                  onClick={() => handleScroll("amenities")}
+                  className="py-3 text-left text-slate-800 font-semibold"
+                >
+                  Amenities
+                </button>
 
-                <a href="#amenities">Amenities</a>
+                <button
+                  onClick={() => handleScroll("floorplans")}
+                  className="py-3 text-left text-slate-800 font-semibold"
+                >
+                  Floor Plans
+                </button>
 
-                <a href="#floorplans">Floor Plans</a>
+                <button
+                  onClick={() => handleScroll("gallery")}
+                  className="py-3 text-left text-slate-800 font-semibold"
+                >
+                  Gallery
+                </button>
 
-                <a href="#gallery">Gallery</a>
+                <button
+                  onClick={() => handleScroll("contact")}
+                  className="py-3 text-left text-slate-800 font-semibold"
+                >
+                  Contact
+                </button>
 
-                <a href="#contact">Contact</a>
-
-                <button className="mt-3 rounded-xl bg-[#EF3B2D] py-3 text-white font-bold">
+                <button
+                  onClick={() => handleScroll("contact")}
+                  className="mt-4 rounded-xl bg-[#EF3B2D] py-3 text-white font-bold"
+                >
                   Get Pricing
                 </button>
 
               </div>
-
             </div>
           )}
-
         </div>
-
       </div>
-
     </header>
   );
 }
+

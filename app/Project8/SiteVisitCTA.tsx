@@ -46,11 +46,11 @@ export default function SiteVisitCTA() {
 
             <div className="mt-10 space-y-4 text-white text-lg">
 
-              <div>✓ Premium 3 & 4 BHK Residences</div>
+              <div>✓ Premium 3 BHK Residences</div>
 
               <div>✓ Starting From ₹ 1.35 Cr*</div>
 
-              <div>✓ 8 Minutes To Airport</div>
+              <div>✓ 8 Minutes To International Airport</div>
 
               <div>✓ 3 Minutes To ORR Exit 14</div>
 
@@ -303,7 +303,7 @@ export default function SiteVisitCTA() {
               />
 
               <p className="text-sm text-slate-600">
-                Premium 3 & 4 BHK Residences at
+                Premium 3 BHK Residences at
                 <span className="font-semibold text-[#003D7A]">
                   {" "}Urbanyards Shangrila
                 </span>

@@ -11,7 +11,7 @@ const gallery = [
 image: "/Urbanads/newimage2.jpg",
   },
   {
-    title: "outdoor Poolside",
+    title: "Outdoor Poolside",
 image: "/Urbanads/newimage3.jpg",
   },
   {
@@ -23,9 +23,10 @@ image: "/Urbanads/newimage4.jpg",
 image: "/Urbanads/newimage5.jpg",
   },
  {
-    title: "kids play area",
+    title: "Kids Play Area",
 image: "/Urbanads/newimage6.jpg",
  }
+
 ];
 
 export default function Gallery() {

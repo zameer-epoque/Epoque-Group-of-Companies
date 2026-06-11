@@ -51,16 +51,15 @@ export default function Hero() {
           
 
             {/* CTA */}
-            <div className="mt-10 flex flex-wrap gap-4">
-
-              <button className="group bg-[#EF3B2D] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 shadow-xl hover:scale-105 transition-all">
-                Schedule Site Visit
-                <ArrowRight size={18} />
-              </button>
-
-            
-
-            </div>
+<div className="mt-10 flex flex-wrap gap-4" id="#contact">
+  <a
+    href="#contact"
+    className="group bg-[#EF3B2D] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 shadow-xl hover:scale-105 transition-all"
+  >
+    Schedule Site Visit
+    <ArrowRight size={18} />
+  </a>
+</div>
 
             {/* Stats */}
             <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -179,9 +178,7 @@ export default function Hero() {
                   2028
                 </h3>
 
-                <p className="text-xs opacity-90">
-                  Second Half
-                </p>
+             
               </div>
             </div>
 

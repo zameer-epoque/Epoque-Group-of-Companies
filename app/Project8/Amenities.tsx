@@ -1,3 +1,4 @@
+
 import {
   Waves,
   Dumbbell,
@@ -5,7 +6,7 @@ import {
   Theater,
   BookOpen,
   Briefcase,
-  Trophy,
+  Gamepad2,
   HeartPulse,
   Trees,
   Users,
@@ -46,7 +47,7 @@ const amenities = [
   },
   {
     title: "Indoor Games",
-    icon: Trophy,
+    icon: Gamepad2,
     color: "bg-green-50 text-green-600",
   },
   {
@@ -78,25 +79,26 @@ const amenities = [
 
 export default function Amenities() {
   return (
-    <section className="py-28 bg-white">
+    <section className="py-28 bg-gradient-to-b from-white to-slate-50" id="#amenities">
       <div className="max-w-7xl mx-auto px-6">
-        
+        {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="text-[#EF3B2D] font-semibold tracking-widest uppercase">
+          <span className="inline-block px-4 py-2 rounded-full bg-[#EF3B2D]/10 text-[#EF3B2D] font-semibold tracking-widest uppercase text-sm">
             Luxury Lifestyle
           </span>
 
-          <h2 className="mt-4 text-5xl md:text-6xl font-black text-[#003D7A]">
+          <h2 className="mt-6 text-5xl md:text-6xl font-black text-[#003D7A] leading-tight">
             World-Class Amenities
           </h2>
 
           <p className="mt-6 text-lg text-slate-600">
-            A dedicated 70,000+ Sq.ft clubhouse designed for
-            wellness, recreation, productivity and unforgettable
-            experiences.
+            Experience luxury living with thoughtfully curated
+            amenities designed for wellness, recreation,
+            productivity, and family enjoyment.
           </p>
         </div>
 
+        {/* Amenities Grid */}
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20">
           {amenities.map((item) => {
             const Icon = item.icon;
@@ -104,42 +106,36 @@ export default function Amenities() {
             return (
               <div
                 key={item.title}
-                className="group relative overflow-hidden rounded-3xl border border-slate-100 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                className="group relative overflow-hidden rounded-[32px] bg-white border border-slate-100 p-8 text-center shadow-md hover:shadow-2xl hover:-translate-y-3 transition-all duration-500"
               >
+                {/* Hover Background */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-[#EF3B2D]/5 to-[#003D7A]/5" />
+
+                {/* Icon */}
                 <div
-                  className={`w-16 h-16 rounded-2xl flex items-center justify-center ${item.color}`}
+                  className={`relative mx-auto w-20 h-20 rounded-3xl flex items-center justify-center ${item.color} group-hover:scale-110 transition duration-500`}
                 >
-                  <Icon size={30} />
+                  <Icon size={38} />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-[#003D7A]">
+                {/* Title */}
+                <h3 className="relative mt-6 text-xl font-bold text-[#003D7A]">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-slate-500">
-                  Premium lifestyle amenities designed to elevate
-                  your everyday living experience.
-                </p>
-
-                <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#EF3B2D] transition-all duration-500 group-hover:w-full" />
+                {/* Decorative Line */}
+                <div className="mt-5 flex justify-center">
+                  <span className="h-1 w-12 rounded-full bg-[#EF3B2D] group-hover:w-20 transition-all duration-500" />
+                </div>
               </div>
             );
           })}
         </div>
 
         {/* Bottom Highlight */}
-        <div className="mt-20 rounded-[32px] bg-gradient-to-r from-[#0057A8] to-[#003D7A] p-10 md:p-14 text-center">
-          <h3 className="text-4xl font-bold text-white">
-            70,000+ Sq.ft Dedicated Clubhouse
-          </h3>
-
-          <p className="mt-4 text-blue-100 text-lg">
-            Swimming Pool • Theatre • Business Lounge • Gym •
-            Spa • Library • Guest Suites • Indoor Games • Kids Zone
-          </p>
-        </div>
-
+       
       </div>
     </section>
   );
 }
+
