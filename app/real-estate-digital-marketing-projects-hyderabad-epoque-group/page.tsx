@@ -58,7 +58,7 @@ const clients = [
     location: "Hyderabad",
     image: "/client2.jpg",
     description:
-      "Comprehensive real estate solutions including buying, selling, and investment advisory.",
+      "Dedicated property handling solutions for NRIs, ensuring seamless management, security, and long-term value creation.",
     link: "/property-management-service-in-hyderabad",
   },
    {
