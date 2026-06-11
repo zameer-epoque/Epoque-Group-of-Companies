@@ -23,16 +23,16 @@ const clients = [
     image:
       "/garikipati-towers-real-estate-marketing-hyderabad-epoque-group.jpg",
     description:
-      "Premium real estate developer offering luxury villas and apartments.",
+      "Premium real estate development driven by expertise, credibility, and an unwavering commitment to quality and integrity.",
     link: "/Garikipati-Towers-1.5-2-3-BHK-Luxury-Apartments-For-Sale-in-Hyderabad",
   },
    {
-    title: "Urbanyards shangrila",
+    title: "Urbanyards Shangrila",
     location: "Hyderabad",
     image:
       "/Urbanads/image1.png",
     description:
-      "Premium real estate development in Hyderabad.",
+      "Premium real estate development driven by expertise, credibility, and an unwavering commitment to quality and integrity.",
     link: "/urbanyards-shangrila-tukkuguda-hyderabad",
   },
 
@@ -76,7 +76,7 @@ const clients = [
     image:
       "/orange-county-homes-digital-marketing-hyderabad-epoque-group.jpg",
     description:
-      "Designed a performance-driven qualified lead generation system reducing CPL and improving conversions.",
+      "Crafting exceptional real estate experiences through innovation, professionalism, and a customer-first approach.",
     link: "/callisto5-4bhk-triplex-villas-for-sale-in-tukkuguda-hyderabad",
   },
   {
