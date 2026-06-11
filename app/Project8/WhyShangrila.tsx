@@ -23,7 +23,7 @@ const features = [
     icon: Plane,
   },
   {
-    title: "Future City Growth Zone",
+    title: "Future City Growth ",
     description:
       "Located near Bharath Future City and Hyderabad's next growth corridor.",
     icon: Building2,
