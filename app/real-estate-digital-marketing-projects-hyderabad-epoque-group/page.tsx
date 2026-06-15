@@ -45,6 +45,14 @@ const clients = [
       "Executed high-performance lead generation campaigns across Hyderabad.",
     link: "/Apr-Praveens-Hillside-4BHK-Luxury-Villas-For-Sale-in-Bachupally-Hyderabad",
   },
+ {
+  title: "MK One Luxury Apartments",
+  location: "Visakhapatnam",
+  image: "/mk-one-luxury-apartments-visakhapatnam.jpg",
+  description:
+    "A landmark luxury residential community featuring premium residences, and an elevated lifestyle experience in Visakhapatnam.",
+  link:"/mk-one-luxury-apartments-visakhapatnam",
+},
   {
     title: "Om Sree Builders",
     location: "Hyderabad",
