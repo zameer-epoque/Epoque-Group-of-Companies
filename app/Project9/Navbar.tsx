@@ -57,9 +57,7 @@ export default function Navbar() {
     <span>+91 9133 633 327</span>
   </a>
 
-  <button className="bg-[#C38762] hover:bg-[#B97852] text-white px-7 py-3 rounded-full font-semibold transition duration-300">
-    Enquire Now
-  </button>
+  
 </div>
 
           {/* Mobile Menu Button */}
