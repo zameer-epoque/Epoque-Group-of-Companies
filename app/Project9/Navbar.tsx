@@ -85,9 +85,13 @@ export default function Navbar() {
               </a>
             ))}
 
-            <button className="mt-6 bg-[#C38762] hover:bg-[#B97852] text-white py-4 rounded-full font-semibold transition">
-              Enquire Now
-            </button>
+             <a
+    href="tel:+919133633327"
+    className="flex items-center gap-2 text-white hover:text-[#C38762] transition"
+  >
+    <Phone size={18} />
+    <span>+91 9133 633 327</span>
+  </a>
           </div>
         </div>
       )}
