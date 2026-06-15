@@ -58,7 +58,7 @@ export default function LocationSection() {
           {/* Location Image */}
           <div className="relative">
             <img
-              src="/MK/Location-Map-Mk1-1-1.jpg"
+              src="/Mk/Location-Map-Mk1-1-1.jpg"
               alt="MK One Location"
               className="w-full rounded-[30px] border border-[#C38762]/20"
             />
