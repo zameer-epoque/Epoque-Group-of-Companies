@@ -28,13 +28,13 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-10">
-              <button className="bg-[#C38762] hover:bg-[#B97852] text-white px-8 py-4 rounded-full font-semibold transition">
-                Download Brochure
-              </button>
-
-              <button className="border border-[#C38762] text-[#C38762] px-8 py-4 rounded-full hover:bg-[#C38762] hover:text-white transition">
-                Schedule Site Visit
-              </button>
+             
+             <a
+  href="#contact"
+  className="border border-[#C38762] text-[#C38762] px-8 py-4 rounded-full hover:bg-[#C38762] hover:text-white transition inline-block"
+>
+  Schedule Site Visit
+</a>
             </div>
 
             {/* Stats */}
